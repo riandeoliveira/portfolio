@@ -33,3 +33,28 @@ export const Navbar = styled.nav`
     color: white;
   }
 `;
+
+export const Main = styled.main`
+  background-color: red;
+  height: 1000px;
+`;
+
+export const About = styled.section`
+  background-color: yellow;
+  height: 100px;
+`;
+
+export const Stack = styled.section`
+  background-color: green;
+  height: 100px;
+`;
+
+export const Footer = styled.footer`
+  background-color: blue;
+  height: 200px;
+`;
+
+export const Contact = styled.section`
+  background-color: purple;
+  height: 100px;
+`;
