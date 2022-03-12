@@ -1,5 +1,9 @@
-import * as S from "../styles/styles";
+import * as S from "../styles/Footer";
 
-export const Footer: React.FC = ({ children }) => {
-  return <S.Footer>{children}</S.Footer>;
+export const Footer: React.FC = () => {
+  return (
+    <S.Footer>
+      <S.Contact></S.Contact>
+    </S.Footer>
+  );
 };
