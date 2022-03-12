@@ -1,4 +1,4 @@
-import * as S from "./styles";
+import * as S from "../styles/styles";
 
 export const Navbar: React.FC = () => {
   return (
