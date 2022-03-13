@@ -1,9 +1,13 @@
-import * as S from "../styles/Footer";
+import styled from "styled-components";
+
+const FooterArea = styled.footer``;
+
+const Contact = styled.section``;
 
 export const Footer: React.FC = () => {
   return (
-    <S.Footer>
-      <S.Contact></S.Contact>
-    </S.Footer>
+    <FooterArea>
+      <Contact></Contact>
+    </FooterArea>
   );
 };
