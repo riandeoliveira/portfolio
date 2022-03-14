@@ -7,12 +7,13 @@ import {
   Career,
   AvatarContainer,
   RotatingContainer,
+  TechImage,
   Avatar,
   Video,
   Source,
   StackSection,
   StackContainer,
-} from "../styles/Main";
+} from "../styles/styles";
 
 import video from "../assets/bg-video.mp4";
 import img from "../assets/avatar.jpg";
@@ -32,11 +33,9 @@ export const Main: React.FC<MainProps> = ({ getTech }) => {
           </DataContainer>
           <AvatarContainer>
             <RotatingContainer>
-              <img
+              <TechImage
                 src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg"
                 alt="React logo"
-                width="50"
-                height="50"
               />
             </RotatingContainer>
             <Avatar src={img} alt="" />

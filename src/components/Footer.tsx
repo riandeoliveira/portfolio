@@ -1,4 +1,4 @@
-import { FooterArea, Contact } from "../styles/Footer";
+import { FooterArea, Contact } from "../styles/styles";
 
 export const Footer: React.FC = () => {
   return (
