@@ -8,14 +8,14 @@ import { Footer } from "./components/Footer";
 export const App: React.FC = () => {
   const { stack_code, stack_name } = data;
 
+  const handleGetTech = stack_code.map((item, i) => (
+    <Tech code={stack_code[i]} name={stack_name[i]} />
+  ));
+
   return (
     <>
       <Header />
-      <Main>
-        {stack_code.map((item, i) => (
-          <Tech code={stack_code[i]} name={stack_name[i]} />
-        ))}
-      </Main>
+      <Main getTech={handleGetTech} />
       <Footer />
     </>
   );

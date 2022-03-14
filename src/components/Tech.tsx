@@ -1,19 +1,4 @@
-import styled from "styled-components";
-
-const TechContainer = styled.div`
-  border: 2px solid blue;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-`;
-
-const TechImage = styled.img`
-  height: 50px;
-  width: 50px;
-`;
-
-const TechName = styled.span``;
+import { TechContainer, TechImage, TechName } from "../styles/Tech";
 
 interface TechProps {
   code: string;
@@ -26,7 +11,7 @@ export const Tech: React.FC<TechProps> = ({ code, name }) => {
       <TechImage
         src={`https://raw.githubusercontent.com/devicons/devicon/master/icons/${code}/${code}-original.svg`}
         alt=""
-      ></TechImage>
+      />
       <TechName>{name}</TechName>
     </TechContainer>
   );

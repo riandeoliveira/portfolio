@@ -1,38 +1,4 @@
-import styled from "styled-components";
-
-const HeaderArea = styled.header`
-  align-items: center;
-  display: flex;
-  height: 80px;
-  justify-content: center;
-`;
-
-const Navbar = styled.nav`
-  height: 100%;
-`;
-
-const List = styled.ul`
-  display: flex;
-  height: inherit;
-`;
-
-const Item = styled.li`
-  align-items: center;
-  border-bottom: 2px solid transparent;
-  cursor: pointer;
-  display: flex;
-  height: inherit;
-  margin: 0 20px;
-  text-align: center;
-
-  &:hover {
-    border-color: #006aeb;
-  }
-`;
-
-const Link = styled.a`
-  color: white;
-`;
+import { HeaderArea, Navbar, List, Item, Link } from "../styles/Header";
 
 export const Header: React.FC = () => {
   return (
