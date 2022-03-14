@@ -3,17 +3,29 @@ import styled from "styled-components";
 export const AboutSection = styled.section``;
 
 export const Avatar = styled.img`
+  animation: rotate 5s linear infinite;
   border-radius: 100%;
   border: 10px solid var(--background);
   margin-bottom: -80px;
   width: 300px;
+
+  @keyframes rotate {
+    50% {
+      transform: rotateY(180deg);
+    }
+
+    to {
+      transform: rotateY(0deg);
+    }
+  }
 `;
 
 export const AvatarContainer = styled.div``;
 
 export const Career = styled.h2`
-  font-size: 24px;
+  font-size: 36px;
   margin: 10px 0;
+  font-family: "Smooch Sans", sans-serif;
 `;
 
 export const Contact = styled.section``;
@@ -53,10 +65,16 @@ export const List = styled.ul`
   height: inherit;
 `;
 
-export const MainArea = styled.main``;
+export const MainArea = styled.main`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
 
 export const Name = styled.h1`
-  font-size: 56px;
+  font-size: 64px;
+  letter-spacing: 10px;
+  font-family: "Bebas Neue", sans-serif;
   margin-top: 100px;
 `;
 
@@ -77,14 +95,14 @@ export const ProfileContainer = styled.div`
 `;
 
 export const RotatingContainer = styled.div`
-  animation: rotate 5s infinite linear;
+  animation: orbit-avatar 5s infinite linear;
   display: flex;
   height: 320px;
   background-color: transparent;
   width: 320px;
   margin-bottom: -310px;
 
-  @keyframes rotate {
+  @keyframes orbit-avatar {
     to {
       transform: rotate(360deg);
     }
