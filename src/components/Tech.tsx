@@ -1,4 +1,5 @@
-import { TechContainer, TechImage, TechName } from "../styles/styles";
+import { TechContainer, TechName } from "../styles/Tech";
+import { TechImage } from "../styles/global/global";
 
 interface TechProps {
   code: string;

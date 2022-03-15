@@ -7,13 +7,13 @@ import {
   Career,
   AvatarContainer,
   RotatingContainer,
-  TechImage,
   Avatar,
   Video,
   Source,
   StackSection,
   StackContainer,
-} from "../styles/styles";
+} from "../styles/Main";
+import { TechImage } from "../styles/global/global";
 
 import video from "../assets/bg-video.mp4";
 import img from "../assets/avatar.jpg";

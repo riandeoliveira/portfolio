@@ -1,4 +1,4 @@
-import { HeaderArea, Navbar, List, Item, Link } from "../styles/styles";
+import { HeaderArea, Navbar, List, Item, Link } from "../styles/Header";
 
 export const Header: React.FC = () => {
   return (
