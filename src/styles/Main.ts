@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { orbit, rotate } from "./animations/animations";
+import { orbit } from "./animations/animations";
 
 export const MainArea = styled.main`
   display: flex;
@@ -26,12 +26,13 @@ export const DataContainer = styled.div``;
 
 export const Name = styled.h1`
   font-size: 64px;
-  letter-spacing: 10px;
+  letter-spacing: 7.5px;
   font-family: "Bebas Neue", sans-serif;
   margin-top: 100px;
 `;
 
 export const Career = styled.h2`
+  font-weight: 400;
   font-size: 36px;
   margin: 10px 0;
   font-family: "Smooch Sans", sans-serif;
@@ -51,13 +52,11 @@ export const RotatingContainer = styled.div`
 `;
 
 export const Avatar = styled.img`
-  animation: rotate 5s linear infinite;
   border-radius: 100%;
   border: 10px solid var(--background);
   margin-bottom: -80px;
   width: 300px;
-
-  ${rotate}
+  z-index: 1;
 `;
 
 export const Video = styled.video`
@@ -71,14 +70,12 @@ export const Source = styled.source``;
 export const StackSection = styled.section`
   align-items: center;
   background-color: var(--other);
-  display: flex;
-  height: 500px;
+  /* display: flex; */
   justify-content: center;
   margin-top: 100px;
 `;
 
 export const StackContainer = styled.div`
-  border: 2px solid red;
   display: grid;
   height: 500px;
   grid-template-columns: repeat(4, 1fr);
@@ -86,4 +83,5 @@ export const StackContainer = styled.div`
   gap: 20px;
   padding: 20px;
   margin: 20px;
+  margin: auto;
 `;

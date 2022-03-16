@@ -26,6 +26,7 @@ export const List = styled.ul`
 
 export const Item = styled.li`
   align-items: center;
+  transition: all 0.2s ease;
   border-bottom: 2px solid transparent;
   cursor: pointer;
   display: flex;
@@ -35,9 +36,17 @@ export const Item = styled.li`
 
   &:hover {
     border-color: #006aeb;
+
+    a {
+      color: white;
+    }
+  }
+
+  a {
+    transition: all 0.2s ease;
   }
 `;
 
 export const Link = styled.a`
-  color: white;
+  color: #737380;
 `;

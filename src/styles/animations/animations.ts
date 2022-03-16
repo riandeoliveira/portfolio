@@ -17,15 +17,3 @@ export const orbit = () => {
         }
       }`;
 };
-
-export const rotate = () => {
-  return `@keyframes rotate {
-        50% {
-          transform: rotateY(180deg);
-        }
-    
-        to {
-          transform: rotateY(0deg);
-        }
-      }`;
-};

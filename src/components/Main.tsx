@@ -13,7 +13,12 @@ import {
   StackSection,
   StackContainer,
 } from "../styles/Main";
-import { TechImage } from "../styles/global/global";
+import {
+  TechImage,
+  TitleContainer,
+  Title,
+  Subtitle,
+} from "../styles/global/global";
 
 import video from "../assets/bg-video.mp4";
 import img from "../assets/avatar.jpg";
@@ -38,7 +43,7 @@ export const Main: React.FC<MainProps> = ({ getTech }) => {
                 alt="React logo"
               />
             </RotatingContainer>
-            <Avatar src={img} alt="" />
+            <Avatar src={img} alt="Image of Rian Oliveira" />
           </AvatarContainer>
         </ProfileContainer>
         <Video autoPlay disablePictureInPicture loop muted>
@@ -46,6 +51,10 @@ export const Main: React.FC<MainProps> = ({ getTech }) => {
         </Video>
       </AboutSection>
       <StackSection>
+        <TitleContainer>
+          <Title>Stack</Title>
+          <Subtitle>Tecnologias que costumo utilizar</Subtitle>
+        </TitleContainer>
         <StackContainer>{getTech}</StackContainer>
       </StackSection>
     </MainArea>
