@@ -6,6 +6,9 @@ export const Header: React.FC = () => {
       <Navbar>
         <List>
           <Item>
+            <Link href=".">Home</Link>
+          </Item>
+          <Item>
             <Link href=".">Sobre</Link>
           </Item>
           <Item>

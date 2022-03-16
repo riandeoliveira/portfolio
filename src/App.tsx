@@ -1,8 +1,8 @@
 import data from "./data/data.json";
 
+import { Tech } from "./components/Tech";
 import { Header } from "./components/Header";
 import { Main } from "./components/Main";
-import { Tech } from "./components/Tech";
 import { Footer } from "./components/Footer";
 
 export const App: React.FC = () => {
