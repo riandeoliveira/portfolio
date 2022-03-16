@@ -1,5 +1,5 @@
 import styled from "styled-components";
 
-export const FooterArea = styled.footer``;
-
-export const Contact = styled.section``;
+export const FooterArea = styled.footer`
+  height: 500px;
+`;
