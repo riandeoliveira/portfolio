@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const StackSection = styled.section`
   background-color: var(--other);
-  margin-top: 100px;
 `;
 
 export const StackContainer = styled.div`

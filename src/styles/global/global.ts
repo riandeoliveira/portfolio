@@ -12,6 +12,7 @@ export const TechImage = styled.img`
 export const Title = styled.h3`
   font-family: "Oswald", sans-serif;
   font-size: 42px;
+  margin-bottom: 10px;
 `;
 
 export const TitleContainer = styled.div`
