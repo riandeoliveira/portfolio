@@ -1,16 +1,13 @@
 import styled from "styled-components";
 
-import { fadeIn } from "./animations/animations";
+import { fadeIn, separate } from "./animations/animations";
 
 export const HeaderArea = styled.header`
   animation: fade-in 1s ease-out;
-  align-items: center;
   background-color: var(--background);
   display: flex;
   height: 80px;
   justify-content: center;
-
-  background-color: var(variables);
 
   ${fadeIn};
 `;
@@ -26,13 +23,12 @@ export const List = styled.ul`
 
 export const Item = styled.li`
   align-items: center;
-  transition: all 0.2s ease;
-  border-bottom: 2px solid transparent;
+  animation: separate 1s ease;
+  border-bottom: 3px solid transparent;
   cursor: pointer;
   display: flex;
-  height: inherit;
   margin: 0 20px;
-  text-align: center;
+  transition: all 0.2s ease;
 
   &:hover {
     border-color: #006aeb;
@@ -42,11 +38,10 @@ export const Item = styled.li`
     }
   }
 
-  a {
-    transition: all 0.2s ease;
-  }
+  ${separate}
 `;
 
 export const Link = styled.a`
   color: #737380;
+  transition: all 0.2s ease;
 `;
