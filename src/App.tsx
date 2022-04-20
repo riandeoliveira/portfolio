@@ -1,22 +1,23 @@
-import data from "./data/data.json";
+import { ThemeProvider } from "styled-components";
+import dark from "./styles/theme/dark";
+import Home from "./components/Home";
+import About from "./components/About";
+import Stack from "./components/Stack";
+import Project from "./components/Project";
+import Resume from "./components/Resume";
+import Footer from "./components/Footer";
 
-import { Tech } from "./components/Tech";
-import { Header } from "./components/Header";
-import { Main } from "./components/Main";
-import { Footer } from "./components/Footer";
-
-export const App: React.FC = () => {
-  const { stack_code, stack_name } = data;
-
-  const handleGetTech = stack_code.map((item, i) => (
-    <Tech code={stack_code[i]} name={stack_name[i]} />
-  ));
-
+const App = (): JSX.Element => {
   return (
-    <>
-      <Header />
-      <Main getTech={handleGetTech} />
+    <ThemeProvider theme={dark}>
+      <Home />
+      <About />
+      <Stack />
+      <Project />
+      <Resume />
       <Footer />
-    </>
+    </ThemeProvider>
   );
 };
+
+export default App;
