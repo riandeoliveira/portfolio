@@ -1,46 +1,64 @@
 import styled from "styled-components";
+import fonts from "../../styles/fonts";
+import device from "media-query-sizes";
+import colors from "../../styles/colors";
 
 export const Footer = styled.footer`
-  background-color: #121214;
   display: flex;
-  color: white;
-  font-family: "Roboto";
-  padding: 100px;
   flex-direction: column;
-
-  p {
-    text-align: center;
-  }
-`;
-
-export const SocialMediasBox = styled.div`
-  display: grid;
+  font-family: ${fonts.primary}, ${fonts.default};
+  height: 200px;
+  justify-content: space-between;
   margin: auto;
-  grid-template-columns: repeat(5, 1fr);
-  width: 328px;
+  max-width: 1200px;
   padding: 20px;
 
-  a {
-    width: 48px;
-    height: 48px;
-    display: flex;
+  div {
     align-items: center;
-    margin: auto;
-    color: black;
-    justify-content: center;
-    padding: 12px;
-    background-color: #a2a2a2;
-    border-radius: 100%;
-    transition: transform 0.25s ease;
-    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
 
-    svg {
-      width: 100%;
-      height: 100%;
+    div {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(6, 1fr);
+
+      @media ${device.tablet} {
+        grid-template-columns: repeat(3, 1fr);
+      }
     }
 
-    &:hover {
-      transform: scale(125%);
+    a,
+    button {
+      align-items: center;
+      background-color: ${colors.primary_light};
+      border-radius: 10px;
+      color: ${colors.secondary};
+      cursor: pointer;
+      display: flex;
+      padding: 12px;
+      transition: all 0.25s ease;
+      width: 48px;
+
+      svg {
+        height: 100%;
+        width: 100%;
+      }
+
+      &:hover {
+        background-color: ${colors.secondary};
+        color: ${colors.neutral};
+        transform: scale(125%);
+      }
+    }
+  }
+
+  p {
+    color: ${colors.neutral_dark};
+    text-align: center;
+
+    strong {
+      color: ${colors.neutral};
     }
   }
 `;
