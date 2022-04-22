@@ -1,16 +1,15 @@
 import * as S from "./styles";
-import { TitleBox } from "../../styles/global/Globals";
-import { ParallaxBox } from "../../styles/global/Globals";
-import { space } from "../../assets";
+import { TitleBox, ParallaxBox } from "../../styles/global";
+import { nightSky } from "../../assets";
 
 const About = (): JSX.Element => {
   return (
-    <S.AboutBox>
+    <S.About>
       <TitleBox>
         <h3>Quem Sou Eu</h3>
         <h4>Um pouco sobre mim</h4>
       </TitleBox>
-      <ParallaxBox image={space}>
+      <ParallaxBox image={nightSky}>
         <p>
           Olá, Mundo! Meu nome é Rian, tenho 20 anos e sou um Desenvolvedor
           Front-End. Estou cursando o 3º semestre de Ciência da Computação pelo
@@ -24,7 +23,7 @@ const About = (): JSX.Element => {
           oportunidade na área.
         </p>
       </ParallaxBox>
-    </S.AboutBox>
+    </S.About>
   );
 };
 

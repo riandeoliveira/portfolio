@@ -1,12 +1,17 @@
 import styled from "styled-components";
-import { sla } from "../../assets";
+import colors from "../../styles/colors";
+import fonts from "../../styles/fonts";
 
-export const AboutBox = styled.section`
+export const About = styled.section`
   p {
-    color: white;
-    font-family: "Roboto";
-    line-height: 1.5em;
+    background-color: #12121480;
+    border-radius: 10px;
+    text-align: justify;
+    padding: 20px;
+    color: ${colors.neutral};
+    line-height: 2em;
+    font-family: ${fonts.primary}, ${fonts.default};
     margin: auto;
-    max-width: 800px;
+    max-width: 1200px;
   }
 `;
