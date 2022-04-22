@@ -13,13 +13,3 @@
     transform: rotate(360deg);
   }
 }
-
-@keyframes separate {
-  from {
-    margin: 0 -20px;
-  }
-
-  to {
-    margin: 0 20px;
-  }
-}
