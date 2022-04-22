@@ -1,7 +1,7 @@
 import * as S from "./styles";
 import stack from "../../content/stack.json";
-import { TechImage } from "../../styles/global/Globals";
-import { avatar, workspace } from "../../assets";
+import { TechImage } from "../../styles/global";
+import { avatar, code } from "../../assets";
 import Header from "../Header";
 
 const Home = (): JSX.Element => {
@@ -18,7 +18,13 @@ const Home = (): JSX.Element => {
             {stack.map(
               (tech, i) =>
                 tech.name === "React" && (
-                  <TechImage alt={tech.alt} key={i} src={tech.url} />
+                  <TechImage
+                    alt={tech.image_alt}
+                    key={i}
+                    onClick={(e) => console.log(e.target)}
+                    src={tech.image_url}
+                    title="Me pegue se for capaz!"
+                  />
                 )
             )}
           </div>
@@ -26,7 +32,7 @@ const Home = (): JSX.Element => {
         </S.AvatarBox>
       </div>
       <video autoPlay disablePictureInPicture loop muted>
-        <source src={workspace} type="video/mp4" />
+        <source src={code} type="video/mp4" />
       </video>
     </S.Home>
   );
