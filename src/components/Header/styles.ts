@@ -1,21 +1,22 @@
 import styled from "styled-components";
+import colors from "../../styles/colors";
+import fonts from "../../styles/fonts";
 
 export const Header = styled.header`
   animation: fade-in 1s ease-out;
   display: flex;
   height: 80px;
   justify-content: space-between;
-  width: 100%;
+  width: 1200px;
 
   span {
-    padding: 0 20px;
     display: flex;
     align-items: center;
     cursor: pointer;
     justify-content: center;
     font-size: 24px;
-    font-family: "Oswald";
-    color: white;
+    font-family: ${fonts.secondary};
+    color: ${colors.neutral};
   }
 
   nav {
@@ -26,17 +27,18 @@ export const Header = styled.header`
       height: inherit;
 
       li {
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: ${fonts.primary};
         align-items: center;
-        animation: separate 1s ease;
         border-bottom: 3px solid transparent;
         cursor: pointer;
         color: #c4c4c4;
         display: flex;
-        padding: 0 20px;
+        margin: 0 15px;
         transition: all 0.2s ease;
 
         &:hover {
+          color: ${colors.neutral};
+          border-color: ${colors.neutral};
         }
       }
     }
