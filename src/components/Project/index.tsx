@@ -1,11 +1,10 @@
 import * as S from "./styles";
-import { TitleBox } from "../../styles/global/Globals";
+import { TitleBox, ParallaxBox } from "../../styles/global";
 import projects from "../../content/projects.json";
 import { stackImages } from "../../assets";
 import { SiGithub } from "react-icons/si";
 import { BiLinkExternal } from "react-icons/bi";
-import { ParallaxBox } from "../../styles/global/Globals";
-import { abc } from "../../assets";
+import { workspace } from "../../assets";
 
 const Project = (): JSX.Element => {
   return (
@@ -14,12 +13,13 @@ const Project = (): JSX.Element => {
         <h3>Meus Projetos</h3>
         <h4>Alguns projetos pessoais que desenvolvi</h4>
       </TitleBox>
-      <ParallaxBox image={abc}>
+      <ParallaxBox image={workspace}>
         <S.ProjectBox>
           {projects.map((project, i) => (
             <div key={i}>
               <div>
                 <span>{project.name}</span>
+                <p>{project.description}</p>
                 <div>
                   <a
                     href={project.repository_url}

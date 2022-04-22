@@ -41,7 +41,7 @@ export const ProjectBox = styled.div`
         position: relative;
 
         a {
-          margin: 0 10px;
+          margin: 0 50px;
           transition: transform 0.25s ease;
           cursor: pointer;
           opacity: 1;
