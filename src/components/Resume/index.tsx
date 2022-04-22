@@ -1,6 +1,5 @@
 import * as S from "./styles";
-import { TitleBox } from "../../styles/global/Globals";
-import { ParallaxBox } from "../../styles/global/Globals";
+import { TitleBox, ParallaxBox } from "../../styles/global";
 import { resume } from "../../assets";
 
 const Resume = (): JSX.Element => {
