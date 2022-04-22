@@ -1,25 +1,28 @@
 import * as S from "./styles";
-import { TitleBox, TechImage } from "../../styles/global/Globals";
+import { TitleBox, TechImage, ParallaxBox } from "../../styles/global";
 import stack from "../../content/stack.json";
-import { ParallaxBox } from "../../styles/global/Globals";
-import { sla } from "../../assets";
+import { notebook } from "../../assets";
 
 const Stack = (): JSX.Element => {
   return (
     <S.Stack>
       <TitleBox>
         <h3>Minha Stack</h3>
-        <h4>
-          Tecnologias que costumo utilizar e meu nível de experiência nelas
-        </h4>
+        <h4>Tecnologias que utilizo e meu nível de experiência nelas</h4>
       </TitleBox>
-      <ParallaxBox image={sla}>
+      <ParallaxBox image={notebook}>
         <S.TechBox>
           {stack.map((tech, i) => (
-            <div key={i}>
-              <TechImage src={tech.url} alt={tech.alt} />
-              <span>{tech.name}</span>
-              <progress max="100" value={tech.domain_level}></progress>
+            <div key={i} title={`Saiba mais sobre ${tech.name}`}>
+              <a href={tech.url} rel="noreferrer" target="_blank">
+                <TechImage src={tech.image_url} alt={tech.image_alt} />
+                <span>{tech.name}</span>
+                <div>
+                  <S.DomainLevelBar progress={tech.domain_level}>
+                    <span>{tech.domain_level}%</span>
+                  </S.DomainLevelBar>
+                </div>
+              </a>
             </div>
           ))}
         </S.TechBox>
