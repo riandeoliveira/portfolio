@@ -17,7 +17,6 @@ export const TechBox = styled.div`
 
   div {
     a {
-      border: 2px solid ${colors.secondary};
       border-radius: 10px;
       height: 175px;
       width: 200px;
