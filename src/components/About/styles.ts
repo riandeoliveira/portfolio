@@ -11,7 +11,6 @@ export const About = styled.section`
     color: ${colors.neutral};
     line-height: 2em;
     font-family: ${fonts.primary}, ${fonts.default};
-    margin: auto;
     max-width: 1200px;
   }
 `;

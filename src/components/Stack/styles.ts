@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import colors from "../../styles/colors";
 import { DomainLevelBarProps } from "../../interfaces";
+import device from "media-query-sizes";
 
 export const Stack = styled.section`
   font-family: "Roboto";
@@ -10,10 +11,9 @@ export const TechBox = styled.div`
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(4, 1fr);
-  margin: 20px;
-  margin: auto;
-  padding: 20px;
-  width: 900px;
+  /* padding: 20px; */
+  justify-content: center;
+  max-width: 870px;
 
   div {
     a {
@@ -24,6 +24,7 @@ export const TechBox = styled.div`
       flex-direction: column;
       align-items: center;
       justify-content: space-evenly;
+
       background-color: ${colors.primary_light};
       transition: transform 0.25s ease;
       cursor: pointer;
@@ -43,6 +44,10 @@ export const TechBox = styled.div`
         width: 160px;
       }
     }
+  }
+
+  @media ${device.laptop} {
+    grid-template-columns: repeat(2, 0.23fr);
   }
 `;
 

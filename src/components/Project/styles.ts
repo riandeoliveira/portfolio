@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import device from "media-query-sizes";
 
 export const Project = styled.section`
   font-family: "Roboto";
@@ -9,8 +10,8 @@ export const ProjectBox = styled.div`
   padding: 20px;
   gap: 20px;
   grid-template-columns: repeat(2, 1fr);
-  width: 1200px;
-  margin: auto;
+  max-width: 1200px;
+  justify-items: center;
 
   div {
     transition: transform 0.25s ease;
@@ -81,5 +82,9 @@ export const ProjectBox = styled.div`
         opacity: 0.8;
       }
     }
+  }
+
+  @media ${device.laptopL} {
+    grid-template-columns: repeat(1, 1fr);
   }
 `;

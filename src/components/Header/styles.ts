@@ -1,13 +1,15 @@
 import styled from "styled-components";
 import colors from "../../styles/colors";
 import fonts from "../../styles/fonts";
+import device from "media-query-sizes";
 
 export const Header = styled.header`
   animation: fade-in 1s ease-out;
   display: flex;
   height: 80px;
   justify-content: space-between;
-  width: 1200px;
+  max-width: 1200px;
+  width: 100%;
 
   span {
     display: flex;
@@ -17,6 +19,7 @@ export const Header = styled.header`
     font-size: 24px;
     font-family: ${fonts.secondary};
     color: ${colors.neutral};
+    margin: 0 20px;
   }
 
   nav {
@@ -42,5 +45,9 @@ export const Header = styled.header`
         }
       }
     }
+  }
+
+  @media ${device.tablet} {
+    background-color: red;
   }
 `;

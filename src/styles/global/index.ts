@@ -48,5 +48,7 @@ export const ParallaxBox = styled.div<ParallaxBoxProps>`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 100px;
+  display: flex;
+  justify-content: center;
+  padding: 100px 20px;
 `;

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import colors from "../../styles/colors";
 import fonts from "../../styles/fonts";
+import device from "media-query-sizes";
 
 export const Home = styled.section`
   & > div {
@@ -25,6 +26,7 @@ export const Home = styled.section`
 
 export const ProfileBox = styled.div`
   color: ${colors.neutral};
+  margin: 0 20px;
 
   h2 {
     font-size: 64px;
@@ -38,24 +40,31 @@ export const ProfileBox = styled.div`
     font-size: 48px;
     font-family: ${fonts.quaternary}, ${fonts.default};
   }
+
+  @media ${device.laptop} {
+    h2 {
+      font-size: 48px;
+    }
+
+    h1 {
+      font-size: 36px;
+    }
+  }
 `;
 
 export const AvatarBox = styled.div`
+  margin: 0 20px;
+
   div {
     animation: orbit 10s infinite linear;
     display: flex;
     height: 320px;
     background-color: transparent;
-    width: 320px;
     margin-bottom: -310px;
 
     img {
       cursor: pointer;
       transition: transform 0.25s ease;
-
-      &:hover {
-        transform: scale(125%);
-      }
     }
   }
 
@@ -63,6 +72,23 @@ export const AvatarBox = styled.div`
     border-radius: 100%;
     border: 10px solid ${colors.primary};
     margin-bottom: 80px;
-    width: 300px;
+    max-width: 300px;
+    width: 100%;
+  }
+
+  @media ${device.mobileL} {
+    div {
+      height: 280px;
+      margin-bottom: -265px;
+
+      img {
+        width: 36px;
+      }
+    }
+
+    & > img {
+      border-width: 8px;
+      width: 250px;
+    }
   }
 `;

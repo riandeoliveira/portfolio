@@ -21,9 +21,7 @@ const Home = (): JSX.Element => {
                   <TechImage
                     alt={tech.image_alt}
                     key={i}
-                    onClick={(e) => console.log(e.target)}
                     src={tech.image_url}
-                    title="Me pegue se for capaz!"
                   />
                 )
             )}
