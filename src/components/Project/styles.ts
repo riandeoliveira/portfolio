@@ -20,14 +20,17 @@ export const ProjectBox = styled.div`
     div {
       align-items: center;
       background-color: black;
-      opacity: 0.8;
+      opacity: 0;
       color: white;
       flex-direction: column;
       position: absolute;
       width: inherit;
-      display: none;
+      display: flex;
       border-radius: 10px;
-      justify-content: center;
+      justify-content: space-between;
+      padding: 20px;
+      text-align: center;
+      transition: all 0.25s ease;
 
       span {
         padding: 30px;
@@ -36,9 +39,11 @@ export const ProjectBox = styled.div`
       }
 
       div {
+        height: 100px;
         display: flex;
         flex-direction: row;
         position: relative;
+        justify-content: center;
 
         a {
           margin: 0 50px;
@@ -73,7 +78,7 @@ export const ProjectBox = styled.div`
 
     &:hover {
       div {
-        display: flex;
+        opacity: 0.8;
       }
     }
   }
