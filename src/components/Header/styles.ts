@@ -24,12 +24,16 @@ export const Header = styled.header`
 
   nav {
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     ul {
       display: flex;
       height: inherit;
 
       li {
+        text-transform: uppercase;
         font-family: ${fonts.primary};
         align-items: center;
         border-bottom: 3px solid transparent;
@@ -45,9 +49,43 @@ export const Header = styled.header`
         }
       }
     }
+
+    svg {
+      margin: 0 20px;
+      display: none;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+    }
   }
 
   @media ${device.tablet} {
-    background-color: red;
+    nav {
+      ul {
+        position: absolute;
+        top: 80px;
+        height: auto;
+        background-color: #121214;
+        flex-direction: column;
+        width: 200px;
+        right: 20px;
+
+        li {
+          border: 0;
+          padding: 20px;
+          margin: 0;
+
+          &:hover {
+            background-color: white;
+            color: #121214;
+          }
+        }
+      }
+
+      svg {
+        color: white;
+        display: flex;
+      }
+    }
   }
 `;
