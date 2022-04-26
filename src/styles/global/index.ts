@@ -20,8 +20,8 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const TechImage = styled.img`
-  height: 50px;
-  width: 50px;
+  max-height: 50px;
+  max-width: 50px;
 `;
 
 export const TitleBox = styled.div`

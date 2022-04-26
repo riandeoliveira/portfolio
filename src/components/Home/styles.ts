@@ -50,6 +50,16 @@ export const ProfileBox = styled.div`
       font-size: 36px;
     }
   }
+
+  @media ${device.mobileM} {
+    h2 {
+      font-size: 36px;
+    }
+
+    h1 {
+      font-size: 24px;
+    }
+  }
 `;
 
 export const AvatarBox = styled.div`

@@ -11,15 +11,14 @@ export const TechBox = styled.div`
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(4, 1fr);
-  /* padding: 20px; */
   justify-content: center;
-  max-width: 870px;
 
   div {
     a {
       border-radius: 10px;
       height: 175px;
       width: 200px;
+      padding: 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -48,6 +47,10 @@ export const TechBox = styled.div`
 
   @media ${device.laptop} {
     grid-template-columns: repeat(2, 0.23fr);
+  }
+
+  @media ${device.mobileL} {
+    grid-template-columns: repeat(1, 0.23fr);
   }
 `;
 
