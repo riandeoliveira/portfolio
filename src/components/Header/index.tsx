@@ -27,16 +27,10 @@ const Header = (): JSX.Element => {
         {(toggleMenu || screenWidth >= 768) && (
           <ul>
             {nav_list.map((item, i) => (
-              <li
-                key={i}
-                onClick={() =>
-                  window.scrollTo({
-                    top: scroll_positions[i],
-                    behavior: "smooth",
-                  })
-                }
-              >
-                {item}
+              <li key={i}>
+                <a href={`#${nav_list[i]}`} rel="internal">
+                  {item}
+                </a>
               </li>
             ))}
           </ul>

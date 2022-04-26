@@ -35,17 +35,22 @@ export const Header = styled.header`
       li {
         text-transform: uppercase;
         font-family: ${fonts.primary};
-        align-items: center;
-        border-bottom: 3px solid transparent;
         cursor: pointer;
-        color: #c4c4c4;
-        display: flex;
         margin: 0 15px;
         transition: all 0.2s ease;
 
-        &:hover {
-          color: ${colors.neutral};
-          border-color: ${colors.neutral};
+        a {
+          border-bottom: 3px solid transparent;
+          color: #c4c4c4;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+
+          &:hover {
+            color: ${colors.neutral};
+            border-color: ${colors.neutral};
+          }
         }
       }
     }
@@ -71,13 +76,16 @@ export const Header = styled.header`
         right: 20px;
 
         li {
-          border: 0;
           padding: 20px;
           margin: 0;
 
           &:hover {
             background-color: white;
-            color: #121214;
+
+            a {
+              border: 0;
+              color: #121214;
+            }
           }
         }
       }

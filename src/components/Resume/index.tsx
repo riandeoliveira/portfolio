@@ -4,7 +4,7 @@ import { resume } from "../../assets";
 
 const Resume = (): JSX.Element => {
   return (
-    <S.Resume>
+    <S.Resume id="Currículo">
       <TitleBox>
         <h3>Meu Currículo</h3>
         <h4>Mais informações sobre mim</h4>

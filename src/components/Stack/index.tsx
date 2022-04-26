@@ -5,7 +5,7 @@ import { notebook } from "../../assets";
 
 const Stack = (): JSX.Element => {
   return (
-    <S.Stack>
+    <S.Stack id="Tecnologias">
       <TitleBox>
         <h3>Minha Stack</h3>
         <h4>Tecnologias que utilizo e meu nível de experiência nelas</h4>

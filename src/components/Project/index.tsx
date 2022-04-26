@@ -8,7 +8,7 @@ import { workspace } from "../../assets";
 
 const Project = (): JSX.Element => {
   return (
-    <S.Project>
+    <S.Project id="Projetos">
       <TitleBox>
         <h3>Meus Projetos</h3>
         <h4>Alguns projetos pessoais que desenvolvi</h4>

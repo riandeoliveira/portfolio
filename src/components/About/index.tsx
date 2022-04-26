@@ -4,7 +4,7 @@ import { nightSky } from "../../assets";
 
 const About = (): JSX.Element => {
   return (
-    <S.About>
+    <S.About id="Sobre">
       <TitleBox>
         <h3>Quem Sou Eu</h3>
         <h4>Um pouco sobre mim</h4>
