@@ -1,6 +1,5 @@
 import * as S from "./styles";
 import nav_list from "../../content/nav_list.json";
-import scroll_positions from "../../content/scroll_positions.json";
 import { BiMenu } from "react-icons/bi";
 import { useState, useEffect } from "react";
 
