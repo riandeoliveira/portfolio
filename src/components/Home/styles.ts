@@ -80,7 +80,7 @@ export const AvatarBox = styled.div`
 
   & > img {
     border-radius: 100%;
-    border: 10px solid ${colors.primary};
+    border: 8px solid ${colors.primary};
     margin-bottom: 80px;
     max-width: 300px;
     width: 100%;
