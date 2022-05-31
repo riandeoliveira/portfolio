@@ -11,7 +11,7 @@ const About = (): JSX.Element => {
       </TitleBox>
       <ParallaxBox image={nightSky}>
         <p>
-          Olá, Mundo! Meu nome é Rian, tenho 20 anos e sou um Desenvolvedor
+          Olá, Mundo! Meu nome é Rian, tenho 21 anos e sou um Desenvolvedor
           Front-End. Estou cursando o 3º semestre de Ciência da Computação pelo
           Centro Universitário Cesuca, em Cachoeirinha, RS. Ao longo de um ano
           tenho procurado me especializar nas tecnologias fundamentais da web:

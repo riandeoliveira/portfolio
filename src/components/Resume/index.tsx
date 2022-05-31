@@ -14,7 +14,7 @@ const Resume = (): JSX.Element => {
           <iframe
             allow="autoplay"
             height="480"
-            src="https://drive.google.com/file/d/1rWMGPnDs9gT283Iurq9B648n4gfcBMKt/preview"
+            src="https://drive.google.com/file/d/1f8V9Z6VrjCl3WWdCtDJUVEIha6tZVYMf/preview"
             title="Rian Oliveira's resume"
             width="640"
           ></iframe>
