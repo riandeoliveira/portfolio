@@ -1,7 +1,5 @@
-.env
 .next
 .swc
-.vercel
 /build
 /coverage
 /dist
