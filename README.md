@@ -1,5 +1,5 @@
 <div align="center">
-  <h1><PROJECT_NAME></h1>
+  <h1>Portfolio</h1>
 </div>
 
 ## 📚 Sobre
@@ -107,4 +107,4 @@
 
 <br>
 
-<p align="center">✨ Made with 💙 by <a href="https://github.com/<GITHUB_USERNAME>"><strong><AUTHOR></strong></a> ✨</p>
+<p align="center">✨ Made with 💙 by <a href="https://github.com/riandeoliveira"><strong>Rian Oliveira</strong></a> ✨</p>

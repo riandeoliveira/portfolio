@@ -4,12 +4,12 @@ const Document = (): JSX.Element => {
   return (
     <Html lang="pt-br">
       <Head>
-        <meta name="description" content="<DESCRIPTION>" />
+        <meta name="description" content="Meu portfólio pessoal." />
         <meta
           name="keywords"
           content="React, NextJS, TypeScript, TailwindCSS"
         />
-        <meta name="author" content="<AUTHOR>" />
+        <meta name="author" content="Rian Oliveira" />
         <meta name="theme-color" content="#18181b" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
