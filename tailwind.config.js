@@ -8,8 +8,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      boxShadow: {
+        neon: "0px 0px 24px #EF2EF2",
+      },
       colors: {
-        "primary-500": "#006aeb",
+        "black-alpha": "#060526",
+        "cyan-alpha": "#05F2DB",
+        "pink-alpha": "#EF2EF2",
+        "purple-alpha": "#7338F2",
+        "purple-dark-alpha": "#361973",
       },
       fontFamily: {
         primary: ["Roboto", "sans-serif"],

@@ -7,3 +7,4 @@
 /dist
 /node_modules
 runme.sh
+yarn.lock
