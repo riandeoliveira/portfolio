@@ -1,24 +1,66 @@
 // Animations and transitions
 
-$default-transition: background-color 0.3s ease, box-shadow 0.3s ease;
+$gradient-animation: gradient 15s ease infinite;
 $pulse-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+$rotate-primary-avatar: rotate-primary-avatar 2s forwards;
+$rotate-secondary-avatar: rotate-secondary-avatar 2s forwards;
+$toggle-primary-avatar: toggle-primary-avatar 2s forwards;
+$toggle-secondary-avatar: toggle-secondary-avatar 2s forwards;
 
-@mixin gradient {
-  @keyframes gradient {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 
 @keyframes pulse {
   50% {
     opacity: 0.5;
+  }
+}
+
+@keyframes rotate-primary-avatar {
+  from {
+    transform: rotateY(0deg);
+  }
+
+  to {
+    transform: rotateY(180deg);
+  }
+}
+
+@keyframes rotate-secondary-avatar {
+  from {
+    transform: rotateY(180deg);
+  }
+
+  to {
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes toggle-primary-avatar {
+  from {
+    z-index: 1;
+  }
+
+  to {
+    z-index: 0;
+  }
+}
+
+@keyframes toggle-secondary-avatar {
+  from {
+    z-index: 0;
+  }
+
+  to {
+    z-index: 1;
   }
 }
