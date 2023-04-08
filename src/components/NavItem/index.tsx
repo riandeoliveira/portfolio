@@ -12,12 +12,15 @@ type NavItemProps = {
 export const NavItem = ({ section, children }: NavItemProps): JSX.Element => {
   const sectionStore: State.Section = useSectionStore();
 
+  const selectedSection: string =
+    sectionStore.selected === section ? styles.selected : "";
+
   return (
     <li className={styles.item}>
       <button
         type="button"
         onClick={() => sectionStore.select(section)}
-        className={styles.button}
+        className={`${styles.button} ${selectedSection}`}
       >
         {children}
       </button>

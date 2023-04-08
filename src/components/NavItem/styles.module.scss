@@ -16,11 +16,11 @@
   padding: 8rem;
   transition: background-color 0.1s ease;
 
-  &:focus {
-    background-color: $purple;
-  }
-
   &:hover {
     background-color: $purple;
   }
+}
+
+.selected {
+  background-color: $purple;
 }
