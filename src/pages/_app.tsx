@@ -1,9 +1,6 @@
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import { Provider } from "react-redux";
-import { store } from "redux/store";
-import "styles/globals.css";
-import "swiper/css";
+import "styles/_global.scss";
 
 const App = ({ Component, pageProps }: AppProps): JSX.Element => {
   return (
@@ -11,9 +8,7 @@ const App = ({ Component, pageProps }: AppProps): JSX.Element => {
       <Head>
         <title>Portfolio</title>
       </Head>
-      <Provider store={store}>
-        <Component {...pageProps} />
-      </Provider>
+      <Component {...pageProps} />
     </>
   );
 };

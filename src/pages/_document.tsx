@@ -4,7 +4,7 @@ const Document = (): JSX.Element => {
   return (
     <Html lang="pt-br">
       <Head>
-        <meta name="description" content="Meu portfólio pessoal." />
+        <meta name="description" content="Este é meu portfólio pessoal." />
         <meta
           name="keywords"
           content="React, NextJS, TypeScript, TailwindCSS"
