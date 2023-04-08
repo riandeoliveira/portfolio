@@ -52,11 +52,6 @@
         <br>
         <span>JavaScript</span>
       </td>
-      <td align="center" width="110" height="110">
-        <img src="https://skillicons.dev/icons?i=react" />
-        <br>
-        <span>React</span>
-      </td>
     </tr>
     <tr>
       <td align="center" width="110" height="110">
@@ -65,41 +60,31 @@
         <span>Markdown</span>
       </td>
       <td align="center" width="110" height="110">
-        <img src="https://skillicons.dev/icons?i=tailwind" />
+        <img src="https://skillicons.dev/icons?i=sass" />
         <br>
-        <span>TailwindCSS</span>
+        <span>SASS</span>
       </td>
       <td align="center" width="110" height="110">
         <img src="https://skillicons.dev/icons?i=ts" />
         <br>
         <span>TypeScript</span>
       </td>
+    </tr>
+    <tr>
+      <td align="center" width="110" height="110">
+        <img src="https://skillicons.dev/icons?i=react" />
+        <br>
+        <span>React</span>
+      </td>
+      <td align="center" width="110" height="110">
+        <img src="https://skillicons.dev/icons?i=firebase" />
+        <br>
+        <span>Firebase</span>
+      </td>
       <td align="center" width="110" height="110">
         <img src="https://skillicons.dev/icons?i=next" />
         <br>
         <span>Next</span>
-      </td>
-    </tr>
-    <tr>
-      <td align="center" width="110" height="110">
-        <img src="https://skillicons.dev/icons?i=jest" />
-        <br>
-        <span>Jest</span>
-      </td>
-      <td align="center" width="110" height="110">
-        <img src="https://skillicons.dev/icons?i=mongodb" />
-        <br>
-        <span>MongoDB</span>
-      </td>
-      <td align="center" width="110" height="110">
-        <img src="https://skillicons.dev/icons?i=nodejs" />
-        <br>
-        <span>NodeJS</span>
-      </td>
-      <td align="center" width="110" height="110">
-        <img src="https://skillicons.dev/icons?i=prisma" />
-        <br>
-        <span>Prisma</span>
       </td>
     </tr>
   </tbody>
