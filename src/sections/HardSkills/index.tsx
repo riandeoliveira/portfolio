@@ -16,8 +16,8 @@ export const HardSkills = (): JSX.Element => {
       <svg
         className={styles.svg}
         width="1125"
-        height="2275"
-        viewBox="0 0 200 200"
+        height="1125"
+        viewBox="0 0 200 1"
         style={{ position: "absolute" }}
       >
         <path
@@ -45,8 +45,8 @@ export const HardSkills = (): JSX.Element => {
       <svg
         className={styles.svg}
         width="1125"
-        height="2275"
-        viewBox="0 0 200 200"
+        height="1125"
+        viewBox="0 0 200 1"
         style={{ position: "absolute", translate: "0 960px" }}
       >
         <path
@@ -74,8 +74,8 @@ export const HardSkills = (): JSX.Element => {
       <svg
         className={styles.svg}
         width="1125"
-        height="2275"
-        viewBox="0 0 200 200"
+        height="1125"
+        viewBox="0 0 200 1"
         style={{ position: "absolute", translate: "0 1920px" }}
       >
         <path
@@ -103,8 +103,8 @@ export const HardSkills = (): JSX.Element => {
       <svg
         className={styles.svg}
         width="1125"
-        height="2275"
-        viewBox="0 0 200 200"
+        height="1125"
+        viewBox="0 0 200 1"
         style={{ position: "absolute", translate: "0 2880px" }}
       >
         <path
@@ -132,8 +132,8 @@ export const HardSkills = (): JSX.Element => {
       <svg
         className={styles.svg}
         width="1125"
-        height="2275"
-        viewBox="0 0 200 200"
+        height="1125"
+        viewBox="0 0 200 1"
         style={{ position: "absolute", translate: "0 3840px" }}
       >
         <path
