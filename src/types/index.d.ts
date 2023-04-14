@@ -6,6 +6,12 @@ export type SectionType =
   | "hard_skills"
   | "soft_skills";
 
+export type TechnologyType = {
+  id: number;
+  name: string;
+  icon: any;
+};
+
 export type UserType = {
   id: string;
   name: string;

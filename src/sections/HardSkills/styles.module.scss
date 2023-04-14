@@ -1,0 +1,36 @@
+@use "../../styles" as *;
+
+.section {
+  background-color: $darkest-purple;
+  border-radius: 10rem;
+  display: flex;
+  flex-direction: column;
+  gap: 32rem;
+  z-index: 0;
+  padding: 32rem;
+}
+
+.title {
+  animation: $fade-in-animation;
+  font-size: 24rem;
+  font-weight: 500;
+}
+.section_container {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 128rem;
+  width: 600rem;
+}
+
+.sla {
+  filter: drop-shadow(0 0 5px $pink);
+}
+
+.svg {
+  z-index: -1;
+}
