@@ -4,11 +4,11 @@ import { create } from "zustand";
 
 export const useSectionStore = create<State.Section>((set) => {
   return {
-    selected: "about_me",
+    name: "about_me",
 
-    select(section: SectionType): void {
+    select(name: SectionType): void {
       set({
-        selected: section,
+        name,
       });
     },
   };

@@ -13,7 +13,7 @@ export const NavItem = ({ section, children }: NavItemProps): JSX.Element => {
   const sectionStore: State.Section = useSectionStore();
 
   const selectedSection: string =
-    sectionStore.selected === section ? styles.selected : "";
+    sectionStore.name === section ? styles.selected : "";
 
   return (
     <li className={styles.item}>

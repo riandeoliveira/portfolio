@@ -2,8 +2,8 @@ import { SectionType, UserType } from "types";
 
 export namespace State {
   export type Section = {
-    selected: SectionType;
-    select(section: SectionType): void;
+    name: SectionType;
+    select(name: SectionType): void;
   };
 
   export type User = {
