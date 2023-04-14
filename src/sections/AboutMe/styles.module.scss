@@ -1,0 +1,25 @@
+@use "../../styles" as *;
+
+.section {
+  background-color: $darkest-purple;
+  border-radius: 10rem;
+  display: flex;
+  flex-direction: column;
+  gap: 32rem;
+  padding: 32rem;
+}
+
+.title {
+  animation: $fade-in-animation;
+  font-size: 24rem;
+  font-weight: 500;
+}
+
+.content {
+  animation: $fade-in-animation;
+  font-weight: 400;
+}
+
+.image {
+  animation: $fade-in-animation;
+}
