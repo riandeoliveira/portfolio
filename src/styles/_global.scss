@@ -16,6 +16,19 @@
   text-decoration: none;
 }
 
+::-webkit-scrollbar {
+  width: 12rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $dark-purple;
+  border-radius: 100rem;
+}
+
 :root {
   font-size: 6.25%; // => 16rem = 16px
 }

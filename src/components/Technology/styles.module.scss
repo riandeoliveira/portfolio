@@ -9,16 +9,31 @@
   cursor: pointer;
   display: flex;
   flex: 1;
+  justify-content: center;
+}
+
+.technology_label {
+  display: flex;
   flex-direction: column;
   gap: 12rem;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.2);
+  }
 }
 
 .technology {
   align-items: center;
   background-color: $dark-purple;
   border-radius: 100rem;
+  box-shadow: 0 0 48rem $dark-purple;
   display: flex;
   height: 80rem;
   justify-content: center;
   width: 80rem;
+}
+
+.label {
+  text-align: center;
 }

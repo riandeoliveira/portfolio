@@ -6,8 +6,9 @@
   display: flex;
   flex-direction: column;
   gap: 32rem;
+  height: 600rem;
+  overflow: auto;
   padding: 32rem;
-  z-index: 0;
 }
 
 .title {
@@ -15,47 +16,20 @@
   font-size: 24rem;
   font-weight: 500;
 }
+
+.content {
+  animation: $fade-in-animation;
+}
+
 .section_container {
   display: flex;
   justify-content: center;
 }
 
 .container {
+  animation: $fade-in-animation;
   display: flex;
   flex-direction: column;
-  gap: 128rem;
+  gap: 64rem;
   width: 600rem;
-}
-
-.tree_1 {
-  position: absolute;
-  z-index: -1;
-
-  & path {
-    filter: drop-shadow(0 0 5px $pink);
-  }
-}
-
-.tree_2 {
-  @extend .tree_1;
-
-  transform: translateY(960px);
-}
-
-.tree_3 {
-  @extend .tree_1;
-
-  transform: translateY(1920px);
-}
-
-.tree_4 {
-  @extend .tree_1;
-
-  transform: translateY(2880px);
-}
-
-.tree_5 {
-  @extend .tree_1;
-
-  transform: translateY(3840px);
 }

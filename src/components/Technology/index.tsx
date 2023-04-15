@@ -10,10 +10,12 @@ export const Technology = ({ list }: TechnologyProps): JSX.Element => {
     <div className={styles.technology_container}>
       {list.map(({ icon: Icon, name }, index) => (
         <div className={styles.container} key={index}>
-          <div className={styles.technology}>
-            <Icon />
+          <div className={styles.technology_label}>
+            <div className={styles.technology}>
+              <Icon />
+            </div>
+            <span className={styles.label}>{name}</span>
           </div>
-          <span>{name}</span>
         </div>
       ))}
     </div>
