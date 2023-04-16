@@ -1,9 +1,20 @@
-import { SectionType, UserType } from "types";
+import { ModalType, SectionType, TechnologyType, UserType } from "types";
 
 export namespace State {
+  export type Modal = {
+    technology: { opened: boolean };
+    close(modal: ModalType): void;
+    open(modal: ModalType): void;
+  };
+
   export type Section = {
     name: SectionType;
     select(name: SectionType): void;
+  };
+
+  export type Technology = {
+    technology: Omit<TechnologyType, "id">;
+    setTechnology(technology: Omit<TechnologyType, "id">): void;
   };
 
   export type User = {
