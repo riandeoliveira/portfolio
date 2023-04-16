@@ -1,5 +1,5 @@
-import { Technology } from "components/Technology";
-import { technologyTreeLevels } from "data/technologyTreeLevels";
+import { TechnologyArea } from "components/TechnologyArea";
+import { technologies } from "data/technologies";
 import styles from "./styles.module.scss";
 
 export const HardSkills = (): JSX.Element => {
@@ -16,9 +16,9 @@ export const HardSkills = (): JSX.Element => {
         suscipit itaque, cumque voluptatum fuga.
       </p>
       <div className={styles.section_container}>
-        <div className={styles.container}>
-          {technologyTreeLevels.map((technologies, index) => (
-            <Technology list={technologies} key={index} />
+        <div className={styles.technologies_container}>
+          {technologies.map((technologiesList, index) => (
+            <TechnologyArea technologies={technologiesList} key={index} />
           ))}
         </div>
       </div>
