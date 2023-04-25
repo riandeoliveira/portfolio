@@ -1,31 +1,36 @@
 @use "../../styles" as *;
 
-.background_container {
-  background-color: $opaque-black;
-  inset: 0;
-  min-height: 100vh;
-  position: absolute;
-  transition: all 0.05s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-}
-
 .modal {
   background-color: $purple;
   border-radius: 10rem;
+  display: flex;
   flex-direction: column;
+  gap: 18rem;
   left: 50%;
+  outline: 0;
   padding: 24rem;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
-  transition: all 0.1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  width: 600rem;
 }
 
-.open {
-  opacity: 1;
-  visibility: visible;
+.header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
 }
 
-.close {
-  opacity: 0;
-  visibility: hidden;
+.title {
+  font-size: 24rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+}
+
+.subtitle {
+  font-size: 18rem;
 }

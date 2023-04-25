@@ -1,4 +1,3 @@
-import { TechnologyModal } from "components/TechnologyModal";
 import { useModalStore } from "store/useModalStore";
 import { useTechnologyStore } from "store/useTechnologyStore";
 import { TechnologyType } from "types";
@@ -21,23 +20,20 @@ export const TechnologyArea = ({
         const { icon: Icon, title } = technology;
 
         return (
-          <>
-            <div className={styles.technology_container} key={index}>
-              <div
-                className={styles.technology}
-                onClick={() => {
-                  modalStore.open("technology");
-                  technologyStore.setTechnology(technology);
-                }}
-              >
-                <div className={styles.icon}>
-                  <Icon />
-                </div>
-                <span>{title}</span>
+          <div className={styles.technology_container} key={index}>
+            <div
+              className={styles.technology}
+              onClick={() => {
+                modalStore.open("technology");
+                technologyStore.setTechnology(technology);
+              }}
+            >
+              <div className={styles.icon}>
+                <Icon />
               </div>
+              <span>{title}</span>
             </div>
-            <TechnologyModal />
-          </>
+          </div>
         );
       })}
     </div>
