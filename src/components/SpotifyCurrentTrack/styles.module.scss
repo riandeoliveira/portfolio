@@ -17,12 +17,3 @@
   font-size: 20rem;
   font-weight: 500;
 }
-
-.spotify_link {
-  @include focus("small", $cyan);
-
-  border-radius: 6rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
