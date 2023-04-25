@@ -52,7 +52,7 @@
     "lines-around-comment": "error",
     "lines-between-class-members": "error",
     "max-classes-per-file": "error",
-    "max-lines": ["error", 500],
+    "max-lines": ["error", 1000],
     "max-params": ["error", 3],
     "new-parens": "error",
     "no-array-constructor": "error",
