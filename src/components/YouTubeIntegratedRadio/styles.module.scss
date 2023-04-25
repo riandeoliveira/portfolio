@@ -1,0 +1,57 @@
+@use "../../styles" as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10rem;
+  width: 300rem;
+}
+
+.title_container {
+  align-items: center;
+  display: flex;
+  gap: 12rem;
+  justify-content: center;
+}
+
+.title {
+  font-size: 20rem;
+  font-weight: 500;
+}
+
+.player_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.thumbnail {
+  border-radius: 3rem;
+}
+
+.player_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.play_button_container {
+  display: flex;
+  justify-content: center;
+}
+
+.play_button {
+  @include animated-background;
+  align-items: center;
+
+  background-color: transparent;
+  border-radius: 100rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  padding: 6rem;
+}
+
+.player {
+  display: none;
+}
