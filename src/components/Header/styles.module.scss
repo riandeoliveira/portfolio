@@ -4,6 +4,7 @@
   background-color: $darkest-purple;
   border-radius: 10rem;
   display: flex;
+  height: 192rem;
   justify-content: space-between;
   padding: 32rem;
 }
@@ -23,4 +24,12 @@
 .social_medias {
   display: flex;
   gap: 10rem;
+}
+
+.slider {
+  margin: 0;
+}
+
+.player {
+  display: none;
 }
