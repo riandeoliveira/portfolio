@@ -7,6 +7,15 @@ export namespace State {
     open(modal: ModalType): void;
   };
 
+  export type Player = {
+    lofiRadio: { playing: boolean };
+    synthwaveRadio: { playing: boolean };
+    pauseLofiRadio(): void;
+    pauseSynthwaveRadio(): void;
+    playLofiRadio(): void;
+    playSynthwaveRadio(): void;
+  };
+
   export type Section = {
     name: SectionType;
     select(name: SectionType): void;

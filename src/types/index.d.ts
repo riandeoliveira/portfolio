@@ -55,7 +55,10 @@ export type TechnologyType = {
   id: string;
   name: TechnologyNameType;
   title: string;
+  category: string;
+  about: string;
   description: string;
+  descoveryDate: string;
   icon: any;
 };
 
