@@ -1,3 +1,4 @@
+// import * as S from "./styles";
 import styles from "./styles.module.scss";
 
 export const Author = (): JSX.Element => {
@@ -5,6 +6,7 @@ export const Author = (): JSX.Element => {
     <div className={styles.author_container}>
       <div className={styles.title_container}>
         <h1 className={styles.title}>Rian Dias de Oliveira</h1>
+        {/* <S.Title>Rian Dias de Oliveira</S.Title> */}
         <hr className={styles.bar} />
       </div>
       <div className={styles.subtitle_container}>
