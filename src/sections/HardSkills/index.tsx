@@ -1,8 +1,11 @@
 import { TechnologyArea } from "components/TechnologyArea";
+import { TechnologyModal } from "components/TechnologyModal";
 import { technologies } from "data/technologies";
 import styles from "./styles.module.scss";
 
 export const HardSkills = (): JSX.Element => {
+  // TODO: Incluir descrição.
+
   return (
     <section className={styles.section}>
       <h3 className={styles.title}>Hard Skills 🛠️</h3>
@@ -22,6 +25,7 @@ export const HardSkills = (): JSX.Element => {
           ))}
         </div>
       </div>
+      <TechnologyModal />
     </section>
   );
 };
