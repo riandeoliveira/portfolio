@@ -6,6 +6,8 @@
   display: flex;
   flex-direction: column;
   gap: 32rem;
+  height: 600rem;
+  overflow: auto;
   padding: 32rem;
 }
 
@@ -17,6 +19,10 @@
 
 .content {
   animation: $fade-in-animation;
+}
+
+.link {
+  color: $cyan;
 }
 
 .image {
