@@ -1,6 +1,8 @@
+import { StyledComponentsRegistry } from "libs/registry";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import "styles/_global.scss";
+import "swiper/css";
 
 const App = ({ Component, pageProps }: AppProps): JSX.Element => {
   return (
@@ -8,7 +10,9 @@ const App = ({ Component, pageProps }: AppProps): JSX.Element => {
       <Head>
         <title>Portfolio</title>
       </Head>
-      <Component {...pageProps} />
+      <StyledComponentsRegistry>
+        <Component {...pageProps} />
+      </StyledComponentsRegistry>
     </>
   );
 };
