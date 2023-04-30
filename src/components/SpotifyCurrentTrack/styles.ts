@@ -1,19 +1,19 @@
-@use "../../styles" as *;
+import styled from "styled-components";
 
-.container {
+export const Box = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
+`;
 
-.title_container {
+export const TitleBox = styled.div`
   align-items: center;
   display: flex;
   gap: 12rem;
   justify-content: center;
-}
+`;
 
-.title {
+export const Title = styled.span`
   font-size: 20rem;
   font-weight: 500;
-}
+`;

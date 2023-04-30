@@ -1,7 +1,8 @@
-@use "../../styles" as *;
+import styled from "styled-components";
+import { theme } from "styles/theme";
 
-.list {
-  background-color: $darkest-purple;
+export const List = styled.ul`
+  background-color: ${theme.colors.darkest_purple};
   border-radius: 10rem;
   display: flex;
   justify-content: center;
@@ -15,4 +16,4 @@
     border-bottom-right-radius: 10rem;
     border-top-right-radius: 10rem;
   }
-}
+`;

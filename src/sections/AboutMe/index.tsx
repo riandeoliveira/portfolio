@@ -1,20 +1,12 @@
-import Image from "next/image";
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 import zzz from "./zzz.gif";
 
 export const AboutMe = (): JSX.Element => {
   return (
-    <section className={styles.section}>
-      <Image
-        src={zzz}
-        alt=""
-        width={500}
-        height={280}
-        className={styles.image}
-      />
-      <h3 className={styles.title}>Sobre Mim 🙋‍♂️</h3>
-      <h3>Minha História como Dev</h3>
-      <p className={styles.content}>
+    <S.Section>
+      <S.Image src={zzz} alt="" width={500} height={280} />
+      <S.Title>Sobre Mim 🙋‍♂️</S.Title>
+      <S.Content>
         Em 2020 eu concluiria meu último ano do ensino médio. Ainda estava
         indeciso sobre qual faculdade fazer, mas eu tinha ideia de que pudesse
         ser algo relacionado a tecnologia. No início daquele ano decidi
@@ -66,15 +58,14 @@ export const AboutMe = (): JSX.Element => {
         aprender, comecei a pensar que aquilo não era pra mim, que era difícil
         demais para alguém como eu. Quando eu estava prestes a desistir da área,
         recebi uma recomendação do Youtube de um vídeo do canal
-        <a
+        <S.Link
           href="https://www.youtube.com/@CursoemVideo"
           rel="external"
           target="_blank"
-          className={styles.link}
         >
           {" "}
           Curso em Vídeo{" "}
-        </a>
+        </S.Link>
         do professor Gustavo Guanabara. O vídeo era o primeiro do curso de HTML
         e CSS, linguagens das quais eu já tinha ouvido falar mas nunca pesquisei
         sobre. Depois de quase desistir da área, eu finalmente havia me
@@ -100,7 +91,7 @@ export const AboutMe = (): JSX.Element => {
         Em novembro de 2022, depois de uma longa busca, finalmente consegui
         minha primeira oportunidade na área, um estágio como Desenvolvedor Web.
         Desde então, continuo estudando ...
-      </p>
-    </section>
+      </S.Content>
+    </S.Section>
   );
 };

@@ -1,5 +1,5 @@
 import { SiSpotify } from "react-icons/si";
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
 type SpotifyCurrentTrackProps = {
   userId: string;
@@ -16,15 +16,15 @@ export const SpotifyCurrentTrack = ({
   // 3. Rádio Synthwave
 
   return (
-    <div className={styles.container}>
-      <div className={styles.title_container}>
-        <span className={styles.title}>Ouvindo agora no</span>
+    <S.Box>
+      <S.TitleBox>
+        <S.Title>Ouvindo agora no</S.Title>
         <SiSpotify size={24} fill="#1db954" />
-      </div>
+      </S.TitleBox>
       <img
         src={`https://spotify-github-profile.vercel.app/api/view?uid=${userId}&cover_image=true&theme=novatorem&show_offline=false&background_color=ffffff&interchange=true&bar_color=${barColor}&bar_color_cover=false`}
         alt="spotify-github-profile"
       />
-    </div>
+    </S.Box>
   );
 };

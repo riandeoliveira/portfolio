@@ -1,7 +1,8 @@
-@use "../../styles" as *;
+import styled from "styled-components";
+import { theme } from "styles/theme";
 
-.modal {
-  background-color: $purple;
+export const Modal = styled.div`
+  background-color: ${theme.colors.purple};
   border-radius: 10rem;
   display: flex;
   flex-direction: column;
@@ -13,24 +14,24 @@
   top: 50%;
   transform: translate(-50%, -50%);
   width: 600rem;
-}
+`;
 
-.header {
+export const Header = styled.div`
   align-items: center;
   display: flex;
   justify-content: space-between;
-}
+`;
 
-.title {
+export const Title = styled.h4`
   font-size: 24rem;
-}
+`;
 
-.content {
+export const Content = styled.div`
   display: flex;
   flex-direction: column;
   gap: 8rem;
-}
+`;
 
-.subtitle {
+export const Subtitle = styled.h5`
   font-size: 18rem;
-}
+`;

@@ -2,7 +2,7 @@ import { Modal } from "@mui/material";
 import { useModalStore } from "store/useModalStore";
 import { useTechnologyStore } from "store/useTechnologyStore";
 import { State } from "types/state";
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
 export const TechnologyModal = (): JSX.Element => {
   const modalStore: State.Modal = useModalStore();
@@ -17,26 +17,26 @@ export const TechnologyModal = (): JSX.Element => {
       open={modalStore.technology.opened}
       onClose={() => modalStore.close("technology")}
     >
-      <div className={styles.modal}>
-        <div className={styles.header}>
-          <div className={styles.header_container}>
-            <h4 className={styles.title}>{technologyStore.technology.title}</h4>
+      <S.Modal>
+        <S.Header>
+          <div>
+            <S.Title>{technologyStore.technology.title}</S.Title>
             <span>{technologyStore.technology.category}</span>
           </div>
           <Icon />
-        </div>
-        <div className={styles.content}>
-          <h5 className={styles.subtitle}>Sobre</h5>
+        </S.Header>
+        <S.Content>
+          <S.Subtitle>Sobre</S.Subtitle>
           <p>{technologyStore.technology.about}</p>
-        </div>
-        <div className={styles.content}>
+        </S.Content>
+        <S.Content>
           <p>{technologyStore.technology.description}</p>
-        </div>
-        <div className={styles.content}>
-          <h5 className={styles.subtitle}>Descoberto em</h5>
+        </S.Content>
+        <S.Content>
+          <S.Subtitle>Descoberto em</S.Subtitle>
           <span>{technologyStore.technology.descoveryDate}</span>
-        </div>
-      </div>
+        </S.Content>
+      </S.Modal>
     </Modal>
   );
 };

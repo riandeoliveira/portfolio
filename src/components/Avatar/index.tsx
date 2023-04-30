@@ -1,29 +1,17 @@
 import { useState } from "react";
-import PrimaryAvatar from "../../../public/assets/images/primary-avatar.svg";
-import SecondaryAvatar from "../../../public/assets/images/secondary-avatar.svg";
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
 export const Avatar = (): JSX.Element => {
-  const [avatarAnimation, setAvatarAnimation] = useState<string>("");
-
-  const handleRotation = (): void => {
-    if (avatarAnimation === styles.primary_rotation) {
-      setAvatarAnimation(styles.secondary_rotation);
-    } else if (avatarAnimation === styles.secondary_rotation) {
-      setAvatarAnimation(styles.primary_rotation);
-    } else {
-      setAvatarAnimation(styles.primary_rotation);
-    }
-  };
+  const [isRotating, setIsRotating] = useState<boolean | null>(null);
 
   return (
-    <div
-      className={`${styles.avatar_container} ${avatarAnimation}`}
-      onClick={handleRotation}
+    <S.Box
+      isRotating={isRotating}
+      onClick={() => setIsRotating((previousState) => !previousState)}
     >
-      <SecondaryAvatar className={styles.secondary_avatar} />
-      <PrimaryAvatar className={styles.primary_avatar} />
-      <div className={styles.avatar_background}></div>
-    </div>
+      <S.SecondaryAvatar isRotating={isRotating} />
+      <S.PrimaryAvatar />
+      <S.AvatarBackground />
+    </S.Box>
   );
 };

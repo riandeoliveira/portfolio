@@ -1,18 +1,19 @@
-@use "../../styles" as *;
+import styled from "styled-components";
+import { theme } from "styles/theme";
 
-.technology_area {
+export const Box = styled.div`
   display: flex;
-}
+`;
 
-.technology_container {
+export const TechnologyBox = styled.div`
   align-items: center;
   cursor: pointer;
   display: flex;
   flex: 1;
   justify-content: center;
-}
+`;
 
-.technology {
+export const Technology = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -22,15 +23,15 @@
   &:hover {
     transform: scale(1.2);
   }
-}
+`;
 
-.icon {
+export const Icon = styled.div`
   align-items: center;
-  background-color: $dark-purple;
+  background-color: ${theme.colors.dark_purple};
   border-radius: 100rem;
-  box-shadow: 0 0 48rem $dark-purple;
+  box-shadow: 0 0 48rem ${theme.colors.dark_purple};
   display: flex;
   height: 80rem;
   justify-content: center;
   width: 80rem;
-}
+`;

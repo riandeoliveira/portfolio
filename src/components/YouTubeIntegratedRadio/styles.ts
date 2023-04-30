@@ -1,57 +1,54 @@
-@use "../../styles" as *;
+import styled from "styled-components";
+import { theme } from "styles/theme";
 
-.container {
+export const Box = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 10rem;
   width: 300rem;
-}
+`;
 
-.title_container {
+export const TitleBox = styled.div`
   align-items: center;
   display: flex;
   gap: 12rem;
   justify-content: center;
-}
+`;
 
-.title {
+export const Title = styled.span`
   font-size: 20rem;
   font-weight: 500;
-}
+`;
 
-.player_container {
+export const MusicPlayerBox = styled.div`
   display: flex;
   justify-content: space-between;
-}
+`;
 
-.thumbnail {
+export const Thumbnail = styled.svg`
   border-radius: 3rem;
-}
+`;
 
-.player_content {
+export const MusicPlayerContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
+`;
 
-.play_button_container {
+export const PlayButtonBox = styled.div`
   display: flex;
   justify-content: center;
-}
+`;
 
-.play_button {
-  @include animated-background;
+export const PlayButton = styled.button`
   align-items: center;
-
   background-color: transparent;
   border-radius: 100rem;
   cursor: pointer;
   display: flex;
   justify-content: center;
   padding: 6rem;
-}
 
-.player {
-  display: none;
-}
+  ${theme.components.animated_background}
+`;

@@ -1,5 +1,5 @@
 import { FaPause, FaPlay } from "react-icons/fa";
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
 type YouTubeIntegratedRadioProps = {
   title: string;
@@ -16,28 +16,24 @@ export const YouTubeIntegratedRadio = ({
   onPause,
   playing,
   description,
-  thumbnail: Thumbnail,
+  thumbnail,
 }: YouTubeIntegratedRadioProps): JSX.Element => {
   return (
-    <div className={styles.container}>
-      <div className={styles.title_container}>
-        <span className={styles.title}>{title}</span>
-      </div>
-      <div className={styles.player_container}>
-        <Thumbnail className={styles.thumbnail} />
-        <div className={styles.player_content}>
+    <S.Box>
+      <S.TitleBox>
+        <S.Title>{title}</S.Title>
+      </S.TitleBox>
+      <S.MusicPlayerBox>
+        <S.Thumbnail as={thumbnail} />
+        <S.MusicPlayerContent>
           <span>{description}</span>
-          <div className={styles.play_button_container}>
-            <button
-              type="button"
-              onClick={playing ? onPause : onPlay}
-              className={styles.play_button}
-            >
+          <S.PlayButtonBox>
+            <S.PlayButton type="button" onClick={playing ? onPause : onPlay}>
               {playing ? <FaPause /> : <FaPlay />}
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
+            </S.PlayButton>
+          </S.PlayButtonBox>
+        </S.MusicPlayerContent>
+      </S.MusicPlayerBox>
+    </S.Box>
   );
 };

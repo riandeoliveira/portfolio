@@ -4,20 +4,20 @@ import type { NextPage } from "next";
 import { AboutMe } from "sections/AboutMe";
 import { HardSkills } from "sections/HardSkills";
 import { useSectionStore } from "store/useSectionStore";
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
 const Home: NextPage = (): JSX.Element => {
   const sectionStore = useSectionStore();
 
   return (
-    <div className={styles.page}>
-      <div className={styles.page_container}>
+    <S.Page>
+      <S.PageBox>
         <Header />
         <Navbar />
         {sectionStore.name === "about_me" && <AboutMe />}
         {sectionStore.name === "hard_skills" && <HardSkills />}
-      </div>
-    </div>
+      </S.PageBox>
+    </S.Page>
   );
 };
 

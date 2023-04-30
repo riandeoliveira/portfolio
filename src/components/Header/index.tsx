@@ -3,7 +3,6 @@ import { Avatar } from "components/Avatar";
 import { SocialMedia } from "components/SocialMedia";
 import { SpotifyCurrentTrack } from "components/SpotifyCurrentTrack";
 import { YouTubeIntegratedRadio } from "components/YouTubeIntegratedRadio";
-import dynamic from "next/dynamic";
 import {
   SiGithub,
   SiGmail,
@@ -14,23 +13,21 @@ import {
   SiWhatsapp,
 } from "react-icons/si";
 import { usePlayerStore } from "store/usePlayerStore";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { SwiperSlide } from "swiper/react";
 import lofiRadioThumbnail from "../../../public/assets/images/lofi-radio-thumbnail.svg";
 import synthwaveRadioThumbnail from "../../../public/assets/images/synthwave-radio-thumbnail.svg";
-import styles from "./styles.module.scss";
-
-const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
+import * as S from "./styles";
 
 export const Header = (): JSX.Element => {
   const playerStore = usePlayerStore();
 
   return (
-    <header className={styles.header}>
-      <div className={styles.header_container}>
+    <S.Header>
+      <S.HeaderBox>
         <Avatar />
-        <div className={styles.author}>
+        <S.Author>
           <Author />
-          <div className={styles.social_medias}>
+          <S.SocialMedias>
             <SocialMedia
               link="https://github.com/riandeoliveira"
               icon={SiGithub}
@@ -56,16 +53,15 @@ export const Header = (): JSX.Element => {
               link="https://open.spotify.com/user/riandias2016"
               icon={SiSpotify}
             />
-          </div>
-        </div>
-      </div>
-      <Swiper
+          </S.SocialMedias>
+        </S.Author>
+      </S.HeaderBox>
+      <S.Slider
         mousewheel
         direction="vertical"
         loop
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
-        className={styles.slider}
       >
         <SwiperSlide>
           <SpotifyCurrentTrack userId="riandias2016" barColor="ef2ef2" />
@@ -90,21 +86,19 @@ export const Header = (): JSX.Element => {
             onPause={playerStore.pauseSynthwaveRadio}
           />
         </SwiperSlide>
-      </Swiper>
-      <ReactPlayer
+      </S.Slider>
+      <S.MusicPlayer
         url="https://www.youtube.com/watch?v=jfKfPfyJRdk"
         playing={playerStore.lofiRadio.playing}
         width={300}
         height={128}
-        className={styles.player}
       />
-      <ReactPlayer
+      <S.MusicPlayer
         url="https://www.youtube.com/watch?v=MVPTGNGiI-4"
         playing={playerStore.synthwaveRadio.playing}
         width={300}
         height={128}
-        className={styles.player}
       />
-    </header>
+    </S.Header>
   );
 };

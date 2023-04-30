@@ -2,7 +2,7 @@ import { useModalStore } from "store/useModalStore";
 import { useTechnologyStore } from "store/useTechnologyStore";
 import { TechnologyType } from "types";
 import { State } from "types/state";
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
 type TechnologyProps = {
   technologies: TechnologyType[];
@@ -15,27 +15,26 @@ export const TechnologyArea = ({
   const technologyStore: State.Technology = useTechnologyStore();
 
   return (
-    <div className={styles.technology_area}>
+    <S.Box>
       {technologies.map((technology, index) => {
         const { icon: Icon, title } = technology;
 
         return (
-          <div className={styles.technology_container} key={index}>
-            <div
-              className={styles.technology}
+          <S.TechnologyBox key={index}>
+            <S.Technology
               onClick={() => {
                 modalStore.open("technology");
                 technologyStore.setTechnology(technology);
               }}
             >
-              <div className={styles.icon}>
+              <S.Icon>
                 <Icon />
-              </div>
+              </S.Icon>
               <span>{title}</span>
-            </div>
-          </div>
+            </S.Technology>
+          </S.TechnologyBox>
         );
       })}
-    </div>
+    </S.Box>
   );
 };

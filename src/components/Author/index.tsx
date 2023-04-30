@@ -1,18 +1,16 @@
-// import * as S from "./styles";
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
 export const Author = (): JSX.Element => {
   return (
-    <div className={styles.author_container}>
-      <div className={styles.title_container}>
-        <h1 className={styles.title}>Rian Dias de Oliveira</h1>
-        {/* <S.Title>Rian Dias de Oliveira</S.Title> */}
-        <hr className={styles.bar} />
-      </div>
-      <div className={styles.subtitle_container}>
-        <h2 className={styles.subtitle}>Desenvolvedor Web</h2>
-        <hr className={styles.bar} />
-      </div>
-    </div>
+    <S.Box>
+      <S.TitleBox>
+        <S.Title>Rian Dias de Oliveira</S.Title>
+        <S.Bar />
+      </S.TitleBox>
+      <S.SubtitleBox>
+        <S.Subtitle>Desenvolvedor Web</S.Subtitle>
+        <S.Bar />
+      </S.SubtitleBox>
+    </S.Box>
   );
 };
