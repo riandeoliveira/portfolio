@@ -1,25 +1,24 @@
 import { ProjectArea } from "components/ProjectArea";
 import { Section } from "components/Section";
 import { projects } from "data/projects";
-import { Pagination } from "swiper";
+import { Keyboard, Navigation, Pagination } from "swiper";
 import { SwiperSlide } from "swiper/react";
 import * as S from "./styles";
 
 export const ProjectsSection = (): JSX.Element => {
-  // BUG: As setas dos slides não estão funcionando corretamente!
-
   return (
     <Section title="Projetos 🚨">
       <S.Slider
         grabCursor
         spaceBetween={24}
         centeredSlides
+        keyboard={{ enabled: true }}
         navigation
         slidesPerView={1.5}
         pagination={{
           type: "fraction",
         }}
-        modules={[Pagination]}
+        modules={[Pagination, Navigation, Keyboard]}
       >
         {projects.map((project) => (
           <SwiperSlide key={project.id}>
