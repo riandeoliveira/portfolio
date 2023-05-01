@@ -5,7 +5,7 @@ import { Pagination } from "swiper";
 import { SwiperSlide } from "swiper/react";
 import * as S from "./styles";
 
-export const Projects = (): JSX.Element => {
+export const ProjectsSection = (): JSX.Element => {
   // TODO: Explorar ao máximo as opções de slide do Swiper e aprimorar a seção "Projetos"
 
   return (

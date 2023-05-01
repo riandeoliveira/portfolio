@@ -2,7 +2,7 @@ import { Section } from "components/Section";
 import * as S from "./styles";
 import zzz from "./zzz.gif";
 
-export const AboutMe = (): JSX.Element => {
+export const AboutMeSection = (): JSX.Element => {
   return (
     <Section title="Sobre Mim 🙋‍♂️">
       <S.Image src={zzz} alt="" width={500} height={280} />

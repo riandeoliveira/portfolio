@@ -4,7 +4,7 @@ import { TechnologyModal } from "components/TechnologyModal";
 import { technologies } from "data/technologies";
 import * as S from "./styles";
 
-export const HardSkills = (): JSX.Element => {
+export const HardSkillsSection = (): JSX.Element => {
   // TODO: Incluir descrição.
 
   return (
