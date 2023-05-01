@@ -24,8 +24,8 @@ export const sections: SectionType[] = [
   },
   {
     id: uuidv4(),
-    name: "hard_skills",
-    label: "Hard Skills",
+    name: "technologies",
+    label: "Tecnologias",
   },
   {
     id: uuidv4(),

@@ -1,4 +1,4 @@
-import { ProjectArea } from "components/ProjectArea";
+import { Project } from "components/Project";
 import { Section } from "components/Section";
 import { projects } from "data/projects";
 import { Keyboard, Navigation, Pagination } from "swiper";
@@ -20,9 +20,9 @@ export const ProjectsSection = (): JSX.Element => {
         }}
         modules={[Pagination, Navigation, Keyboard]}
       >
-        {projects.map((project) => (
-          <SwiperSlide key={project.id}>
-            <ProjectArea project={project} />
+        {projects.map((projectData) => (
+          <SwiperSlide key={projectData.id}>
+            <Project data={projectData} />
           </SwiperSlide>
         ))}
       </S.Slider>

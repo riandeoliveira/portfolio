@@ -4,12 +4,12 @@ import { SiGithub } from "react-icons/si";
 import { ProjectType } from "types";
 import * as S from "./styles";
 
-type ProjectAreaProps = {
-  project: ProjectType;
+type ProjectProps = {
+  data: ProjectType;
 };
 
-export const ProjectArea = ({
-  project: {
+export const Project = ({
+  data: {
     name,
     description,
     technologies_icons,
@@ -18,7 +18,7 @@ export const ProjectArea = ({
     release_date,
     image,
   },
-}: ProjectAreaProps): JSX.Element => {
+}: ProjectProps): JSX.Element => {
   const [hovered, setHovered] = useState<boolean>(false);
 
   return (

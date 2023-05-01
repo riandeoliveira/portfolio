@@ -18,7 +18,7 @@ export type SectionNameType =
   | "education"
   | "experience"
   | "projects"
-  | "hard_skills"
+  | "technologies"
   | "my_resume";
 
 export type SectionType = {

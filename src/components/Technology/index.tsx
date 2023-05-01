@@ -8,7 +8,7 @@ type TechnologyProps = {
   technologies: TechnologyType[];
 };
 
-export const TechnologyArea = ({
+export const Technology = ({
   technologies,
 }: TechnologyProps): JSX.Element => {
   const modalStore: State.Modal = useModalStore();
