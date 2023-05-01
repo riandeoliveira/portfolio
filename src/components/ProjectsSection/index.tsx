@@ -6,7 +6,7 @@ import { SwiperSlide } from "swiper/react";
 import * as S from "./styles";
 
 export const ProjectsSection = (): JSX.Element => {
-  // TODO: Explorar ao máximo as opções de slide do Swiper e aprimorar a seção "Projetos"
+  // BUG: As setas dos slides não estão funcionando corretamente!
 
   return (
     <Section title="Projetos 🚨">
