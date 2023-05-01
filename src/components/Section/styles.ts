@@ -26,7 +26,7 @@ export const TitleBox = styled.div`
 
 export const Title = styled.h3`
   font-size: 24px;
-  font-weight: 400;
+  font-weight: 500;
 `;
 
 export const Bar = styled.hr`

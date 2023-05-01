@@ -1,10 +1,10 @@
-import { Header } from "components/Header";
-import { NavItem } from "components/NavItem";
-import { sections } from "data/sections";
-import type { NextPage } from "next";
 import { AboutMeSection } from "components/AboutMeSection";
 import { HardSkillsSection } from "components/HardSkillsSection";
+import { Header } from "components/Header";
+import { NavItem } from "components/NavItem";
 import { ProjectsSection } from "components/ProjectsSection";
+import { sections } from "data/sections";
+import type { NextPage } from "next";
 import { useSectionStore } from "store/useSectionStore";
 import * as S from "./styles";
 
@@ -24,9 +24,11 @@ const Home: NextPage = (): JSX.Element => {
             ))}
           </S.List>
         </nav>
-        {sectionStore.name === "about_me" && <AboutMeSection />}
-        {sectionStore.name === "projects" && <ProjectsSection />}
-        {sectionStore.name === "hard_skills" && <HardSkillsSection />}
+        <main>
+          {sectionStore.name === "about_me" && <AboutMeSection />}
+          {sectionStore.name === "projects" && <ProjectsSection />}
+          {sectionStore.name === "hard_skills" && <HardSkillsSection />}
+        </main>
       </S.PageBox>
     </S.Page>
   );
