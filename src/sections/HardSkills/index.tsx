@@ -1,3 +1,4 @@
+import { Section } from "components/Section";
 import { TechnologyArea } from "components/TechnologyArea";
 import { TechnologyModal } from "components/TechnologyModal";
 import { technologies } from "data/technologies";
@@ -7,9 +8,7 @@ export const HardSkills = (): JSX.Element => {
   // TODO: Incluir descrição.
 
   return (
-    <S.Section>
-      <S.Title>Hard Skills 🛠️</S.Title>
-      <S.Bar />
+    <Section title="Hard Skills 🛠️">
       <S.SectionBox>
         <S.Technologies>
           {technologies.map((technologiesList, index) => (
@@ -18,6 +17,6 @@ export const HardSkills = (): JSX.Element => {
         </S.Technologies>
       </S.SectionBox>
       <TechnologyModal />
-    </S.Section>
+    </Section>
   );
 };

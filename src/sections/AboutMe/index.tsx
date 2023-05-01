@@ -1,11 +1,11 @@
+import { Section } from "components/Section";
 import * as S from "./styles";
 import zzz from "./zzz.gif";
 
 export const AboutMe = (): JSX.Element => {
   return (
-    <S.Section>
+    <Section title="Sobre Mim 🙋‍♂️">
       <S.Image src={zzz} alt="" width={500} height={280} />
-      <S.Title>Sobre Mim 🙋‍♂️</S.Title>
       <S.Content>
         Em 2020 eu concluiria meu último ano do ensino médio. Ainda estava
         indeciso sobre qual faculdade fazer, mas eu tinha ideia de que pudesse
@@ -92,6 +92,6 @@ export const AboutMe = (): JSX.Element => {
         minha primeira oportunidade na área, um estágio como Desenvolvedor Web.
         Desde então, continuo estudando ...
       </S.Content>
-    </S.Section>
+    </Section>
   );
 };

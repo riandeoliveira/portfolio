@@ -1,4 +1,5 @@
 import { ProjectArea } from "components/ProjectArea";
+import { Section } from "components/Section";
 import { projects } from "data/projects";
 import { Pagination } from "swiper";
 import { SwiperSlide } from "swiper/react";
@@ -8,8 +9,7 @@ export const Projects = (): JSX.Element => {
   // TODO: Explorar ao máximo as opções de slide do Swiper e aprimorar a seção "Projetos"
 
   return (
-    <S.Section>
-      <S.Title>Projetos</S.Title>
+    <Section title="Projetos 🚨">
       <S.Slider
         grabCursor
         spaceBetween={24}
@@ -27,6 +27,6 @@ export const Projects = (): JSX.Element => {
           </SwiperSlide>
         ))}
       </S.Slider>
-    </S.Section>
+    </Section>
   );
 };
