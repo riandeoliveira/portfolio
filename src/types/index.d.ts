@@ -1,5 +1,16 @@
 export type ModalType = "technology";
 
+export type ProjectType = {
+  id: string;
+  name: string;
+  description: string;
+  image: string;
+  technologies_icons: any[];
+  github_link: string;
+  website_link: string;
+  release_date: string;
+};
+
 export type SectionType =
   | "about_me"
   | "education"
