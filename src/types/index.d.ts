@@ -1,3 +1,5 @@
+import { IconType } from "react-icons";
+
 export type ModalType = "technology";
 
 export type ProjectType = {
@@ -18,6 +20,13 @@ export type SectionType =
   | "projects"
   | "hard_skills"
   | "soft_skills";
+
+export type SocialMediasType = {
+  id: string;
+  name: string;
+  url: string;
+  icon: IconType;
+};
 
 export type TechnologyNameType =
   | "bash"

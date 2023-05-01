@@ -1,17 +1,8 @@
 import { Author } from "components/Author";
 import { Avatar } from "components/Avatar";
-import { SocialMedia } from "components/SocialMedia";
 import { SpotifyCurrentTrack } from "components/SpotifyCurrentTrack";
 import { YouTubeIntegratedRadio } from "components/YouTubeIntegratedRadio";
-import {
-  SiGithub,
-  SiGmail,
-  SiInstagram,
-  SiLinkedin,
-  SiSpotify,
-  SiTwitter,
-  SiWhatsapp,
-} from "react-icons/si";
+import { socialMedias } from "data/social-medias";
 import { usePlayerStore } from "store/usePlayerStore";
 import { Pagination } from "swiper";
 import { SwiperSlide } from "swiper/react";
@@ -29,31 +20,17 @@ export const Header = (): JSX.Element => {
         <S.Author>
           <Author />
           <S.SocialMedias>
-            <SocialMedia
-              link="https://github.com/riandeoliveira"
-              icon={SiGithub}
-            />
-            <SocialMedia
-              link="https://www.linkedin.com/in/riandeoliveira/"
-              icon={SiLinkedin}
-            />
-            <SocialMedia
-              link="https://twitter.com/_MrBachelor_"
-              icon={SiTwitter}
-            />
-            <SocialMedia link="https://wa.me/5551991852873" icon={SiWhatsapp} />
-            <SocialMedia
-              link="mailto:riandiasdeoliveira2001@gmail.com"
-              icon={SiGmail}
-            />
-            <SocialMedia
-              link="https://www.instagram.com/rian.deoliveira/"
-              icon={SiInstagram}
-            />
-            <SocialMedia
-              link="https://open.spotify.com/user/riandias2016"
-              icon={SiSpotify}
-            />
+            {socialMedias.map(({ url, name, id, icon: Icon }) => (
+              <S.Link
+                href={url}
+                rel="external"
+                target="_blank"
+                title={name}
+                key={id}
+              >
+                <Icon size={20} />
+              </S.Link>
+            ))}
           </S.SocialMedias>
         </S.Author>
       </S.HeaderBox>
