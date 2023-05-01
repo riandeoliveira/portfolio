@@ -3,6 +3,7 @@ import { Navbar } from "components/Navbar";
 import type { NextPage } from "next";
 import { AboutMe } from "sections/AboutMe";
 import { HardSkills } from "sections/HardSkills";
+import { Projects } from "sections/Projects";
 import { useSectionStore } from "store/useSectionStore";
 import * as S from "./styles";
 
@@ -15,6 +16,7 @@ const Home: NextPage = (): JSX.Element => {
         <Header />
         <Navbar />
         {sectionStore.name === "about_me" && <AboutMe />}
+        {sectionStore.name === "projects" && <Projects />}
         {sectionStore.name === "hard_skills" && <HardSkills />}
       </S.PageBox>
     </S.Page>

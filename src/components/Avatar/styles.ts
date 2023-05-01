@@ -10,7 +10,7 @@ type AvatarMotion = {
 export const Box = styled.div<AvatarMotion>`
   cursor: pointer;
   display: flex;
-  gap: 40rem;
+  gap: 40px;
 
   ${(props) => {
     if (props.isRotating) {
@@ -26,9 +26,9 @@ export const Box = styled.div<AvatarMotion>`
 `;
 
 const avatarStyles = css`
-  height: 128rem;
+  height: 128px;
   position: absolute;
-  width: 128rem;
+  width: 128px;
 
   & > rect {
     height: inherit;
@@ -58,10 +58,10 @@ export const PrimaryAvatar = styled(PrimaryAvatarSVG)`
 `;
 
 export const AvatarBackground = styled.div`
-  border-radius: 100rem;
-  box-shadow: 0 0 48rem ${theme.colors.pink};
-  height: 128rem;
-  width: 128rem;
+  border-radius: 100px;
+  box-shadow: 0 0 48px ${theme.colors.pink};
+  height: 128px;
+  width: 128px;
 
   ${theme.animations.pulse};
 `;

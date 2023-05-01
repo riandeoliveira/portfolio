@@ -13,6 +13,7 @@ import {
   SiWhatsapp,
 } from "react-icons/si";
 import { usePlayerStore } from "store/usePlayerStore";
+import { Pagination } from "swiper";
 import { SwiperSlide } from "swiper/react";
 import lofiRadioThumbnail from "../../../public/assets/images/lofi-radio-thumbnail.svg";
 import synthwaveRadioThumbnail from "../../../public/assets/images/synthwave-radio-thumbnail.svg";
@@ -60,6 +61,9 @@ export const Header = (): JSX.Element => {
         mousewheel
         direction="vertical"
         loop
+        centeredSlides
+        spaceBetween={100}
+        modules={[Pagination]}
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
       >

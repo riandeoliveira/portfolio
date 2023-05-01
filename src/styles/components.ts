@@ -14,14 +14,14 @@ export const components = {
   `,
 
   animated_button: css`
-    border-bottom: 3rem solid ${animatedButtonColor};
-    border-right: 3rem solid ${animatedButtonColor};
+    border-bottom: 3px solid ${animatedButtonColor};
+    border-right: 3px solid ${animatedButtonColor};
 
     &:active {
       border-bottom: none;
-      border-left: 3rem solid ${animatedButtonColor};
+      border-left: 3px solid ${animatedButtonColor};
       border-right: none;
-      border-top: 3rem solid ${animatedButtonColor};
+      border-top: 3px solid ${animatedButtonColor};
     }
   `,
 };

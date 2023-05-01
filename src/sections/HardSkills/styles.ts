@@ -3,23 +3,27 @@ import { theme } from "styles/theme";
 
 export const Section = styled.section`
   background-color: ${theme.colors.darkest_purple};
-  border-radius: 10rem;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
-  gap: 32rem;
-  height: 600rem;
+  gap: 32px;
+  height: 600px;
   overflow: auto;
-  padding: 32rem;
+  padding: 32px;
 `;
 
 export const Title = styled.h3`
-  animation: ${theme.animations.fade_in};
-  font-size: 24rem;
+  font-size: 24px;
   font-weight: 500;
+
+  ${theme.animations.fade_in}
 `;
 
-export const Content = styled.p`
-  animation: ${theme.animations.fade_in};
+export const Bar = styled.hr`
+  border-radius: 100px;
+  height: 1px;
+
+  ${theme.components.animated_background}
 `;
 
 export const SectionBox = styled.div`
@@ -28,9 +32,10 @@ export const SectionBox = styled.div`
 `;
 
 export const Technologies = styled.div`
-  animation: ${theme.animations.fade_in};
   display: flex;
   flex-direction: column;
-  gap: 64rem;
-  width: 600rem;
+  gap: 64px;
+  width: 600px;
+
+  ${theme.animations.fade_in};
 `;

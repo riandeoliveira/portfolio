@@ -17,7 +17,7 @@ export const Technology = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
-  gap: 12rem;
+  gap: 12px;
   transition: transform 0.2s ease;
 
   &:hover {
@@ -28,10 +28,10 @@ export const Technology = styled.div`
 export const Icon = styled.div`
   align-items: center;
   background-color: ${theme.colors.dark_purple};
-  border-radius: 100rem;
-  box-shadow: 0 0 48rem ${theme.colors.dark_purple};
+  border-radius: 100px;
+  box-shadow: 0 0 48px ${theme.colors.dark_purple};
   display: flex;
-  height: 80rem;
+  height: 80px;
   justify-content: center;
-  width: 80rem;
+  width: 80px;
 `;

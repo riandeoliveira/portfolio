@@ -16,11 +16,11 @@ export const TechnologyArea = ({
 
   return (
     <S.Box>
-      {technologies.map((technology, index) => {
+      {technologies.map((technology) => {
         const { icon: Icon, title } = technology;
 
         return (
-          <S.TechnologyBox key={index}>
+          <S.TechnologyBox key={technology.id}>
             <S.Technology
               onClick={() => {
                 modalStore.open("technology");

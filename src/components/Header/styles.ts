@@ -7,28 +7,28 @@ const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 export const Header = styled.header`
   background-color: ${theme.colors.darkest_purple};
-  border-radius: 10rem;
+  border-radius: 10px;
   display: flex;
-  height: 192rem;
+  height: 192px;
   justify-content: space-between;
-  padding: 32rem;
+  padding: 32px;
 `;
 
 export const HeaderBox = styled.div`
   display: flex;
-  gap: 24rem;
+  gap: 24px;
 `;
 
 export const Author = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 12rem;
+  gap: 12px;
   justify-content: center;
 `;
 
 export const SocialMedias = styled.div`
   display: flex;
-  gap: 10rem;
+  gap: 10px;
 `;
 
 export const Slider = styled(Swiper)`

@@ -3,17 +3,17 @@ import { theme } from "styles/theme";
 
 export const Modal = styled.div`
   background-color: ${theme.colors.purple};
-  border-radius: 10rem;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
-  gap: 18rem;
+  gap: 18px;
   left: 50%;
   outline: 0;
-  padding: 24rem;
+  padding: 24px;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 600rem;
+  width: 600px;
 `;
 
 export const Header = styled.div`
@@ -23,15 +23,15 @@ export const Header = styled.div`
 `;
 
 export const Title = styled.h4`
-  font-size: 24rem;
+  font-size: 24px;
 `;
 
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 8rem;
+  gap: 8px;
 `;
 
 export const Subtitle = styled.h5`
-  font-size: 18rem;
+  font-size: 18px;
 `;

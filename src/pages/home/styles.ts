@@ -7,13 +7,13 @@ export const Page = styled.div`
 `;
 
 export const PageBox = styled.div`
-  border-radius: 10rem;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
-  gap: 6rem;
-  margin-top: 32rem;
-  padding: 6rem;
-  width: 1200rem;
+  gap: 6px;
+  margin-top: 32px;
+  padding: 6px;
+  width: 1200px;
 
   ${theme.components.animated_background}
 `;

@@ -7,7 +7,7 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     color: ${theme.colors.white};
     font-family: ${theme.fonts.primary_group};
-    font-size: 16rem;
+    font-size: 16px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -15,7 +15,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   ::-webkit-scrollbar {
-    width: 12rem;
+    width: 12px;
   }
 
   ::-webkit-scrollbar-track {
@@ -24,11 +24,7 @@ export const GlobalStyle = createGlobalStyle`
 
   ::-webkit-scrollbar-thumb {
     background-color: ${theme.colors.dark_purple};
-    border-radius: 100rem;
-  }
-
-  :root {
-    font-size: 6.25%; // => 16rem = 16px
+    border-radius: 100px;
   }
 
   body {

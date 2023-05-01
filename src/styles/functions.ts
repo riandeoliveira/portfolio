@@ -27,7 +27,7 @@ export const functions = {
         transition: box-shadow 0.15s;
 
         &:focus-visible {
-          box-shadow: 0 0 0 4rem ${focusColor};
+          box-shadow: 0 0 0 4px ${focusColor};
         }
       `;
     }
@@ -35,7 +35,7 @@ export const functions = {
     if (size === "small") {
       return css`
         &:focus-visible {
-          outline: 2rem solid ${focusColor};
+          outline: 2px solid ${focusColor};
         }
       `;
     }

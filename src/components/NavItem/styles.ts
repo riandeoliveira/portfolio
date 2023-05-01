@@ -15,7 +15,7 @@ export const Button = styled.button<ButtonProps>`
   display: flex;
   flex: 1;
   justify-content: center;
-  padding: 8rem;
+  padding: 8px;
   transition: background-color 0.1s ease;
 
   background-color: ${(props) => {
