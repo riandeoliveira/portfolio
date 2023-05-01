@@ -29,7 +29,7 @@ export const sections: SectionType[] = [
   },
   {
     id: uuidv4(),
-    name: "soft_skills",
-    label: "Soft Skills",
+    name: "my_resume",
+    label: "Meu currículo",
   },
 ];

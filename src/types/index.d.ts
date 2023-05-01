@@ -19,7 +19,7 @@ export type SectionNameType =
   | "experience"
   | "projects"
   | "hard_skills"
-  | "soft_skills";
+  | "my_resume";
 
 export type SectionType = {
   id: string;
