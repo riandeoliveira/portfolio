@@ -3,11 +3,11 @@ import { theme } from "styles/theme";
 import PrimaryAvatarSVG from "../../../public/assets/images/primary-avatar.svg";
 import SecondaryAvatarSVG from "../../../public/assets/images/secondary-avatar.svg";
 
-type AvatarMotion = {
+type AvatarMotionProps = {
   isRotating: boolean | null;
 };
 
-export const Box = styled.div<AvatarMotion>`
+export const Box = styled.div<AvatarMotionProps>`
   cursor: pointer;
   display: flex;
   gap: 40px;
@@ -37,7 +37,7 @@ const avatarStyles = css`
   }
 `;
 
-export const SecondaryAvatar = styled(SecondaryAvatarSVG)<AvatarMotion>`
+export const SecondaryAvatar = styled(SecondaryAvatarSVG)<AvatarMotionProps>`
   ${avatarStyles}
 
   ${(props) => {

@@ -5,8 +5,6 @@ import { technologies } from "data/technologies";
 import * as S from "./styles";
 
 export const HardSkillsSection = (): JSX.Element => {
-  // TODO: Incluir descrição.
-
   return (
     <Section title="Hard Skills 🛠️">
       <S.SectionBox>

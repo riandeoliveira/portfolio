@@ -13,6 +13,7 @@ export const SectionBox = styled.div`
   display: flex;
   flex-direction: column;
   gap: 32px;
+  height: 100%;
 
   ${theme.animations.fade_in}
 `;
