@@ -1,11 +1,11 @@
 import { ReactNode } from "react";
 import { useSectionStore } from "store/useSectionStore";
-import { SectionType } from "types";
+import { SectionNameType } from "types";
 import { State } from "types/state";
 import * as S from "./styles";
 
 type NavItemProps = {
-  section: SectionType;
+  section: SectionNameType;
   children: ReactNode;
 };
 

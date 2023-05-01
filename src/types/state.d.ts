@@ -1,4 +1,4 @@
-import { ModalType, SectionType, TechnologyType, UserType } from "types";
+import { ModalType, SectionNameType, TechnologyType, UserType } from "types";
 
 export namespace State {
   export type Modal = {
@@ -17,8 +17,8 @@ export namespace State {
   };
 
   export type Section = {
-    name: SectionType;
-    select(name: SectionType): void;
+    name: SectionNameType;
+    select(name: SectionNameType): void;
   };
 
   export type Technology = {

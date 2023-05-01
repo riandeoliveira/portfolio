@@ -1,5 +1,6 @@
 import { Header } from "components/Header";
-import { Navbar } from "components/Navbar";
+import { NavItem } from "components/NavItem";
+import { sections } from "data/sections";
 import type { NextPage } from "next";
 import { AboutMe } from "sections/AboutMe";
 import { HardSkills } from "sections/HardSkills";
@@ -14,7 +15,15 @@ const Home: NextPage = (): JSX.Element => {
     <S.Page>
       <S.PageBox>
         <Header />
-        <Navbar />
+        <nav>
+          <S.List>
+            {sections.map(({ name, id, label }) => (
+              <NavItem section={name} key={id}>
+                {label}
+              </NavItem>
+            ))}
+          </S.List>
+        </nav>
         {sectionStore.name === "about_me" && <AboutMe />}
         {sectionStore.name === "projects" && <Projects />}
         {sectionStore.name === "hard_skills" && <HardSkills />}

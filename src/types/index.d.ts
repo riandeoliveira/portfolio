@@ -13,13 +13,19 @@ export type ProjectType = {
   release_date: string;
 };
 
-export type SectionType =
+export type SectionNameType =
   | "about_me"
   | "education"
   | "experience"
   | "projects"
   | "hard_skills"
   | "soft_skills";
+
+export type SectionType = {
+  id: string;
+  name: SectionNameType;
+  label: string;
+};
 
 export type SocialMediasType = {
   id: string;
