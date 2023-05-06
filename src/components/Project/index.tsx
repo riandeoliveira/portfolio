@@ -12,7 +12,7 @@ export const Project = ({
   data: {
     name,
     description,
-    technologies_icons,
+    skill_icons,
     github_link,
     website_link,
     release_date,
@@ -33,7 +33,7 @@ export const Project = ({
           <S.Title>{name}</S.Title>
           <S.Description>{description}</S.Description>
           <S.List>
-            {technologies_icons.map((Icon, index) => (
+            {skill_icons.map((Icon, index) => (
               <Icon key={index} />
             ))}
           </S.List>

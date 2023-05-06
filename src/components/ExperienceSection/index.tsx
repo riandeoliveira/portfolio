@@ -3,7 +3,7 @@ import * as S from "./styles";
 
 export const ExperienceSection = (): JSX.Element => {
   return (
-    <Section title="Experiência">
+    <Section title="Experiência 💼">
       <S.Section>
         <S.Experience>
           <S.RehagroLogo />

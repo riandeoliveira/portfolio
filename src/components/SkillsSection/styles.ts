@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
-export const SectionBox = styled.div`
+export const Section = styled.div`
   display: flex;
   justify-content: center;
+  padding-bottom: 32px;
 `;
 
-export const Technologies = styled.div`
+export const Skills = styled.div`
   display: flex;
   flex-direction: column;
   gap: 64px;

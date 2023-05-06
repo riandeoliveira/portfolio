@@ -14,7 +14,7 @@ export const projects: ProjectType[] = [
     description:
       "Simulador web totalmente funcional da Nova Urna Eletrônica que foi utilizada pela primeira vez nas Eleições Brasileiras de 2022.",
     image: "urna-eletronica.png",
-    technologies_icons: [
+    skill_icons: [
       javascriptLogo,
       nextjsLogo,
       reactLogo,
@@ -31,7 +31,7 @@ export const projects: ProjectType[] = [
     description:
       "Aplicação para pesquisar e favoritar filmes no Local Storage do navegador, fazendo uso da API do The Movie Database (TMDB).",
     image: "popular-movies.png",
-    technologies_icons: [
+    skill_icons: [
       javascriptLogo,
       nextjsLogo,
       reactLogo,
@@ -48,7 +48,7 @@ export const projects: ProjectType[] = [
     description:
       "Lista de Tarefas básica e funcional, com salvamento de dados no Local Storage do navegador.",
     image: "todo-list.png",
-    technologies_icons: [
+    skill_icons: [
       javascriptLogo,
       nextjsLogo,
       reactLogo,
@@ -65,7 +65,7 @@ export const projects: ProjectType[] = [
     description:
       "Página inicial de um website reponsivo e acessível para uma clínica médica fictícia.",
     image: "medicenter.png",
-    technologies_icons: [
+    skill_icons: [
       javascriptLogo,
       nextjsLogo,
       reactLogo,
@@ -81,7 +81,7 @@ export const projects: ProjectType[] = [
     name: "LinkedIn Clone",
     description: "Clone da página de perfil do LinkedIn.",
     image: "linkedin-clone.png",
-    technologies_icons: [
+    skill_icons: [
       javascriptLogo,
       nextjsLogo,
       reactLogo,
@@ -97,7 +97,7 @@ export const projects: ProjectType[] = [
     name: "OptimusTech",
     description: "Página completa de vagas da empresa fictícia OptimusTech.",
     image: "optimustech.png",
-    technologies_icons: [
+    skill_icons: [
       javascriptLogo,
       nextjsLogo,
       reactLogo,

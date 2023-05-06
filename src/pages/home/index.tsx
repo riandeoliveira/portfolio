@@ -4,7 +4,7 @@ import { Header } from "components/Header";
 import { MyResumeSection } from "components/MyResumeSection";
 import { NavItem } from "components/NavItem";
 import { ProjectsSection } from "components/ProjectsSection";
-import { TechnologiesSection } from "components/TechnologiesSection";
+import { SkillsSection } from "components/SkillsSection";
 import { sections } from "data/sections";
 import type { NextPage } from "next";
 import { useSectionStore } from "store/useSectionStore";
@@ -30,7 +30,7 @@ const Home: NextPage = (): JSX.Element => {
           {sectionStore.name === "about_me" && <AboutMeSection />}
           {sectionStore.name === "experience" && <ExperienceSection />}
           {sectionStore.name === "projects" && <ProjectsSection />}
-          {sectionStore.name === "technologies" && <TechnologiesSection />}
+          {sectionStore.name === "skills" && <SkillsSection />}
           {sectionStore.name === "my_resume" && <MyResumeSection />}
         </main>
       </S.PageBox>

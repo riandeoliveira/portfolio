@@ -5,24 +5,18 @@ export const Box = styled.div`
   display: flex;
 `;
 
-export const TechnologyBox = styled.div`
+export const SkillBox = styled.div`
   align-items: center;
-  cursor: pointer;
   display: flex;
   flex: 1;
   justify-content: center;
 `;
 
-export const Technology = styled.div`
+export const Skill = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  transition: transform 0.2s ease;
-
-  &:hover {
-    transform: scale(1.2);
-  }
 `;
 
 export const Icon = styled.div`

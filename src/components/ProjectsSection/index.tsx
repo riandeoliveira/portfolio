@@ -7,7 +7,7 @@ import * as S from "./styles";
 
 export const ProjectsSection = (): JSX.Element => {
   return (
-    <Section title="Projetos 🚨">
+    <Section title="Projetos 💡">
       <S.Slider
         grabCursor
         spaceBetween={24}
