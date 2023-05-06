@@ -71,7 +71,7 @@ export const Link = styled.a`
   transition: scale 0.2s ease;
 
   &:hover {
-    scale: 1.4;
+    scale: 1.25;
   }
 `;
 

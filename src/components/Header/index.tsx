@@ -1,3 +1,4 @@
+import { Tooltip, Zoom } from "@mui/material";
 import { Author } from "components/Author";
 import { Avatar } from "components/Avatar";
 import { SpotifyCurrentTrack } from "components/SpotifyCurrentTrack";
@@ -21,15 +22,11 @@ export const Header = (): JSX.Element => {
           <Author />
           <S.SocialMedias>
             {socialMedias.map(({ url, name, id, icon: Icon }) => (
-              <S.Link
-                href={url}
-                rel="external"
-                target="_blank"
-                title={name}
-                key={id}
-              >
-                <Icon size={20} />
-              </S.Link>
+              <Tooltip title={name} TransitionComponent={Zoom as any} key={id}>
+                <S.Link href={url} rel="external" target="_blank">
+                  <Icon size={20} />
+                </S.Link>
+              </Tooltip>
             ))}
           </S.SocialMedias>
         </S.Author>

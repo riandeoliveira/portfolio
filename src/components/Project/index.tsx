@@ -1,3 +1,4 @@
+import { Tooltip, Zoom } from "@mui/material";
 import { useState } from "react";
 import { FiExternalLink } from "react-icons/fi";
 import { SiGithub } from "react-icons/si";
@@ -40,12 +41,26 @@ export const Project = ({
         </S.Content>
         <S.Footer>
           <S.LinkBox>
-            <S.Link href={github_link} rel="external" target="_blank">
-              <SiGithub size={36} />
-            </S.Link>
-            <S.Link href={website_link} rel="external" target="_blank">
-              <FiExternalLink size={36} />
-            </S.Link>
+            <Tooltip
+              title="Acessar repositório"
+              placement="top"
+              arrow
+              TransitionComponent={Zoom as any}
+            >
+              <S.Link href={github_link} rel="external" target="_blank">
+                <SiGithub size={36} />
+              </S.Link>
+            </Tooltip>
+            <Tooltip
+              title="Acessar projeto"
+              placement="top"
+              arrow
+              TransitionComponent={Zoom as any}
+            >
+              <S.Link href={website_link} rel="external" target="_blank">
+                <FiExternalLink size={36} />
+              </S.Link>
+            </Tooltip>
           </S.LinkBox>
           <S.Date>Lançado em {release_date}</S.Date>
         </S.Footer>

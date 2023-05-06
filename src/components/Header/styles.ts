@@ -45,10 +45,9 @@ export const Link = styled.a`
   ${theme.functions.focus("small", theme.colors.cyan, "light")}
 
   &:hover {
-    scale: 1.5;
+    scale: 1.25;
   }
 `;
-
 
 export const Slider = styled(Swiper)`
   margin: 0;
