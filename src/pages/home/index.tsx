@@ -1,4 +1,5 @@
 import { AboutMeSection } from "components/AboutMeSection";
+import { ExperienceSection } from "components/ExperienceSection";
 import { Header } from "components/Header";
 import { MyResumeSection } from "components/MyResumeSection";
 import { NavItem } from "components/NavItem";
@@ -27,6 +28,7 @@ const Home: NextPage = (): JSX.Element => {
         </nav>
         <main>
           {sectionStore.name === "about_me" && <AboutMeSection />}
+          {sectionStore.name === "experience" && <ExperienceSection />}
           {sectionStore.name === "projects" && <ProjectsSection />}
           {sectionStore.name === "technologies" && <TechnologiesSection />}
           {sectionStore.name === "my_resume" && <MyResumeSection />}

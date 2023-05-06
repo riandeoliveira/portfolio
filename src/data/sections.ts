@@ -9,11 +9,6 @@ export const sections: SectionType[] = [
   },
   {
     id: uuidv4(),
-    name: "education",
-    label: "Educação",
-  },
-  {
-    id: uuidv4(),
     name: "experience",
     label: "Experiência",
   },

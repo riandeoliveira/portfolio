@@ -15,7 +15,6 @@ export type ProjectType = {
 
 export type SectionNameType =
   | "about_me"
-  | "education"
   | "experience"
   | "projects"
   | "technologies"
