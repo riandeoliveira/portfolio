@@ -7,7 +7,8 @@ export const Page = styled.div`
 `;
 
 export const PageBox = styled.div`
-  border-radius: 10px;
+  border-radius: 20px;
+  box-shadow: 0 0 36px ${theme.colors.purple};
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -20,17 +21,17 @@ export const PageBox = styled.div`
 
 export const List = styled.ul`
   background-color: ${theme.colors.darkest_purple};
-  border-radius: 10px;
+  border-radius: 20px;
   display: flex;
   justify-content: center;
 
   & li:first-of-type button {
-    border-bottom-left-radius: 10px;
-    border-top-left-radius: 10px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
   }
 
   & li:last-of-type button {
-    border-bottom-right-radius: 10px;
-    border-top-right-radius: 10px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
   }
 `;

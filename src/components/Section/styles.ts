@@ -3,7 +3,7 @@ import { theme } from "styles/theme";
 
 export const Section = styled.section`
   background-color: ${theme.colors.darkest_purple};
-  border-radius: 10px;
+  border-radius: 20px;
   height: 600px;
   overflow: auto;
   padding: 32px;
