@@ -1,21 +1,16 @@
 import { SkillType } from "types";
 import { v4 as uuidv4 } from "uuid";
-import bashLogo from "../../public/assets/icons/bash-logo.svg";
 import bootstrapLogo from "../../public/assets/icons/bootstrap-logo.svg";
-import cLogo from "../../public/assets/icons/c-logo.svg";
 import charpLogo from "../../public/assets/icons/csharp-logo.svg";
 import cssLogo from "../../public/assets/icons/css-logo.svg";
-import dockerLogo from "../../public/assets/icons/docker-logo.svg";
 import dotnetLogo from "../../public/assets/icons/dotnet-logo.svg";
 import expressjsLogo from "../../public/assets/icons/expressjs-logo.svg";
 import figmaLogo from "../../public/assets/icons/figma-logo.svg";
 import firebaseLogo from "../../public/assets/icons/firebase-logo.svg";
 import gitLogo from "../../public/assets/icons/git-logo.svg";
 import githubLogo from "../../public/assets/icons/github-logo.svg";
-import herokuLogo from "../../public/assets/icons/heroku-logo.svg";
 import htmlLogo from "../../public/assets/icons/html-logo.svg";
 import javascriptLogo from "../../public/assets/icons/javascript-logo.svg";
-import jestLogo from "../../public/assets/icons/jest-logo.svg";
 import laravelLogo from "../../public/assets/icons/laravel-logo.svg";
 import markdownLogo from "../../public/assets/icons/markdown-logo.svg";
 import materialUILogo from "../../public/assets/icons/materialui-logo.svg";
@@ -30,7 +25,6 @@ import pythonLogo from "../../public/assets/icons/python-logo.svg";
 import reactLogo from "../../public/assets/icons/react-logo.svg";
 import reduxLogo from "../../public/assets/icons/redux-logo.svg";
 import sassLogo from "../../public/assets/icons/sass-logo.svg";
-import sequelizeLogo from "../../public/assets/icons/sequelize-logo.svg";
 import sqliteLogo from "../../public/assets/icons/sqlite-logo.svg";
 import styledcomponentsLogo from "../../public/assets/icons/styled-components-logo.svg";
 import tailwindcssLogo from "../../public/assets/icons/tailwindcss-logo.svg";
@@ -39,8 +33,8 @@ import typescriptLogo from "../../public/assets/icons/typescript-logo.svg";
 import vercelLogo from "../../public/assets/icons/vercel-logo.svg";
 import viteLogo from "../../public/assets/icons/vite-logo.svg";
 import vscodeLogo from "../../public/assets/icons/vscode-logo.svg";
-import vuejsLogo from "../../public/assets/icons/vuejs-logo.svg";
-import webpackLogo from "../../public/assets/icons/webpack-logo.svg";
+
+// TODO: Remover assets não utilizados !!!
 
 export const skills: SkillType[][] = [
   [{ id: uuidv4(), title: "Firebase", icon: firebaseLogo }],
@@ -57,43 +51,29 @@ export const skills: SkillType[][] = [
     { id: uuidv4(), title: "ThreeJS", icon: threejsLogo },
     { id: uuidv4(), title: "Redux", icon: reduxLogo },
   ],
-  [{ id: uuidv4(), title: "C", icon: cLogo }],
-  [
-    { id: uuidv4(), title: "Bash", icon: bashLogo },
-    { id: uuidv4(), title: "Docker", icon: dockerLogo },
-  ],
-  [
-    { id: uuidv4(), title: "Jest", icon: jestLogo },
-    { id: uuidv4(), title: "VueJS", icon: vuejsLogo },
-    { id: uuidv4(), title: "TailwindCSS", icon: tailwindcssLogo },
-  ],
+  [{ id: uuidv4(), title: "TailwindCSS", icon: tailwindcssLogo }],
   [
     { id: uuidv4(), title: "NextJS", icon: nextjsLogo },
     { id: uuidv4(), title: "Vercel", icon: vercelLogo },
   ],
-  [{ id: uuidv4(), title: "Prisma", icon: prismaLogo }],
   [
     { id: uuidv4(), title: "Vite", icon: viteLogo },
+    { id: uuidv4(), title: "Prisma", icon: prismaLogo },
     { id: uuidv4(), title: "Styled Components", icon: styledcomponentsLogo },
   ],
   [
-    { id: uuidv4(), title: "Heroku", icon: herokuLogo },
     { id: uuidv4(), title: "TypeScript", icon: typescriptLogo },
     { id: uuidv4(), title: "SASS", icon: sassLogo },
   ],
+  [{ id: uuidv4(), title: "React", icon: reactLogo }],
   [
     { id: uuidv4(), title: "MongoDB", icon: mongodbLogo },
     { id: uuidv4(), title: "SQLite", icon: sqliteLogo },
   ],
-  [{ id: uuidv4(), title: "React", icon: reactLogo }],
-  [
-    { id: uuidv4(), title: "Bootstrap", icon: bootstrapLogo },
-    { id: uuidv4(), title: "Webpack", icon: webpackLogo },
-  ],
   [
     { id: uuidv4(), title: "ExpressJS", icon: expressjsLogo },
+    { id: uuidv4(), title: "Bootstrap", icon: bootstrapLogo },
     { id: uuidv4(), title: "NodeJS", icon: nodejsLogo },
-    { id: uuidv4(), title: "Sequelize", icon: sequelizeLogo },
   ],
   [
     { id: uuidv4(), title: "PHP", icon: phpLogo },
