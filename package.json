@@ -16,10 +16,9 @@
     "dev": "start http://localhost:3000 & next dev",
     "eslint": "next lint",
     "format": "prettier --write --ignore-unknown .",
-    "lint": "npm run format & npm run stylelint & npm run eslint",
+    "lint": "npm run format & npm run eslint",
     "prebuild": "npm run lint",
-    "start": "start http://localhost:3000 & next start",
-    "stylelint": "stylelint **/*.scss"
+    "start": "start http://localhost:3000 & next start"
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",
@@ -32,7 +31,6 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
-    "react-player": "^2.12.0",
     "sharp": "^0.32.0",
     "swiper": "^9.2.4",
     "uuid": "^9.0.0",
@@ -42,18 +40,14 @@
     "@types/node": "^18.15.11",
     "@types/react": "^18.0.33",
     "@types/react-dom": "^18.0.11",
-    "@types/sass": "^1.45.0",
     "@types/styled-components": "^5.1.26",
     "@types/uuid": "^9.0.1",
     "cypress": "^12.9.0",
     "eslint": "^8.37.0",
     "eslint-config-next": "^13.2.4",
     "eslint-plugin-cypress": "^2.13.2",
-    "postcss-scss": "^4.0.6",
     "prettier": "^2.8.7",
-    "sass": "^1.61.0",
     "styled-components": "^5.3.10",
-    "stylelint": "^15.4.0",
     "typescript": "^5.0.3"
   },
   "repository": {
