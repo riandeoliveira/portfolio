@@ -1,15 +1,6 @@
 import { SectionNameType, UserType } from "types";
 
 export namespace State {
-  export type Player = {
-    lofiRadio: { playing: boolean };
-    synthwaveRadio: { playing: boolean };
-    pauseLofiRadio(): void;
-    pauseSynthwaveRadio(): void;
-    playLofiRadio(): void;
-    playSynthwaveRadio(): void;
-  };
-
   export type Section = {
     name: SectionNameType;
     select(name: SectionNameType): void;
