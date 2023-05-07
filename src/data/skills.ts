@@ -34,8 +34,6 @@ import vercelLogo from "../../public/assets/icons/vercel-logo.svg";
 import viteLogo from "../../public/assets/icons/vite-logo.svg";
 import vscodeLogo from "../../public/assets/icons/vscode-logo.svg";
 
-// TODO: Remover assets não utilizados !!!
-
 export const skills: SkillType[][] = [
   [{ id: uuidv4(), title: "Firebase", icon: firebaseLogo }],
   [

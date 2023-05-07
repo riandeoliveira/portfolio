@@ -1,9 +1,15 @@
 import { Tooltip, Zoom } from "@mui/material";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import * as S from "./styles";
 
 export const Avatar = (): JSX.Element => {
   const [isRotating, setIsRotating] = useState<boolean | null>(null);
+
+  const handleRotating = () => {
+    setIsRotating((previousState) => !previousState);
+  };
+
+  useEffect(handleRotating, []);
 
   return (
     <Tooltip
@@ -12,10 +18,7 @@ export const Avatar = (): JSX.Element => {
       arrow
       TransitionComponent={Zoom as any}
     >
-      <S.Box
-        isRotating={isRotating}
-        onClick={() => setIsRotating((previousState) => !previousState)}
-      >
+      <S.Box isRotating={isRotating} onClick={handleRotating}>
         <S.SecondaryAvatar isRotating={isRotating} />
         <S.PrimaryAvatar />
         <S.AvatarBackground />

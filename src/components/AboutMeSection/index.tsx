@@ -25,9 +25,6 @@ export const AboutMeSection = (): JSX.Element => {
           >
             Baixar currículo <FiDownload size={18} />
           </S.DownloadButton>
-          {/* <Button variant="contained" endIcon={<FiDownload />}>
-            Baixar currículo
-          </Button> */}
         </S.Box>
         <S.Image
           src="/assets/images/cyberpunk-city.gif"
