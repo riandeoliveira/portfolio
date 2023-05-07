@@ -10,9 +10,9 @@ export const PageBox = styled.div`
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;
   margin-top: 32px;
-  padding: 6px;
+  padding: 4px;
   width: 1200px;
 
   ${theme.components.animated_background}

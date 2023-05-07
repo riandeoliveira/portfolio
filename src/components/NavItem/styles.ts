@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { theme } from "styles/theme";
 
 type ButtonProps = {
@@ -16,15 +16,20 @@ export const Button = styled.button<ButtonProps>`
   flex: 1;
   justify-content: center;
   padding: 8px;
-  transition: background-color 0.1s ease;
+  transition: background-color 0.15s ease;
 
-  background-color: ${(props) => {
+  ${(props) => {
     if (props.selectedButton) {
-      return theme.colors.purple;
+      return css`
+        background-color: ${theme.colors.purple};
+        box-shadow: 0 0 48px ${theme.colors.purple};
+      `;
     }
 
-    return "transparent";
-  }};
+    return css`
+      background-color: transparent;
+    `;
+  }}
 
   &:hover {
     background-color: ${theme.colors.purple};

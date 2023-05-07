@@ -12,11 +12,11 @@ export const TitleBox = styled.div`
   flex-direction: column;
   gap: 6px;
   width: fit-content;
-`;
+  `;
 
 export const Title = styled.h1`
   font-size: 32px;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 24px;
 `;
 

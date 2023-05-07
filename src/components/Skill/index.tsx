@@ -17,7 +17,7 @@ export const Skill = ({ skills }: SkillProps): JSX.Element => {
               <S.Icon>
                 <Icon />
               </S.Icon>
-              <span>{title}</span>
+              <S.Title>{title}</S.Title>
             </S.Skill>
           </S.SkillBox>
         );

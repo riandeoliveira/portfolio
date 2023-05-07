@@ -29,3 +29,7 @@ export const Icon = styled.div`
   justify-content: center;
   width: 80px;
 `;
+
+export const Title = styled.span`
+  font-size: 18px;
+`;

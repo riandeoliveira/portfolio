@@ -8,6 +8,7 @@ export const GlobalStyle = createGlobalStyle`
     color: ${theme.colors.white};
     font-family: ${theme.fonts.primary_group};
     font-size: 16px;
+    letter-spacing: 0.6px;
     list-style: none;
     margin: 0;
     padding: 0;
