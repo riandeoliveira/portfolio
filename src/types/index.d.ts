@@ -13,10 +13,8 @@ export type ProjectType = {
 
 export type SectionNameType =
   | "about_me"
-  | "experience"
   | "projects"
-  | "skills"
-  | "my_resume";
+  | "skills";
 
 export type SectionType = {
   id: string;
