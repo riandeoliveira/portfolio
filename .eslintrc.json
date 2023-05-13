@@ -49,7 +49,6 @@
     "key-spacing": "error",
     "keyword-spacing": "error",
     "line-comment-position": "error",
-    "lines-around-comment": "error",
     "lines-between-class-members": "error",
     "max-classes-per-file": "error",
     "max-lines": ["error", 1000],
