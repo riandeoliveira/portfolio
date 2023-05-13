@@ -4,14 +4,17 @@ const Document = (): JSX.Element => {
   return (
     <Html lang="pt-br">
       <Head>
-        <meta name="description" content="Este é meu portfólio pessoal." />
+        <meta
+          name="description"
+          content="Meu portfólio pessoal, com informações sobre mim, tecnologias que utilizo, meus projetos e links para minhas redes sociais."
+        />
         <meta
           name="keywords"
-          content="React, NextJS, TypeScript, TailwindCSS"
+          content="React, NextJS, TypeScript, Styled Components"
         />
         <meta name="author" content="Rian Oliveira" />
-        <meta name="theme-color" content="#18181b" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta name="theme-color" content="#060526" />
+        <link rel="icon" href="/favicon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
