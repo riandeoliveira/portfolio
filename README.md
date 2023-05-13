@@ -1,24 +1,14 @@
 <div align="center">
-  <h1>Portfolio</h1>
+  <h1>🚀 Portfólio 🚀</h1>
 </div>
 
 ## 📚 Sobre
 
-<!-- Uma breve descrição do seu projeto -->
-
-## 🏗️ Desenvolvimento
-
-<!-- Detalhes sobre o desenvolvimento -->
-
-## 🕹️ Possui as seguintes funcionalidades:
-
-- Funcionalidade 1
-- Funcionalidade 2
-- Funcionalidade 3
+Meu portfólio pessoal, com informações sobre mim, tecnologias que utilizo, meus projetos e links para minhas redes sociais.
 
 ## 📝 Notas
 
-<!-- Notas sobre o projeto -->
+Desenvolvido inicialmente em abril de 2022 e atualizado para sua segunda versão em maio de 2023.
 
 ## 🔎 Demonstração
 
@@ -52,6 +42,11 @@
         <br>
         <span>JavaScript</span>
       </td>
+      <td align="center" width="110" height="110">
+        <img src="https://skillicons.dev/icons?i=react" />
+        <br>
+        <span>React</span>
+      </td>
     </tr>
     <tr>
       <td align="center" width="110" height="110">
@@ -60,26 +55,14 @@
         <span>Markdown</span>
       </td>
       <td align="center" width="110" height="110">
-        <img src="https://skillicons.dev/icons?i=sass" />
+        <img src="https://skillicons.dev/icons?i=styledcomponents" />
         <br>
-        <span>SASS</span>
+        <span>Styled Components</span>
       </td>
       <td align="center" width="110" height="110">
         <img src="https://skillicons.dev/icons?i=ts" />
         <br>
         <span>TypeScript</span>
-      </td>
-    </tr>
-    <tr>
-      <td align="center" width="110" height="110">
-        <img src="https://skillicons.dev/icons?i=react" />
-        <br>
-        <span>React</span>
-      </td>
-      <td align="center" width="110" height="110">
-        <img src="https://skillicons.dev/icons?i=firebase" />
-        <br>
-        <span>Firebase</span>
       </td>
       <td align="center" width="110" height="110">
         <img src="https://skillicons.dev/icons?i=next" />
