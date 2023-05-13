@@ -13,12 +13,12 @@ Desenvolvido inicialmente em abril de 2022 e atualizado para sua segunda versão
 ## 🔎 Demonstração
 
 <div align="center">
-  <img src=".github/demo.gif" alt="Application demo GIF">
+  <img src=".github/demo.png" alt="Application demo PNG">
 </div>
 
 ## 💻 Como acessar
 
-<!-- Onde a sua aplicação está hospedada? -->
+A aplicação está hospedada na **Vercel** e pode ser acessada [aqui](https://portfolio-omega-murex-81.vercel.app/).
 
 ## 🛠️ Tecnologias utilizadas
 

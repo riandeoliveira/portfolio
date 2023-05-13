@@ -4,7 +4,7 @@
   "version": "2.0.0",
   "license": "MIT",
   "private": true,
-  "homepage": "<PROJECT_URL>",
+  "homepage": "https://portfolio-omega-murex-81.vercel.app/",
   "main": "src/pages/_app.tsx",
   "author": {
     "name": "Rian Oliveira",
