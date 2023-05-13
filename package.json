@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
-  "description": "Este é meu portfólio pessoal.",
-  "version": "0.1.0",
+  "description": "Meu portfólio pessoal, com informações sobre mim, tecnologias que utilizo, meus projetos e links para minhas redes sociais.",
+  "version": "2.0.0",
   "license": "MIT",
   "private": true,
   "homepage": "<PROJECT_URL>",
@@ -54,5 +54,13 @@
     "type": "git",
     "url": "https://github.com/riandeoliveira/Portfolio.git"
   },
-  "keywords": []
+  "keywords": [
+    "brazil",
+    "javascript",
+    "nextjs",
+    "portfolio",
+    "react",
+    "styled-components",
+    "typescript"
+  ]
 }
