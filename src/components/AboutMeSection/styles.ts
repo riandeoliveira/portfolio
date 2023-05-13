@@ -6,7 +6,6 @@ export const SectionBox = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 32px;
-  transition: all 0.15s ease;
 
   @media ${theme.devices.laptop_s} {
     flex-direction: column-reverse;
@@ -17,7 +16,6 @@ export const Box = styled.div`
   display: flex;
   flex-direction: column;
   gap: 18px;
-  transition: all 0.15s ease;
 
   @media ${theme.devices.laptop_s} {
     padding-bottom: 32px;
@@ -34,7 +32,6 @@ export const Description = styled.p`
   line-height: 28px;
   flex: 2;
   text-indent: 32px;
-  transition: all 0.15s ease;
 
   @media ${theme.devices.tablet_s} {
     font-size: 14px;
@@ -52,7 +49,6 @@ export const DownloadButton = styled.a`
   box-shadow: 0 0 48px ${theme.colors.dark_purple};
   cursor: pointer;
   border: 0.5px solid transparent;
-  transition: all 0.15s ease;
 
   ${theme.functions.focus("large", theme.colors.cyan, "light")}
 
@@ -73,7 +69,6 @@ export const Image = styled(NextImage)`
   flex: 1;
   box-shadow: 0 0 48px ${theme.colors.dark_purple};
   width: 100%;
-  transition: all 0.15s ease;
 
   @media ${theme.devices.laptop_s} {
     margin: auto;

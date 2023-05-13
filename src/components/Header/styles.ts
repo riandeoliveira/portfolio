@@ -8,7 +8,6 @@ export const Header = styled.header`
   min-height: 192px;
   justify-content: space-between;
   padding: 32px;
-  transition: all 0.15s ease;
 
   @media ${theme.devices.tablet_l} {
     flex-direction: column;
@@ -24,7 +23,6 @@ export const Header = styled.header`
 export const HeaderBox = styled.div`
   display: flex;
   gap: 24px;
-  transition: all 0.15s ease;
 
   @media ${theme.devices.tablet_s} {
     gap: 18px;
@@ -43,7 +41,6 @@ export const SocialMedias = styled.div`
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
-  transition: all 0.15s ease;
 
   @media ${theme.devices.tablet_s} {
     justify-content: center;
@@ -57,7 +54,7 @@ export const Link = styled.a`
   display: flex;
   height: 32px;
   justify-content: center;
-  transition: all 0.15s ease, scale 0.3s ease;
+  transition: scale 0.3s ease;
   width: 32px;
 
   ${theme.components.animated_background}

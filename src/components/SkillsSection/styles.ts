@@ -13,7 +13,6 @@ export const Skills = styled.div`
   gap: 64px;
   max-width: 600px;
   width: 100%;
-  transition: all 0.15s ease;
 
   @media ${theme.devices.tablet_s} {
     gap: 48px;

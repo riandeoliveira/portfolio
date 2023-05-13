@@ -17,7 +17,6 @@ export const TitleBox = styled.div`
 export const Title = styled.span`
   font-size: 20px;
   font-weight: 500;
-  transition: all 0.15s ease;
 
   @media ${theme.devices.tablet_s} {
     font-size: 18px;

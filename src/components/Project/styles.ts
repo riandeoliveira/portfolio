@@ -47,7 +47,6 @@ export const Title = styled.h4`
   font-size: 24px;
   font-weight: 400;
   text-align: center;
-  transition: all 0.15s ease;
 
   @media ${theme.devices.tablet_s} {
     font-size: 20px;
@@ -58,7 +57,6 @@ export const Description = styled.p`
   font-size: 18px;
   font-weight: 300;
   text-align: justify;
-  transition: all 0.15s ease;
 
   @media ${theme.devices.tablet_s} {
     font-size: 14px;
@@ -69,7 +67,6 @@ export const List = styled.ul`
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
-  transition: all 0.15s ease;
 
   @media ${theme.devices.tablet_s} {
     justify-content: center;
@@ -78,8 +75,6 @@ export const List = styled.ul`
 `;
 
 export const Icon = styled.div`
-  transition: all 0.15s ease;
-
   @media ${theme.devices.tablet_s} {
     scale: 0.8;
   }
@@ -109,7 +104,6 @@ export const Link = styled.a`
 export const Date = styled.span`
   text-align: center;
   font-weight: 300;
-  transition: all 0.15s ease;
 
   @media ${theme.devices.tablet_s} {
     font-size: 12px;

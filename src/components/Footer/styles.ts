@@ -9,8 +9,6 @@ export const Footer = styled.footer`
 `;
 
 export const Content = styled.span`
-  transition: all 0.15s ease;
-
   @media ${theme.devices.tablet_s} {
     font-size: 14px;
   }
