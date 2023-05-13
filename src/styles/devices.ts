@@ -1,12 +1,31 @@
 export const devices = {
-  desktop: "(max-width: 2560)",
-  laptop_l: "(max-width: 1440)",
-  laptop_m: "(max-width: 1280)",
-  laptop_s: "(max-width: 1024)",
-  tablet_l: "(max-width: 900)",
-  tablet_m: "(max-width: 768)",
-  tablet_s: "(max-width: 600)",
-  mobile_l: "(max-width: 425)",
-  mobile_m: "(max-width: 375)",
-  mobile_s: "(max-width: 320)",
+  /** 2560px */
+  desktop: "(max-width: 2560px)",
+
+  /** 1440px */
+  laptop_l: "(max-width: 1440px)",
+
+  /** 1280px */
+  laptop_m: "(max-width: 1280px)",
+
+  /** 1024px */
+  laptop_s: "(max-width: 1024px)",
+
+  /** 900px */
+  tablet_l: "(max-width: 900px)",
+
+  /** 768px */
+  tablet_m: "(max-width: 768px)",
+
+  /** 600px */
+  tablet_s: "(max-width: 600px)",
+
+  /** 425px */
+  mobile_l: "(max-width: 425px)",
+
+  /** 375px */
+  mobile_m: "(max-width: 375px)",
+
+  /** 320px */
+  mobile_s: "(max-width: 320px)",
 };
