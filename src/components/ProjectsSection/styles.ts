@@ -2,10 +2,6 @@ import styled from "styled-components";
 import { theme } from "styles/theme";
 import { Swiper } from "swiper/react";
 
-type SlideProps = {
-  width: number;
-};
-
 export const Slider = styled(Swiper)`
   width: 100%;
   padding-bottom: 50px;

@@ -34,11 +34,3 @@ export type SkillType = {
   title: string;
   icon: any;
 };
-
-export type UserType = {
-  id: string;
-  name: string;
-  email: string;
-  password: string;
-  authenticated: boolean;
-};

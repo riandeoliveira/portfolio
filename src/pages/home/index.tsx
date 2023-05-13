@@ -7,10 +7,11 @@ import { SkillsSection } from "components/SkillsSection";
 import { sections } from "data/sections";
 import type { NextPage } from "next";
 import { useSectionStore } from "store/useSectionStore";
+import { State } from "types/state";
 import * as S from "./styles";
 
 const Home: NextPage = (): JSX.Element => {
-  const sectionStore = useSectionStore();
+  const sectionStore: State.Section = useSectionStore();
 
   return (
     <S.Page>
