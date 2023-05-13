@@ -11,6 +11,8 @@ export const Box = styled.div<AvatarMotionProps>`
   cursor: pointer;
   display: flex;
   gap: 40px;
+  align-items: center;
+  transition: all 0.15s ease;
 
   ${(props) => {
     if (props.isRotating) {
@@ -23,12 +25,17 @@ export const Box = styled.div<AvatarMotionProps>`
 
     return "";
   }}
+
+  @media ${theme.devices.tablet_s} {
+    justify-content: center;
+  }
 `;
 
 const avatarStyles = css`
   height: 128px;
   position: absolute;
   width: 128px;
+  transition: all 0.15s ease;
 
   & > rect {
     height: inherit;
@@ -62,6 +69,7 @@ export const AvatarBackground = styled.div`
   box-shadow: 0 0 48px ${theme.colors.pink};
   height: 128px;
   width: 128px;
+  transition: all 0.15s ease;
 
   ${theme.animations.pulse};
 `;

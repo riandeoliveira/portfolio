@@ -2,8 +2,8 @@ import { Project } from "components/Project";
 import { Section } from "components/Section";
 import { projects } from "data/projects";
 import { Keyboard, Navigation, Pagination } from "swiper";
-import { SwiperSlide } from "swiper/react";
 import * as S from "./styles";
+import { SwiperSlide } from "swiper/react";
 
 export const ProjectsSection = (): JSX.Element => {
   return (
@@ -14,7 +14,7 @@ export const ProjectsSection = (): JSX.Element => {
         centeredSlides
         keyboard={{ enabled: true }}
         navigation
-        slidesPerView={1.5}
+        slidesPerView={1}
         pagination={{
           type: "fraction",
         }}

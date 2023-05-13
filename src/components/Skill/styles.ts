@@ -28,8 +28,19 @@ export const Icon = styled.div`
   height: 80px;
   justify-content: center;
   width: 80px;
+  transition: all 0.15s ease;
+
+  @media ${theme.devices.tablet_s} {
+    scale: 0.8;
+  }
 `;
 
 export const Title = styled.span`
+  text-align: center;
   font-size: 18px;
+  transition: all 0.15s ease;
+
+  @media ${theme.devices.tablet_s} {
+    font-size: 14px;
+  }
 `;

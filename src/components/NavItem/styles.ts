@@ -8,6 +8,7 @@ type ButtonProps = {
 export const Item = styled.li`
   display: flex;
   flex: 1;
+  align-items: center;
 `;
 
 export const Button = styled.button<ButtonProps>`
@@ -16,7 +17,7 @@ export const Button = styled.button<ButtonProps>`
   flex: 1;
   justify-content: center;
   padding: 8px;
-  transition: background-color 0.15s ease;
+  transition: all 0.15s ease, background-color 0.15s ease;
 
   ${(props) => {
     if (props.selectedButton) {

@@ -5,14 +5,31 @@ export const Header = styled.header`
   background-color: ${theme.colors.darkest_purple};
   border-radius: 20px;
   display: flex;
-  height: 192px;
+  min-height: 192px;
   justify-content: space-between;
   padding: 32px;
+  transition: all 0.15s ease;
+
+  @media ${theme.devices.tablet_l} {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  @media ${theme.devices.tablet_s} {
+    padding: 16px;
+    justify-content: center;
+  }
 `;
 
 export const HeaderBox = styled.div`
   display: flex;
   gap: 24px;
+  transition: all 0.15s ease;
+
+  @media ${theme.devices.tablet_s} {
+    gap: 18px;
+    flex-direction: column;
+  }
 `;
 
 export const Author = styled.div`
@@ -25,6 +42,12 @@ export const Author = styled.div`
 export const SocialMedias = styled.div`
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
+  transition: all 0.15s ease;
+
+  @media ${theme.devices.tablet_s} {
+    justify-content: center;
+  }
 `;
 
 export const Link = styled.a`
@@ -34,7 +57,7 @@ export const Link = styled.a`
   display: flex;
   height: 32px;
   justify-content: center;
-  transition: scale 0.3s ease;
+  transition: all 0.15s ease, scale 0.3s ease;
   width: 32px;
 
   ${theme.components.animated_background}
@@ -42,5 +65,10 @@ export const Link = styled.a`
 
   &:hover {
     scale: 1.25;
+  }
+
+  @media ${theme.devices.tablet_s} {
+    width: 28px;
+    height: 28px;
   }
 `;

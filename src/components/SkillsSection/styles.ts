@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { theme } from "styles/theme";
 
 export const Section = styled.div`
   display: flex;
@@ -10,5 +11,11 @@ export const Skills = styled.div`
   display: flex;
   flex-direction: column;
   gap: 64px;
-  width: 600px;
+  max-width: 600px;
+  width: 100%;
+  transition: all 0.15s ease;
+
+  @media ${theme.devices.tablet_s} {
+    gap: 48px;
+  }
 `;

@@ -7,6 +7,11 @@ export const Section = styled.section`
   height: 600px;
   overflow: auto;
   padding: 32px;
+  transition: all 0.15s ease;
+
+  @media ${theme.devices.tablet_s} {
+    padding: 16px;
+  }
 `;
 
 export const SectionBox = styled.div`
@@ -28,6 +33,11 @@ export const TitleBox = styled.div`
 export const Title = styled.h3`
   font-size: 24px;
   font-weight: 500;
+  transition: all 0.15s ease;
+
+  @media ${theme.devices.tablet_s} {
+    font-size: 20px;
+  }
 `;
 
 export const Bar = styled.hr`
