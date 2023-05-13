@@ -1,4 +1,5 @@
 import { AboutMeSection } from "components/AboutMeSection";
+import { Footer } from "components/Footer";
 import { Header } from "components/Header";
 import { NavItem } from "components/NavItem";
 import { ProjectsSection } from "components/ProjectsSection";
@@ -29,6 +30,7 @@ const Home: NextPage = (): JSX.Element => {
           {sectionStore.name === "projects" && <ProjectsSection />}
           {sectionStore.name === "skills" && <SkillsSection />}
         </main>
+        <Footer />
       </S.PageBox>
     </S.Page>
   );
