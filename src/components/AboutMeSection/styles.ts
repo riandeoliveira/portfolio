@@ -54,6 +54,8 @@ export const DownloadButton = styled.a`
   border: 0.5px solid transparent;
   transition: all 0.15s ease;
 
+  ${theme.functions.focus("large", theme.colors.cyan, "light")}
+
   &:hover {
     background-color: transparent;
     border-color: ${theme.colors.purple};

@@ -7,12 +7,16 @@ type AvatarMotionProps = {
   isRotating: boolean | null;
 };
 
-export const Box = styled.div<AvatarMotionProps>`
+export const Box = styled.button<AvatarMotionProps>`
   cursor: pointer;
   display: flex;
+  background-color: transparent;
   gap: 40px;
   align-items: center;
+  border-radius: 100px;
   transition: all 0.15s ease;
+
+  ${theme.functions.focus("large", theme.colors.cyan, "light")}
 
   ${(props) => {
     if (props.isRotating) {

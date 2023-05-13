@@ -19,6 +19,8 @@ export const Button = styled.button<ButtonProps>`
   padding: 8px;
   transition: all 0.15s ease, background-color 0.15s ease;
 
+  ${theme.functions.focus("large", theme.colors.cyan, "light")}
+
   ${(props) => {
     if (props.selectedButton) {
       return css`

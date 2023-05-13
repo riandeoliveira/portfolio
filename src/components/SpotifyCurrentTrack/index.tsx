@@ -19,6 +19,7 @@ export const SpotifyCurrentTrack = ({
       <S.Iframe
         src={`https://spotify-github-profile.vercel.app/api/view?uid=${userId}&cover_image=true&theme=novatorem&show_offline=false&background_color=ffffff&interchange=true&bar_color=${barColor}&bar_color_cover=false`}
         title="spotify-github-profile"
+        tabIndex={-1}
       />
     </S.Box>
   );
