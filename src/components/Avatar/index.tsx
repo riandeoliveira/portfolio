@@ -1,5 +1,5 @@
 import { Tooltip, Zoom } from "@mui/material";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import * as S from "./styles";
 
 export const Avatar = (): JSX.Element => {
@@ -8,8 +8,6 @@ export const Avatar = (): JSX.Element => {
   const handleRotating = () => {
     setIsRotating((previousState) => !previousState);
   };
-
-  useEffect(handleRotating, []);
 
   return (
     <Tooltip
