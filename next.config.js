@@ -4,6 +4,7 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
+  pageExtensions: ["tsx"],
   reactStrictMode: true,
   webpack(config) {
     config.module.rules.push({

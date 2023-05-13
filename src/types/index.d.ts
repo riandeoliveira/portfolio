@@ -11,10 +11,7 @@ export type ProjectType = {
   release_date: string;
 };
 
-export type SectionNameType =
-  | "about_me"
-  | "projects"
-  | "skills";
+export type SectionNameType = "about_me" | "projects" | "skills";
 
 export type SectionType = {
   id: string;
