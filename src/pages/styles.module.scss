@@ -1,30 +1,25 @@
-import styled from "styled-components";
-import { theme } from "styles/theme";
+@use "../styles" as *;
 
-export const Page = styled.div`
+.page {
   display: flex;
   justify-content: center;
-`;
+}
 
-export const PageBox = styled.div`
+.page_box {
+  @include animated-background-component;
+
   border-radius: 20px;
-  box-shadow: 0 0 36px ${theme.colors.purple};
+  box-shadow: 0 0 36px $purple;
   display: flex;
   flex-direction: column;
   gap: 4px;
   margin: 32px 16px;
   padding: 4px;
   width: 1200px;
+}
 
-  ${theme.components.animated_background}
-
-  @media ${theme.devices.mobile_l} {
-    gap: 8px;
-  }
-`;
-
-export const List = styled.ul`
-  background-color: ${theme.colors.darkest_purple};
+.list {
+  background-color: $darkest-purple;
   border-radius: 20px;
   display: flex;
   justify-content: center;
@@ -38,8 +33,14 @@ export const List = styled.ul`
     border-bottom-right-radius: 20px;
     border-top-right-radius: 20px;
   }
+}
 
-  @media ${theme.devices.mobile_l} {
+@include media-query($mobile-l) {
+  .page_box {
+    gap: 8px;
+  }
+
+  .list {
     flex-direction: column;
 
     & li:first-of-type button {
@@ -48,9 +49,9 @@ export const List = styled.ul`
     }
 
     & li:last-of-type button {
+      border-bottom-left-radius: 20px;
       border-bottom-right-radius: 20px;
       border-top-right-radius: 0;
-      border-bottom-left-radius: 20px;
     }
   }
-`;
+}

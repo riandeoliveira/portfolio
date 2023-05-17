@@ -1,5 +1,5 @@
 import { SkillType } from "types";
-import * as S from "./styles";
+import styles from "./styles.module.scss";
 
 type SkillProps = {
   skills: SkillType[];
@@ -7,21 +7,21 @@ type SkillProps = {
 
 export const Skill = ({ skills }: SkillProps): JSX.Element => {
   return (
-    <S.Box>
+    <div className={styles.box}>
       {skills.map((skill) => {
         const { icon: Icon, title } = skill;
 
         return (
-          <S.SkillBox key={skill.id}>
-            <S.Skill>
-              <S.Icon>
+          <div className={styles.skill_box} key={skill.id}>
+            <div className={styles.skill}>
+              <div className={styles.icon}>
                 <Icon />
-              </S.Icon>
-              <S.Title>{title}</S.Title>
-            </S.Skill>
-          </S.SkillBox>
+              </div>
+              <span className={styles.title}>{title}</span>
+            </div>
+          </div>
         );
       })}
-    </S.Box>
+    </div>
   );
 };

@@ -1,13 +1,14 @@
 import { Section } from "components/Section";
+import Image from "next/image";
 import { FiDownload } from "react-icons/fi";
-import * as S from "./styles";
+import styles from "./styles.module.scss";
 
 export const AboutMeSection = (): JSX.Element => {
   return (
     <Section title="Sobre Mim 🙋‍♂️">
-      <S.SectionBox>
-        <S.Box>
-          <S.Description>
+      <div className={styles.section_box}>
+        <div className={styles.box}>
+          <p className={styles.description}>
             Olá, me chamo Rian, e é um prazer ver você por aqui! Desde pequeno,
             sempre fui fascinado por ciência e tecnologia, e hoje tenho a
             oportunidade de exercer minha criatividade fazendo o que tanto amo.
@@ -18,21 +19,23 @@ export const AboutMeSection = (): JSX.Element => {
             outras. Apesar do meu foco estar concentrado em front-end, estou
             sempre aberto a novas oportunidades para continuar aprendendo cada
             vez mais.
-          </S.Description>
-          <S.DownloadButton
+          </p>
+          <a
             href="/assets/documents/CV-Rian-Dias-de-Oliveira.pdf"
             download
+            className={styles.download_button}
           >
             Baixar currículo <FiDownload size={18} />
-          </S.DownloadButton>
-        </S.Box>
-        <S.Image
+          </a>
+        </div>
+        <Image
           src="/assets/images/cyberpunk-city.gif"
           alt="A GIF of a pixelated cyberpunk city at night"
           width={500}
           height={280}
+          className={styles.image}
         />
-      </S.SectionBox>
+      </div>
     </Section>
   );
 };

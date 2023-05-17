@@ -1,9 +1,10 @@
 import { Tooltip, Zoom } from "@mui/material";
+import Image from "next/image";
 import { useState } from "react";
 import { FiExternalLink } from "react-icons/fi";
 import { SiGithub } from "react-icons/si";
 import { ProjectType } from "types";
-import * as S from "./styles";
+import styles from "./styles.module.scss";
 
 type ProjectProps = {
   data: ProjectType;
@@ -24,35 +25,41 @@ export const Project = ({
 
   return (
     <>
-      <S.OpaqueBackground hovered={hovered} />
+      <div data-hovered={hovered} className={styles.opaque_background} />
       <div>
-        <S.Box
-          hovered={hovered}
+        <div
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
+          data-hovered={hovered}
+          className={styles.box}
         >
-          <S.Content>
-            <S.Title>{name}</S.Title>
-            <S.Description>{description}</S.Description>
-            <S.List>
+          <div className={styles.content}>
+            <h4 className={styles.title}>{name}</h4>
+            <p className={styles.description}>{description}</p>
+            <ul className={styles.list}>
               {skill_icons.map((Icon, index) => (
-                <S.Icon key={index}>
+                <div key={index} className={styles.icon}>
                   <Icon />
-                </S.Icon>
+                </div>
               ))}
-            </S.List>
-          </S.Content>
-          <S.Footer>
-            <S.LinkBox>
+            </ul>
+          </div>
+          <div className={styles.footer}>
+            <div className={styles.link_box}>
               <Tooltip
                 title="Acessar repositório"
                 placement="top"
                 arrow
                 TransitionComponent={Zoom as any}
               >
-                <S.Link href={github_link} rel="external" target="_blank">
+                <a
+                  href={github_link}
+                  rel="external"
+                  target="_blank"
+                  className={styles.link}
+                >
                   <SiGithub size={36} />
-                </S.Link>
+                </a>
               </Tooltip>
               <Tooltip
                 title="Acessar projeto"
@@ -60,22 +67,28 @@ export const Project = ({
                 arrow
                 TransitionComponent={Zoom as any}
               >
-                <S.Link href={website_link} rel="external" target="_blank">
+                <a
+                  href={website_link}
+                  rel="external"
+                  target="_blank"
+                  className={styles.link}
+                >
                   <FiExternalLink size={36} />
-                </S.Link>
+                </a>
               </Tooltip>
-            </S.LinkBox>
-            <S.Date>Lançado em {release_date}</S.Date>
-          </S.Footer>
-        </S.Box>
+            </div>
+            <span className={styles.date}>Lançado em {release_date}</span>
+          </div>
+        </div>
       </div>
-      <S.Image
+      <Image
         src={`/assets/images/${image}`}
         alt="Project image"
         width={700}
         height={400}
         quality={100}
-        hovered={hovered}
+        data-hovered={hovered}
+        className={styles.image}
       />
     </>
   );

@@ -3,27 +3,32 @@ import { Author } from "components/Author";
 import { Avatar } from "components/Avatar";
 import { SpotifyCurrentTrack } from "components/SpotifyCurrentTrack";
 import { socialMedias } from "data/social-medias";
-import * as S from "./styles";
+import styles from "./styles.module.scss";
 
 export const Header = (): JSX.Element => {
   return (
-    <S.Header>
-      <S.HeaderBox>
+    <header className={styles.header}>
+      <div className={styles.header_box}>
         <Avatar />
-        <S.Author>
+        <div className={styles.author}>
           <Author />
-          <S.SocialMedias>
+          <div className={styles.social_medias}>
             {socialMedias.map(({ url, name, id, icon: Icon }) => (
               <Tooltip title={name} TransitionComponent={Zoom as any} key={id}>
-                <S.Link href={url} rel="external" target="_blank">
+                <a
+                  href={url}
+                  rel="external"
+                  target="_blank"
+                  className={styles.link}
+                >
                   <Icon size={20} />
-                </S.Link>
+                </a>
               </Tooltip>
             ))}
-          </S.SocialMedias>
-        </S.Author>
-      </S.HeaderBox>
+          </div>
+        </div>
+      </div>
       <SpotifyCurrentTrack userId="riandias2016" barColor="ef2ef2" />
-    </S.Header>
+    </header>
   );
 };

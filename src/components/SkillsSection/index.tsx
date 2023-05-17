@@ -1,18 +1,18 @@
 import { Section } from "components/Section";
 import { Skill } from "components/Skill";
 import { skills } from "data/skills";
-import * as S from "./styles";
+import styles from "./styles.module.scss";
 
 export const SkillsSection = (): JSX.Element => {
   return (
     <Section title="Habilidades 🛠️">
-      <S.Section>
-        <S.Skills>
+      <div className={styles.section}>
+        <div className={styles.skills}>
           {skills.map((skillsList, index) => (
             <Skill skills={skillsList} key={index} />
           ))}
-        </S.Skills>
-      </S.Section>
+        </div>
+      </div>
     </Section>
   );
 };

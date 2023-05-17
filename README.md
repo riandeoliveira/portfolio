@@ -55,9 +55,9 @@ A aplicação está hospedada na **Vercel** e pode ser acessada [aqui](https://p
         <span>Markdown</span>
       </td>
       <td align="center" width="110" height="110">
-        <img src="https://skillicons.dev/icons?i=styledcomponents" />
+        <img src="https://skillicons.dev/icons?i=sass" />
         <br>
-        <span>Styled Components</span>
+        <span>SASS</span>
       </td>
       <td align="center" width="110" height="110">
         <img src="https://skillicons.dev/icons?i=ts" />

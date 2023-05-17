@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import * as S from "./styles";
+import styles from "./styles.module.scss";
 
 type SectionProps = {
   title: string;
@@ -8,14 +8,14 @@ type SectionProps = {
 
 export const Section = ({ title, children }: SectionProps): JSX.Element => {
   return (
-    <S.Section>
-      <S.SectionBox>
-        <S.TitleBox>
-          <S.Title>{title}</S.Title>
-          <S.Bar />
-        </S.TitleBox>
+    <section className={styles.section}>
+      <div className={styles.section_box}>
+        <div className={styles.title_box}>
+          <h3 className={styles.title}>{title}</h3>
+          <hr className={styles.bar} />
+        </div>
         {children}
-      </S.SectionBox>
-    </S.Section>
+      </div>
+    </section>
   );
 };

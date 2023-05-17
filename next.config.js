@@ -1,9 +1,6 @@
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
-  compiler: {
-    styledComponents: true,
-  },
   pageExtensions: ["tsx"],
   reactStrictMode: true,
   webpack(config) {

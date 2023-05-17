@@ -8,23 +8,23 @@ import { sections } from "data/sections";
 import type { NextPage } from "next";
 import { useSectionStore } from "store/useSectionStore";
 import { State } from "types/state";
-import * as S from "./styles";
+import styles from "./styles.module.scss";
 
 const Home: NextPage = (): JSX.Element => {
   const sectionStore: State.Section = useSectionStore();
 
   return (
-    <S.Page>
-      <S.PageBox>
+    <div className={styles.page}>
+      <div className={styles.page_box}>
         <Header />
         <nav>
-          <S.List>
+          <ul className={styles.list}>
             {sections.map(({ name, id, label }) => (
               <NavItem section={name} key={id}>
                 {label}
               </NavItem>
             ))}
-          </S.List>
+          </ul>
         </nav>
         <main>
           {sectionStore.name === "about_me" && <AboutMeSection />}
@@ -32,8 +32,8 @@ const Home: NextPage = (): JSX.Element => {
           {sectionStore.name === "skills" && <SkillsSection />}
         </main>
         <Footer />
-      </S.PageBox>
-    </S.Page>
+      </div>
+    </div>
   );
 };
 

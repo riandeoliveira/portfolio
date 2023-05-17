@@ -2,13 +2,13 @@ import { Project } from "components/Project";
 import { Section } from "components/Section";
 import { projects } from "data/projects";
 import { Keyboard, Navigation, Pagination } from "swiper";
-import * as S from "./styles";
-import { SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import styles from "./styles.module.scss";
 
 export const ProjectsSection = (): JSX.Element => {
   return (
     <Section title="Projetos 💡">
-      <S.Slider
+      <Swiper
         grabCursor
         spaceBetween={24}
         centeredSlides
@@ -19,13 +19,14 @@ export const ProjectsSection = (): JSX.Element => {
           type: "fraction",
         }}
         modules={[Pagination, Navigation, Keyboard]}
+        className={styles.slider}
       >
         {projects.map((projectData) => (
           <SwiperSlide key={projectData.id}>
             <Project data={projectData} />
           </SwiperSlide>
         ))}
-      </S.Slider>
+      </Swiper>
     </Section>
   );
 };

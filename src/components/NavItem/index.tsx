@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import { useSectionStore } from "store/useSectionStore";
 import { SectionNameType } from "types";
 import { State } from "types/state";
-import * as S from "./styles";
+import styles from "./styles.module.scss";
 
 type NavItemProps = {
   section: SectionNameType;
@@ -15,14 +15,15 @@ export const NavItem = ({ section, children }: NavItemProps): JSX.Element => {
   const selectedButton: boolean = sectionStore.name === section;
 
   return (
-    <S.Item>
-      <S.Button
+    <li className={styles.item}>
+      <button
         type="button"
-        selectedButton={selectedButton}
         onClick={() => sectionStore.select(section)}
+        data-selected={selectedButton}
+        className={styles.button}
       >
         {children}
-      </S.Button>
-    </S.Item>
+      </button>
+    </li>
   );
 };

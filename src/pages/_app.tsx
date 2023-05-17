@@ -1,7 +1,6 @@
-import { StyledComponentsRegistry } from "libs/registry";
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import { GlobalStyle } from "styles/global";
+import "styles/_global.scss";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -12,12 +11,7 @@ const App = ({ Component, pageProps }: AppProps): JSX.Element => {
       <Head>
         <title>Portfólio | Rian Oliveira</title>
       </Head>
-      <StyledComponentsRegistry>
-        <>
-          <GlobalStyle />
-          <Component {...pageProps} />
-        </>
-      </StyledComponentsRegistry>
+      <Component {...pageProps} />
     </>
   );
 };

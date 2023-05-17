@@ -1,9 +1,11 @@
-import * as S from "./styles";
+import styles from "./styles.module.scss";
 
 export const Footer = (): JSX.Element => {
   return (
-    <S.Footer>
-      <S.Content>✨ Made with much 💜 by Rian Oliveira ✨</S.Content>
-    </S.Footer>
+    <footer className={styles.footer}>
+      <span className={styles.content}>
+        ✨ Made with much 💜 by Rian Oliveira ✨
+      </span>
+    </footer>
   );
 };
