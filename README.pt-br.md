@@ -4,18 +4,18 @@
 [![pt](https://img.shields.io/badge/lang-pt_br-blue.svg)](https://github.com/riandeoliveira/Portfolio/blob/main/README.pt-br.md)
 
 <div align="center">
-  <h1>🚀 Portfolio 🚀</h1>
+  <h1>🚀 Portfólio 🚀</h1>
 </div>
 
-## 📚 About
+## 📚 Sobre
 
-My personal portfolio, with information about me, the technologies I use, my projects, and links to my social media.
+Meu portfólio pessoal, com informações sobre mim, tecnologias que utilizo, meus projetos e links para minhas redes sociais.
 
-## 💻 How to access
+## 💻 Como acessar
 
-The application is available online and can be accessed [here]().
+A aplicação está disponível online e pode ser acessada [aqui]().
 
-## 🛠️ Stack
+## 🛠️ Tecnologias
 
 <br />
 
@@ -37,5 +37,5 @@ The application is available online and can be accessed [here]().
 <br />
 
 <p align="center">
-  ✨ Made with 💙 by <a href="https://github.com/riandeoliveira"><strong>Rian Oliveira</strong></a> ✨
+  ✨ Feito com 💙 por <a href="https://github.com/riandeoliveira"><strong>Rian Oliveira</strong></a> ✨
 </p>

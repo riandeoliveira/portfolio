@@ -1,0 +1,18 @@
+clear
+
+echo "======================================"
+echo "    RUNNING UNIT TESTS WITH VITEST    "
+echo "======================================"
+
+pnpm vitest
+
+echo "======================================"
+echo "    RUNNING E2E TESTS WITH CYPRESS    "
+echo "======================================"
+
+pnpm cypress:run
+
+echo "================================="
+echo "    ALL TESTS WERE SUCCESSFUL    "
+echo "================================="
+echo ""

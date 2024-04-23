@@ -1,47 +1,43 @@
 {
   "compilerOptions": {
-    "allowJs": false,
+    "allowImportingTsExtensions": true,
     "allowSyntheticDefaultImports": true,
     "allowUnreachableCode": false,
-    "allowUnusedLabels": false,
-    "alwaysStrict": true,
-    "baseUrl": "src",
-    "checkJs": false,
-    "declaration": false,
-    "disableSizeLimit": false,
-    "emitDeclarationOnly": false,
-    "esModuleInterop": true,
-    "exactOptionalPropertyTypes": true,
-    "forceConsistentCasingInFileNames": true,
-    "incremental": true,
+    "baseUrl": ".",
     "isolatedModules": true,
-    "jsx": "preserve",
-    "keyofStringsOnly": false,
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "jsx": "react-jsx",
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
+    ],
     "module": "ESNext",
-    "moduleResolution": "node",
+    "moduleResolution": "Node",
+    "newLine": "lf",
     "noEmit": true,
-    "noEmitOnError": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitAny": true,
-    "noImplicitOverride": true,
-    "noImplicitReturns": true,
     "noImplicitThis": true,
-    "noPropertyAccessFromIndexSignature": false,
-    "noResolve": false,
-    "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "preserveValueImports": false,
-    "pretty": true,
-    "removeComments": true,
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
-    "strictFunctionTypes": true,
-    "strictNullChecks": true,
-    "strictPropertyInitialization": false,
-    "target": "ESNext"
+    "target": "ES2020",
+    "useDefineForClassFields": true
   },
-  "exclude": ["build", "dist", "node_modules"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
+  "exclude": [
+    "build",
+    "dist",
+    "node_modules"
+  ],
+  "include": [
+    "cypress",
+    "src",
+    "vite.config.ts"
+  ],
 }
