@@ -87,7 +87,7 @@ export const ProjectCard = ({
 
   return (
     <div
-      className="py-20 flex items-center justify-center"
+      className="flex items-center justify-center"
       style={{
         perspective: "1000px",
       }}
@@ -140,8 +140,9 @@ export const ProjectCard = ({
             height="1000"
             width="1000"
             alt="thumbnail"
-            className={`object-cover rounded-xl group-hover/card:shadow-xl w-[860px] h-[480px] ${isMouseEntered ? "blur-sm brightness-50" : ""}`}
+            className={`object-cover rounded-xl group-hover/card:shadow-xl w-[574px] h-[320px] ${isMouseEntered ? "blur-sm brightness-50" : ""}`}
           />
+          {/* 860px | 480px */}
         </div>
       </div>
     </div>

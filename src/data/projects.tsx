@@ -5,7 +5,7 @@ export const projects: IProject[] = [
     name: "Urna Eletrônica",
     description:
       "Simulador web totalmente funcional da Nova Urna Eletrônica que foi utilizada pela primeira vez nas Eleições Brasileiras de 2022.",
-    imageUrl: "urna-eletronica.png",
+    imageUrl: "https://i.imgur.com/XfYOeHp.png",
     skillList: ["js", "nextjs", "react", "tailwind", "ts"],
     gitHubUrl: "https://github.com/riandeoliveira/UrnaEletronica",
     websiteUrl: "https://urna-eletronica-three.vercel.app/",
@@ -15,7 +15,7 @@ export const projects: IProject[] = [
     name: "Popular Movies",
     description:
       "Aplicação para pesquisar e favoritar filmes no Local Storage do navegador, fazendo uso da API do The Movie Database (TMDB).",
-    imageUrl: "popular-movies.png",
+    imageUrl: "https://i.imgur.com/jmBD1qY.png",
     skillList: ["js", "nextjs", "react", "tailwind", "ts"],
     gitHubUrl: "https://github.com/riandeoliveira/PopularMovies",
     websiteUrl: "https://popular-movies-six.vercel.app/",
@@ -25,7 +25,7 @@ export const projects: IProject[] = [
     name: "Todo List",
     description:
       "Lista de Tarefas básica e funcional, com salvamento de dados no Local Storage do navegador.",
-    imageUrl: "todo-list.png",
+    imageUrl: "https://i.imgur.com/lTP25zb.png",
     skillList: ["js", "nextjs", "react", "sass", "ts"],
     gitHubUrl: "https://github.com/riandeoliveira/TodoList",
     websiteUrl: "https://todo-list-ruddy-six.vercel.app/",
@@ -35,7 +35,7 @@ export const projects: IProject[] = [
     name: "MediCenter",
     description:
       "Página inicial de um website reponsivo e acessível para uma clínica médica fictícia.",
-    imageUrl: "medicenter.png",
+    imageUrl: "https://i.imgur.com/Z0xqW0A.png",
     skillList: ["js", "nextjs", "react", "sass", "ts"],
     gitHubUrl: "https://github.com/riandeoliveira/MediCenter",
     websiteUrl: "https://medicenter-beryl.vercel.app/",
@@ -44,7 +44,7 @@ export const projects: IProject[] = [
   {
     name: "LinkedIn Clone",
     description: "Clone da página de perfil do LinkedIn.",
-    imageUrl: "linkedin-clone.png",
+    imageUrl: "https://i.imgur.com/UpOpeyd.png",
     skillList: ["js", "nextjs", "react", "sass", "ts"],
     gitHubUrl: "https://github.com/riandeoliveira/LinkedInClone",
     websiteUrl: "https://linkedin-clone-zeta-three.vercel.app/",
@@ -53,7 +53,7 @@ export const projects: IProject[] = [
   {
     name: "OptimusTech",
     description: "Página completa de vagas da empresa fictícia OptimusTech.",
-    imageUrl: "optimustech.png",
+    imageUrl: "https://i.imgur.com/s6l4QwL.png",
     skillList: ["js", "nextjs", "react", "sass", "ts"],
     gitHubUrl: "https://github.com/riandeoliveira/OptimusTech",
     websiteUrl: "https://optimus-tech-eta.vercel.app/",
