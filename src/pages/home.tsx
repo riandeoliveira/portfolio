@@ -1,5 +1,8 @@
 import { HeroParallax } from "@/components/hero-parallax";
+import { NewCard } from "@/components/new-card";
+import { projects } from "@/data/projects";
 import { type ReactElement } from "react";
+import { v4 as uuid } from "uuid";
 
 const HeroParallaxDemo = () => {
   return <HeroParallax products={products} />;
@@ -84,5 +87,26 @@ const products = [
 ];
 
 export const Home = (): ReactElement => {
-  return <HeroParallaxDemo />;
+  return (
+    <section className="flex justify-center">
+      <div className="w-[1200px] flex flex-wrap justify-around ">
+        {projects.map(
+          ({ description, gitHubUrl, name, releaseDate, skillList, thumbnail, websiteUrl }) => (
+            <NewCard
+              description={description}
+              gitHubUrl={gitHubUrl}
+              name={name}
+              releaseDate={releaseDate}
+              skillList={skillList}
+              thumbnail={thumbnail}
+              websiteUrl={websiteUrl}
+              key={uuid()}
+            />
+          ),
+        )}
+      </div>
+    </section>
+  );
+
+  // return <HeroParallaxDemo />;
 };

@@ -12,7 +12,7 @@ interface ProjectCardProps extends IProject {}
 export const ProjectCard = ({
   description,
   gitHubUrl,
-  imageUrl,
+  thumbnail,
   name,
   releaseDate,
   skillList,
@@ -136,7 +136,7 @@ export const ProjectCard = ({
             </div>
           </div>
           <img
-            src={imageUrl}
+            src={thumbnail}
             height="1000"
             width="1000"
             alt="thumbnail"
