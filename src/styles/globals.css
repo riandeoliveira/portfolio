@@ -10,3 +10,9 @@
     @apply font-montserrat;
   }
 }
+
+.swiper-3d,
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
+  background-image: none !important;
+}

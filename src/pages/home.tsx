@@ -1,8 +1,14 @@
 import { HeroParallax } from "@/components/hero-parallax";
 import { NewCard } from "@/components/new-card";
 import { projects } from "@/data/projects";
-import { type ReactElement } from "react";
+import type { ReactElement } from "react";
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import { EffectCoverflow, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { v4 as uuid } from "uuid";
+import "./style.css";
 
 const HeroParallaxDemo = () => {
   return <HeroParallax products={products} />;
@@ -88,25 +94,42 @@ const products = [
 
 export const Home = (): ReactElement => {
   return (
-    <section className="flex justify-center">
-      <div className="w-[1200px] flex flex-wrap justify-around ">
-        {projects.map(
-          ({ description, gitHubUrl, name, releaseDate, skillList, thumbnail, websiteUrl }) => (
-            <NewCard
-              description={description}
-              gitHubUrl={gitHubUrl}
-              name={name}
-              releaseDate={releaseDate}
-              skillList={skillList}
-              thumbnail={thumbnail}
-              websiteUrl={websiteUrl}
-              key={uuid()}
-            />
-          ),
-        )}
+    <>
+      <HeroParallaxDemo />
+      <div className="pb-32 pt-">
+        <Swiper
+          effect={"slide"}
+          grabCursor={true}
+          centeredSlides={true}
+          slidesPerView={"auto"}
+          coverflowEffect={{
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+          }}
+          pagination={true}
+          spaceBetween={224}
+          modules={[EffectCoverflow, Pagination]}
+        >
+          {projects.map(
+            ({ description, gitHubUrl, name, releaseDate, skillList, thumbnail, websiteUrl }) => (
+              <SwiperSlide key={uuid()}>
+                <NewCard
+                  description={description}
+                  gitHubUrl={gitHubUrl}
+                  name={name}
+                  releaseDate={releaseDate}
+                  skillList={skillList}
+                  thumbnail={thumbnail}
+                  websiteUrl={websiteUrl}
+                />
+              </SwiperSlide>
+            ),
+          )}
+        </Swiper>
       </div>
-    </section>
+    </>
   );
-
-  // return <HeroParallaxDemo />;
 };
