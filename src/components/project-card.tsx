@@ -1,150 +1,71 @@
-import externalLinkIcon from "@/assets/icons/common/external-link.svg";
-import gitHubIcon from "@/assets/icons/common/github.svg";
 import type { IProject } from "@/types/project";
 import type { ReactElement } from "react";
-import React, { useEffect, useRef, useState } from "react";
-import { v4 as uuid } from "uuid";
+import { FaGithub } from "react-icons/fa";
+import { CardBody, CardContainer, CardItem } from "./3d-card";
 import { SkillIcon } from "./skill-icon";
 import { Tooltip } from "./tooltip";
 
-interface ProjectCardProps extends IProject {}
+interface ProjectCardProps extends Omit<IProject, "id"> {}
 
 export const ProjectCard = ({
   description,
-  gitHubUrl,
+  repository,
   thumbnail,
   name,
-  releaseDate,
   skillList,
   websiteUrl,
 }: ProjectCardProps): ReactElement => {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [isMouseEntered, setIsMouseEntered] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
-
-  const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>): void => {
-    if (!containerRef.current) return;
-
-    const { left, top, width, height } = containerRef.current.getBoundingClientRect();
-
-    const x = (event.clientX - left - width / 2) / 25;
-    const y = (event.clientY - top - height / 2) / 25;
-
-    containerRef.current.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
-  };
-
-  const handleMouseEnter = (): void => {
-    setIsMouseEntered(true);
-
-    if (!containerRef.current) return;
-  };
-
-  const handleMouseLeave = (): void => {
-    if (!containerRef.current) return;
-
-    setIsMouseEntered(false);
-
-    containerRef.current.style.transform = "rotateY(0deg) rotateX(0deg)";
-  };
-
-  const handleAnimations = (): void => {
-    if (!ref.current) return;
-
-    if (isMouseEntered) {
-      const styles = `
-        rotateX(0deg)
-        rotateY(0deg)
-        rotateZ(0deg)
-        translateX(0px)
-        translateY(0px)
-        translateZ(100px)
-      `;
-
-      ref.current.style.transform = styles;
-
-      return;
-    }
-
-    if (!isMouseEntered) {
-      const styles = `
-        translateX(0px)
-        translateY(0px)
-        translateZ(0px)
-        rotateX(0deg)
-        rotateY(0deg)
-        rotateZ(0deg)
-      `;
-
-      ref.current.style.transform = styles;
-
-      return;
-    }
-  };
-
-  useEffect(() => {
-    handleAnimations();
-  }, [isMouseEntered]);
-
   return (
-    <div
-      className="flex items-center justify-center"
-      style={{
-        perspective: "1000px",
-      }}
-    >
-      <div
-        ref={containerRef}
-        onMouseEnter={handleMouseEnter}
-        onMouseMove={handleMouseMove}
-        onMouseLeave={handleMouseLeave}
-        className="flex items-center justify-center relative transition-all duration-200 ease-linear"
-        style={{
-          transformStyle: "preserve-3d",
-        }}
-      >
-        <div className="w-fit transition duration-200 ease-linear" ref={ref}>
-          <div
-            className={`flex flex-col justify-between z-10 bg-transparent absolute h-full w-full p-6 text-white transition-opacity ${isMouseEntered ? "opacity-100" : "opacity-0"}`}
+    <CardContainer className="inter-var">
+      <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
+        <CardItem translateZ={60} className="text-xl font-bold text-neutral-600 dark:text-white">
+          {name}
+        </CardItem>
+        <CardItem
+          as="p"
+          translateZ={80}
+          className="text-neutral-500 text-sm mt-2 dark:text-neutral-300 text-justify"
+        >
+          {description}
+        </CardItem>
+        <CardItem translateZ={100} className="w-full mt-4">
+          <Tooltip title="Clique para acessar o projeto">
+            <a href={websiteUrl} target="_blank" rel="noreferrer">
+              <img
+                src={thumbnail}
+                alt={`thumbnail do projeto ${name}`}
+                className="w-full h-96 object-cover rounded-xl group-hover/card:shadow-xl active:scale-90 transition-all"
+              />
+            </a>
+          </Tooltip>
+        </CardItem>
+        <CardItem
+          translateZ={80}
+          className="text-neutral-500 text-sm mt-2 dark:text-neutral-300 flex justify-evenly w-full"
+        >
+          {skillList.map((skillName) => (
+            <SkillIcon name={skillName} key={skillName} />
+          ))}
+        </CardItem>
+        <div className="flex justify-center items-center mt-6">
+          <CardItem
+            as="a"
+            href={repository?.url}
+            target="_blank"
+            translateZ={60}
+            className="px-4 py-2 rounded-xl text-xs text-gray-800 border-gray-800 border-2 font-bold flex items-center gap-2 transform translate-z-[120px]"
           >
-            <div className="flex flex-col gap-6">
-              <h1 className="text-center text-2xl font-semibold">{name}</h1>
-              <p>{description}</p>
-              <ul className="flex gap-4">
-                {skillList.map((skillName) => (
-                  <li key={uuid()}>
-                    <SkillIcon name={skillName} />
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="flex flex-col items-center gap-6">
-              <div className="flex gap-12">
-                <Tooltip
-                  id={1}
-                  label="Acessar o repositório"
-                  linkUrl={gitHubUrl}
-                  iconUrl={gitHubIcon}
-                />
-                <Tooltip
-                  id={2}
-                  label="Acessar o projeto"
-                  linkUrl={websiteUrl}
-                  iconUrl={externalLinkIcon}
-                />
-              </div>
-              <span>Lançado em {releaseDate}</span>
-            </div>
-          </div>
-          <img
-            src={thumbnail}
-            height="1000"
-            width="1000"
-            alt="thumbnail"
-            className={`object-cover rounded-xl group-hover/card:shadow-xl w-[574px] h-[320px] ${isMouseEntered ? "blur-sm brightness-50" : ""}`}
-          />
-          {/* 860px | 480px */}
+            {repository.isPrivate ? (
+              <span>Repositório privado</span>
+            ) : (
+              <>
+                <FaGithub size={24} />
+                <span>Acessar o repositório</span>
+              </>
+            )}
+          </CardItem>
         </div>
-      </div>
-    </div>
+      </CardBody>
+    </CardContainer>
   );
 };

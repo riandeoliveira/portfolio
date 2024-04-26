@@ -1,11 +1,16 @@
 import type { SkillType } from "./skill";
 
+export interface IProjectRepository {
+  url: string | null;
+  isPrivate: boolean;
+}
+
 export interface IProject {
-  description: string;
-  gitHubUrl: string;
-  thumbnail: string;
+  id: number;
   name: string;
-  releaseDate: string;
+  description: string;
+  thumbnail: string;
   skillList: SkillType[];
   websiteUrl: string;
+  repository: IProjectRepository;
 }
