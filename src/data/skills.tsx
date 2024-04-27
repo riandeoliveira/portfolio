@@ -148,7 +148,7 @@ export const skills: Skill[] = [
     name: "php",
     title: "PHP",
     icon: PHP,
-    color: "#fff",
+    color: "#777BB3",
   },
   {
     name: "postgresql",
