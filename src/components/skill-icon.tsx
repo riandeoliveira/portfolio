@@ -6,5 +6,21 @@ interface SkillIconProps {
   name: SkillType;
 }
 
-export const SkillIcon = ({ name }: SkillIconProps): ReactElement =>
-  skills.find((icon) => icon.name === name)?.icon as ReactElement;
+// TODO: Ajustar componente, pois ele representa agora o card de skill (SkillCard)
+
+export const SkillIcon = ({ name }: SkillIconProps): ReactElement => {
+  const skill = skills.find((icon) => icon.name === name);
+
+  if (!skill) return <></>;
+
+  const Icon = skill.icon;
+
+  return (
+    <div className="flex flex-col items-center gap-2 flex-1">
+      <div style={{ boxShadow: `0 0 20px ${skill.color}` }} className={"rounded-xl w-12 h-12"}>
+        <Icon />
+      </div>
+      <span className="text-white text-center">{skill.title}</span>
+    </div>
+  );
+};

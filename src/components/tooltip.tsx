@@ -11,7 +11,7 @@ interface TooltipProps {
 export const Tooltip = forwardRef<
   ElementRef<typeof TooltipPrimitive.Content>,
   ComponentPropsWithoutRef<typeof TooltipPrimitive.Content & TooltipProps>
->(({ children, className, sideOffset = 110, title, ...props }, ref) => (
+>(({ children, className, sideOffset = 10, title, ...props }, ref) => (
   <TooltipPrimitive.Provider>
     <TooltipPrimitive.Root>
       <TooltipPrimitive.Trigger asChild>{children}</TooltipPrimitive.Trigger>
