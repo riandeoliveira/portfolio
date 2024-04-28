@@ -30,7 +30,7 @@ import { makeAutoObservable } from "mobx";
 
 // REFACT: Considerar lazy import
 
-export const skillList: ISkill[] = [
+const skillList: ISkill[] = [
   {
     name: "azure",
     title: "Azure",

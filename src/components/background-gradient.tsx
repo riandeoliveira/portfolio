@@ -1,22 +1,19 @@
 import { cn } from "@/lib/utils";
 import type { Transition } from "framer-motion";
 import { motion } from "framer-motion";
-import type { ReactElement } from "react";
-import React from "react";
+import type { ReactNode } from "react";
 
 interface BackgroundGradientProps {
-  children?: React.ReactNode;
-  className?: string;
-  containerClassName?: string;
   animate?: boolean;
+  children?: ReactNode;
+  className?: string;
 }
 
 export const BackgroundGradient = ({
+  animate = true,
   children,
   className,
-  containerClassName,
-  animate = true,
-}: BackgroundGradientProps): ReactElement => {
+}: BackgroundGradientProps) => {
   const variants = {
     initial: {
       backgroundPosition: "0 50%",
@@ -43,8 +40,9 @@ export const BackgroundGradient = ({
           backgroundSize: animate ? "400% 400%" : undefined,
         }}
         className={cn(
-          "absolute inset-0 rounded-xl -z-50 opacity-60 group-hover:opacity-100 blur-xl transition duration-500 will-change-transform",
+          "absolute inset-0 -z-50 opacity-60 group-hover:opacity-100 blur-xl transition duration-500 will-change-transform",
           "bg-[radial-gradient(circle_farthest-side_at_0_100%,#00ccb1,transparent),radial-gradient(circle_farthest-side_at_100%_0,#7b61ff,transparent),radial-gradient(circle_farthest-side_at_100%_100%,#ffc414,transparent),radial-gradient(circle_farthest-side_at_0_0,#1ca0fb,#141316)]",
+          className,
         )}
       />
       <motion.div
@@ -56,8 +54,9 @@ export const BackgroundGradient = ({
           backgroundSize: animate ? "400% 400%" : undefined,
         }}
         className={cn(
-          "absolute inset-0 rounded-xl -z-50 will-change-transform",
+          "absolute inset-0 -z-50 will-change-transform",
           "bg-[radial-gradient(circle_farthest-side_at_0_100%,#00ccb1,transparent),radial-gradient(circle_farthest-side_at_100%_0,#7b61ff,transparent),radial-gradient(circle_farthest-side_at_100%_100%,#ffc414,transparent),radial-gradient(circle_farthest-side_at_0_0,#1ca0fb,#141316)]",
+          className,
         )}
       />
       {children}

@@ -1,4 +1,4 @@
-import type { FunctionComponent, SVGProps } from "react";
+import type { IconComponentType } from "./svg";
 
 export type SkillType =
   | "arduino"
@@ -45,12 +45,6 @@ export type SkillType =
   | "vitest"
   | "vscode"
   | "windows";
-
-type IconComponentType = FunctionComponent<
-  SVGProps<SVGSVGElement> & {
-    title?: string;
-  }
->;
 
 interface ISkill {
   name: SkillType;
