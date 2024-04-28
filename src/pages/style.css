@@ -9,7 +9,6 @@ body {
 }
 
 body {
-  background: #eee !important;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif !important;
   font-size: 14px !important;
   margin: 0 !important;
@@ -17,15 +16,12 @@ body {
 }
 
 .swiper {
-  padding-bottom: 50px !important;
-  padding-top: 50px !important;
   width: 100% !important;
 }
 
 .swiper-slide {
   background-position: center !important;
   background-size: cover !important;
-  height: 658px !important;
   width: 300px !important;
 }
 

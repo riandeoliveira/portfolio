@@ -1,4 +1,3 @@
-import { BackgroundGradient } from "@/components/background-gradient";
 import { ProjectCard } from "@/components/project-card";
 import { ProjectParallax } from "@/components/project-parallax";
 import { SkillsSection } from "@/components/skills-section";
@@ -13,6 +12,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "./style.css";
 
 // TODO: Buscar um tooltip animado pro SKillIcon ou fazer um manualmente
+
+// TODO: Testar cores de fundo para o card de projeto: zinc; neutral; stone
 
 export const Home = observer((): ReactElement => {
   return (
@@ -38,10 +39,10 @@ export const Home = observer((): ReactElement => {
           </button>
         </BackgroundGradient> */}
         <div className="mb-96" />
-        <SkillsSection />
+        {/* <SkillsSection /> */}
       </div>
       <ProjectParallax />
-      <div className="pb-32 select-none">
+      <div className="select-none">
         <Swiper
           effect={"slide"}
           grabCursor={true}
@@ -57,6 +58,7 @@ export const Home = observer((): ReactElement => {
           pagination={true}
           spaceBetween={224}
           modules={[EffectCoverflow, Pagination]}
+          className="py-24"
         >
           {projectStore.sortByHighlight().map((project) => (
             <SwiperSlide key={project.id}>
@@ -72,6 +74,7 @@ export const Home = observer((): ReactElement => {
           ))}
         </Swiper>
       </div>
+      <div className="mt-64 w-full h-full" />
     </>
   );
 });

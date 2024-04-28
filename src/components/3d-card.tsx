@@ -1,4 +1,6 @@
 import { cn } from "@/lib/utils";
+import type { Transition } from "framer-motion";
+import { motion } from "framer-motion";
 import React, { createContext, useContext, useEffect, useRef, useState } from "react";
 
 const MouseEnterContext = createContext<
@@ -25,12 +27,12 @@ export const CardContainer = ({
     containerRef.current.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
   };
 
-  const handleMouseEnter = (e: React.MouseEvent<HTMLDivElement>) => {
+  const handleMouseEnter = () => {
     setIsMouseEntered(true);
     if (!containerRef.current) return;
   };
 
-  const handleMouseLeave = (e: React.MouseEvent<HTMLDivElement>) => {
+  const handleMouseLeave = () => {
     if (!containerRef.current) return;
     setIsMouseEntered(false);
     containerRef.current.style.transform = "rotateY(0deg) rotateX(0deg)";
@@ -70,14 +72,57 @@ export const CardBody = ({
   children: React.ReactNode;
   className?: string;
 }) => {
+  const variants = {
+    initial: {
+      backgroundPosition: "0 50%",
+    },
+    animate: {
+      backgroundPosition: ["0, 50%", "100% 50%", "0 50%"],
+    },
+  };
+
+  const springOptions: Transition = {
+    duration: 5,
+    repeat: Infinity,
+    repeatType: "reverse",
+  };
+
+  const animate = true;
+
   return (
     <div
       className={cn(
-        "h-96 w-96 [transform-style:preserve-3d]  [&>*]:[transform-style:preserve-3d]",
+        "h-96 w-96 p-2 [transform-style:preserve-3d] [&>*]:[transform-style:preserve-3d]",
         className,
       )}
     >
-      {children}
+      <motion.div
+        variants={animate ? variants : undefined}
+        initial={animate ? "initial" : undefined}
+        animate={animate ? "animate" : undefined}
+        transition={animate ? springOptions : undefined}
+        style={{
+          backgroundSize: animate ? "400% 400%" : undefined,
+        }}
+        className={cn(
+          "absolute inset-0 rounded-xl -z-50 opacity-60 group-hover:opacity-100 blur-xl transition duration-500 will-change-transform",
+          "bg-[radial-gradient(circle_farthest-side_at_0_100%,#00ccb1,transparent),radial-gradient(circle_farthest-side_at_100%_0,#7b61ff,transparent),radial-gradient(circle_farthest-side_at_100%_100%,#ffc414,transparent),radial-gradient(circle_farthest-side_at_0_0,#1ca0fb,#141316)]",
+        )}
+      />
+      <motion.div
+        variants={animate ? variants : undefined}
+        initial={animate ? "initial" : undefined}
+        animate={animate ? "animate" : undefined}
+        transition={animate ? springOptions : undefined}
+        style={{
+          backgroundSize: animate ? "400% 400%" : undefined,
+        }}
+        className={cn(
+          "absolute inset-0 rounded-xl -z-50 will-change-transform",
+          "bg-[radial-gradient(circle_farthest-side_at_0_100%,#00ccb1,transparent),radial-gradient(circle_farthest-side_at_100%_0,#7b61ff,transparent),radial-gradient(circle_farthest-side_at_100%_100%,#ffc414,transparent),radial-gradient(circle_farthest-side_at_0_0,#1ca0fb,#141316)]",
+        )}
+      />
+      <div className="bg-zinc-900 rounded-xl p-4">{children}</div>
     </div>
   );
 };

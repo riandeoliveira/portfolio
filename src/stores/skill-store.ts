@@ -25,23 +25,12 @@ import { ReactComponent as Tailwind } from "@/assets/icons/skill/tailwind.svg";
 import { ReactComponent as TS } from "@/assets/icons/skill/ts.svg";
 import { ReactComponent as Vite } from "@/assets/icons/skill/vite.svg";
 import { ReactComponent as VSCode } from "@/assets/icons/skill/vscode.svg";
-import type { SkillType } from "@/types/skill";
-import type { FunctionComponent, SVGProps } from "react";
+import type { ISkill, SkillType } from "@/types/skill";
+import { makeAutoObservable } from "mobx";
 
-export type IconComponentType = FunctionComponent<
-  SVGProps<SVGSVGElement> & {
-    title?: string | undefined;
-  }
->;
+// REFACT: Considerar lazy import
 
-interface Skill {
-  name: SkillType;
-  title: string;
-  icon: IconComponentType;
-  color: string;
-}
-
-export const skills: Skill[] = [
+export const skillList: ISkill[] = [
   {
     name: "azure",
     title: "Azure",
@@ -205,3 +194,17 @@ export const skills: Skill[] = [
     color: "#3C99D4",
   },
 ];
+
+class SkillStore {
+  public list: ISkill[] = skillList;
+
+  public constructor() {
+    makeAutoObservable(this);
+  }
+
+  public filterBy(skillNameList: SkillType[]): ISkill[] {
+    return this.list.filter((skill) => skillNameList.includes(skill.name));
+  }
+}
+
+export const skillStore = new SkillStore();

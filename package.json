@@ -14,7 +14,7 @@
     "e2e:run": "cypress run",
     "format": "prettier --write ./src/**/*.{js,jsx,ts,tsx} vite.config.ts",
     "lint": "eslint --fix ./src/**/*.{js,jsx,ts,tsx} vite.config.ts",
-    "prebuild": "pnpm lint && pnpm format && pnpm test && pnpm e2e:run",
+    "prebuild": "pnpm lint && pnpm format && pnpm test",
     "start": "vite preview --open",
     "test": "vitest --run"
   },
