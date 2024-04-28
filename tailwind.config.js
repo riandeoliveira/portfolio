@@ -1,12 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 
+import svgToDataUri from "mini-svg-data-uri";
 import animations from "tailwindcss-animate";
 import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
 
 const addVariablesForColors = ({ addBase, theme }) => {
   const allColors = flattenColorPalette(theme("colors"));
   const newVars = Object.fromEntries(
-    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val]),
   );
 
   addBase({
@@ -15,11 +16,24 @@ const addVariablesForColors = ({ addBase, theme }) => {
 };
 
 module.exports = {
-  content: [
-    "./src/**/*.{ts,tsx}",
-  ],
+  content: ["./src/**/*.{ts,tsx}"],
   darkMode: ["class"],
-  plugins: [addVariablesForColors, animations],
+  plugins: [
+    addVariablesForColors,
+    animations,
+    function ({ matchUtilities, theme }) {
+      matchUtilities(
+        {
+          "bg-dot-thick": (value) => ({
+            backgroundImage: `url("${svgToDataUri(
+              `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="none"><circle fill="${value}" id="pattern-circle" cx="10" cy="10" r="2.5"></circle></svg>`,
+            )}")`,
+          }),
+        },
+        { values: flattenColorPalette(theme("backgroundColor")), type: "color" },
+      );
+    },
+  ],
   prefix: "",
   theme: {
     container: {
@@ -31,7 +45,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        "montserrat": ["Montserrat"]
+        montserrat: ["Montserrat"],
       },
       animation: {
         aurora: "aurora 60s linear infinite",
@@ -155,7 +169,7 @@ module.exports = {
           "max-mobile-l": { max: "425px" },
           "max-mobile-m": { max: "375px" },
           "max-mobile-s": { max: "320px" },
-        }
+        },
       },
     },
   },
