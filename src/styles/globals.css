@@ -9,10 +9,6 @@
   * {
     @apply font-montserrat;
   }
-
-  body {
-    @apply bg-zinc-950;
-  }
 }
 
 .swiper-3d,

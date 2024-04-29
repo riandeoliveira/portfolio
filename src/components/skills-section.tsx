@@ -8,7 +8,7 @@ import { SkillCard } from "./skill-card";
 
 export const SkillsSection = observer((): ReactElement => {
   return (
-    <section className="h-[40rem] w-full rounded-md bg-neutral-950 relative flex flex-col items-center justify-center antialiased">
+    <section className="h-[50vh] w-full rounded-md bg-neutral-950 relative flex flex-col items-center justify-center antialiased">
       <h1 className="text-7xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 font-sans font-bold">
         Skills
       </h1>
