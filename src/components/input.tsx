@@ -1,58 +1,35 @@
 import { cn } from "@/lib/utils";
-import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
-import * as React from "react";
+import type { FormikProps } from "formik";
+import type { InputHTMLAttributes, ReactElement } from "react";
+import { BackgroundGradient } from "./background-gradient";
 
-export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {}
+type InputProps = InputHTMLAttributes<HTMLInputElement> & {
+  instance: FormikProps<any>;
+  label: string;
+  name: string;
+};
 
-export const Input = React.forwardRef<HTMLInputElement, InputProps>(
-  ({ className, type, ...props }, ref) => {
-    const radius = 100;
-    const [visible, setVisible] = React.useState(false);
-
-    const mouseX = useMotionValue(0);
-    const mouseY = useMotionValue(0);
-
-    const handleMouseMove = ({ currentTarget, clientX, clientY }: any) => {
-      const { left, top } = currentTarget.getBoundingClientRect();
-
-      mouseX.set(clientX - left);
-      mouseY.set(clientY - top);
-    };
-
-    return (
-      <motion.div
-        style={{
-          background: useMotionTemplate`
-        radial-gradient(
-          ${visible ? `${radius}px` : "0px"} circle at ${mouseX}px ${mouseY}px,
-          var(--blue-500),
-          transparent 80%
-        )
-      `,
-        }}
-        onMouseMove={handleMouseMove}
-        onMouseEnter={() => setVisible(true)}
-        onMouseLeave={() => setVisible(false)}
-        className="p-[2px] rounded-lg transition duration-300 group/input"
-      >
-        <input
-          type={type}
-          className={cn(
-            `flex h-10 w-full border-none bg-gray-50 dark:bg-zinc-800 text-black dark:text-white shadow-input rounded-md px-3 py-2 text-sm  file:border-0 file:bg-transparent
-          file:text-sm file:font-medium placeholder:text-neutral-400 dark:placeholder-text-neutral-600
-          focus-visible:outline-none focus-visible:ring-[2px]  focus-visible:ring-neutral-400 dark:focus-visible:ring-neutral-600
-           disabled:cursor-not-allowed disabled:opacity-50
-           dark:shadow-[0px_0px_1px_1px_var(--neutral-700)]
-           group-hover/input:shadow-none transition duration-400
-           `,
-            className,
-          )}
-          ref={ref}
-          {...props}
-        />
-      </motion.div>
-    );
-  },
-);
-
-Input.displayName = "Input";
+export const Input = ({ className, instance, label, name, ...props }: InputProps): ReactElement => {
+  return (
+    <div className="flex flex-col gap-1">
+      <label htmlFor={name} className="text-zinc-50 text-base font-semibold">
+        {label}
+      </label>
+      <div className="relative p-0.5 z-50 flex">
+        <BackgroundGradient className="absolute rounded-md">
+          <input
+            type="text"
+            name={name}
+            onChange={instance.handleChange}
+            className={cn(
+              "px-3 py-2 rounded-md bg-zinc-900 text-zinc-50 w-full outline-none",
+              className,
+            )}
+            {...props}
+          />
+        </BackgroundGradient>
+      </div>
+      <span className="text-red-500 font-semibold">{instance.errors[name]?.toString()}</span>
+    </div>
+  );
+};

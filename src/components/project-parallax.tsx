@@ -5,6 +5,7 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import { observer } from "mobx-react-lite";
 import type { ReactElement } from "react";
 import { useRef } from "react";
+import { BackgroundGradient } from "./background-gradient";
 
 export const ProjectParallax = observer((): ReactElement => {
   const projectList = projectStore.sortByPresentation();
@@ -37,7 +38,7 @@ export const ProjectParallax = observer((): ReactElement => {
   return (
     <div
       ref={elementRef}
-      className="h-[300vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="h-[300vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px]"
     >
       <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
         <h1 className="text-2xl md:text-7xl font-bold text-zinc-100">
@@ -86,28 +87,31 @@ const ParallaxCard = ({ project, translate }: ParallaxCardProps): ReactElement =
     <motion.div
       style={{
         x: translate,
+        padding: "4px",
       }}
       whileHover={{
         y: -20,
       }}
       key={project.id}
-      className="group/product h-96 w-[30rem] relative flex-shrink-0"
+      className="group/product h-96 w-[30rem] relative flex-shrink-0 rounded-xl"
     >
       <a
         href={project.websiteUrl}
         target="_blank"
         rel="noreferrer"
-        className="block group-hover/product:shadow-2xl"
+        className="block group-hover/product:shadow-2xl rounded-xl"
       >
-        <img
-          src={project.thumbnail}
-          height="600"
-          width="600"
-          className="object-cover absolute h-full w-full inset-0"
-          alt={project.name}
-        />
+        <BackgroundGradient className="rounded-xl">
+          <img
+            src={project.thumbnail}
+            alt={project.name}
+            height="600"
+            width="600"
+            className="object-cover absolute h-full w-full inset-0 rounded-xl p-1"
+          />
+        </BackgroundGradient>
       </a>
-      <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none"></div>
+      <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none rounded-xl" />
       <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white">
         {project.name}
       </h2>

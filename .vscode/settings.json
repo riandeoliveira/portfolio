@@ -150,4 +150,5 @@
   //
   "typescript.suggest.completeFunctionCalls": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
+  "livePreview.defaultPreviewPath": "/z.html",
 }

@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
-import type { Transition } from "framer-motion";
+import type { Transition, Variants } from "framer-motion";
 import { motion } from "framer-motion";
-import type { ReactNode } from "react";
+import type { ReactElement, ReactNode } from "react";
 
 interface BackgroundGradientProps {
   animate?: boolean;
@@ -13,8 +13,8 @@ export const BackgroundGradient = ({
   animate = true,
   children,
   className,
-}: BackgroundGradientProps) => {
-  const variants = {
+}: BackgroundGradientProps): ReactElement => {
+  const variants: Variants = {
     initial: {
       backgroundPosition: "0 50%",
     },
