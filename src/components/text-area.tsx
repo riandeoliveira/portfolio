@@ -34,7 +34,11 @@ export const TextArea = ({
           />
         </BackgroundGradient>
       </div>
-      <span className="text-red-500 font-semibold">{instance.errors[name]?.toString()}</span>
+      {
+        instance.touched[name] && (
+          <span className="text-red-500 font-semibold">{instance.errors[name]?.toString()}</span>
+        )
+      }
     </div>
   );
 };
