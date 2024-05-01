@@ -1,29 +1,17 @@
+import { yup } from "@/extensions/yup-extension";
 import emailJs from "@emailjs/browser";
 import { useFormik } from "formik";
 import { type ReactElement } from "react";
-import { z } from "zod";
-import { toFormikValidationSchema } from "zod-formik-adapter";
 import { Button } from "./button";
 import { Input } from "./input";
 import { TextArea } from "./text-area";
 
-z.string()._addCheck({ kind: "trimAll" })
+const contactSchema = yup.object({
+  name: yup.string().trim().required("Campo obrigatório!"),
 
-z.string().trimAll();
+  email: yup.string().trim().required("Campo obrigatório!").validEmail("O e-mail deve ser válido!"),
 
-const trimAll = (value: string) => {
-  
-}
-
-const contactSchema = z.object({
-  name: z
-    .string({ message: "Campo obrigatório!" })
-    .transform((value) => value.replace(/\s+/g, ""))
-    .pipe(z.string().min(1, "Campo obrigatório!")),
-
-  email: z.string().min(1, "Campo obrigatório!").email("O e-mail deve ser válido!"),
-
-  message: z.string().min(1, "Campo obrigatório!"),
+  message: yup.string().trim().required("Campo obrigatório!"),
 });
 
 export const ContactSection = (): ReactElement => {
@@ -42,8 +30,10 @@ export const ContactSection = (): ReactElement => {
       email: "",
       message: "",
     },
-    validationSchema: toFormikValidationSchema(contactSchema),
-    onSubmit: handleSendEmail,
+    validationSchema: contactSchema,
+    onSubmit: (values) => {
+      console.log(values);
+    },
   });
 
   return (
