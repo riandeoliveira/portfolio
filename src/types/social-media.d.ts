@@ -10,7 +10,7 @@ export type SocialMediaNameType =
 
 interface ISocialMedia {
   name: SocialMediaNameType;
-  title?: string;
+  title: string;
   icon: IconComponentType;
   url: string;
 }
