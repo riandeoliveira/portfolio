@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import type { FormikProps } from "formik";
 import type { InputHTMLAttributes, ReactElement } from "react";
-import { BackgroundGradient } from "../background-gradient";
+import { NeonBackground } from "../neon-background";
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   instance: FormikProps<any>;
@@ -16,7 +16,7 @@ export const Input = ({ className, instance, label, name, ...props }: InputProps
         {label}
       </label>
       <div className="relative p-0.5 z-50 flex">
-        <BackgroundGradient className="absolute rounded-md">
+        <NeonBackground className="absolute rounded-md">
           <input
             type="text"
             name={name}
@@ -27,7 +27,7 @@ export const Input = ({ className, instance, label, name, ...props }: InputProps
             )}
             {...props}
           />
-        </BackgroundGradient>
+        </NeonBackground>
       </div>
       {instance.touched[name] && (
         <span className="text-red-500 font-semibold">{instance.errors[name]?.toString()}</span>

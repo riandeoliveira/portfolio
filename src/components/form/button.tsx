@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import type { ButtonHTMLAttributes, ReactElement, ReactNode } from "react";
-import { BackgroundGradient } from "../background-gradient";
+import { NeonBackground } from "../neon-background";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
@@ -9,7 +9,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 export const Button = ({ children, className, ...props }: ButtonProps): ReactElement => {
   return (
     <div className="relative z-50 p-0.5 group">
-      <BackgroundGradient className="rounded-xl">
+      <NeonBackground className="rounded-xl">
         <button
           type="button"
           {...props}
@@ -20,7 +20,7 @@ export const Button = ({ children, className, ...props }: ButtonProps): ReactEle
         >
           {children}
         </button>
-      </BackgroundGradient>
+      </NeonBackground>
     </div>
   );
 };

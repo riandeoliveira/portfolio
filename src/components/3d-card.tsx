@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import React, { createContext, useContext, useEffect, useRef, useState } from "react";
-import { BackgroundGradient } from "./background-gradient";
+import { NeonBackground } from "./neon-background";
 
 const MouseEnterContext = createContext<
   [boolean, React.Dispatch<React.SetStateAction<boolean>>] | undefined
@@ -78,7 +78,7 @@ export const CardBody = ({
         className,
       )}
     >
-      <BackgroundGradient className="rounded-xl">{children}</BackgroundGradient>
+      <NeonBackground className="rounded-xl">{children}</NeonBackground>
     </div>
   );
 };

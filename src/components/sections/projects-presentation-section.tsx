@@ -5,7 +5,7 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import { observer } from "mobx-react-lite";
 import type { ReactElement } from "react";
 import { useRef } from "react";
-import { BackgroundGradient } from "../background-gradient";
+import { NeonBackground } from "../neon-background";
 
 export const ProjectsPresentationSection = observer((): ReactElement => {
   const projectList = projectStore.sortByPresentation();
@@ -101,7 +101,7 @@ const ParallaxCard = ({ project, translate }: ParallaxCardProps): ReactElement =
         rel="noreferrer"
         className="block group-hover/product:shadow-2xl rounded-xl"
       >
-        <BackgroundGradient className="rounded-xl">
+        <NeonBackground className="rounded-xl">
           <img
             src={project.thumbnail}
             alt={project.name}
@@ -109,7 +109,7 @@ const ParallaxCard = ({ project, translate }: ParallaxCardProps): ReactElement =
             width="600"
             className="object-cover absolute h-full w-full inset-0 rounded-xl p-1"
           />
-        </BackgroundGradient>
+        </NeonBackground>
       </a>
       <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none rounded-xl" />
       <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white">

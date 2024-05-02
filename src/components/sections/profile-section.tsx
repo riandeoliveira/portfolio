@@ -1,9 +1,9 @@
 import { avatar } from "@/assets/images";
 import { observer } from "mobx-react-lite";
 import type { ReactElement } from "react";
-import { BackgroundGradient } from "../background-gradient";
 import { HighlightBackground } from "../highlight-background";
 import { HighlightText } from "../highlight-text";
+import { NeonBackground } from "../neon-background";
 import { SocialMediasArea } from "../social-medias-area";
 
 export const ProfileSection = observer((): ReactElement => {
@@ -18,7 +18,7 @@ export const ProfileSection = observer((): ReactElement => {
           <SocialMediasArea />
         </div>
         <div className="[transform-style:preserve-3d] p-1">
-          <BackgroundGradient className="rounded-full">
+          <NeonBackground className="rounded-full">
             <img
               src={avatar}
               alt="Imagem de perfil"
@@ -26,7 +26,7 @@ export const ProfileSection = observer((): ReactElement => {
               height={256}
               className="rounded-full"
             />
-          </BackgroundGradient>
+          </NeonBackground>
         </div>
       </HighlightBackground>
     </section>

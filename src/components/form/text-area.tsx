@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import type { FormikProps } from "formik";
 import type { ReactElement, TextareaHTMLAttributes } from "react";
-import { BackgroundGradient } from "../background-gradient";
+import { NeonBackground } from "../neon-background";
 
 interface TextAreaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
   instance: FormikProps<any>;
@@ -22,7 +22,7 @@ export const TextArea = ({
         {label}
       </label>
       <div className="relative p-0.5 z-50 flex">
-        <BackgroundGradient className="absolute rounded-md">
+        <NeonBackground className="absolute rounded-md">
           <textarea
             name={name}
             onChange={instance.handleChange}
@@ -32,7 +32,7 @@ export const TextArea = ({
             )}
             {...props}
           />
-        </BackgroundGradient>
+        </NeonBackground>
       </div>
       {instance.touched[name] && (
         <span className="text-red-500 font-semibold">{instance.errors[name]?.toString()}</span>

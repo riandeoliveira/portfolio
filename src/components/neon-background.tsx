@@ -3,17 +3,17 @@ import type { Transition, Variants } from "framer-motion";
 import { motion } from "framer-motion";
 import type { ReactElement, ReactNode } from "react";
 
-interface BackgroundGradientProps {
+interface NeonBackgroundProps {
   animate?: boolean;
   children?: ReactNode;
   className?: string;
 }
 
-export const BackgroundGradient = ({
+export const NeonBackground = ({
   animate = true,
   children,
   className,
-}: BackgroundGradientProps): ReactElement => {
+}: NeonBackgroundProps): ReactElement => {
   const variants: Variants = {
     initial: {
       backgroundPosition: "0 50%",

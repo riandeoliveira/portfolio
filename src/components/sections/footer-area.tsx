@@ -1,12 +1,12 @@
 import type { ReactElement } from "react";
-import { BackgroundGradient } from "../background-gradient";
+import { NeonBackground } from "../neon-background";
 import { SocialMediasArea } from "../social-medias-area";
 
 export const FooterArea = (): ReactElement => {
   return (
     <>
       <div className="[transform-style:preserve-3d] h-0.5">
-        <BackgroundGradient />
+        <NeonBackground />
       </div>
       <footer className="h-[40vh] w-full flex justify-center">
         <div className="flex flex-col items-center justify-center gap-8">
