@@ -13,18 +13,21 @@ import type { ReactElement } from "react";
 export const Home = observer((): ReactElement => {
   return (
     <>
-      <OuterSpaceBackground />
-      <div className="py-24" />
+      {/* <OuterSpaceBackground /> */}
       <main className="flex flex-col gap-24">
-        <ProfileSection />
-        <AboutMeSection />
-        <ProjectsPresentationSection />
-        <ProjectsSection />
+        {/* <ProfileSection /> */}
+        {/* <AboutMeSection /> */}
+
+        {/* <ProjectsPresentationSection /> */}
+
+        {/* <ProjectsSection /> */}
+
         <SkillsSection />
-        <AchievementsSection />
-        <ContactSection />
+
+        {/* <AchievementsSection /> */}
+        {/* <ContactSection /> */}
       </main>
-      <FooterArea />
+      {/* <FooterArea /> */}
     </>
   );
 });

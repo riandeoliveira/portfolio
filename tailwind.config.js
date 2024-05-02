@@ -36,12 +36,21 @@ module.exports = {
   ],
   prefix: "",
   theme: {
+    screens: {
+      "desktop": { max: "2560px" },
+      "laptop-l": { max: "1440px" },
+      "laptop-m": { max: "1280px" },
+      "laptop-s": { max: "1024px" },
+      "tablet-l": { max: "900px" },
+      "tablet-m": { max: "768px" },
+      "tablet-s": { max: "600px" },
+      "mobile-l": { max: "425px" },
+      "mobile-m": { max: "375px" },
+      "mobile-s": { max: "320px" },
+    },
     container: {
       center: true,
       padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
     },
     extend: {
       fontFamily: {
@@ -101,18 +110,6 @@ module.exports = {
           lg: "var(--radius)",
           md: "calc(var(--radius) - 2px)",
           sm: "calc(var(--radius) - 4px)",
-        },
-        screens: {
-          "max-desktop": { max: "2560px" },
-          "max-laptop-l": { max: "1440px" },
-          "max-laptop-m": { max: "1280px" },
-          "max-laptop-s": { max: "1024px" },
-          "max-tablet-l": { max: "900px" },
-          "max-tablet-m": { max: "768px" },
-          "max-tablet-s": { max: "600px" },
-          "max-mobile-l": { max: "425px" },
-          "max-mobile-m": { max: "375px" },
-          "max-mobile-s": { max: "320px" },
         },
       },
     },

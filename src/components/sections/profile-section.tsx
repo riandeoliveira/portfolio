@@ -11,20 +11,23 @@ import { SocialMediasArea } from "../social-medias-area";
 export const ProfileSection = observer((): ReactElement => {
   return (
     <section>
-      <HighlightBackground containerClassName="py-48" className="flex justify-between w-[1200px]">
-        <div className="flex flex-col justify-between">
-          <h1 className="text-5xl text-zinc-50 flex flex-col gap-2">
+      <HighlightBackground
+        containerClassName="py-48 px-4 laptop-s:py-24"
+        className="flex justify-between w-[1200px] gap-12 laptop-s:flex-col-reverse laptop-s:items-center"
+      >
+        <div className="flex flex-col justify-between gap-12 tablet-m:text-center">
+          <h1 className="w-full text-5xl text-zinc-50 flex flex-col gap-2 tablet-m:text-3xl">
             <strong className="font-semibold">Olá, eu sou Rian Oliveira!</strong>
             <HighlightText>Desenvolvedor Front End</HighlightText>
           </h1>
-          <div className="flex justify-between items-center">
+          <div className="flex justify-between items-center gap-8 tablet-m:flex-col">
             <SocialMediasArea />
             <Link href={curriculum} download>
               Baixar Currículo
             </Link>
           </div>
         </div>
-        <NeonBackground className="rounded-full p-1">
+        <NeonBackground className="rounded-full p-1 w-64 h-64">
           <img
             src={avatar}
             alt="Imagem de perfil"

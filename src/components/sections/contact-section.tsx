@@ -68,10 +68,10 @@ export const ContactSection = (): ReactElement => {
 
   return (
     <section className="flex justify-center py-48 px-4">
-      <div className="w-[1200px] flex gap-24">
-        <h2 className="text-zinc-50 text-5xl flex flex-col gap-2 flex-1">
+      <div className="w-[1200px] flex laptop-s:flex-col laptop-s:gap-12">
+        <h2 className="text-zinc-50 text-5xl flex flex-col gap-2 flex-1 laptop-s:text-center tablet-s:text-3xl">
           <strong className="font-semibold">Gostou Do Que Viu?</strong>
-          <HighlightText className="w-fit">Entre em Contato!</HighlightText>
+          <HighlightText className="w-fit laptop-s:w-full">Entre em Contato!</HighlightText>
         </h2>
         <form className="flex flex-col flex-1 gap-8" onSubmit={handleSubmit}>
           <div className="flex flex-col gap-4">
