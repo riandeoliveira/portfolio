@@ -32,7 +32,7 @@ export const TextArea = ({
           {...props}
         />
       </NeonBackground>
-      {instance.touched[name] ? (
+      {instance.touched[name] && !!instance.errors[name] ? (
         <span className="text-red-500 font-semibold">{instance.errors[name]?.toString()}</span>
       ) : (
         <div className="h-[21px]" />

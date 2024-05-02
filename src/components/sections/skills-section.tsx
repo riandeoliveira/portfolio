@@ -4,8 +4,6 @@ import type { ReactElement } from "react";
 import { BackgroundBeams } from "../background-beams";
 import { SkillCard } from "../skill-card";
 
-// NOTE: Adicionar alguma animação com as tecnologias surgindo suavemente e/ou deslizando pela tela???
-
 export const SkillsSection = observer((): ReactElement => {
   return (
     <section className="h-[50vh] w-full rounded-md bg-neutral-950 relative flex flex-col items-center justify-center antialiased">
