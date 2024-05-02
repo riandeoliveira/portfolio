@@ -4,6 +4,7 @@ import {
   VITE_EMAIL_TEMPLATE_ID,
 } from "@/constants/environment-variables";
 import { yup } from "@/extensions/yup-extension";
+import type { EmailJSResponseStatus } from "@emailjs/browser";
 import emailJs from "@emailjs/browser";
 import { useFormik } from "formik";
 import type { FormEvent } from "react";
@@ -12,6 +13,7 @@ import { toast } from "react-toastify";
 import { Button } from "../form/button";
 import { Input } from "../form/input";
 import { TextArea } from "../form/text-area";
+import { HighlightText } from "../highlight-text";
 
 const contactSchema = yup.object({
   name: yup.string().trim().required("Campo obrigatório!").max(64, "Máximo de 64 caracteres!"),
@@ -34,7 +36,7 @@ export const ContactSection = (): ReactElement => {
   const [formEvent, setFormEvent] = useState<FormEvent<HTMLFormElement>>();
 
   const handleSendEmail = async (): Promise<void> => {
-    const response = emailJs.sendForm(
+    const response: Promise<EmailJSResponseStatus> = emailJs.sendForm(
       VITE_EMAIL_SERVICE_ID,
       VITE_EMAIL_TEMPLATE_ID,
       formEvent?.target as HTMLFormElement,
@@ -65,11 +67,12 @@ export const ContactSection = (): ReactElement => {
   };
 
   return (
-    <section className="flex justify-center bg-zinc-950 p-24">
+    <section className="flex justify-center py-48 px-4">
       <div className="w-[1200px] flex gap-24">
-        <p className="text-zinc-50 font-semibold text-4xl flex-1">
-          Gostou do Que Viu? Então Entre em Contato!
-        </p>
+        <h2 className="text-zinc-50 text-5xl flex flex-col gap-2 flex-1">
+          <strong className="font-semibold">Gostou Do Que Viu?</strong>
+          <HighlightText className="w-fit">Entre em Contato!</HighlightText>
+        </h2>
         <form className="flex flex-col flex-1 gap-8" onSubmit={handleSubmit}>
           <div className="flex flex-col gap-4">
             <Input type="text" name="name" label="Nome*" placeholder="Seu nome" instance={formik} />

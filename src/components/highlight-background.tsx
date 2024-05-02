@@ -33,7 +33,7 @@ export const HighlightBackground = ({
   return (
     <div
       className={cn(
-        "relative h-[50vh] flex items-center bg-black justify-center w-full group",
+        "relative flex items-center bg-black justify-center w-full group",
         containerClassName,
       )}
       onMouseMove={handleMouseMove}
@@ -58,9 +58,7 @@ export const HighlightBackground = ({
           `,
         }}
       />
-      <div className={cn("relative z-20 flex w-[1200px] justify-between", className)}>
-        {children}
-      </div>
+      <div className={cn("relative", className)}>{children}</div>
     </div>
   );
 };

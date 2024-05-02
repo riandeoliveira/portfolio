@@ -21,21 +21,21 @@ export const TextArea = ({
       <label htmlFor={name} className="text-zinc-50 text-base font-semibold">
         {label}
       </label>
-      <div className="relative p-0.5 z-50 flex">
-        <NeonBackground className="absolute rounded-md">
-          <textarea
-            name={name}
-            onChange={instance.handleChange}
-            className={cn(
-              "px-3 py-2 rounded-md bg-zinc-900 text-zinc-50 w-full outline-none h-32 resize-none",
-              className,
-            )}
-            {...props}
-          />
-        </NeonBackground>
-      </div>
-      {instance.touched[name] && (
+      <NeonBackground className="flex rounded-md">
+        <textarea
+          name={name}
+          onChange={instance.handleChange}
+          className={cn(
+            "px-3 py-2 rounded-md h-32 bg-zinc-900 text-zinc-50 w-full outline-none resize-none",
+            className,
+          )}
+          {...props}
+        />
+      </NeonBackground>
+      {instance.touched[name] ? (
         <span className="text-red-500 font-semibold">{instance.errors[name]?.toString()}</span>
+      ) : (
+        <div className="h-[21px]" />
       )}
     </div>
   );

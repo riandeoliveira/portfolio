@@ -12,7 +12,7 @@ interface RouteProps {
 export const Route = ({ page: Page }: RouteProps): ReactElement => {
   return (
     <>
-      <ToastContainer />
+      <ToastContainer toastClassName="bg-zinc-900 text-zinc-50" />
       <Page />
     </>
   );

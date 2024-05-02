@@ -9,7 +9,7 @@ interface HighlightTextProps {
 
 export const HighlightText = ({ children, className }: HighlightTextProps): ReactElement => {
   return (
-    <motion.span
+    <motion.strong
       initial={{
         backgroundSize: "0% 100%",
       }}
@@ -27,11 +27,11 @@ export const HighlightText = ({ children, className }: HighlightTextProps): Reac
         display: "inline",
       }}
       className={cn(
-        "relative inline-block pb-1 px-1 rounded-lg bg-gradient-to-r from-indigo-500 to-purple-500",
+        "relative inline-block font-semibold pb-1 px-1 rounded-lg bg-gradient-to-r from-indigo-500 to-purple-500",
         className,
       )}
     >
       {children}
-    </motion.span>
+    </motion.strong>
   );
 };

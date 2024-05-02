@@ -15,22 +15,22 @@ export const Input = ({ className, instance, label, name, ...props }: InputProps
       <label htmlFor={name} className="text-zinc-50 text-base font-semibold">
         {label}
       </label>
-      <div className="relative p-0.5 z-50 flex">
-        <NeonBackground className="absolute rounded-md">
-          <input
-            type="text"
-            name={name}
-            onChange={instance.handleChange}
-            className={cn(
-              "px-3 py-2 rounded-md bg-zinc-900 text-zinc-50 w-full outline-none",
-              className,
-            )}
-            {...props}
-          />
-        </NeonBackground>
-      </div>
-      {instance.touched[name] && (
+      <NeonBackground className="rounded-md">
+        <input
+          type="text"
+          name={name}
+          onChange={instance.handleChange}
+          className={cn(
+            "px-3 py-2 rounded-md bg-zinc-900 text-zinc-50 w-full outline-none",
+            className,
+          )}
+          {...props}
+        />
+      </NeonBackground>
+      {instance.touched[name] ? (
         <span className="text-red-500 font-semibold">{instance.errors[name]?.toString()}</span>
+      ) : (
+        <div className="h-[21px]" />
       )}
     </div>
   );

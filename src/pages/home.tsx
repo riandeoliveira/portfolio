@@ -1,6 +1,6 @@
 import { OuterSpaceBackground } from "@/components/outer-space-background";
 import { AboutMeSection } from "@/components/sections/about-me-section";
-import { CertificatesSection } from "@/components/sections/certificates-section";
+import { AchievementsSection } from "@/components/sections/achievements-section";
 import { ContactSection } from "@/components/sections/contact-section";
 import { FooterArea } from "@/components/sections/footer-area";
 import { ProfileSection } from "@/components/sections/profile-section";
@@ -14,18 +14,14 @@ export const Home = observer((): ReactElement => {
   return (
     <>
       <OuterSpaceBackground />
-      <main>
-        <div className="py-24" />
+      <div className="py-24" />
+      <main className="flex flex-col gap-24">
         <ProfileSection />
-        <div className="py-24" />
         <AboutMeSection />
-        <div className="py-96" />
-        <CertificatesSection />
-        <div className="mb-96" />
-        <SkillsSection />
         <ProjectsPresentationSection />
         <ProjectsSection />
-        <div className="mt-64 w-full h-full" />
+        <SkillsSection />
+        <AchievementsSection />
         <ContactSection />
       </main>
       <FooterArea />
