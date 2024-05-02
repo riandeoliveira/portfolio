@@ -25,6 +25,7 @@ import { ReactComponent as Tailwind } from "@/assets/icons/skill/tailwind.svg";
 import { ReactComponent as TS } from "@/assets/icons/skill/ts.svg";
 import { ReactComponent as Vite } from "@/assets/icons/skill/vite.svg";
 import { ReactComponent as VSCode } from "@/assets/icons/skill/vscode.svg";
+import { ReactComponent as ThreeJS } from "@/assets/icons/skill/threejs.svg";
 import type { ISkill, SkillType } from "@/types/skill";
 import { makeAutoObservable } from "mobx";
 
@@ -174,6 +175,12 @@ const skillList: ISkill[] = [
     title: "Tailwind CSS",
     icon: Tailwind,
     color: "#14C6B7",
+  },
+  {
+    name: "threejs",
+    title: "Three.js",
+    icon: ThreeJS,
+    color: "#fff",
   },
   {
     name: "ts",
