@@ -6,8 +6,8 @@ import { SocialMediaCard } from "./social-media-card";
 export const SocialMediasArea = observer((): ReactElement => {
   return (
     <div className="flex gap-4">
-      {socialMediaStore.list.map(({ icon, color, name }) => (
-        <SocialMediaCard icon={icon} color={color} key={name} />
+      {socialMediaStore.list.map(({ icon, url, name }) => (
+        <SocialMediaCard icon={icon} url={url} key={name} />
       ))}
     </div>
   );
