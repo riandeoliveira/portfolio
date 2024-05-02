@@ -1,35 +1,35 @@
-import { ReactComponent as Azure } from "@/assets/icons/skill/azure.svg";
-import { ReactComponent as Bootstrap } from "@/assets/icons/skill/bootstrap.svg";
-import { ReactComponent as CS } from "@/assets/icons/skill/cs.svg";
-import { ReactComponent as CSS } from "@/assets/icons/skill/css.svg";
-import { ReactComponent as Cypress } from "@/assets/icons/skill/cypress.svg";
-import { ReactComponent as Docker } from "@/assets/icons/skill/docker.svg";
-import { ReactComponent as DotNet } from "@/assets/icons/skill/dotnet.svg";
-import { ReactComponent as Express } from "@/assets/icons/skill/express.svg";
-import { ReactComponent as Git } from "@/assets/icons/skill/git.svg";
-import { ReactComponent as HTML } from "@/assets/icons/skill/html.svg";
-import { ReactComponent as Jest } from "@/assets/icons/skill/jest.svg";
-import { ReactComponent as JS } from "@/assets/icons/skill/js.svg";
-import { ReactComponent as Laravel } from "@/assets/icons/skill/laravel.svg";
-import { ReactComponent as MaterialUI } from "@/assets/icons/skill/materialui.svg";
-import { ReactComponent as MySQL } from "@/assets/icons/skill/mysql.svg";
-import { ReactComponent as NextJS } from "@/assets/icons/skill/nextjs.svg";
-import { ReactComponent as NodeJS } from "@/assets/icons/skill/nodejs.svg";
-import { ReactComponent as PHP } from "@/assets/icons/skill/php.svg";
-import { ReactComponent as PostgreSQL } from "@/assets/icons/skill/postgresql.svg";
-import { ReactComponent as React } from "@/assets/icons/skill/react.svg";
-import { ReactComponent as Redux } from "@/assets/icons/skill/redux.svg";
-import { ReactComponent as SASS } from "@/assets/icons/skill/sass.svg";
-import { ReactComponent as StyledComponents } from "@/assets/icons/skill/styledcomponents.svg";
-import { ReactComponent as Tailwind } from "@/assets/icons/skill/tailwind.svg";
-import { ReactComponent as TS } from "@/assets/icons/skill/ts.svg";
-import { ReactComponent as Vite } from "@/assets/icons/skill/vite.svg";
-import { ReactComponent as VSCode } from "@/assets/icons/skill/vscode.svg";
-import { ReactComponent as ThreeJS } from "@/assets/icons/skill/threejs.svg";
-import type { ISkill, SkillType } from "@/types/skill";
+import {
+  Azure,
+  Bootstrap,
+  CS,
+  CSS,
+  Cypress,
+  Docker,
+  DotNet,
+  Express,
+  Git,
+  HTML,
+  Jest,
+  JS,
+  Laravel,
+  MaterialUI,
+  MySQL,
+  NextJS,
+  NodeJS,
+  PHP,
+  PostgreSQL,
+  React,
+  Redux,
+  SASS,
+  StyledComponents,
+  Tailwind,
+  ThreeJS,
+  TS,
+  Vite,
+  VSCode,
+} from "@/assets/icons";
+import type { ISkill, SkillNameType } from "@/types/skill";
 import { makeAutoObservable } from "mobx";
-
-// REFACT: Considerar lazy import
 
 const skillList: ISkill[] = [
   {
@@ -209,7 +209,7 @@ class SkillStore {
     makeAutoObservable(this);
   }
 
-  public filterBy(skillNameList: SkillType[]): ISkill[] {
+  public filterBy(skillNameList: SkillNameType[]): ISkill[] {
     return this.list.filter((skill) => skillNameList.includes(skill.name));
   }
 }

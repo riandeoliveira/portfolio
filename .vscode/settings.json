@@ -80,9 +80,6 @@
   "[postcss]": {
     "editor.defaultFormatter": "mrmlnc.vscode-postcss-sorting"
   },
-  "[scss]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -150,5 +147,4 @@
   //
   "typescript.suggest.completeFunctionCalls": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "livePreview.defaultPreviewPath": "/z.html",
 }

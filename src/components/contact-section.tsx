@@ -1,42 +1,51 @@
+import {
+  VITE_EMAIL_PUBLIC_KEY,
+  VITE_EMAIL_SERVICE_ID,
+  VITE_EMAIL_TEMPLATE_ID,
+} from "@/constants/environment-variables";
 import { yup } from "@/extensions/yup-extension";
 import emailJs from "@emailjs/browser";
 import { useFormik } from "formik";
-import { FormEvent, useState, type ReactElement } from "react";
+import type { FormEvent } from "react";
+import { useState, type ReactElement } from "react";
 import { toast } from "react-toastify";
 import { Button } from "./button";
 import { Input } from "./input";
 import { TextArea } from "./text-area";
 
-// TODO: Adicionar um toast informando o envio de e-mail
-
 const contactSchema = yup.object({
   name: yup.string().trim().required("Campo obrigatório!").max(64, "Máximo de 64 caracteres!"),
 
-  email: yup.string().trim().required("Campo obrigatório!").validEmail("O e-mail deve ser válido!").max(64, "Máximo de 64 caracteres!"),
+  email: yup
+    .string()
+    .trim()
+    .required("Campo obrigatório!")
+    .validEmail("O e-mail deve ser válido!")
+    .max(64, "Máximo de 64 caracteres!"),
 
-  message: yup.string().trim().required("Campo obrigatório!").max(1024, "Máximo de 1024 caracteres!"),
+  message: yup
+    .string()
+    .trim()
+    .required("Campo obrigatório!")
+    .max(1024, "Máximo de 1024 caracteres!"),
 });
 
-
 export const ContactSection = (): ReactElement => {
-  const [formEvent, setFormEvent] = useState<FormEvent<HTMLFormElement>>()
+  const [formEvent, setFormEvent] = useState<FormEvent<HTMLFormElement>>();
 
   const handleSendEmail = async (): Promise<void> => {
     const response = emailJs.sendForm(
-      import.meta.env.VITE_EMAIL_SERVICE_ID,
-      import.meta.env.VITE_EMAIL_TEMPLATE_ID,
+      VITE_EMAIL_SERVICE_ID,
+      VITE_EMAIL_TEMPLATE_ID,
       formEvent?.target as HTMLFormElement,
-      import.meta.env.VITE_EMAIL_PUBLIC_KEY,
+      VITE_EMAIL_PUBLIC_KEY,
     );
 
-    toast.promise(
-      response,
-      {
-        pending: 'Enviando e-mail...',
-        success: 'E-mail enviado com sucesso!',
-        error: 'Não foi possível enviar o e-mail. Tente outra forma de contato.'
-      }
-  )
+    toast.promise(response, {
+      pending: "Enviando e-mail...",
+      success: "E-mail enviado com sucesso!",
+      error: "Não foi possível enviar o e-mail. Tente outra forma de contato.",
+    });
   };
 
   const formik = useFormik({
@@ -50,10 +59,10 @@ export const ContactSection = (): ReactElement => {
   });
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>): void => {
-    setFormEvent(event)
+    setFormEvent(event);
 
-    formik.handleSubmit(event)
-  }
+    formik.handleSubmit(event);
+  };
 
   return (
     <section className="flex justify-center bg-zinc-950 p-24">

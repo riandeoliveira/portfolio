@@ -1,9 +1,7 @@
 import type { IconComponentType } from "./svg";
 
-export type SkillType =
-  | "arduino"
+export type SkillNameType =
   | "azure"
-  | "bash"
   | "bootstrap"
   | "cs"
   | "css"
@@ -11,43 +9,29 @@ export type SkillType =
   | "docker"
   | "dotnet"
   | "express"
-  | "figma"
-  | "firebase"
   | "git"
-  | "github"
   | "html"
   | "jest"
   | "js"
   | "laravel"
-  | "linux"
   | "materialui"
-  | "md"
-  | "mongodb"
   | "mysql"
   | "nextjs"
   | "nodejs"
   | "php"
   | "postgresql"
-  | "powershell"
-  | "prisma"
-  | "py"
   | "react"
   | "redux"
   | "sass"
-  | "sqlite"
   | "styledcomponents"
   | "tailwind"
   | "threejs"
   | "ts"
-  | "ubuntu"
-  | "vercel"
   | "vite"
-  | "vitest"
-  | "vscode"
-  | "windows";
+  | "vscode";
 
 interface ISkill {
-  name: SkillType;
+  name: SkillNameType;
   title?: string;
   icon: IconComponentType;
   color: string;

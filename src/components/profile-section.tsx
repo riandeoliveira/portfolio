@@ -1,4 +1,4 @@
-import avatar from "@/assets/images/avatar.png";
+import { avatar } from "@/assets/images";
 import { motion } from "framer-motion";
 import { observer } from "mobx-react-lite";
 import type { ReactElement } from "react";

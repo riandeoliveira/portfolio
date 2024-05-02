@@ -1,9 +1,4 @@
-import { ReactComponent as Github } from "@/assets/icons/social-medias/github.svg";
-import { ReactComponent as WhatsApp } from "@/assets/icons/social-medias/whatsapp.svg";
-import { ReactComponent as Instagram } from "@/assets/icons/social-medias/instagram.svg";
-import { ReactComponent as LinkedIn } from "@/assets/icons/social-medias/linkedin.svg";
-import { ReactComponent as Spotify } from "@/assets/icons/social-medias/spotify.svg";
-import { ReactComponent as X } from "@/assets/icons/social-medias/x.svg";
+import { Github, Instagram, LinkedIn, Spotify, WhatsApp, X } from "@/assets/icons";
 import type { ISocialMedia } from "@/types/social-media";
 import { makeAutoObservable } from "mobx";
 
@@ -36,7 +31,7 @@ const socialMediaList: ISocialMedia[] = [
     name: "whatsapp",
     title: "WhatsApp",
     icon: WhatsApp,
-    url: "https://wa.me/5551991852873"
+    url: "https://wa.me/5551991852873",
   },
   {
     name: "x",

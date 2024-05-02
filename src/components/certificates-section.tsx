@@ -1,6 +1,4 @@
-import personalCertificate from "@/assets/images/personal-certificate.png";
-import teamCertificate from "@/assets/images/team-certificate.png";
-
+import { personal, team } from "@/assets/images";
 import type { ReactElement } from "react";
 import { BackgroundGradient } from "./background-gradient";
 
@@ -20,24 +18,12 @@ export const CertificatesSection = (): ReactElement => {
         <div className="flex justify-between gap-4">
           <div className="relative p-1">
             <BackgroundGradient className="absolute rounded-xl">
-              <img
-                src={teamCertificate}
-                alt=""
-                width={720}
-                height={507.08}
-                className="rounded-xl"
-              />
+              <img src={team} alt="" width={720} height={507.08} className="rounded-xl" />
             </BackgroundGradient>
           </div>
           <div className="relative p-1">
             <BackgroundGradient className="absolute rounded-xl">
-              <img
-                src={personalCertificate}
-                alt=""
-                width={720}
-                height={507.08}
-                className="rounded-xl"
-              />
+              <img src={personal} alt="" width={720} height={507.08} className="rounded-xl" />
             </BackgroundGradient>
           </div>
         </div>
