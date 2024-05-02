@@ -4,7 +4,7 @@ import type { ReactElement } from "react";
 
 import { EffectCoverflow, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { ProjectCard } from "./project-card";
+import { ProjectCard } from "../project-card";
 import "./style.css";
 
 export const ProjectsSection = observer((): ReactElement => {

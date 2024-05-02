@@ -1,6 +1,6 @@
 import { personal, team } from "@/assets/images";
 import type { ReactElement } from "react";
-import { BackgroundGradient } from "./background-gradient";
+import { BackgroundGradient } from "../background-gradient";
 
 export const CertificatesSection = (): ReactElement => {
   return (

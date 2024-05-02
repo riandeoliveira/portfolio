@@ -9,9 +9,9 @@ import { useFormik } from "formik";
 import type { FormEvent } from "react";
 import { useState, type ReactElement } from "react";
 import { toast } from "react-toastify";
-import { Button } from "./button";
-import { Input } from "./input";
-import { TextArea } from "./text-area";
+import { Button } from "../form/button";
+import { Input } from "../form/input";
+import { TextArea } from "../form/text-area";
 
 const contactSchema = yup.object({
   name: yup.string().trim().required("Campo obrigatório!").max(64, "Máximo de 64 caracteres!"),

@@ -1,12 +1,12 @@
-import { AboutMeSection } from "@/components/about-me-section";
-import { CertificatesSection } from "@/components/certificates-section";
-import { ContactSection } from "@/components/contact-section";
-import { FooterArea } from "@/components/footer-area";
 import { OuterSpaceBackground } from "@/components/outer-space-background";
-import { ProfileSection } from "@/components/profile-section";
-import { ProjectParallax } from "@/components/project-parallax";
-import { ProjectsSection } from "@/components/projects-section";
-import { SkillsSection } from "@/components/skills-section";
+import { AboutMeSection } from "@/components/sections/about-me-section";
+import { CertificatesSection } from "@/components/sections/certificates-section";
+import { ContactSection } from "@/components/sections/contact-section";
+import { FooterArea } from "@/components/sections/footer-area";
+import { ProfileSection } from "@/components/sections/profile-section";
+import { ProjectsPresentationSection } from "@/components/sections/projects-presentation-section";
+import { ProjectsSection } from "@/components/sections/projects-section";
+import { SkillsSection } from "@/components/sections/skills-section";
 import { observer } from "mobx-react-lite";
 import type { ReactElement } from "react";
 
@@ -23,7 +23,7 @@ export const Home = observer((): ReactElement => {
         <CertificatesSection />
         <div className="mb-96" />
         <SkillsSection />
-        <ProjectParallax />
+        <ProjectsPresentationSection />
         <ProjectsSection />
         <div className="mt-64 w-full h-full" />
         <ContactSection />

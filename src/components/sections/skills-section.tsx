@@ -1,8 +1,8 @@
 import { skillStore } from "@/stores/skill-store";
 import { observer } from "mobx-react-lite";
 import type { ReactElement } from "react";
-import { BackgroundBeams } from "./background-beams";
-import { SkillCard } from "./skill-card";
+import { BackgroundBeams } from "../background-beams";
+import { SkillCard } from "../skill-card";
 
 // NOTE: Adicionar alguma animação com as tecnologias surgindo suavemente e/ou deslizando pela tela???
 

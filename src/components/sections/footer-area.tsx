@@ -1,6 +1,6 @@
 import type { ReactElement } from "react";
-import { BackgroundGradient } from "./background-gradient";
-import { SocialMediasArea } from "./social-medias-area";
+import { BackgroundGradient } from "../background-gradient";
+import { SocialMediasArea } from "../social-medias-area";
 
 export const FooterArea = (): ReactElement => {
   return (

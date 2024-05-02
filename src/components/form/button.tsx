@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import type { ButtonHTMLAttributes, ReactElement, ReactNode } from "react";
-import { BackgroundGradient } from "./background-gradient";
+import { BackgroundGradient } from "../background-gradient";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;

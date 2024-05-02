@@ -5,9 +5,9 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import { observer } from "mobx-react-lite";
 import type { ReactElement } from "react";
 import { useRef } from "react";
-import { BackgroundGradient } from "./background-gradient";
+import { BackgroundGradient } from "../background-gradient";
 
-export const ProjectParallax = observer((): ReactElement => {
+export const ProjectsPresentationSection = observer((): ReactElement => {
   const projectList = projectStore.sortByPresentation();
 
   const firstRow = projectList.slice(0, 5);

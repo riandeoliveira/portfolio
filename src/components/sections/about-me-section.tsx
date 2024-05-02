@@ -1,6 +1,6 @@
 import type { ReactElement } from "react";
-import { TextGenerateEffect } from "./text-generate-effect";
-import { WavyBackground } from "./wavy-background";
+import { TextGenerateEffect } from "../text-generate-effect";
+import { WavyBackground } from "../wavy-background";
 
 export const AboutMeSection = (): ReactElement => {
   return (
