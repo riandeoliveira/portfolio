@@ -6,7 +6,7 @@ import { NeonBackground } from "../neon-background";
 export const AchievementsSection = (): ReactElement => {
   return (
     <section className="flex justify-center py-48 px-4">
-      <div className="w-[1200px] flex flex-col gap-4">
+      <div className="w-[1200px] flex flex-col gap-8">
         <h1 className="text-zinc-50 font-bold text-4xl text-center w-fit tablet-s:text-2xl tablet-s:w-full">
           <HighlightText>O que Conquistei</HighlightText>
         </h1>

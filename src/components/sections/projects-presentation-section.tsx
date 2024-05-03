@@ -36,15 +36,15 @@ export const ProjectsPresentationSection = observer((): ReactElement => {
   const opacity = useSpring(useTransform(scrollYProgress, [0, 0.2], [0.2, 1]), springOptions);
 
   return (
-    <div
+    <section
       ref={elementRef}
-      className="h-[300vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px]"
+      className="h-[300vh] py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
-      <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
-        <h1 className="text-2xl md:text-7xl font-bold text-zinc-100">
+      <div className="max-w-7xl relative mx-auto py-40 px-4 left-0 top-0 w-full tablet-s:py-20">
+        <h1 className="text-7xl font-bold text-zinc-100 tablet-s:text-4xl">
           Conheça mais <br /> sobre meu trabalho
         </h1>
-        <p className="max-w-2xl text-base md:text-xl mt-8 text-zinc-50">
+        <p className="max-w-2xl text-xl mt-8 text-zinc-50 tablet-s:text-base">
           Ao longo da minha jornada, já desenvolvi uma variedade de produtos de alta qualidade
           utilizando as tecnologias mais recentes e requisitadas do mercado.
         </p>
@@ -73,7 +73,7 @@ export const ProjectsPresentationSection = observer((): ReactElement => {
           ))}
         </motion.div>
       </motion.div>
-    </div>
+    </section>
   );
 });
 
@@ -87,7 +87,6 @@ const ParallaxCard = ({ project, translate }: ParallaxCardProps): ReactElement =
     <motion.div
       style={{
         x: translate,
-        padding: "4px",
       }}
       whileHover={{
         y: -20,
@@ -95,13 +94,13 @@ const ParallaxCard = ({ project, translate }: ParallaxCardProps): ReactElement =
       key={project.id}
       className="group/product h-96 w-[30rem] relative flex-shrink-0 rounded-xl"
     >
-      <a
-        href={project.websiteUrl}
-        target="_blank"
-        rel="noreferrer"
-        className="block group-hover/product:shadow-2xl rounded-xl"
-      >
-        <NeonBackground className="rounded-xl">
+      <NeonBackground className="w-full h-full">
+        <a
+          href={project.websiteUrl}
+          target="_blank"
+          rel="noreferrer"
+          className="block group-hover/product:shadow-2xl rounded-xl"
+        >
           <img
             src={project.thumbnail}
             alt={project.name}
@@ -109,10 +108,10 @@ const ParallaxCard = ({ project, translate }: ParallaxCardProps): ReactElement =
             width="600"
             className="object-cover absolute h-full w-full inset-0 rounded-xl p-1"
           />
-        </NeonBackground>
-      </a>
-      <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none rounded-xl" />
-      <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white">
+        </a>
+      </NeonBackground>
+      <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-zinc-950 pointer-events-none rounded-xl" />
+      <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-zinc-50">
         {project.name}
       </h2>
     </motion.div>

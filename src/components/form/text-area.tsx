@@ -35,7 +35,7 @@ export const TextArea = ({
       {instance.touched[name] && !!instance.errors[name] ? (
         <span className="text-red-500 font-semibold">{instance.errors[name]?.toString()}</span>
       ) : (
-        <div className="h-[21px]" />
+        <div className="h-6" />
       )}
     </div>
   );
