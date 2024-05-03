@@ -4,7 +4,6 @@ import type { ReactElement } from "react";
 import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { ProjectCard } from "../project-card";
-// import "./style.css";
 
 export const ProjectsSection = observer((): ReactElement => {
   return (
@@ -13,12 +12,28 @@ export const ProjectsSection = observer((): ReactElement => {
         grabCursor
         centeredSlides
         navigation
-        slidesPerView={3}
         pagination={{
           clickable: true,
         }}
         modules={[EffectCoverflow, Navigation, Pagination]}
         className="py-24"
+        breakpoints={{
+          0: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 300,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 500,
+          },
+          1440: {
+            slidesPerView: 3,
+            spaceBetween: 200,
+          },
+        }}
       >
         {projectStore.sortByHighlight().map((project) => (
           <SwiperSlide key={project.id}>

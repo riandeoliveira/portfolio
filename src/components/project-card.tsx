@@ -23,8 +23,8 @@ export const ProjectCard = observer(
     return (
       <CardContainer className="inter-var">
         <NeonBackground>
-          <CardBody className="bg-zinc-900 relative group/card w-[30rem] h-auto rounded-xl">
-            <div className="bg-zinc-900 rounded-xl p-4">
+          <CardBody className="bg-zinc-900 relative group/card h-auto rounded-xl w-[30rem] tablet-s:w-[25rem] mobile-l:w-[20rem]">
+            <div className="bg-zinc-900 rounded-xl p-6 w-full">
               <CardItem translateZ={60} className="text-xl font-bold text-zinc-50">
                 {name}
               </CardItem>
@@ -32,20 +32,28 @@ export const ProjectCard = observer(
                 {description}
               </CardItem>
               <CardItem translateZ={140} className="w-full mt-4">
-                <NeonBackground>
+                <NeonBackground className="w-full">
                   <img
                     src={thumbnail}
                     alt={`thumbnail do projeto ${name}`}
+                    width={384}
+                    height={384}
                     className="w-full h-96 object-cover rounded-xl group-hover/card:shadow-xl"
                   />
                 </NeonBackground>
               </CardItem>
-              <CardItem translateZ={100} className="text-sm mt-2 flex justify-evenly w-full">
+              <CardItem
+                translateZ={100}
+                className="text-sm mt-2 flex gap-2 justify-evenly items-center w-full"
+              >
                 {skillStore.filterBy(skillList).map(({ icon, color, name }) => (
                   <SkillCard icon={icon} color={color} key={name} />
                 ))}
               </CardItem>
-              <CardItem translateZ={80} className="flex mt-6 w-full gap-12">
+              <CardItem
+                translateZ={80}
+                className="flex mt-6 w-full gap-12 tablet-s:flex-col tablet-s:gap-6"
+              >
                 {repository.isPrivate ? (
                   <span className="flex w-full items-center justify-center whitespace-nowrap text-red-500 gap-2">
                     <HiLockClosed size={20} />

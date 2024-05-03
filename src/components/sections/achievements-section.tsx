@@ -17,10 +17,22 @@ export const AchievementsSection = (): ReactElement => {
         </p>
         <div className="flex gap-4 mt-8 tablet-s:flex-col">
           <NeonBackground>
-            <img src={team} alt="Imagem de certificado de uma equipe" width={720} height={507.08} className="rounded-xl w-full" />
+            <img
+              src={team}
+              alt="Imagem de certificado de uma equipe"
+              width={720}
+              height={507.08}
+              className="rounded-xl w-full"
+            />
           </NeonBackground>
           <NeonBackground>
-            <img src={personal} alt="Imagem de certificado de uma pessoa" width={720} height={507.08} className="rounded-xl w-full" />
+            <img
+              src={personal}
+              alt="Imagem de certificado de uma pessoa"
+              width={720}
+              height={507.08}
+              className="rounded-xl w-full"
+            />
           </NeonBackground>
         </div>
       </div>
