@@ -15,15 +15,15 @@ export const Home = observer((): ReactElement => {
     <>
       <OuterSpaceBackground />
       <main className="flex flex-col gap-24">
-        <ProfileSection />
-        <AboutMeSection />
-        <ProjectsPresentationSection />
-        {/* <ProjectsSection /> */}
-        <SkillsSection />
-        <AchievementsSection />
-        <ContactSection />
+        {/* <ProfileSection /> */}
+        {/* <AboutMeSection /> */}
+        {/* <ProjectsPresentationSection /> */}
+        <ProjectsSection />
+        {/* <SkillsSection /> */}
+        {/* <AchievementsSection /> */}
+        {/* <ContactSection /> */}
       </main>
-      <FooterArea />
+      {/* <FooterArea /> */}
     </>
   );
 });

@@ -78,7 +78,9 @@ export const CardBody = ({
         className,
       )}
     >
-      <NeonBackground className="rounded-xl">{children}</NeonBackground>
+      {/* <NeonBackground className="rounded-xl">{children}</NeonBackground> */}
+
+      {children}
     </div>
   );
 };

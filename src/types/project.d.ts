@@ -1,7 +1,7 @@
 import type { SkillType } from "./skill";
 
 export interface IProjectRepository {
-  url: string | null;
+  url?: string;
   isPrivate: boolean;
 }
 

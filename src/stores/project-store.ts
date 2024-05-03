@@ -127,7 +127,7 @@ const projects: IProject[] = [
     thumbnail: "https://i.imgur.com/OM8zsvo.png",
     skillList: ["js", "nextjs", "react", "sass", "ts"],
     repository: {
-      url: null,
+      url: undefined,
       isPrivate: true,
     },
     websiteUrl: "https://metamorfose-digital.vercel.app/",

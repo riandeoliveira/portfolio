@@ -1,14 +1,20 @@
 import { cn } from "@/lib/utils";
-import type { AnchorHTMLAttributes, ReactElement } from "react";
+import type { AnchorHTMLAttributes, ReactElement, ReactNode } from "react";
 import { NeonBackground } from "../neon-background";
 
 interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
-  children: string;
+  children: ReactNode;
+  containerClassName?: string;
 }
 
-export const Link = ({ children, className, ...props }: LinkProps): ReactElement => {
+export const Link = ({
+  containerClassName,
+  children,
+  className,
+  ...props
+}: LinkProps): ReactElement => {
   return (
-    <NeonBackground>
+    <NeonBackground className={cn("", containerClassName)}>
       <a
         {...props}
         className={cn(
