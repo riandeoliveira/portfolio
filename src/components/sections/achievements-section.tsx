@@ -1,4 +1,4 @@
-import { personal, team } from "@/assets/images";
+import { image } from "@/assets/images";
 import type { ReactElement } from "react";
 import { HighlightText } from "../highlight-text";
 import { NeonBackground } from "../neon-background";
@@ -18,7 +18,7 @@ export const AchievementsSection = (): ReactElement => {
         <div className="flex gap-4 mt-8 tablet-s:flex-col">
           <NeonBackground>
             <img
-              src={team}
+              src={image.teamCertificate}
               alt="Imagem de certificado de uma equipe"
               width={720}
               height={507.08}
@@ -27,7 +27,7 @@ export const AchievementsSection = (): ReactElement => {
           </NeonBackground>
           <NeonBackground>
             <img
-              src={personal}
+              src={image.personalCertificate}
               alt="Imagem de certificado de uma pessoa"
               width={720}
               height={507.08}

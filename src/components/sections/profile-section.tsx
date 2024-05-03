@@ -1,5 +1,6 @@
-import { curriculum } from "@/assets/docs";
-import { avatar } from "@/assets/images";
+import { doc } from "@/assets/docs";
+import { Icon } from "@/assets/icons";
+import { image } from "@/assets/images";
 import { observer } from "mobx-react-lite";
 import type { ReactElement } from "react";
 import { Link } from "../form/link";
@@ -22,14 +23,15 @@ export const ProfileSection = observer((): ReactElement => {
           </h1>
           <div className="flex justify-between items-center gap-8 tablet-m:flex-col">
             <SocialMediasArea />
-            <Link href={curriculum} download>
+            <Link href={doc.curriculum} download className="gap-2">
               Baixar Currículo
+              <Icon.HiDownload size={20} />
             </Link>
           </div>
         </div>
         <NeonBackground className="rounded-full p-1 w-64 h-64">
           <img
-            src={avatar}
+            src={image.avatar}
             alt="Imagem de perfil"
             width={256}
             height={256}

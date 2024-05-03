@@ -1,4 +1,10 @@
-export { default as personal } from "./certificates/personal.png";
-export { default as team } from "./certificates/team.png";
+import { default as personalCertificate } from "./certificates/personal.png";
+import { default as teamCertificate } from "./certificates/team.png";
 
-export { default as avatar } from "./profile/avatar.png";
+import { default as avatar } from "./profile/avatar.png";
+
+export const image = {
+  avatar,
+  personalCertificate,
+  teamCertificate,
+};

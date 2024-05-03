@@ -1,4 +1,7 @@
+import { doc } from "@/assets/docs";
+import { Icon } from "@/assets/icons";
 import type { ReactElement } from "react";
+import { Link } from "../form/link";
 import { HighlightText } from "../highlight-text";
 import { NeonBackground } from "../neon-background";
 import { SocialMediasArea } from "../social-medias-area";
@@ -14,6 +17,10 @@ export const FooterArea = (): ReactElement => {
             <HighlightText className="rounded-md pb-0.5">Rian Oliveira</HighlightText> ✨
           </p>
           <SocialMediasArea />
+          <Link href={doc.curriculum} download className="gap-2">
+            Baixar Currículo
+            <Icon.HiDownload size={20} />
+          </Link>
         </div>
       </footer>
     </>

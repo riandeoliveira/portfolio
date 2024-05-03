@@ -1,4 +1,4 @@
-import { Github, Instagram, LinkedIn, Spotify, WhatsApp, X } from "@/assets/icons";
+import { Icon } from "@/assets/icons";
 import type { ISocialMedia } from "@/types/social-media";
 import { makeAutoObservable } from "mobx";
 
@@ -6,37 +6,37 @@ const socialMediaList: ISocialMedia[] = [
   {
     name: "github",
     title: "GitHub",
-    icon: Github,
+    icon: Icon.Github,
     url: "https://github.com/riandeoliveira",
   },
   {
     name: "instagram",
     title: "Instagram",
-    icon: Instagram,
+    icon: Icon.Instagram,
     url: "https://www.instagram.com/rian.deoliveira",
   },
   {
     name: "linkedin",
     title: "LinkedIn",
-    icon: LinkedIn,
+    icon: Icon.LinkedIn,
     url: "https://www.linkedin.com/in/riandeoliveira",
   },
   {
     name: "spotify",
     title: "Spotify",
-    icon: Spotify,
+    icon: Icon.Spotify,
     url: "https://open.spotify.com/user/riandias2016",
   },
   {
     name: "whatsapp",
     title: "WhatsApp",
-    icon: WhatsApp,
+    icon: Icon.WhatsApp,
     url: "https://wa.me/5551991852873",
   },
   {
     name: "x",
     title: "X",
-    icon: X,
+    icon: Icon.X,
     url: "https://twitter.com/_MrBachelor_",
   },
 ];

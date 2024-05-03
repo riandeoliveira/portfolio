@@ -1,9 +1,8 @@
+import { Icon } from "@/assets/icons";
 import { skillStore } from "@/stores/skill-store";
 import type { IProject } from "@/types/project";
 import { observer } from "mobx-react-lite";
 import type { ReactElement } from "react";
-import { FaGithub } from "react-icons/fa";
-import { HiLockClosed, HiOutlineExternalLink } from "react-icons/hi";
 import { CardBody, CardContainer, CardItem } from "./3d-card";
 import { Link } from "./form/link";
 import { NeonBackground } from "./neon-background";
@@ -56,7 +55,7 @@ export const ProjectCard = observer(
               >
                 {repository.isPrivate ? (
                   <span className="flex w-full items-center justify-center whitespace-nowrap text-red-500 gap-2">
-                    <HiLockClosed size={20} />
+                    <Icon.HiLockClosed size={20} />
                     Repositório privado
                   </span>
                 ) : (
@@ -67,7 +66,7 @@ export const ProjectCard = observer(
                     containerClassName="w-full"
                     className="text-sm font-medium p-2 gap-2 bg-zinc-900"
                   >
-                    <FaGithub size={20} />
+                    <Icon.FaGithub size={20} />
                     Acessar repositório
                   </Link>
                 )}
@@ -78,7 +77,7 @@ export const ProjectCard = observer(
                   containerClassName="w-full"
                   className="text-sm font-medium p-2 gap-2 bg-zinc-900"
                 >
-                  <HiOutlineExternalLink size={20} />
+                  <Icon.HiOutlineExternalLink size={20} />
                   Acessar projeto
                 </Link>
               </CardItem>
