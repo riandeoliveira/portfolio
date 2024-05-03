@@ -23,3 +23,11 @@
 .swiper-button-next {
   @apply text-purple-500;
 }
+
+.swiper-slide {
+  @apply scale-75 transition-all opacity-50;
+}
+
+.swiper-slide-active {
+  @apply scale-100 transition-all opacity-100;
+}
