@@ -10,12 +10,16 @@
   }
 }
 
-.swiper-3d,
-.swiper-slide-shadow-left,
-.swiper-slide-shadow-right {
-  background-image: none !important;
-}
-
 .Toastify__close-button > svg {
   @apply text-zinc-50;
+}
+
+.swiper-pagination-bullet,
+.swiper-pagination-bullet-active {
+  @apply bg-gradient-to-r from-indigo-500 to-purple-500;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  @apply text-purple-500;
 }

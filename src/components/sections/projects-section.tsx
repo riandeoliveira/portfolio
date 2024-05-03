@@ -1,30 +1,23 @@
 import { projectStore } from "@/stores/project-store";
 import { observer } from "mobx-react-lite";
 import type { ReactElement } from "react";
-
-import { EffectCoverflow, Pagination } from "swiper/modules";
+import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { ProjectCard } from "../project-card";
-import "./style.css";
+// import "./style.css";
 
 export const ProjectsSection = observer((): ReactElement => {
   return (
     <div className="select-none">
       <Swiper
-        effect={"slide"}
-        grabCursor={true}
-        centeredSlides={true}
-        slidesPerView={"auto"}
-        coverflowEffect={{
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
+        grabCursor
+        centeredSlides
+        navigation
+        slidesPerView={3}
+        pagination={{
+          clickable: true,
         }}
-        pagination={true}
-        spaceBetween={224}
-        modules={[EffectCoverflow, Pagination]}
+        modules={[EffectCoverflow, Navigation, Pagination]}
         className="py-24"
       >
         {projectStore.sortByHighlight().map((project) => (
