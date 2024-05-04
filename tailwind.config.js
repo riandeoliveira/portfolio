@@ -57,6 +57,10 @@ module.exports = {
         montserrat: ["Montserrat"],
       },
       animation: {
+        rotatePrimary: "rotatePrimary 2s forwards",
+        rotateSecondary: "rotateSecondary 2s forwards",
+        togglePrimary: "togglePrimary 1.2s forwards",
+        toggleSecondary: "toggleSecondary 3.5s forwards",
         aurora: "aurora 60s linear infinite",
         first: "moveVertical 30s ease infinite",
         second: "moveInCircle 20s reverse infinite",
@@ -65,6 +69,38 @@ module.exports = {
         fifth: "moveInCircle 20s ease infinite",
       },
       keyframes: {
+        rotatePrimary: {
+          from: {
+            transform: "rotateY(0deg)"
+          },
+          to: {
+            transform: "rotateY(180deg)"
+          }
+        },
+        rotateSecondary: {
+          from: {
+            transform: "rotateY(180deg)"
+          },
+          to: {
+            transform: "rotateY(0deg)"
+          }
+        },
+        togglePrimary: {
+          from: {
+            zIndex: 50
+          },
+          to: {
+            zIndex: 0
+          }
+        },
+        toggleSecondary: {
+          from: {
+            zIndex: 0
+          },
+          to: {
+            zIndex: 50
+          }
+        },
         aurora: {
           from: {
             backgroundPosition: "50% 50%, 50% 50%",

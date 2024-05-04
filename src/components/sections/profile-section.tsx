@@ -1,15 +1,22 @@
 import { doc } from "@/assets/docs";
 import { Icon } from "@/assets/icons";
 import { image } from "@/assets/images";
+import { video } from "@/assets/videos";
 import { observer } from "mobx-react-lite";
 import type { ReactElement } from "react";
+import { useState } from "react";
 import { Link } from "../form/link";
 import { HighlightBackground } from "../highlight-background";
 import { HighlightText } from "../highlight-text";
 import { NeonBackground } from "../neon-background";
 import { SocialMediasArea } from "../social-medias-area";
+import { Tooltip } from "../tooltip";
 
 export const ProfileSection = observer((): ReactElement => {
+  const [isRotating, setIsRotating] = useState<boolean | null>(null);
+
+  const handleRotate = (): void => setIsRotating((previousState) => !previousState);
+
   return (
     <section id="profile">
       <HighlightBackground
@@ -29,15 +36,37 @@ export const ProfileSection = observer((): ReactElement => {
             </Link>
           </div>
         </div>
-        <NeonBackground className="rounded-full p-1 w-64 h-64">
-          <img
-            src={image.avatar}
-            alt="Imagem de perfil"
-            width={256}
-            height={256}
-            className="rounded-full"
-          />
-        </NeonBackground>
+        <Tooltip title="Clique aqui!">
+          <button
+            type="button"
+            onClick={handleRotate}
+            className={`${isRotating === true ? "animate-rotatePrimary" : ""} ${isRotating === false ? "animate-rotateSecondary" : ""}`}
+          >
+            <NeonBackground className="rounded-full p-0 w-64 h-64">
+              <div
+                className={`bg-zinc-900 flex items-center justify-center w-[248px] h-[248px] rounded-full absolute translate-x-1 translate-y-1 ${isRotating === true ? "animate-toggleSecondary" : ""} ${isRotating === false ? "animate-togglePrimary" : ""}`}
+              >
+                <a
+                  href={video.easterEgg}
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{ transform: "rotateY(180deg)" }}
+                  className="block bg-clip-text hover:animate-pulse font-semibold text-transparent bg-gradient-to-b from-indigo-500 to-purple-500"
+                >
+                  Para onde esse link leva?
+                  <div className="h-px bg-gradient-to-b from-indigo-500 to-purple-500" />
+                </a>
+              </div>
+              <img
+                src={image.avatar}
+                alt="Imagem de perfil"
+                width={248}
+                height={248}
+                className="rounded-full absolute translate-x-1 translate-y-1 z-10"
+              />
+            </NeonBackground>
+          </button>
+        </Tooltip>
       </HighlightBackground>
     </section>
   );
