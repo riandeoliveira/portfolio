@@ -6,7 +6,7 @@ import { SkillCard } from "../skill-card";
 
 export const SkillsSection = observer((): ReactElement => {
   return (
-    <section className="py-48 px-4 bg-zinc-950 flex justify-center relative">
+    <section id="skills" className="py-48 px-4 bg-zinc-950 flex justify-center relative">
       <BackgroundBeams />
       <div className="w-[1200px] flex flex-col text-center">
         <h1 className="text-7xl bg-clip-text text-transparent bg-gradient-to-b from-zinc-200 to-zinc-600 font-bold tablet-s:text-5xl">

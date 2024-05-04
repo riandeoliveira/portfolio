@@ -37,6 +37,8 @@ import { ReactComponent as X } from "./social-medias/x.svg";
 import { FaGithub } from "react-icons/fa";
 import { HiDownload, HiLockClosed, HiOutlineExternalLink } from "react-icons/hi";
 
+import { FaAward, FaEnvelope, FaFolderOpen, FaHome, FaTools, FaUser } from "react-icons/fa";
+
 export const Icon = {
   Azure,
   Bootstrap,
@@ -46,7 +48,13 @@ export const Icon = {
   Docker,
   DotNet,
   Express,
+  FaAward,
+  FaEnvelope,
+  FaFolderOpen,
   FaGithub,
+  FaHome,
+  FaTools,
+  FaUser,
   Git,
   Github,
   HiDownload,

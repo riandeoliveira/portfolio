@@ -6,7 +6,11 @@
 
 @layer base {
   * {
-    @apply font-montserrat;
+    @apply font-montserrat list-none;
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 }
 

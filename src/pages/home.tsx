@@ -3,6 +3,7 @@ import { AboutMeSection } from "@/components/sections/about-me-section";
 import { AchievementsSection } from "@/components/sections/achievements-section";
 import { ContactSection } from "@/components/sections/contact-section";
 import { FooterArea } from "@/components/sections/footer-area";
+import { HeaderArea } from "@/components/sections/header-area";
 import { ProfileSection } from "@/components/sections/profile-section";
 import { ProjectsPresentationSection } from "@/components/sections/projects-presentation-section";
 import { ProjectsSection } from "@/components/sections/projects-section";
@@ -14,6 +15,7 @@ export const Home = observer((): ReactElement => {
   return (
     <>
       <OuterSpaceBackground />
+      <HeaderArea />
       <main className="flex flex-col gap-24">
         <ProfileSection />
         <AboutMeSection />

@@ -1,18 +1,20 @@
 import { cn } from "@/lib/utils";
 import type { Transition, Variants } from "framer-motion";
 import { motion } from "framer-motion";
-import type { ReactElement, ReactNode } from "react";
+import type { CSSProperties, ReactElement, ReactNode } from "react";
 
 interface NeonBackgroundProps {
   animate?: boolean;
   children?: ReactNode;
   className?: string;
+  style?: CSSProperties;
 }
 
 export const NeonBackground = ({
   animate = true,
   children,
   className,
+  style,
 }: NeonBackgroundProps): ReactElement => {
   const variants: Variants = {
     initial: {
@@ -30,7 +32,7 @@ export const NeonBackground = ({
   };
 
   return (
-    <div className={cn("[transform-style:preserve-3d] p-0.5", className)}>
+    <div className={cn("[transform-style:preserve-3d] p-0.5", className)} style={style}>
       <motion.div
         variants={animate ? variants : undefined}
         initial={animate ? "initial" : undefined}

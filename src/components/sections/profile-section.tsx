@@ -11,7 +11,7 @@ import { SocialMediasArea } from "../social-medias-area";
 
 export const ProfileSection = observer((): ReactElement => {
   return (
-    <section>
+    <section id="profile">
       <HighlightBackground
         containerClassName="py-48 px-4 laptop-s:py-24"
         className="flex justify-between w-[1200px] gap-12 laptop-s:flex-col-reverse laptop-s:items-center"

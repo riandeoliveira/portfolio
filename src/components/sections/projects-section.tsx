@@ -8,7 +8,7 @@ import { ProjectCard } from "../project-card";
 
 export const ProjectsSection = observer((): ReactElement => {
   return (
-    <section className="select-none py-48 px-4">
+    <section id="projects" className="select-none py-48 px-4">
       <div className="flex justify-center px-4">
         <div className="w-[1200px] flex flex-col gap-4">
           <h1 className="text-zinc-50 font-bold text-4xl text-center w-fit tablet-s:text-2xl tablet-s:w-full">
