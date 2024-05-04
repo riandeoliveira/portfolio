@@ -31,7 +31,7 @@ export const HeaderArea = (): ReactElement => {
     <>
       <header
         style={{ height: `${headerHeight}px` }}
-        className={`flex justify-center px-4 ${isHeaderFixed ? "transition-all fixed top-0 left-0 right-0 bg-zinc-950 z-50" : ""}`}
+        className={`flex justify-center px-4 animate-header ${isHeaderFixed ? "transition-all fixed top-0 left-0 right-0 bg-zinc-950 z-50" : ""}`}
       >
         <nav className="w-[1200px] flex">
           <ul className="flex items-center w-full">
@@ -56,7 +56,7 @@ export const HeaderArea = (): ReactElement => {
           </ul>
         </nav>
       </header>
-      <NeonBackground className="h-0.5 p-0" />
+      <NeonBackground className="h-0.5 p-0 animate-headerBar" />
     </>
   );
 };

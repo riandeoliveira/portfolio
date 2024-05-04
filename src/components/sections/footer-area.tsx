@@ -17,9 +17,9 @@ export const FooterArea = (): ReactElement => {
             <HighlightText className="rounded-md pb-0.5">Rian Oliveira</HighlightText> ✨
           </p>
           <SocialMediasArea />
-          <Link href={doc.curriculum} download className="gap-2">
+          <Link href={doc.curriculum} download className="gap-2 group/link">
             Baixar Currículo
-            <Icon.HiDownload size={20} />
+            <Icon.HiDownload size={20} className="transition-all group-hover/link:animate-bounce" />
           </Link>
         </div>
       </footer>

@@ -57,6 +57,9 @@ module.exports = {
         montserrat: ["Montserrat"],
       },
       animation: {
+        header: "header 1s forwards",
+        headerBar: "headerBar 1s forwards",
+        growUp: "growUp 1s forwards",
         rotatePrimary: "rotatePrimary 2s forwards",
         rotateSecondary: "rotateSecondary 2s forwards",
         togglePrimary: "togglePrimary 1.2s forwards",
@@ -69,6 +72,30 @@ module.exports = {
         fifth: "moveInCircle 20s ease infinite",
       },
       keyframes: {
+        header: {
+          from: {
+            transform: "translateY(-80px)"
+          },
+          to: {
+            transform: "translateY(0)"
+          }
+        },
+        headerBar: {
+          from: {
+            transform: "translateY(-60px)"
+          },
+          to: {
+            transform: "translateY(0)"
+          }
+        },
+        growUp: {
+          from: {
+            transform: "scale(0)"
+          },
+          to: {
+            transform: "scale(1)"
+          }
+        },
         rotatePrimary: {
           from: {
             transform: "rotateY(0deg)"

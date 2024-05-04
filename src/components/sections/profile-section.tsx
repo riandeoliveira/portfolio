@@ -30,9 +30,12 @@ export const ProfileSection = observer((): ReactElement => {
           </h1>
           <div className="flex justify-between items-center gap-8 tablet-m:flex-col">
             <SocialMediasArea />
-            <Link href={doc.curriculum} download className="gap-2">
+            <Link href={doc.curriculum} download className="gap-2 group/link">
               Baixar Currículo
-              <Icon.HiDownload size={20} />
+              <Icon.HiDownload
+                size={20}
+                className="transition-all group-hover/link:animate-bounce"
+              />
             </Link>
           </div>
         </div>
@@ -40,7 +43,7 @@ export const ProfileSection = observer((): ReactElement => {
           <button
             type="button"
             onClick={handleRotate}
-            className={`${isRotating === true ? "animate-rotatePrimary" : ""} ${isRotating === false ? "animate-rotateSecondary" : ""}`}
+            className={`animate-growUp ${isRotating === true ? "animate-rotatePrimary" : ""} ${isRotating === false ? "animate-rotateSecondary" : ""}`}
           >
             <NeonBackground className="rounded-full p-0 w-64 h-64">
               <div
