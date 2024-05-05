@@ -1,4 +1,3 @@
-import { doc } from "@/assets/docs";
 import { Icon } from "@/assets/icons";
 import type { ReactElement } from "react";
 import { Link } from "../form/link";
@@ -17,7 +16,7 @@ export const FooterArea = (): ReactElement => {
             <HighlightText className="rounded-md pb-0.5">Rian Oliveira</HighlightText> ✨
           </p>
           <SocialMediasArea />
-          <Link href={doc.curriculum} download className="gap-2 group/link">
+          <Link href="/Rian_Dias_de_Oliveira_Curriculo.pdf" download className="gap-2 group/link">
             Baixar Currículo
             <Icon.HiDownload size={20} className="transition-all group-hover/link:animate-bounce" />
           </Link>

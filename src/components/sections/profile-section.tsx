@@ -1,7 +1,5 @@
-import { doc } from "@/assets/docs";
 import { Icon } from "@/assets/icons";
 import { image } from "@/assets/images";
-import { video } from "@/assets/videos";
 import { observer } from "mobx-react-lite";
 import type { ReactElement } from "react";
 import { useState } from "react";
@@ -30,7 +28,7 @@ export const ProfileSection = observer((): ReactElement => {
           </h1>
           <div className="flex justify-between items-center gap-8 tablet-m:flex-col">
             <SocialMediasArea />
-            <Link href={doc.curriculum} download className="gap-2 group/link">
+            <Link href="/Rian_Dias_de_Oliveira_Curriculo.pdf" download className="gap-2 group/link">
               Baixar Currículo
               <Icon.HiDownload
                 size={20}
@@ -50,7 +48,7 @@ export const ProfileSection = observer((): ReactElement => {
                 className={`bg-zinc-900 flex items-center justify-center w-[248px] h-[248px] rounded-full absolute translate-x-1 translate-y-1 ${isRotating === true ? "animate-toggleSecondary" : ""} ${isRotating === false ? "animate-togglePrimary" : ""}`}
               >
                 <a
-                  href={video.easterEgg}
+                  href="https://youtu.be/uHgt8giw1LY?si=MovtNeUKU20Qt6FQ"
                   target="_blank"
                   rel="noreferrer"
                   style={{ transform: "rotateY(180deg)" }}
