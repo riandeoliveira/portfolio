@@ -57,6 +57,7 @@ module.exports = {
         montserrat: ["Montserrat"],
       },
       animation: {
+        fadeIn: "fadeIn 1s forwards",
         header: "header 1s forwards",
         headerBar: "headerBar 1s forwards",
         growUp: "growUp 1s forwards",
@@ -72,6 +73,14 @@ module.exports = {
         fifth: "moveInCircle 20s ease infinite",
       },
       keyframes: {
+        fadeIn: {
+          from: {
+            opacity: 0
+          },
+          to: {
+            opacity: 1
+          }
+        },
         header: {
           from: {
             transform: "translateY(-80px)"
