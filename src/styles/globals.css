@@ -1,0 +1,37 @@
+@import "./fonts";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply font-montserrat list-none;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+.Toastify__close-button > svg {
+  @apply text-zinc-50;
+}
+
+.swiper-pagination-bullet,
+.swiper-pagination-bullet-active {
+  @apply bg-gradient-to-r from-indigo-500 to-purple-500;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  @apply text-purple-500;
+}
+
+.swiper-slide {
+  @apply scale-75 transition-all opacity-50;
+}
+
+.swiper-slide-active {
+  @apply scale-100 transition-all opacity-100;
+}
