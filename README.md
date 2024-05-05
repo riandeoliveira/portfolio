@@ -1,78 +1,41 @@
-<div align="center">
-  <h1>🚀 Portfólio 🚀</h1>
-</div>
+<br />
 
-## 📚 Sobre
-
-Meu portfólio pessoal, com informações sobre mim, tecnologias que utilizo, meus projetos e links para minhas redes sociais.
-
-## 📝 Notas
-
-Desenvolvido inicialmente em abril de 2022 e atualizado para sua segunda versão em maio de 2023.
-
-## 🔎 Demonstração
+[![en](https://img.shields.io/badge/lang-en_us-red.svg)](https://github.com/riandeoliveira/Portfolio/blob/main/README.md)
+[![pt](https://img.shields.io/badge/lang-pt_br-blue.svg)](https://github.com/riandeoliveira/Portfolio/blob/main/README.pt-br.md)
 
 <div align="center">
-  <img src=".github/demo.png" alt="Application demo PNG">
+  <h1>🚀 Portfolio 🚀</h1>
 </div>
 
-## 💻 Como acessar
+## 📚 About
 
-A aplicação está hospedada na **Vercel** e pode ser acessada [aqui](https://portfolio-omega-murex-81.vercel.app/).
+My personal portfolio, with information about me, the technologies I use, my projects, and links to my social media.
 
-## 🛠️ Tecnologias utilizadas
+## 💻 How to access
 
-<br>
+The application is available online and can be accessed [here]().
 
-<table align="center">
-  <tbody>
-    <tr>
-      <td align="center" width="110" height="110">
-        <img src="https://skillicons.dev/icons?i=html" />
-        <br>
-        <span>HTML</span>
-      </td>
-      <td align="center" width="110" height="110">
-        <img src="https://skillicons.dev/icons?i=css" />
-        <br>
-        <span>CSS</span>
-      </td>
-      <td align="center" width="110" height="110">
-        <img src="https://skillicons.dev/icons?i=js" />
-        <br>
-        <span>JavaScript</span>
-      </td>
-      <td align="center" width="110" height="110">
-        <img src="https://skillicons.dev/icons?i=react" />
-        <br>
-        <span>React</span>
-      </td>
-    </tr>
-    <tr>
-      <td align="center" width="110" height="110">
-        <img src="https://skillicons.dev/icons?i=markdown" />
-        <br>
-        <span>Markdown</span>
-      </td>
-      <td align="center" width="110" height="110">
-        <img src="https://skillicons.dev/icons?i=sass" />
-        <br>
-        <span>SASS</span>
-      </td>
-      <td align="center" width="110" height="110">
-        <img src="https://skillicons.dev/icons?i=ts" />
-        <br>
-        <span>TypeScript</span>
-      </td>
-      <td align="center" width="110" height="110">
-        <img src="https://skillicons.dev/icons?i=next" />
-        <br>
-        <span>Next</span>
-      </td>
-    </tr>
-  </tbody>
-</table>
+## 🛠️ Stack
 
-<br>
+<br />
 
-<p align="center">✨ Made with 💙 by <a href="https://github.com/riandeoliveira"><strong>Rian Oliveira</strong></a> ✨</p>
+<div align="center">
+  <img src="https://skillicons.dev/icons?i=html" width="64" /> &nbsp;
+  <img src="https://skillicons.dev/icons?i=css" width="64" /> &nbsp;
+  <img src="https://skillicons.dev/icons?i=js" width="64" /> &nbsp;
+  <img src="https://skillicons.dev/icons?i=react" width="64" /> &nbsp;
+  <img src="https://skillicons.dev/icons?i=vite" width="64" /> &nbsp;
+  <br />
+  <br />
+  <img src="https://skillicons.dev/icons?i=pnpm" width="64" /> &nbsp;
+  <img src="https://skillicons.dev/icons?i=tailwind" width="64" /> &nbsp;
+  <img src="https://skillicons.dev/icons?i=ts" width="64" /> &nbsp;
+  <img src="https://skillicons.dev/icons?i=cypress" width="64" /> &nbsp;
+  <img src="https://skillicons.dev/icons?i=vitest" width="64" /> &nbsp;
+</div>
+
+<br />
+
+<p align="center">
+  ✨ Made with 💙 by <a href="https://github.com/riandeoliveira"><strong>Rian Oliveira</strong></a> ✨
+</p>
