@@ -5,6 +5,7 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import { observer } from "mobx-react-lite";
 import type { ReactElement } from "react";
 import { useRef } from "react";
+import { Image } from "../image";
 import { NeonBackground } from "../neon-background";
 
 export const ProjectsPresentationSection = observer((): ReactElement => {
@@ -101,11 +102,11 @@ const ParallaxCard = ({ project, translate }: ParallaxCardProps): ReactElement =
           rel="noreferrer"
           className="block group-hover/product:shadow-2xl rounded-xl"
         >
-          <img
+          <Image
             src={project.thumbnail}
             alt={project.name}
-            height="600"
-            width="600"
+            height={600}
+            width={600}
             className="object-cover absolute h-full w-full inset-0 rounded-xl p-0.5"
           />
         </a>

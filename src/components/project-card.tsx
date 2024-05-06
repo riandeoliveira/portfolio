@@ -5,6 +5,7 @@ import { observer } from "mobx-react-lite";
 import type { ReactElement } from "react";
 import { CardBody, CardContainer, CardItem } from "./3d-card";
 import { Link } from "./form/link";
+import { Image } from "./image";
 import { NeonBackground } from "./neon-background";
 import { SkillCard } from "./skill-card";
 
@@ -31,12 +32,13 @@ export const ProjectCard = observer(
                 {description}
               </CardItem>
               <CardItem translateZ={140} className="w-full mt-4">
-                <NeonBackground className="w-full">
-                  <img
+                <NeonBackground className="w-full h-[388px]">
+                  <Image
                     src={thumbnail}
                     alt={`thumbnail do projeto ${name}`}
-                    width={384}
+                    width={428}
                     height={384}
+                    skeletonClassName="h-96"
                     className="w-full h-96 object-cover rounded-xl group-hover/card:shadow-xl"
                   />
                 </NeonBackground>

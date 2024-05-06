@@ -1,6 +1,7 @@
 import { image } from "@/assets/images";
 import type { ReactElement } from "react";
 import { HighlightText } from "../highlight-text";
+import { Image } from "../image";
 import { NeonBackground } from "../neon-background";
 
 export const AchievementsSection = (): ReactElement => {
@@ -16,22 +17,22 @@ export const AchievementsSection = (): ReactElement => {
           <strong>NASA Space Apps Challenge</strong> de 2023, o maior hackaton do mundo.
         </p>
         <div className="flex gap-4 mt-8 tablet-s:flex-col">
-          <NeonBackground>
-            <img
+          <NeonBackground className="max-h-[388px] flex-1">
+            <Image
               src={image.teamCertificate}
               alt="Imagem de certificado de uma equipe"
-              width={720}
-              height={507.08}
-              className="rounded-xl w-full"
+              height={384}
+              skeletonClassName="h-96"
+              className="rounded-xl w-full h-96 object-cover"
             />
           </NeonBackground>
-          <NeonBackground>
-            <img
+          <NeonBackground className="max-h-[388px] flex-1">
+            <Image
               src={image.personalCertificate}
               alt="Imagem de certificado de uma pessoa"
-              width={720}
-              height={507.08}
-              className="rounded-xl w-full"
+              height={384}
+              skeletonClassName="h-96"
+              className="rounded-xl w-full h-96 object-cover"
             />
           </NeonBackground>
         </div>
