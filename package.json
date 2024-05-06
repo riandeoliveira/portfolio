@@ -4,7 +4,7 @@
   "version": "3.0.0",
   "license": "MIT",
   "private": true,
-  "homepage": "",
+  "homepage": "https://portfolio-kappa-seven-14.vercel.app/",
   "main": "./src/main.tsx",
   "scripts": {
     "build": "tsc && vite build",
