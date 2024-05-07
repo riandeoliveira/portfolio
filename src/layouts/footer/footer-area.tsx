@@ -1,9 +1,8 @@
-import { Icon } from "@/assets/icons";
+import { HighlightText } from "@/components/highlight-text";
+import { NeonBackground } from "@/components/neon-background";
+import { ResumeDownloadLink } from "@/components/resume-download-link";
+import { SocialMediasArea } from "@/components/social-medias-area";
 import type { ReactElement } from "react";
-import { Link } from "../form/link";
-import { HighlightText } from "../highlight-text";
-import { NeonBackground } from "../neon-background";
-import { SocialMediasArea } from "../social-medias-area";
 
 export const FooterArea = (): ReactElement => {
   return (
@@ -16,10 +15,7 @@ export const FooterArea = (): ReactElement => {
             <HighlightText className="rounded-md pb-0.5">Rian Oliveira</HighlightText> ✨
           </p>
           <SocialMediasArea />
-          <Link href="/Rian_Dias_de_Oliveira_Curriculo.pdf" download className="gap-2 group/link">
-            Baixar Currículo
-            <Icon.HiDownload size={20} className="transition-all group-hover/link:animate-bounce" />
-          </Link>
+          <ResumeDownloadLink />
         </div>
       </footer>
     </>

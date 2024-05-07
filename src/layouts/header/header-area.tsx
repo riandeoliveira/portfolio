@@ -1,8 +1,8 @@
 import { Icon } from "@/assets/icons";
+import { NeonBackground } from "@/components/neon-background";
 import type { ReactElement } from "react";
 import { useEffect, useState } from "react";
-import { NavLink } from "../nav-link";
-import { NeonBackground } from "../neon-background";
+import { HeaderNavLink } from "./header-nav-link";
 
 export const HeaderArea = (): ReactElement => {
   const headerHeight: number = 80;
@@ -35,24 +35,24 @@ export const HeaderArea = (): ReactElement => {
       >
         <nav className="w-[1200px] flex">
           <ul className="flex items-center w-full">
-            <NavLink to="#profile" icon={Icon.FaHome}>
+            <HeaderNavLink to="#profile" icon={Icon.FaHome}>
               Início
-            </NavLink>
-            <NavLink to="#about" icon={Icon.FaUser}>
+            </HeaderNavLink>
+            <HeaderNavLink to="#about" icon={Icon.FaUser}>
               Sobre
-            </NavLink>
-            <NavLink to="#projects" icon={Icon.FaFolderOpen}>
+            </HeaderNavLink>
+            <HeaderNavLink to="#projects" icon={Icon.FaFolderOpen}>
               Projetos
-            </NavLink>
-            <NavLink to="#skills" icon={Icon.FaTools}>
+            </HeaderNavLink>
+            <HeaderNavLink to="#skills" icon={Icon.FaTools}>
               Skills
-            </NavLink>
-            <NavLink to="#achievements" icon={Icon.FaAward}>
+            </HeaderNavLink>
+            <HeaderNavLink to="#achievements" icon={Icon.FaAward}>
               Conquistas
-            </NavLink>
-            <NavLink to="#contact" icon={Icon.FaEnvelope}>
+            </HeaderNavLink>
+            <HeaderNavLink to="#contact" icon={Icon.FaEnvelope}>
               Contato
-            </NavLink>
+            </HeaderNavLink>
           </ul>
         </nav>
       </header>

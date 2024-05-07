@@ -1,3 +1,4 @@
+import { Field } from "@/composables/field";
 import {
   VITE_EMAIL_PUBLIC_KEY,
   VITE_EMAIL_SERVICE_ID,
@@ -10,10 +11,6 @@ import { useFormik } from "formik";
 import type { FormEvent } from "react";
 import { useState, type ReactElement } from "react";
 import { toast } from "react-toastify";
-import { Button } from "../form/button";
-import { Input } from "../form/input";
-import { TextArea } from "../form/text-area";
-import { HighlightText } from "../highlight-text";
 
 const contactSchema = yup.object({
   name: yup.string().trim().required("Campo obrigatório!").max(64, "Máximo de 64 caracteres!"),
@@ -32,7 +29,7 @@ const contactSchema = yup.object({
     .max(1024, "Máximo de 1024 caracteres!"),
 });
 
-export const ContactSection = (): ReactElement => {
+export const ContactForm = (): ReactElement => {
   const [formEvent, setFormEvent] = useState<FormEvent<HTMLFormElement>>();
   const [isFormSubmitted, setIsFormSubmitted] = useState<boolean>(false);
 
@@ -72,47 +69,40 @@ export const ContactSection = (): ReactElement => {
   };
 
   return (
-    <section id="contact" className="flex justify-center py-48 px-4">
-      <div className="w-[1200px] flex gap-12 laptop-s:flex-col">
-        <h2 className="text-zinc-50 text-5xl flex flex-col gap-2 flex-1 laptop-s:text-center tablet-s:text-3xl">
-          <strong className="font-semibold">Gostou do que viu?</strong>
-          <HighlightText className="w-fit laptop-s:w-full">Entre em Contato!</HighlightText>
-        </h2>
-        {isFormSubmitted ? (
-          <div className="h-[496px] flex flex-col justify-center text-center gap-2 flex-1 animate-fadeIn">
-            <strong className="text-3xl bg-clip-text text-transparent bg-gradient-to-b from-indigo-500 to-purple-500">
-              Obrigado por entrar em contato.
-            </strong>
-            <p className="text-xl text-zinc-50">Recebi seu e-mail e retornarei o quanto antes!</p>
-          </div>
-        ) : (
-          <form className="flex flex-col flex-1 gap-8" onSubmit={handleSubmit}>
-            <div className="flex flex-col gap-4">
-              <Input
-                type="text"
-                name="name"
-                label="Nome*"
-                placeholder="Seu nome"
-                instance={formik}
-              />
-              <Input
-                type="email"
-                name="email"
-                label="E-mail*"
-                placeholder="Seu e-mail"
-                instance={formik}
-              />
-              <TextArea
+    <>
+      {isFormSubmitted ? (
+        <div className="h-[496px] flex flex-col justify-center text-center gap-2 flex-1 animate-fadeIn">
+          <strong className="text-3xl bg-clip-text text-transparent bg-gradient-to-b from-indigo-500 to-purple-500">
+            Obrigado por entrar em contato.
+          </strong>
+          <p className="text-xl text-zinc-50">Recebi seu e-mail e retornarei o quanto antes!</p>
+        </div>
+      ) : (
+        <form className="flex flex-col flex-1 gap-8" onSubmit={handleSubmit}>
+          <div className="flex flex-col gap-4">
+            <Field.Root hasErrors={!!formik.errors.name} isTouched={formik.touched.name}>
+              <Field.Label>Nome*</Field.Label>
+              <Field.Input name="name" placeholder="Seu nome" onChange={formik.handleChange} />
+              <Field.ErrorMessage>{formik.errors.name}</Field.ErrorMessage>
+            </Field.Root>
+            <Field.Root hasErrors={!!formik.errors.email} isTouched={formik.touched.email}>
+              <Field.Label>E-mail*</Field.Label>
+              <Field.Input name="email" placeholder="Seu e-mail" onChange={formik.handleChange} />
+              <Field.ErrorMessage>{formik.errors.email}</Field.ErrorMessage>
+            </Field.Root>
+            <Field.Root hasErrors={!!formik.errors.message} isTouched={formik.touched.message}>
+              <Field.Label>Mensagem*</Field.Label>
+              <Field.TextArea
                 name="message"
-                label="Mensagem*"
                 placeholder="Sua mensagem"
-                instance={formik}
+                onChange={formik.handleChange}
               />
-            </div>
-            <Button type="submit">Enviar</Button>
-          </form>
-        )}
-      </div>
-    </section>
+              <Field.ErrorMessage>{formik.errors.message}</Field.ErrorMessage>
+            </Field.Root>
+          </div>
+          <Field.Button type="submit">Enviar</Field.Button>
+        </form>
+      )}
+    </>
   );
 };

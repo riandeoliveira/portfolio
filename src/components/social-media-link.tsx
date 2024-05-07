@@ -3,7 +3,7 @@ import type { ReactElement } from "react";
 import { NeonBackground } from "./neon-background";
 import { Tooltip } from "./tooltip";
 
-interface SocialMediaLinkProps extends Omit<ISocialMedia, "name"> {}
+type SocialMediaLinkProps = Omit<ISocialMedia, "name">;
 
 export const SocialMediaLink = ({ icon: Icon, title, url }: SocialMediaLinkProps): ReactElement => {
   return (

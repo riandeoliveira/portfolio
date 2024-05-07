@@ -1,22 +1,20 @@
+import { Section } from "@/composables/section";
 import { projectStore } from "@/stores/project-store";
 import { observer } from "mobx-react-lite";
 import type { ReactElement } from "react";
 import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { HighlightText } from "../highlight-text";
-import { ProjectCard } from "../project-card";
+import { ProjectCard } from "./project-card";
 
 export const ProjectsSection = observer((): ReactElement => {
   return (
     <section id="projects" className="py-48 px-4">
       <div className="flex justify-center px-4">
         <div className="w-[1200px] flex flex-col gap-4">
-          <h1 className="text-zinc-50 font-bold text-4xl text-center w-fit tablet-s:text-2xl tablet-s:w-full">
-            <HighlightText>Meus Projetos</HighlightText>
-          </h1>
-          <p className="text-zinc-50 text-justify text-xl tablet-s:text-base">
+          <Section.Title isHighlighted>Meus Projetos</Section.Title>
+          <Section.Description>
             Confira alguns dos projetos que eu já desenvolvi
-          </p>
+          </Section.Description>
         </div>
       </div>
       <Swiper

@@ -1,14 +1,12 @@
 import { projectStore } from "@/stores/project-store";
-import type { IProject } from "@/types/project";
-import type { MotionValue, SpringOptions } from "framer-motion";
+import type { SpringOptions } from "framer-motion";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import { observer } from "mobx-react-lite";
 import type { ReactElement } from "react";
 import { useRef } from "react";
-import { Image } from "../image";
-import { NeonBackground } from "../neon-background";
+import { ProjectGalleryCard } from "./project-gallery-card";
 
-export const ProjectsPresentationSection = observer((): ReactElement => {
+export const ProjectGallerySection = observer((): ReactElement => {
   const projectList = projectStore.sortByPresentation();
 
   const firstRow = projectList.slice(0, 5);
@@ -60,62 +58,20 @@ export const ProjectsPresentationSection = observer((): ReactElement => {
       >
         <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
           {firstRow.map((project) => (
-            <ParallaxCard project={project} translate={translateX} key={project.id} />
+            <ProjectGalleryCard project={project} translate={translateX} key={project.id} />
           ))}
         </motion.div>
         <motion.div className="flex flex-row mb-20 space-x-20">
           {secondRow.map((project) => (
-            <ParallaxCard project={project} translate={translateXReverse} key={project.id} />
+            <ProjectGalleryCard project={project} translate={translateXReverse} key={project.id} />
           ))}
         </motion.div>
         <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
           {thirdRow.map((project) => (
-            <ParallaxCard project={project} translate={translateX} key={project.id} />
+            <ProjectGalleryCard project={project} translate={translateX} key={project.id} />
           ))}
         </motion.div>
       </motion.div>
     </section>
   );
 });
-
-interface ParallaxCardProps {
-  project: IProject;
-  translate: MotionValue<number>;
-}
-
-const ParallaxCard = ({ project, translate }: ParallaxCardProps): ReactElement => {
-  return (
-    <motion.div
-      style={{
-        x: translate,
-      }}
-      whileHover={{
-        y: -20,
-      }}
-      key={project.id}
-      className="group/product h-96 w-[30rem] relative flex-shrink-0 rounded-xl"
-    >
-      <NeonBackground className="w-full h-full">
-        <a
-          href={project.websiteUrl}
-          target="_blank"
-          rel="noreferrer"
-          aria-label={`Acesse o(a) ${project.name} na internet`}
-          className="block group-hover/product:shadow-2xl rounded-xl"
-        >
-          <Image
-            src={project.thumbnail}
-            alt={project.name}
-            height={600}
-            width={600}
-            className="object-cover absolute h-full w-full inset-0 rounded-xl p-0.5"
-          />
-        </a>
-      </NeonBackground>
-      <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-zinc-950 pointer-events-none rounded-xl" />
-      <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-zinc-50">
-        {project.name}
-      </h2>
-    </motion.div>
-  );
-};

@@ -3,14 +3,12 @@ import { cn } from "@/lib/utils";
 import { useState, type ImgHTMLAttributes, type ReactElement } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
-interface ImageProps extends ImgHTMLAttributes<HTMLImageElement> {
+type ImageProps = ImgHTMLAttributes<HTMLImageElement> & {
   skeletonClassName?: string;
-}
+};
 
 export const Image = ({ className, skeletonClassName, ...props }: ImageProps): ReactElement => {
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
-
-  const handleLoaded = (): void => setIsLoaded(true);
 
   return (
     <>
@@ -24,7 +22,7 @@ export const Image = ({ className, skeletonClassName, ...props }: ImageProps): R
         <Icon.FaSpinner size={32} className="text-zinc-50 animate-spin" />
       </div>
       <LazyLoadImage
-        onLoad={handleLoaded}
+        onLoad={() => setIsLoaded(true)}
         className={cn(isLoaded ? "block" : "hidden", className)}
         {...props}
       />

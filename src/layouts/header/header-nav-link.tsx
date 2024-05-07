@@ -1,14 +1,14 @@
+import { NeonBackground } from "@/components/neon-background";
 import type { ReactElement } from "react";
 import type { IconType } from "react-icons";
-import { NeonBackground } from "./neon-background";
 
-interface NavLinkProps {
+type HeaderNavLinkProps = {
   children: string;
   icon: IconType;
   to: string;
-}
+};
 
-export const NavLink = ({ children, icon: Icon, to }: NavLinkProps): ReactElement => {
+export const HeaderNavLink = ({ children, icon: Icon, to }: HeaderNavLinkProps): ReactElement => {
   return (
     <li className="flex-1 text-center flex justify-center">
       <a

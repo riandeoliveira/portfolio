@@ -1,7 +1,7 @@
 import type { ISkill } from "@/types/skill";
 import type { ReactElement } from "react";
 
-interface SkillCardProps extends Omit<ISkill, "name"> {}
+type SkillCardProps = Omit<ISkill, "name">;
 
 export const SkillCard = ({ color, icon: Icon, title }: SkillCardProps): ReactElement => {
   return (

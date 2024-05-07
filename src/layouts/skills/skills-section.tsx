@@ -1,8 +1,8 @@
+import { BackgroundBeams } from "@/components/background-beams";
 import { skillStore } from "@/stores/skill-store";
 import { observer } from "mobx-react-lite";
 import type { ReactElement } from "react";
-import { BackgroundBeams } from "../background-beams";
-import { SkillCard } from "../skill-card";
+import { SkillCard } from "./skill-card";
 
 export const SkillsSection = observer((): ReactElement => {
   return (
