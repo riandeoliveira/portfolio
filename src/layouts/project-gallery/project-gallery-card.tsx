@@ -23,7 +23,7 @@ export const ProjectGalleryCard = ({
         y: -20,
       }}
       key={project.id}
-      className="group/product h-96 w-[30rem] relative flex-shrink-0 rounded-xl"
+      className="group/product w-[30rem] h-96 relative flex-shrink-0 rounded-xl"
     >
       <NeonBackground className="w-full h-full">
         <a
@@ -36,14 +36,14 @@ export const ProjectGalleryCard = ({
           <Image
             src={project.thumbnail}
             alt={project.name}
-            height={600}
-            width={600}
+            width={480}
+            height={384}
             className="object-cover absolute h-full w-full inset-0 rounded-xl p-0.5"
           />
         </a>
       </NeonBackground>
       <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-zinc-950 pointer-events-none rounded-xl" />
-      <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-zinc-50">
+      <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100">
         {project.name}
       </h2>
     </motion.div>

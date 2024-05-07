@@ -34,7 +34,7 @@ const Button = ({ children, className, ...props }: ButtonElementProps): ReactEle
       <button
         type="button"
         className={cn(
-          "px-3 py-2 text-center rounded-xl items-center text-zinc-50 w-full font-semibold text-base hover:bg-zinc-950 transition-colors",
+          "px-3 py-2 text-center rounded-xl items-center w-full font-semibold text-base hover:bg-zinc-950 transition-colors",
           className,
         )}
         {...props}
@@ -66,10 +66,7 @@ const Input = ({ className, ...props }: InputElementProps): ReactElement => {
     <NeonBackground className="rounded-md">
       <input
         type="text"
-        className={cn(
-          "px-3 py-2 rounded-md bg-zinc-900 text-zinc-50 w-full outline-none",
-          className,
-        )}
+        className={cn("px-3 py-2 rounded-md bg-zinc-900 w-full outline-none", className)}
         {...props}
       />
     </NeonBackground>
@@ -78,7 +75,7 @@ const Input = ({ className, ...props }: InputElementProps): ReactElement => {
 
 const Label = ({ children, className, ...props }: LabelElementProps): ReactElement => {
   return (
-    <label className={cn("text-zinc-50 text-base font-semibold", className)} {...props}>
+    <label className={cn("text-base font-semibold", className)} {...props}>
       {children}
     </label>
   );
@@ -93,7 +90,7 @@ const Link = ({ children, className, containerClassName, ...props }: LinkProps):
     <NeonBackground className={cn("", containerClassName)}>
       <a
         className={cn(
-          "h-full w-full px-4 py-2 flex items-center justify-center rounded-xl text-zinc-50 font-semibold hover:bg-zinc-950 transition-colors",
+          "h-full w-full px-4 py-2 flex items-center justify-center rounded-xl font-semibold hover:bg-zinc-950 transition-colors mobile-l:text-sm",
           className,
         )}
         {...props}
@@ -127,7 +124,7 @@ const TextArea = ({ className, ...props }: TextAreaElementProps): ReactElement =
     <NeonBackground className="rounded-md flex">
       <textarea
         className={cn(
-          "px-3 py-2 rounded-md h-32 bg-zinc-900 text-zinc-50 w-full outline-none resize-none",
+          "px-3 py-2 rounded-md h-32 bg-zinc-900 w-full outline-none resize-none",
           className,
         )}
         {...props}

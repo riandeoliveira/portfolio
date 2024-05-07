@@ -24,8 +24,8 @@ export const ProjectCard = observer(
       <Card.Container className="inter-var">
         <NeonBackground>
           <Card.Body className="bg-zinc-900 relative group/card h-auto rounded-xl w-[30rem] tablet-s:w-[25rem] mobile-l:w-[20rem]">
-            <div className="bg-zinc-900 rounded-xl p-6 w-full">
-              <Card.Item translateZ={60} className="text-xl font-bold text-zinc-50">
+            <div className="bg-zinc-900 rounded-xl p-6 w-full mobile-l:p-4">
+              <Card.Item translateZ={60} className="text-xl font-bold">
                 {name}
               </Card.Item>
               <Card.Item
@@ -36,14 +36,14 @@ export const ProjectCard = observer(
                 {description}
               </Card.Item>
               <Card.Item translateZ={140} className="w-full mt-4">
-                <NeonBackground className="w-full h-[388px]">
+                <NeonBackground className="w-full h-[388px] mobile-l:h-[244px]">
                   <Image
                     src={thumbnail}
                     alt={`thumbnail do projeto ${name}`}
                     width={428}
                     height={384}
                     skeletonClassName="h-96"
-                    className="w-full h-96 object-cover rounded-xl group-hover/card:shadow-xl"
+                    className="w-full h-96 object-cover rounded-xl group-hover/card:shadow-xl mobile-l:h-60"
                   />
                 </NeonBackground>
               </Card.Item>
@@ -57,7 +57,7 @@ export const ProjectCard = observer(
               </Card.Item>
               <Card.Item
                 translateZ={80}
-                className="flex mt-6 w-full gap-12 tablet-s:flex-col tablet-s:gap-6"
+                className="flex mt-6 w-full gap-12 tablet-s:flex-col tablet-s:gap-6 mobile-l:gap-3 mobile-l:mt-3"
               >
                 {repository.isPrivate ? (
                   <span className="flex w-full items-center justify-center whitespace-nowrap text-red-500 gap-2">

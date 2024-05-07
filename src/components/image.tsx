@@ -19,7 +19,7 @@ export const Image = ({ className, skeletonClassName, ...props }: ImageProps): R
           skeletonClassName,
         )}
       >
-        <Icon.FaSpinner size={32} className="text-zinc-50 animate-spin" />
+        <Icon.FaSpinner size={32} className="animate-spin" />
       </div>
       <LazyLoadImage
         onLoad={() => setIsLoaded(true)}

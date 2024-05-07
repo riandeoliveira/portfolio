@@ -5,10 +5,7 @@ import type { ReactElement } from "react";
 
 const Description = ({ children, className, ...props }: ParagraphElementProps): ReactElement => {
   return (
-    <p
-      className={cn("text-zinc-50 text-justify text-xl tablet-s:text-base indent-10", className)}
-      {...props}
-    >
+    <p className={cn("text-justify text-xl tablet-s:text-base indent-10", className)} {...props}>
       {children}
     </p>
   );
@@ -27,7 +24,7 @@ const Title = ({
   return (
     <h1
       className={cn(
-        "text-zinc-50 font-bold text-4xl w-fit tablet-s:text-2xl tablet-s:w-full",
+        "font-bold text-4xl w-fit tablet-s:text-2xl tablet-s:w-full tablet-s:text-center",
         className,
       )}
       {...props}

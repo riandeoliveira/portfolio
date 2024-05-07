@@ -26,13 +26,13 @@ export const ProfileAvatar = (): ReactElement => {
         onClick={() => setIsRotating((previousState) => !previousState)}
         className={`animate-growUp ${isRotating === true ? "animate-rotatePrimary" : ""} ${isRotating === false ? "animate-rotateSecondary" : ""}`}
       >
-        <NeonBackground className="rounded-full p-0 w-64 h-64">
+        <NeonBackground className="rounded-full p-0 w-64 h-64 tablet-s:w-56 tablet-s:h-56">
           <div
-            className={`bg-zinc-900 gap-2 flex items-center justify-center w-[248px] h-[248px] rounded-full absolute translate-x-1 translate-y-1 flex-col ${isRotating === true ? "animate-toggleSecondary" : ""} ${isRotating === false ? "animate-togglePrimary" : ""}`}
+            className={`bg-zinc-900 gap-2 flex items-center justify-center w-[248px] h-[248px] rounded-full absolute translate-x-1 translate-y-1 flex-col tablet-s:w-[216px] tablet-s:h-[216px] ${isRotating === true ? "animate-toggleSecondary" : ""} ${isRotating === false ? "animate-togglePrimary" : ""}`}
           >
             <span
               style={{ transform: "rotateY(180deg)" }}
-              className="block bg-clip-text text-sm hover:animate-pulse font-semibold text-transparent bg-gradient-to-b from-indigo-500 to-purple-500"
+              className="block bg-clip-text text-sm hover:animate-pulse font-semibold text-transparent bg-gradient-to-b from-indigo-500 to-purple-500 tablet-s:text-xs"
             >
               Você encontrou um Easter Egg!
             </span>
@@ -41,7 +41,7 @@ export const ProfileAvatar = (): ReactElement => {
               target="_blank"
               rel="noreferrer"
               style={{ transform: "rotateY(180deg)" }}
-              className="block bg-clip-text hover:animate-pulse font-semibold text-transparent bg-gradient-to-b from-indigo-500 to-purple-500"
+              className="block bg-clip-text hover:animate-pulse font-semibold text-transparent bg-gradient-to-b from-indigo-500 to-purple-500 tablet-s:text-sm"
             >
               Para onde esse link leva?
               <div className="h-px bg-gradient-to-b from-indigo-500 to-purple-500" />
@@ -52,8 +52,8 @@ export const ProfileAvatar = (): ReactElement => {
             alt="Imagem de perfil"
             width={248}
             height={248}
-            skeletonClassName="w-[248px] h-[248px]"
-            className="rounded-full absolute translate-x-1 translate-y-1 z-10"
+            skeletonClassName="w-[248px] h-[248px] tablet-s:w-[216px] tablet-s:h-[216px]"
+            className="rounded-full absolute translate-x-1 translate-y-1 z-10 tablet-s:w-[216px] tablet-s:h-[216px]"
           />
         </NeonBackground>
       </button>

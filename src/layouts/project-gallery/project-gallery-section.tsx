@@ -40,10 +40,10 @@ export const ProjectGallerySection = observer((): ReactElement => {
       className="h-[300vh] overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <div className="max-w-7xl relative mx-auto py-40 px-4 left-0 top-0 w-full tablet-s:py-20">
-        <h1 className="text-7xl font-bold text-zinc-100 tablet-s:text-4xl">
+        <h1 className="text-7xl font-bold tablet-s:text-4xl">
           Conheça mais <br /> sobre meu trabalho
         </h1>
-        <p className="max-w-2xl text-xl mt-8 text-zinc-50 tablet-s:text-base">
+        <p className="max-w-2xl text-xl mt-8 tablet-s:text-base">
           Ao longo da minha jornada, já desenvolvi uma variedade de produtos de alta qualidade
           utilizando as tecnologias mais recentes e requisitadas do mercado.
         </p>
