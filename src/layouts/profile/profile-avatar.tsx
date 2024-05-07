@@ -1,13 +1,26 @@
-import { useState, type ReactElement } from "react";
 import { Image } from "@/components/image";
 import { NeonBackground } from "@/components/neon-background";
 import { Tooltip } from "@/components/tooltip";
+import { useEffect, useState, type ReactElement } from "react";
 
 export const ProfileAvatar = (): ReactElement => {
   const [isRotating, setIsRotating] = useState<boolean | null>(null);
+  const [isTooltipOpen, setIsTooltipOpen] = useState<true | undefined>();
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsTooltipOpen(true);
+
+      setTimeout(() => {
+        setIsTooltipOpen(undefined);
+      }, 3000);
+    }, 15000);
+
+    return (): void => clearInterval(interval);
+  }, []);
 
   return (
-    <Tooltip title="Clique aqui!">
+    <Tooltip title="Clique aqui!" open={isTooltipOpen}>
       <button
         type="button"
         onClick={() => setIsRotating((previousState) => !previousState)}

@@ -1,21 +1,20 @@
 import { cn } from "@/lib/utils";
 import * as TooltipPrimitive from "@radix-ui/react-tooltip";
-import type { ComponentPropsWithoutRef, ElementRef, ReactNode } from "react";
+import type { ComponentPropsWithoutRef, ElementRef } from "react";
 import { forwardRef } from "react";
 
 type TooltipProps = {
-  children: ReactNode;
-  title: string;
+  open?: boolean;
 };
 
 type ElementType = ElementRef<typeof TooltipPrimitive.Content>;
 
-type ElementProps = ComponentPropsWithoutRef<typeof TooltipPrimitive.Content & TooltipProps>;
+type ElementProps = ComponentPropsWithoutRef<typeof TooltipPrimitive.Content> & TooltipProps;
 
 export const Tooltip = forwardRef<ElementType, ElementProps>(
-  ({ children, className, sideOffset = 10, title, ...props }, ref) => (
+  ({ children, className, sideOffset = 10, open, title, ...props }, ref) => (
     <TooltipPrimitive.Provider delayDuration={250}>
-      <TooltipPrimitive.Root>
+      <TooltipPrimitive.Root open={open}>
         <TooltipPrimitive.Trigger asChild>{children}</TooltipPrimitive.Trigger>
         <TooltipPrimitive.Content
           ref={ref}
