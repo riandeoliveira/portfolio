@@ -6,7 +6,7 @@
 
 @layer base {
   * {
-    @apply font-montserrat list-none text-zinc-50;
+    @apply font-primary list-none text-zinc-50;
   }
 
   html {

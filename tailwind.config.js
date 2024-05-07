@@ -38,7 +38,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        montserrat: ["Montserrat"],
+        primary: ["Montserrat", "sans-serif"],
       },
       animation: {
         fadeIn: "fadeIn 1s forwards",
