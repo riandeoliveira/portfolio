@@ -100,6 +100,7 @@ const ParallaxCard = ({ project, translate }: ParallaxCardProps): ReactElement =
           href={project.websiteUrl}
           target="_blank"
           rel="noreferrer"
+          aria-label={`Acesse o(a) ${project.name} na internet`}
           className="block group-hover/product:shadow-2xl rounded-xl"
         >
           <Image

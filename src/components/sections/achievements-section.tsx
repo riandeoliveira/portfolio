@@ -1,4 +1,3 @@
-import { image } from "@/assets/images";
 import type { ReactElement } from "react";
 import { HighlightText } from "../highlight-text";
 import { Image } from "../image";
@@ -19,7 +18,7 @@ export const AchievementsSection = (): ReactElement => {
         <div className="flex gap-4 mt-8 tablet-s:flex-col">
           <NeonBackground className="max-h-[388px] flex-1">
             <Image
-              src={image.teamCertificate}
+              src="https://i.imgur.com/lafl4UT.png"
               alt="Imagem de certificado de uma equipe"
               height={384}
               skeletonClassName="h-96"
@@ -28,7 +27,7 @@ export const AchievementsSection = (): ReactElement => {
           </NeonBackground>
           <NeonBackground className="max-h-[388px] flex-1">
             <Image
-              src={image.personalCertificate}
+              src="https://i.imgur.com/undCXcN.png"
               alt="Imagem de certificado de uma pessoa"
               height={384}
               skeletonClassName="h-96"

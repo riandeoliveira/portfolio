@@ -10,7 +10,7 @@ export const SocialMediaLink = ({ icon: Icon, title, url }: SocialMediaLinkProps
     <Tooltip title={title}>
       <div className="hover:scale-125 transition-transform">
         <NeonBackground>
-          <a href={url} target="_blank" rel="noreferrer">
+          <a href={url} target="_blank" rel="noreferrer" aria-label={title}>
             <Icon className="scale-100" />
           </a>
         </NeonBackground>

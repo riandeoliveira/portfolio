@@ -1,5 +1,4 @@
 import { Icon } from "@/assets/icons";
-import { image } from "@/assets/images";
 import { observer } from "mobx-react-lite";
 import type { ReactElement } from "react";
 import { useState } from "react";
@@ -66,7 +65,7 @@ export const ProfileSection = observer((): ReactElement => {
                 </a>
               </div>
               <Image
-                src={image.avatar}
+                src="https://i.imgur.com/0tAVYaU.png"
                 alt="Imagem de perfil"
                 width={248}
                 height={248}
