@@ -1,7 +1,7 @@
 import { useState, type ReactElement } from "react";
-import { Image } from "../../components/image";
-import { NeonBackground } from "../../components/neon-background";
-import { Tooltip } from "../../components/tooltip";
+import { Image } from "@/components/image";
+import { NeonBackground } from "@/components/neon-background";
+import { Tooltip } from "@/components/tooltip";
 
 export const ProfileAvatar = (): ReactElement => {
   const [isRotating, setIsRotating] = useState<boolean | null>(null);
