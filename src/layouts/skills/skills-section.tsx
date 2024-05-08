@@ -1,4 +1,5 @@
 import { BackgroundBeams } from "@/components/background-beams";
+import { localStorageStore } from "@/stores/local-storage-store";
 import { skillStore } from "@/stores/skill-store";
 import { observer } from "mobx-react-lite";
 import type { ReactElement } from "react";
@@ -10,7 +11,7 @@ export const SkillsSection = observer((): ReactElement => {
       id="skills"
       className="py-20 px-4 bg-zinc-950 flex justify-center relative tablet-s:py-10"
     >
-      <BackgroundBeams />
+      {localStorageStore.isQualityMode && <BackgroundBeams />}
       <div className="w-[1200px] flex flex-col text-center gap-2">
         <h1 className="text-6xl bg-clip-text text-transparent bg-gradient-to-b from-zinc-200 to-zinc-600 font-bold tablet-s:text-4xl">
           Skills
