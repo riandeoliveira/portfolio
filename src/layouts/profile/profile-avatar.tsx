@@ -1,6 +1,7 @@
 import { Image } from "@/components/image";
 import { NeonBackground } from "@/components/neon-background";
 import { Tooltip } from "@/components/tooltip";
+import { cn } from "@/lib/utils";
 import { useEffect, useState, type ReactElement } from "react";
 
 export const ProfileAvatar = (): ReactElement => {
@@ -24,11 +25,19 @@ export const ProfileAvatar = (): ReactElement => {
       <button
         type="button"
         onClick={() => setIsRotating((previousState) => !previousState)}
-        className={`animate-growUp ${isRotating === true ? "animate-rotatePrimary" : ""} ${isRotating === false ? "animate-rotateSecondary" : ""}`}
+        className={cn(
+          "animate-growUp",
+          isRotating === true ? "animate-rotatePrimary" : "",
+          isRotating === false ? "animate-rotateSecondary" : "",
+        )}
       >
         <NeonBackground className="rounded-full p-0 w-64 h-64 tablet-s:w-56 tablet-s:h-56">
           <div
-            className={`bg-zinc-900 gap-2 flex items-center justify-center w-[248px] h-[248px] rounded-full absolute translate-x-1 translate-y-1 flex-col tablet-s:w-[216px] tablet-s:h-[216px] ${isRotating === true ? "animate-toggleSecondary" : ""} ${isRotating === false ? "animate-togglePrimary" : ""}`}
+            className={cn(
+              "bg-zinc-900 gap-2 flex items-center justify-center w-[248px] h-[248px] rounded-full absolute translate-x-1 translate-y-1 flex-col tablet-s:w-[216px] tablet-s:h-[216px]",
+              isRotating === true ? "animate-toggleSecondary" : "",
+              isRotating === false ? "animate-togglePrimary" : "",
+            )}
           >
             <span
               style={{ transform: "rotateY(180deg)" }}
