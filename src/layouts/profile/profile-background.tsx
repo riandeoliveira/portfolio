@@ -3,17 +3,17 @@ import type { MotionValue } from "framer-motion";
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 import type { MouseEvent, ReactElement, ReactNode } from "react";
 
-interface HighlightBackgroundProps {
+type ProfileBackgroundProps = {
   children: ReactNode;
   className?: string;
   containerClassName?: string;
-}
+};
 
-export const HighlightBackground = ({
+export const ProfileBackground = ({
   children,
   className,
   containerClassName,
-}: HighlightBackgroundProps): ReactElement => {
+}: ProfileBackgroundProps): ReactElement => {
   const mouseX: MotionValue<number> = useMotionValue(0);
   const mouseY: MotionValue<number> = useMotionValue(0);
 

@@ -6,16 +6,12 @@
 
 @layer base {
   * {
-    @apply font-montserrat list-none;
+    @apply font-primary list-none text-zinc-50;
   }
 
   html {
     scroll-behavior: smooth;
   }
-}
-
-.Toastify__close-button > svg {
-  @apply text-zinc-50;
 }
 
 .swiper-pagination-bullet,

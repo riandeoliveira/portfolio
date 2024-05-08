@@ -13,7 +13,7 @@ My personal portfolio, with information about me, the technologies I use, my pro
 
 ## 💻 How to access
 
-The application is available online and can be accessed [here]().
+The application is available online and can be accessed [here](https://portfolio-kappa-seven-14.vercel.app/).
 
 ## 🛠️ Stack
 
@@ -30,7 +30,7 @@ The application is available online and can be accessed [here]().
   <img src="https://skillicons.dev/icons?i=pnpm" width="64" /> &nbsp;
   <img src="https://skillicons.dev/icons?i=tailwind" width="64" /> &nbsp;
   <img src="https://skillicons.dev/icons?i=ts" width="64" /> &nbsp;
-  <img src="https://skillicons.dev/icons?i=cypress" width="64" /> &nbsp;
+  <img src="https://skillicons.dev/icons?i=threejs" width="64" /> &nbsp;
   <img src="https://skillicons.dev/icons?i=vitest" width="64" /> &nbsp;
 </div>
 

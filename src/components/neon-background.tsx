@@ -3,12 +3,12 @@ import type { Transition, Variants } from "framer-motion";
 import { motion } from "framer-motion";
 import type { CSSProperties, ReactElement, ReactNode } from "react";
 
-interface NeonBackgroundProps {
+type NeonBackgroundProps = {
   animate?: boolean;
   children?: ReactNode;
   className?: string;
   style?: CSSProperties;
-}
+};
 
 export const NeonBackground = ({
   animate = true,

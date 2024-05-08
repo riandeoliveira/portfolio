@@ -2,10 +2,10 @@ import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import type { ReactElement, ReactNode } from "react";
 
-interface HighlightTextProps {
+type HighlightTextProps = {
   children: ReactNode;
   className?: string;
-}
+};
 
 export const HighlightText = ({ children, className }: HighlightTextProps): ReactElement => {
   return (
@@ -27,7 +27,7 @@ export const HighlightText = ({ children, className }: HighlightTextProps): Reac
         display: "inline",
       }}
       className={cn(
-        "relative inline-block font-semibold pb-1 px-1 rounded-lg bg-gradient-to-r from-indigo-500 to-purple-500",
+        "relative inline-block pb-1 px-1 rounded-lg bg-gradient-to-r from-indigo-500 to-purple-500",
         className,
       )}
     >

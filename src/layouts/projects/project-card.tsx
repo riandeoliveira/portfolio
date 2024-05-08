@@ -1,14 +1,15 @@
 import { Icon } from "@/assets/icons";
+import { Image } from "@/components/image";
+import { NeonBackground } from "@/components/neon-background";
+import { Card } from "@/composables/3d-card";
+import { Field } from "@/composables/field";
 import { skillStore } from "@/stores/skill-store";
 import type { IProject } from "@/types/project";
 import { observer } from "mobx-react-lite";
 import type { ReactElement } from "react";
-import { CardBody, CardContainer, CardItem } from "./3d-card";
-import { Link } from "./form/link";
-import { NeonBackground } from "./neon-background";
-import { SkillCard } from "./skill-card";
+import { SkillCard } from "../skills/skill-card";
 
-interface ProjectCardProps extends Omit<IProject, "id"> {}
+type ProjectCardProps = Omit<IProject, "id">;
 
 export const ProjectCard = observer(
   ({
@@ -20,38 +21,43 @@ export const ProjectCard = observer(
     websiteUrl,
   }: ProjectCardProps): ReactElement => {
     return (
-      <CardContainer className="inter-var">
+      <Card.Container className="inter-var">
         <NeonBackground>
-          <CardBody className="bg-zinc-900 relative group/card h-auto rounded-xl w-[30rem] tablet-s:w-[25rem] mobile-l:w-[20rem]">
-            <div className="bg-zinc-900 rounded-xl p-6 w-full">
-              <CardItem translateZ={60} className="text-xl font-bold text-zinc-50">
+          <Card.Body className="bg-zinc-900 relative group/card h-auto rounded-xl w-[30rem] tablet-s:w-[25rem] mobile-l:w-[20rem]">
+            <div className="bg-zinc-900 rounded-xl p-6 w-full mobile-l:p-4">
+              <Card.Item translateZ={60} className="text-xl font-bold">
                 {name}
-              </CardItem>
-              <CardItem as="p" translateZ={100} className="text-sm mt-2 text-justify text-zinc-400">
+              </Card.Item>
+              <Card.Item
+                as="p"
+                translateZ={100}
+                className="text-sm mt-2 text-justify text-zinc-400"
+              >
                 {description}
-              </CardItem>
-              <CardItem translateZ={140} className="w-full mt-4">
-                <NeonBackground className="w-full">
-                  <img
+              </Card.Item>
+              <Card.Item translateZ={140} className="w-full mt-4">
+                <NeonBackground className="w-full h-[388px] mobile-l:h-[244px]">
+                  <Image
                     src={thumbnail}
                     alt={`thumbnail do projeto ${name}`}
-                    width={384}
+                    width={428}
                     height={384}
-                    className="w-full h-96 object-cover rounded-xl group-hover/card:shadow-xl"
+                    skeletonClassName="h-96"
+                    className="w-full h-96 object-cover rounded-xl group-hover/card:shadow-xl mobile-l:h-60"
                   />
                 </NeonBackground>
-              </CardItem>
-              <CardItem
+              </Card.Item>
+              <Card.Item
                 translateZ={100}
                 className="text-sm mt-2 flex gap-2 justify-evenly items-center w-full"
               >
                 {skillStore.filterBy(skillList).map(({ icon, color, name }) => (
                   <SkillCard icon={icon} color={color} key={name} />
                 ))}
-              </CardItem>
-              <CardItem
+              </Card.Item>
+              <Card.Item
                 translateZ={80}
-                className="flex mt-6 w-full gap-12 tablet-s:flex-col tablet-s:gap-6"
+                className="flex mt-6 w-full gap-12 tablet-s:flex-col tablet-s:gap-6 mobile-l:gap-3 mobile-l:mt-3"
               >
                 {repository.isPrivate ? (
                   <span className="flex w-full items-center justify-center whitespace-nowrap text-red-500 gap-2">
@@ -59,7 +65,7 @@ export const ProjectCard = observer(
                     Repositório privado
                   </span>
                 ) : (
-                  <Link
+                  <Field.Link
                     href={repository.url}
                     target="_blank"
                     rel="noreferrer"
@@ -68,9 +74,9 @@ export const ProjectCard = observer(
                   >
                     <Icon.FaGithub size={20} />
                     Acessar repositório
-                  </Link>
+                  </Field.Link>
                 )}
-                <Link
+                <Field.Link
                   href={websiteUrl}
                   target="_blank"
                   rel="noreferrer"
@@ -79,12 +85,12 @@ export const ProjectCard = observer(
                 >
                   <Icon.HiOutlineExternalLink size={20} />
                   Acessar projeto
-                </Link>
-              </CardItem>
+                </Field.Link>
+              </Card.Item>
             </div>
-          </CardBody>
+          </Card.Body>
         </NeonBackground>
-      </CardContainer>
+      </Card.Container>
     );
   },
 );
