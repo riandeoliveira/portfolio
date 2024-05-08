@@ -1,5 +1,6 @@
 import { Icon } from "@/assets/icons";
 import { NeonBackground } from "@/components/neon-background";
+import { localStorageStore } from "@/stores/local-storage-store";
 import type { ReactElement } from "react";
 import { useEffect, useState } from "react";
 import { HeaderNavLink } from "./header-nav-link";
@@ -57,7 +58,9 @@ export const HeaderArea = (): ReactElement => {
           </ul>
         </nav>
       </header>
-      <NeonBackground className="h-0.5 p-0 animate-headerBar" />
+      <NeonBackground
+        className={`h-0.5 p-0 animate-headerBar ${isHeaderFixed ? "fixed top-10 left-0 right-0 z-50" : ""} ${localStorageStore.isPerformanceMode && isHeaderFixed ? "top-20" : ""}`}
+      />
     </>
   );
 };

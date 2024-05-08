@@ -8,14 +8,22 @@ import { ProfileSection } from "@/layouts/profile/profile-section";
 import { ProjectGallerySection } from "@/layouts/project-gallery/project-gallery-section";
 import { ProjectsSection } from "@/layouts/projects/projects-section";
 import { SkillsSection } from "@/layouts/skills/skills-section";
+import { localStorageStore } from "@/stores/local-storage-store";
 import { observer } from "mobx-react-lite";
-import type { ReactElement } from "react";
+import { type ReactElement } from "react";
 
 export const Home = observer((): ReactElement => {
   return (
     <>
-      <OuterSpaceBackground />
+      {localStorageStore.isQualityMode && <OuterSpaceBackground />}
       <HeaderArea />
+      <button
+        type="button"
+        onClick={localStorageStore.toggleMode}
+        className="bg-zinc-800 p-4 m-4 rounded-xl hover:bg-zinc-700 transition-colors"
+      >
+        Alterar para o Modo {localStorageStore.isQualityMode ? "Desempenho" : "Qualidade"}
+      </button>
       <main className="flex flex-col gap-24">
         <ProfileSection />
         <AboutSection />

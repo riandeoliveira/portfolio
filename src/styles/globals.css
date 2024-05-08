@@ -12,6 +12,10 @@
   html {
     scroll-behavior: smooth;
   }
+
+  body {
+    @apply bg-black;
+  }
 }
 
 .swiper-pagination-bullet,

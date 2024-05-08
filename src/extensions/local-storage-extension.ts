@@ -3,6 +3,10 @@ import type { ILocalStorageExtension, LocalStorageKeys } from "@/types/local-sto
 export class LocalStorageExtension implements ILocalStorageExtension {
   private readonly storage: Storage = window.localStorage;
 
+  public clear(): void {
+    this.storage.clear();
+  }
+
   public getItem<TValue>(key: LocalStorageKeys): TValue | null {
     const storageItem: string | null = this.storage.getItem(key);
 

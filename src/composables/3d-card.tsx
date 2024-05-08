@@ -47,11 +47,7 @@ type ContainerProps = {
   containerClassName?: string;
 };
 
-const Container = ({
-  children,
-  className,
-  containerClassName,
-}: ContainerProps): ReactElement => {
+const Container = ({ children, className, containerClassName }: ContainerProps): ReactElement => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   const [isMouseEntered, setIsMouseEntered] = useState<boolean>(false);
