@@ -20,18 +20,18 @@ The application is available online and can be accessed [here](https://portfolio
 <br />
 
 <div align="center">
-  <img src="https://skillicons.dev/icons?i=html" width="64" /> &nbsp;
-  <img src="https://skillicons.dev/icons?i=css" width="64" /> &nbsp;
-  <img src="https://skillicons.dev/icons?i=js" width="64" /> &nbsp;
-  <img src="https://skillicons.dev/icons?i=react" width="64" /> &nbsp;
-  <img src="https://skillicons.dev/icons?i=vite" width="64" /> &nbsp;
+  <img src="https://skillicons.dev/icons?i=html" width="48" /> &nbsp;&nbsp;
+  <img src="https://skillicons.dev/icons?i=css" width="48" /> &nbsp;&nbsp;
+  <img src="https://skillicons.dev/icons?i=js" width="48" /> &nbsp;&nbsp;
+  <img src="https://skillicons.dev/icons?i=react" width="48" /> &nbsp;&nbsp;
+  <img src="https://skillicons.dev/icons?i=vite" width="48" /> &nbsp;&nbsp;
   <br />
   <br />
-  <img src="https://skillicons.dev/icons?i=pnpm" width="64" /> &nbsp;
-  <img src="https://skillicons.dev/icons?i=tailwind" width="64" /> &nbsp;
-  <img src="https://skillicons.dev/icons?i=ts" width="64" /> &nbsp;
-  <img src="https://skillicons.dev/icons?i=threejs" width="64" /> &nbsp;
-  <img src="https://skillicons.dev/icons?i=vitest" width="64" /> &nbsp;
+  <img src="https://skillicons.dev/icons?i=pnpm" width="48" /> &nbsp;&nbsp;
+  <img src="https://skillicons.dev/icons?i=tailwind" width="48" /> &nbsp;&nbsp;
+  <img src="https://skillicons.dev/icons?i=ts" width="48" /> &nbsp;&nbsp;
+  <img src="https://skillicons.dev/icons?i=threejs" width="48" /> &nbsp;&nbsp;
+  <img src="https://skillicons.dev/icons?i=vitest" width="48" /> &nbsp;&nbsp;
 </div>
 
 <br />
