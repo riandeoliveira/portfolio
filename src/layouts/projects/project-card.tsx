@@ -60,8 +60,8 @@ export const ProjectCard = observer(
                 className="flex mt-6 w-full gap-12 tablet-s:flex-col tablet-s:gap-6 mobile-l:gap-3 mobile-l:mt-3"
               >
                 {repository.isPrivate ? (
-                  <span className="flex w-full items-center justify-center whitespace-nowrap text-red-500 gap-2">
-                    <Icon.HiLockClosed size={20} />
+                  <span className="flex w-full items-center justify-center whitespace-nowrap text-red-500 gap-2 h-[36px]">
+                    <Icon.HiLockClosed size={20} className="fill-red-500" />
                     Repositório privado
                   </span>
                 ) : (
