@@ -1,4 +1,6 @@
 import { cn } from "@/lib/utils";
+import { localStorageStore } from "@/stores/local-storage-store";
+import { observer } from "mobx-react-lite";
 import type {
   Dispatch,
   ElementType,
@@ -47,7 +49,7 @@ type ContainerProps = {
   containerClassName?: string;
 };
 
-const Container = ({ children, className, containerClassName }: ContainerProps): ReactElement => {
+const Container = observer(({ children, className, containerClassName }: ContainerProps): ReactElement => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   const [isMouseEntered, setIsMouseEntered] = useState<boolean>(false);
@@ -85,7 +87,7 @@ const Container = ({ children, className, containerClassName }: ContainerProps):
         }}
       >
         <div
-          ref={containerRef}
+          ref={localStorageStore.isQualityMode ? containerRef : undefined}
           onMouseEnter={handleMouseEnter}
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
@@ -102,7 +104,7 @@ const Container = ({ children, className, containerClassName }: ContainerProps):
       </div>
     </MouseEnterContext.Provider>
   );
-};
+});
 
 type ItemProps = {
   as?: ElementType;
@@ -117,7 +119,7 @@ type ItemProps = {
   [key: string]: unknown;
 };
 
-const Item = ({
+const Item = observer(({
   as: Tag = "div",
   children,
   className,
@@ -167,11 +169,11 @@ const Item = ({
   };
 
   return (
-    <Tag ref={ref} className={cn("w-fit transition duration-200 ease-linear", className)} {...rest}>
+    <Tag ref={localStorageStore.isQualityMode ? ref : undefined} className={cn("w-fit transition duration-200 ease-linear", className)} {...rest}>
       {children}
     </Tag>
   );
-};
+});
 
 export const Card = {
   Body,
