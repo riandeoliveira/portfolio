@@ -1,6 +1,9 @@
 export type LocalStorageKeys = "mode";
 
 export interface ILocalStorageExtension {
+  /**
+   * Clears all items from the localStorage.
+   */
   clear(): void;
 
   /**
