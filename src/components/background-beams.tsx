@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 import type { ReactElement } from "react";
 import { memo } from "react";
 
-interface BackgroundBeamsProps {
+type BackgroundBeamsProps = {
   className?: string;
-}
+};
 
 export const BackgroundBeams = memo(({ className }: BackgroundBeamsProps): ReactElement => {
   const paths: string[] = [

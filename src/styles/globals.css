@@ -1,31 +1,19 @@
-@import "./fonts";
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   * {
-    @apply font-montserrat list-none;
+    @apply font-primary list-none text-zinc-50;
   }
 
   html {
-    scroll-behavior: smooth;
+    @apply scroll-smooth;
   }
-}
 
-.Toastify__close-button > svg {
-  @apply text-zinc-50;
-}
-
-.swiper-pagination-bullet,
-.swiper-pagination-bullet-active {
-  @apply bg-gradient-to-r from-indigo-500 to-purple-500;
-}
-
-.swiper-button-prev,
-.swiper-button-next {
-  @apply text-purple-500;
+  body {
+    @apply bg-black;
+  }
 }
 
 .swiper-slide {
@@ -34,4 +22,14 @@
 
 .swiper-slide-active {
   @apply scale-100 transition-all opacity-100;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  @apply text-purple-500;
+}
+
+.swiper-pagination-bullet,
+.swiper-pagination-bullet-active {
+  @apply bg-gradient-to-r from-indigo-500 to-purple-500;
 }

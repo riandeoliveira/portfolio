@@ -1,6 +1,11 @@
-export type LocalStorageKeys = "";
+export type LocalStorageKeys = "mode";
 
 export interface ILocalStorageExtension {
+  /**
+   * Clears all items from the localStorage.
+   */
+  clear(): void;
+
   /**
    * Retrieves an item from the localStorage using a key.
    * @param key - The key of the item to retrieve.
