@@ -1,4 +1,5 @@
 import { OuterSpaceBackground } from "@/components/outer-space-background";
+import { SwitchModeButton } from "@/components/toggle-mode-button";
 import { AboutSection } from "@/layouts/about/about-section";
 import { AchievementsSection } from "@/layouts/achievements/achievements-section";
 import { ContactSection } from "@/layouts/contact/contact-section";
@@ -17,13 +18,6 @@ export const Home = observer((): ReactElement => {
     <>
       {localStorageStore.isQualityMode && <OuterSpaceBackground />}
       <HeaderArea />
-      <button
-        type="button"
-        onClick={localStorageStore.toggleMode}
-        className="bg-zinc-800 p-4 m-4 rounded-xl hover:bg-zinc-700 transition-colors"
-      >
-        Alterar para o Modo {localStorageStore.isQualityMode ? "Desempenho" : "Qualidade"}
-      </button>
       <main className="flex flex-col gap-24">
         <ProfileSection />
         <AboutSection />
@@ -34,6 +28,7 @@ export const Home = observer((): ReactElement => {
         <ContactSection />
       </main>
       <FooterArea />
+      <SwitchModeButton />
     </>
   );
 });

@@ -34,6 +34,7 @@ import { ReactComponent as Spotify } from "./social-medias/spotify.svg";
 import { ReactComponent as WhatsApp } from "./social-medias/whatsapp.svg";
 import { ReactComponent as X } from "./social-medias/x.svg";
 
+import { CgPerformance } from "react-icons/cg";
 import {
   FaAward,
   FaEnvelope,
@@ -44,14 +45,13 @@ import {
   FaTools,
   FaUser,
 } from "react-icons/fa";
-
 import { HiDownload, HiLockClosed, HiOutlineExternalLink } from "react-icons/hi";
 
 export const Icon = {
   Azure,
   Bootstrap,
+  CgPerformance,
   CS,
-  FaSpinner,
   CSS,
   Cypress,
   Docker,
@@ -62,6 +62,7 @@ export const Icon = {
   FaFolderOpen,
   FaGithub,
   FaHome,
+  FaSpinner,
   FaTools,
   FaUser,
   Git,
