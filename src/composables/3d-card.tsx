@@ -49,62 +49,64 @@ type ContainerProps = {
   containerClassName?: string;
 };
 
-const Container = observer(({ children, className, containerClassName }: ContainerProps): ReactElement => {
-  const containerRef = useRef<HTMLDivElement>(null);
+const Container = observer(
+  ({ children, className, containerClassName }: ContainerProps): ReactElement => {
+    const containerRef = useRef<HTMLDivElement>(null);
 
-  const [isMouseEntered, setIsMouseEntered] = useState<boolean>(false);
+    const [isMouseEntered, setIsMouseEntered] = useState<boolean>(false);
 
-  const handleMouseMove = (event: MouseEvent<HTMLDivElement>): void => {
-    if (!containerRef.current) return;
+    const handleMouseMove = (event: MouseEvent<HTMLDivElement>): void => {
+      if (!containerRef.current) return;
 
-    const { left, top, width, height } = containerRef.current.getBoundingClientRect();
+      const { left, top, width, height } = containerRef.current.getBoundingClientRect();
 
-    const x = (event.clientX - left - width / 2) / 25;
-    const y = (event.clientY - top - height / 2) / 25;
+      const x = (event.clientX - left - width / 2) / 25;
+      const y = (event.clientY - top - height / 2) / 25;
 
-    containerRef.current.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
-  };
+      containerRef.current.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
+    };
 
-  const handleMouseEnter = (): void => {
-    setIsMouseEntered(true);
+    const handleMouseEnter = (): void => {
+      setIsMouseEntered(true);
 
-    if (!containerRef.current) return;
-  };
+      if (!containerRef.current) return;
+    };
 
-  const handleMouseLeave = (): void => {
-    if (!containerRef.current) return;
+    const handleMouseLeave = (): void => {
+      if (!containerRef.current) return;
 
-    setIsMouseEntered(false);
+      setIsMouseEntered(false);
 
-    containerRef.current.style.transform = "rotateY(0deg) rotateX(0deg)";
-  };
-  return (
-    <MouseEnterContext.Provider value={[isMouseEntered, setIsMouseEntered]}>
-      <div
-        className={cn("flex items-center justify-center", containerClassName)}
-        style={{
-          perspective: "1000px",
-        }}
-      >
+      containerRef.current.style.transform = "rotateY(0deg) rotateX(0deg)";
+    };
+    return (
+      <MouseEnterContext.Provider value={[isMouseEntered, setIsMouseEntered]}>
         <div
-          ref={localStorageStore.isQualityMode ? containerRef : undefined}
-          onMouseEnter={handleMouseEnter}
-          onMouseMove={handleMouseMove}
-          onMouseLeave={handleMouseLeave}
-          className={cn(
-            "flex items-center justify-center relative transition-all duration-200 ease-linear",
-            className,
-          )}
+          className={cn("flex items-center justify-center", containerClassName)}
           style={{
-            transformStyle: "preserve-3d",
+            perspective: "1000px",
           }}
         >
-          {children}
+          <div
+            ref={localStorageStore.isQualityMode ? containerRef : undefined}
+            onMouseEnter={handleMouseEnter}
+            onMouseMove={handleMouseMove}
+            onMouseLeave={handleMouseLeave}
+            className={cn(
+              "flex items-center justify-center relative transition-all duration-200 ease-linear",
+              className,
+            )}
+            style={{
+              transformStyle: "preserve-3d",
+            }}
+          >
+            {children}
+          </div>
         </div>
-      </div>
-    </MouseEnterContext.Provider>
-  );
-});
+      </MouseEnterContext.Provider>
+    );
+  },
+);
 
 type ItemProps = {
   as?: ElementType;
@@ -119,30 +121,31 @@ type ItemProps = {
   [key: string]: unknown;
 };
 
-const Item = observer(({
-  as: Tag = "div",
-  children,
-  className,
-  translateX = 0,
-  translateY = 0,
-  translateZ = 0,
-  rotateX = 0,
-  rotateY = 0,
-  rotateZ = 0,
-  ...rest
-}: ItemProps): ReactElement => {
-  const ref = useRef<HTMLDivElement>(null);
-  const [isMouseEntered] = useMouseEnter();
+const Item = observer(
+  ({
+    as: Tag = "div",
+    children,
+    className,
+    translateX = 0,
+    translateY = 0,
+    translateZ = 0,
+    rotateX = 0,
+    rotateY = 0,
+    rotateZ = 0,
+    ...rest
+  }: ItemProps): ReactElement => {
+    const ref = useRef<HTMLDivElement>(null);
+    const [isMouseEntered] = useMouseEnter();
 
-  useEffect(() => {
-    handleAnimations();
-  }, [isMouseEntered]);
+    useEffect(() => {
+      handleAnimations();
+    }, [isMouseEntered]);
 
-  const handleAnimations = (): void => {
-    if (!ref.current) return;
+    const handleAnimations = (): void => {
+      if (!ref.current) return;
 
-    if (isMouseEntered) {
-      ref.current.style.transform = `
+      if (isMouseEntered) {
+        ref.current.style.transform = `
         translateX(${translateX}px)
         translateY(${translateY}px)
         translateZ(${translateZ}px)
@@ -151,11 +154,11 @@ const Item = observer(({
         rotateZ(${rotateZ}deg)
       `;
 
-      return;
-    }
+        return;
+      }
 
-    if (!isMouseEntered) {
-      ref.current.style.transform = `
+      if (!isMouseEntered) {
+        ref.current.style.transform = `
         translateX(0px)
         translateY(0px)
         translateZ(0px)
@@ -164,16 +167,21 @@ const Item = observer(({
         rotateZ(0deg)
       `;
 
-      return;
-    }
-  };
+        return;
+      }
+    };
 
-  return (
-    <Tag ref={localStorageStore.isQualityMode ? ref : undefined} className={cn("w-fit transition duration-200 ease-linear", className)} {...rest}>
-      {children}
-    </Tag>
-  );
-});
+    return (
+      <Tag
+        ref={localStorageStore.isQualityMode ? ref : undefined}
+        className={cn("w-fit transition duration-200 ease-linear", className)}
+        {...rest}
+      >
+        {children}
+      </Tag>
+    );
+  },
+);
 
 export const Card = {
   Body,
