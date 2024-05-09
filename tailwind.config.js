@@ -41,45 +41,40 @@ module.exports = {
         primary: ["Montserrat", "sans-serif"],
       },
       animation: {
-        fadeIn: "fadeIn 1s forwards",
-        header: "header 1s forwards",
-        headerBar: "headerBar 1s forwards",
-        growUp: "growUp 1s forwards",
-        rotatePrimary: "rotatePrimary 2s forwards",
-        rotateSecondary: "rotateSecondary 2s forwards",
-        togglePrimary: "togglePrimary 1.2s forwards",
-        toggleSecondary: "toggleSecondary 3.5s forwards",
+        "fade-in": "fade-in 1s forwards",
+        "grow": "grow 1s forwards",
+        "rotate-primary": "rotate-primary 2s forwards",
+        "rotate-secondary": "rotate-secondary 2s forwards",
+        "slide-in-down": "slide-in-down 1s forwards",
+        "toggle-primary": "toggle-primary 1.2s forwards",
+        "toggle-secondary": "toggle-secondary 3.5s forwards",
       },
       keyframes: {
-        fadeIn: {
+        "fade-in": {
           from: { opacity: 0 },
           to: { opacity: 1 }
         },
-        header: {
-          from: { transform: "translateY(-80px)" },
-          to: { transform: "translateY(0)" }
-        },
-        headerBar: {
-          from: { transform: "translateY(-60px)" },
-          to: { transform: "translateY(0)" }
-        },
-        growUp: {
+        "grow": {
           from: { transform: "scale(0)" },
           to: { transform: "scale(1)" }
         },
-        rotatePrimary: {
+        "rotate-primary": {
           from: { transform: "rotateY(0deg)" },
           to: { transform: "rotateY(180deg)" }
         },
-        rotateSecondary: {
+        "rotate-secondary": {
           from: { transform: "rotateY(180deg)" },
           to: { transform: "rotateY(0deg)" }
         },
-        togglePrimary: {
+        "slide-in-down": {
+          from: { transform: "translateY(-80px)" },
+          to: { transform: "translateY(0)" }
+        },
+        "toggle-primary": {
           from: { zIndex: 50 },
           to: { zIndex: 0 }
         },
-        toggleSecondary: {
+        "toggle-secondary": {
           from: { zIndex: 0 },
           to: { zIndex: 50 }
         },

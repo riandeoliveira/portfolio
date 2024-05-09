@@ -71,11 +71,13 @@ export const ContactForm = (): ReactElement => {
   return (
     <>
       {isFormSubmitted ? (
-        <div className="h-[496px] flex flex-col justify-center text-center gap-2 flex-1 animate-fadeIn">
+        <div className="h-[496px] flex flex-col justify-center text-center gap-2 flex-1 animate-fade-in">
           <strong className="text-3xl bg-clip-text text-transparent bg-gradient-to-b from-indigo-500 to-purple-500 mobile-l:text-2xl">
             Obrigado por entrar em contato.
           </strong>
-          <p className="text-xl mobile-l:text-base">Recebi seu e-mail e retornarei o quanto antes!</p>
+          <p className="text-xl mobile-l:text-base">
+            Recebi seu e-mail e retornarei o quanto antes!
+          </p>
         </div>
       ) : (
         <form className="flex flex-col flex-1 gap-8" onSubmit={handleSubmit}>

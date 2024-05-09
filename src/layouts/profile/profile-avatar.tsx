@@ -26,17 +26,17 @@ export const ProfileAvatar = (): ReactElement => {
         type="button"
         onClick={() => setIsRotating((previousState) => !previousState)}
         className={cn(
-          "animate-growUp",
-          isRotating === true ? "animate-rotatePrimary" : "",
-          isRotating === false ? "animate-rotateSecondary" : "",
+          "animate-grow",
+          isRotating === true ? "animate-rotate-primary" : "",
+          isRotating === false ? "animate-rotate-secondary" : "",
         )}
       >
         <NeonBackground className="rounded-full p-0 w-64 h-64 tablet-s:w-56 tablet-s:h-56">
           <div
             className={cn(
               "bg-zinc-900 gap-2 flex items-center justify-center w-[248px] h-[248px] rounded-full absolute translate-x-1 translate-y-1 flex-col tablet-s:w-[216px] tablet-s:h-[216px]",
-              isRotating === true ? "animate-toggleSecondary" : "",
-              isRotating === false ? "animate-togglePrimary" : "",
+              isRotating === true ? "animate-toggle-secondary" : "",
+              isRotating === false ? "animate-toggle-primary" : "",
             )}
           >
             <span
