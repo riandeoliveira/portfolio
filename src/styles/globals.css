@@ -8,22 +8,12 @@
   }
 
   html {
-    scroll-behavior: smooth;
+    @apply scroll-smooth;
   }
 
   body {
     @apply bg-black;
   }
-}
-
-.swiper-pagination-bullet,
-.swiper-pagination-bullet-active {
-  @apply bg-gradient-to-r from-indigo-500 to-purple-500;
-}
-
-.swiper-button-prev,
-.swiper-button-next {
-  @apply text-purple-500;
 }
 
 .swiper-slide {
@@ -32,4 +22,14 @@
 
 .swiper-slide-active {
   @apply scale-100 transition-all opacity-100;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  @apply text-purple-500;
+}
+
+.swiper-pagination-bullet,
+.swiper-pagination-bullet-active {
+  @apply bg-gradient-to-r from-indigo-500 to-purple-500;
 }
