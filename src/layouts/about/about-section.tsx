@@ -11,9 +11,9 @@ export const AboutSection = (): ReactElement => {
           exercer minha criatividade fazendo o que tanto amo. Nos últimos 3 anos, venho
           desenvolvendo e aprimorando minhas habilidades em programação. Possuo uma ótima
           experiência com tecnologias tanto da parte de front end quanto de back end. Algumas delas
-          são: React, TypeScript, .NET, C#, entre outras. Apesar do meu foco estar concentrado no
-          front end, estou sempre aberto a novas oportunidades para continuar aprendendo coisas
-          novas.
+          são: React, TypeScript, Next.js, Node.js, entre outras. Apesar do meu foco estar
+          concentrado no front end, estou sempre aberto a novas oportunidades para continuar
+          aprendendo coisas novas.
         </Section.Description>
       </div>
     </section>
