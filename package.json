@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "description": "Meu portfólio pessoal, com informações sobre mim, tecnologias que utilizo, meus projetos e links para minhas redes sociais.",
-  "version": "3.0.0",
+  "version": "3.2.0",
   "license": "MIT",
   "private": true,
   "homepage": "https://portfolio-kappa-seven-14.vercel.app/",
