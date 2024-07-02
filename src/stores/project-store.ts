@@ -192,7 +192,7 @@ const projects: IProject[] = [
     thumbnail: "https://i.imgur.com/XfVxsNM.png",
     skillList: ["bootstrap", "js", "react", "sass", "vite"],
     repository: {
-      url: "https://github.com/brunomdrrosa/GlossarioLibras",
+      url: "https://github.com/riandeoliveira/GlossarioLibras",
       isPrivate: false,
     },
     websiteUrl: "https://glossario-libras.vercel.app/aprender",
