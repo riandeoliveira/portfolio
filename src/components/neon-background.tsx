@@ -13,7 +13,12 @@ type NeonBackgroundProps = {
 };
 
 export const NeonBackground = observer(
-  ({ animate = true, children, className, style }: NeonBackgroundProps): ReactElement => {
+  ({
+    animate = true,
+    children,
+    className,
+    style,
+  }: NeonBackgroundProps): ReactElement => {
     const variants: Variants = {
       initial: {
         backgroundPosition: "0 50%",
@@ -25,7 +30,7 @@ export const NeonBackground = observer(
 
     const springOptions: Transition = {
       duration: 5,
-      repeat: Infinity,
+      repeat: Number.POSITIVE_INFINITY,
       repeatType: "reverse",
     };
 

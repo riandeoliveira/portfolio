@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply font-primary list-none text-zinc-50;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-black;
+  }
+}
+
+.swiper-slide {
+  @apply scale-75 transition-all opacity-50;
+}
+
+.swiper-slide-active {
+  @apply scale-100 transition-all opacity-100;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  @apply text-purple-500;
+}
+
+.swiper-pagination-bullet,
+.swiper-pagination-bullet-active {
+  @apply bg-gradient-to-r from-indigo-500 to-purple-500;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: url(./assets/fonts/montserrat/Montserrat-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  src: url(./assets/fonts/montserrat/Montserrat-Medium.ttf) format("truetype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  src: url(./assets/fonts/montserrat/Montserrat-Bold.ttf) format("truetype");
+}

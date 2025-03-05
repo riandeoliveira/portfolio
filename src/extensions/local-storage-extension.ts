@@ -1,4 +1,7 @@
-import type { ILocalStorageExtension, LocalStorageKeys } from "@/types/local-storage-extension";
+import type {
+  ILocalStorageExtension,
+  LocalStorageKeys,
+} from "@/types/local-storage-extension";
 
 export class LocalStorageExtension implements ILocalStorageExtension {
   private readonly storage: Storage = window.localStorage;

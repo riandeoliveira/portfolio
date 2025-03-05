@@ -1,21 +1,15 @@
 {
   "name": "portfolio",
-  "description": "Meu portfólio pessoal, com informações sobre mim, tecnologias que utilizo, meus projetos e links para minhas redes sociais.",
+  "description": "My personal portfolio, with information about me, the technologies I use, my projects, and links to my social media.",
   "version": "3.3.0",
   "license": "MIT",
   "private": true,
-  "homepage": "https://portfolio-kappa-seven-14.vercel.app/",
   "main": "./src/main.tsx",
   "scripts": {
     "build": "tsc && vite build",
-    "coverage": "vitest run --coverage",
-    "dev": "vite --open",
-    "e2e:open": "cypress open",
-    "e2e:run": "cypress run",
-    "format": "prettier --write ./src/**/*.{js,jsx,ts,tsx} vite.config.ts",
-    "lint": "eslint --fix ./src/**/*.{js,jsx,ts,tsx} vite.config.ts",
-    "start": "vite preview --open",
-    "test": "vitest --run"
+    "check": "biome check --write",
+    "dev": "vite",
+    "start": "vite preview"
   },
   "dependencies": {
     "@emailjs/browser": "^4.3.3",
@@ -39,37 +33,22 @@
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
     "three": "^0.164.1",
-    "vite-plugin-pwa": "^0.16.7",
     "vite-plugin-svgr": "^3.3.0",
     "workbox-window": "^7.0.0",
     "yup": "^1.4.0"
   },
   "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
     "@types/react": "^18.2.79",
     "@types/react-dom": "^18.2.25",
     "@types/three": "^0.164.0",
-    "@typescript-eslint/eslint-plugin": "^7.7.1",
-    "@typescript-eslint/parser": "^7.7.1",
     "@vitejs/plugin-react-swc": "^3.6.0",
-    "@vitest/coverage-v8": "^0.34.6",
     "autoprefixer": "^10.4.19",
-    "cypress": "^13.8.0",
-    "eslint": "^8.57.0",
-    "eslint-plugin-cypress": "^2.15.2",
-    "eslint-plugin-react": "^7.34.1",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "jsdom": "^22.1.0",
     "postcss": "^8.4.38",
-    "prettier": "^3.2.5",
     "tailwindcss": "^3.4.3",
     "typescript": "^5.4.5",
     "vite": "^4.5.3",
-    "vite-tsconfig-paths": "^4.3.2",
-    "vitest": "^0.34.6"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/riandeoliveira/Portfolio.git"
+    "vite-tsconfig-paths": "^4.3.2"
   },
   "keywords": [
     "brazil",

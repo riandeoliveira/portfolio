@@ -17,7 +17,15 @@ export const OuterSpaceBackground = (): ReactElement => {
           minPolarAngle={Math.PI / 3.5}
           maxPolarAngle={Math.PI - Math.PI / 3}
         />
-        <Stars radius={100} depth={100} count={10000} factor={5} saturation={0} fade speed={1} />
+        <Stars
+          radius={100}
+          depth={100}
+          count={10000}
+          factor={5}
+          saturation={0}
+          fade
+          speed={1}
+        />
       </Canvas>
     </div>
   );

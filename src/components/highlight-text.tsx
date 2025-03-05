@@ -7,7 +7,10 @@ type HighlightTextProps = {
   className?: string;
 };
 
-export const HighlightText = ({ children, className }: HighlightTextProps): ReactElement => {
+export const HighlightText = ({
+  children,
+  className,
+}: HighlightTextProps): ReactElement => {
   return (
     <motion.strong
       initial={{

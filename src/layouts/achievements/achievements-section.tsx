@@ -9,9 +9,10 @@ export const AchievementsSection = (): ReactElement => {
       <div className="w-[1200px] flex flex-col gap-8">
         <Section.Title isHighlighted>O que Conquistei</Section.Title>
         <Section.Description>
-          Em outubro de 2023, minha equipe, Absolem Coders, foi vencedora do prêmio Local{" "}
-          {"People's"} Choice pelo Instituto Federal do Paraná - IFPR (Curitiba) durante o{" "}
-          <strong>NASA Space Apps Challenge</strong> de 2023, o maior hackaton do mundo.
+          Em outubro de 2023, minha equipe, Absolem Coders, foi vencedora do
+          prêmio Local {"People's"} Choice pelo Instituto Federal do Paraná -
+          IFPR (Curitiba) durante o <strong>NASA Space Apps Challenge</strong>{" "}
+          de 2023, o maior hackaton do mundo.
         </Section.Description>
         <div className="flex gap-4 mt-8 tablet-s:flex-col">
           <NeonBackground className="max-h-[388px] flex-1">

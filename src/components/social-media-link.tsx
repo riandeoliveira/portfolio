@@ -5,7 +5,11 @@ import { Tooltip } from "./tooltip";
 
 type SocialMediaLinkProps = Omit<ISocialMedia, "name">;
 
-export const SocialMediaLink = ({ icon: Icon, title, url }: SocialMediaLinkProps): ReactElement => {
+export const SocialMediaLink = ({
+  icon: Icon,
+  title,
+  url,
+}: SocialMediaLinkProps): ReactElement => {
   return (
     <Tooltip title={title}>
       <div className="hover:scale-125 transition-transform mobile-l:scale-[0.8]">

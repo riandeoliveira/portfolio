@@ -8,7 +8,11 @@ type HeaderNavLinkProps = {
   to: string;
 };
 
-export const HeaderNavLink = ({ children, icon: Icon, to }: HeaderNavLinkProps): ReactElement => {
+export const HeaderNavLink = ({
+  children,
+  icon: Icon,
+  to,
+}: HeaderNavLinkProps): ReactElement => {
   return (
     <li className="flex-1 text-center flex justify-center">
       <a

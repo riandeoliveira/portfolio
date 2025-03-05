@@ -26,7 +26,8 @@ class LocalStorageStore {
   };
 
   private syncMode = (): void => {
-    const mode: ModeType | null = localStorageExtension.getItem<ModeType>("mode");
+    const mode: ModeType | null =
+      localStorageExtension.getItem<ModeType>("mode");
     const modeList: ModeType[] = ["quality", "performance"];
 
     if (mode && modeList.includes(mode)) {
@@ -40,7 +41,8 @@ class LocalStorageStore {
   };
 
   public toggleMode = (): void => {
-    const newMode: ModeType = this.mode === "quality" ? "performance" : "quality";
+    const newMode: ModeType =
+      this.mode === "quality" ? "performance" : "quality";
 
     localStorageExtension.setItem<ModeType>("mode", newMode);
 

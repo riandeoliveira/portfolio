@@ -15,7 +15,9 @@ export const ProfileSection = (): ReactElement => {
       >
         <div className="flex flex-col justify-between gap-12 tablet-m:text-center">
           <Section.Title className="text-5xl flex flex-col gap-2">
-            <strong className="font-semibold">Olá, eu sou Rian Oliveira!</strong>
+            <strong className="font-semibold">
+              Olá, eu sou Rian Oliveira!
+            </strong>
             <HighlightText>Desenvolvedor Front End</HighlightText>
           </Section.Title>
           <div className="flex justify-between items-center gap-8 tablet-m:flex-col">

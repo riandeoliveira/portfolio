@@ -3,7 +3,11 @@ import type { ReactElement } from "react";
 
 type SkillCardProps = Omit<ISkill, "name">;
 
-export const SkillCard = ({ color, icon: Icon, title }: SkillCardProps): ReactElement => {
+export const SkillCard = ({
+  color,
+  icon: Icon,
+  title,
+}: SkillCardProps): ReactElement => {
   return (
     <div className="flex flex-col items-center gap-2 flex-1">
       <Icon className="mobile-l:scale-90" />

@@ -30,11 +30,7 @@ const addDotThickBackgroundUtility = ({ matchUtilities, theme }) => {
 
 module.exports = {
   content: ["./src/**/*.{ts,tsx}"],
-  plugins: [
-    addDotThickBackgroundUtility,
-    addVariablesForColors,
-    animations,
-  ],
+  plugins: [addDotThickBackgroundUtility, addVariablesForColors, animations],
   theme: {
     extend: {
       fontFamily: {
@@ -42,7 +38,7 @@ module.exports = {
       },
       animation: {
         "fade-in": "fade-in 1s forwards",
-        "grow": "grow 1s forwards",
+        grow: "grow 1s forwards",
         "rotate-primary": "rotate-primary 2s forwards",
         "rotate-secondary": "rotate-secondary 2s forwards",
         "slide-in-down": "slide-in-down 1s forwards",
@@ -52,36 +48,36 @@ module.exports = {
       keyframes: {
         "fade-in": {
           from: { opacity: 0 },
-          to: { opacity: 1 }
+          to: { opacity: 1 },
         },
-        "grow": {
+        grow: {
           from: { transform: "scale(0)" },
-          to: { transform: "scale(1)" }
+          to: { transform: "scale(1)" },
         },
         "rotate-primary": {
           from: { transform: "rotateY(0deg)" },
-          to: { transform: "rotateY(180deg)" }
+          to: { transform: "rotateY(180deg)" },
         },
         "rotate-secondary": {
           from: { transform: "rotateY(180deg)" },
-          to: { transform: "rotateY(0deg)" }
+          to: { transform: "rotateY(0deg)" },
         },
         "slide-in-down": {
           from: { transform: "translateY(-80px)" },
-          to: { transform: "translateY(0)" }
+          to: { transform: "translateY(0)" },
         },
         "toggle-primary": {
           from: { zIndex: 50 },
-          to: { zIndex: 0 }
+          to: { zIndex: 0 },
         },
         "toggle-secondary": {
           from: { zIndex: 0 },
-          to: { zIndex: 50 }
+          to: { zIndex: 50 },
         },
       },
     },
     screens: {
-      "desktop": { max: "2560px" },
+      desktop: { max: "2560px" },
       "laptop-l": { max: "1440px" },
       "laptop-m": { max: "1280px" },
       "laptop-s": { max: "1024px" },

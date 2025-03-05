@@ -13,7 +13,9 @@ import { createContext, useContext, useEffect, useRef, useState } from "react";
 
 type MouseEnterContextType = [boolean, Dispatch<SetStateAction<boolean>>];
 
-const MouseEnterContext = createContext<MouseEnterContextType | undefined>(undefined);
+const MouseEnterContext = createContext<MouseEnterContextType | undefined>(
+  undefined,
+);
 
 export const useMouseEnter = (): MouseEnterContextType => {
   const context = useContext(MouseEnterContext);
@@ -50,7 +52,11 @@ type ContainerProps = {
 };
 
 const Container = observer(
-  ({ children, className, containerClassName }: ContainerProps): ReactElement => {
+  ({
+    children,
+    className,
+    containerClassName,
+  }: ContainerProps): ReactElement => {
     const containerRef = useRef<HTMLDivElement>(null);
 
     const [isMouseEntered, setIsMouseEntered] = useState<boolean>(false);
@@ -58,7 +64,8 @@ const Container = observer(
     const handleMouseMove = (event: MouseEvent<HTMLDivElement>): void => {
       if (!containerRef.current) return;
 
-      const { left, top, width, height } = containerRef.current.getBoundingClientRect();
+      const { left, top, width, height } =
+        containerRef.current.getBoundingClientRect();
 
       const x = (event.clientX - left - width / 2) / 25;
       const y = (event.clientY - top - height / 2) / 25;

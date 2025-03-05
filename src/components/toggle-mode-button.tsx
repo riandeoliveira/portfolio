@@ -1,13 +1,15 @@
 import { Icon } from "@/assets/icons";
 import { localStorageStore } from "@/stores/local-storage-store";
 import { observer } from "mobx-react-lite";
-import { type ReactElement } from "react";
+import type { ReactElement } from "react";
 import { toast } from "react-toastify";
 import { Tooltip } from "./tooltip";
 
 export const SwitchModeButton = observer((): ReactElement => {
   const handleButtonClick = (): void => {
-    const message: string = localStorageStore.isQualityMode ? "Ativado" : "Desativado";
+    const message: string = localStorageStore.isQualityMode
+      ? "Ativado"
+      : "Desativado";
 
     toast.info(`Modo Performance ${message}`);
 
@@ -17,7 +19,9 @@ export const SwitchModeButton = observer((): ReactElement => {
   return (
     <Tooltip
       title={
-        localStorageStore.isQualityMode ? "Ativar Modo Performance" : "Desativar Modo Performance"
+        localStorageStore.isQualityMode
+          ? "Ativar Modo Performance"
+          : "Desativar Modo Performance"
       }
     >
       <button

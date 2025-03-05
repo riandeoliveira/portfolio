@@ -36,7 +36,9 @@ export const HeaderArea = (): ReactElement => {
         style={{ height: `${headerHeight}px` }}
         className={cn(
           "flex justify-center px-4 animate-slide-in-down",
-          isHeaderFixed ? "transition-all fixed top-0 left-0 right-0 bg-zinc-950 z-50" : "",
+          isHeaderFixed
+            ? "transition-all fixed top-0 left-0 right-0 bg-zinc-950 z-50"
+            : "",
         )}
       >
         <nav className="w-[1200px] flex">
@@ -67,7 +69,9 @@ export const HeaderArea = (): ReactElement => {
           className={cn(
             "h-0.5 p-0",
             isHeaderFixed ? "fixed top-10 left-0 right-0 z-50" : "",
-            localStorageStore.isPerformanceMode && isHeaderFixed ? "top-20" : "",
+            localStorageStore.isPerformanceMode && isHeaderFixed
+              ? "top-20"
+              : "",
           )}
         />
       </div>

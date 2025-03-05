@@ -12,7 +12,10 @@ export const FooterArea = (): ReactElement => {
         <div className="flex flex-col items-center justify-center gap-8">
           <p className="text-base text-center">
             ✨ Desenvolvido com muito 💜 e ☕ por{" "}
-            <HighlightText className="rounded-md pb-0.5">Rian Oliveira</HighlightText> ✨
+            <HighlightText className="rounded-md pb-0.5">
+              Rian Oliveira
+            </HighlightText>{" "}
+            ✨
           </p>
           <SocialMediasArea />
           <ResumeDownloadLink />

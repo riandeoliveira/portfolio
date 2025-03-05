@@ -1,11 +1,24 @@
 import { HighlightText } from "@/components/highlight-text";
 import { cn } from "@/lib/utils";
-import type { HeadingElementProps, ParagraphElementProps } from "@/types/element";
+import type {
+  HeadingElementProps,
+  ParagraphElementProps,
+} from "@/types/element";
 import type { ReactElement } from "react";
 
-const Description = ({ children, className, ...props }: ParagraphElementProps): ReactElement => {
+const Description = ({
+  children,
+  className,
+  ...props
+}: ParagraphElementProps): ReactElement => {
   return (
-    <p className={cn("text-justify text-xl tablet-s:text-base indent-10", className)} {...props}>
+    <p
+      className={cn(
+        "text-justify text-xl tablet-s:text-base indent-10",
+        className,
+      )}
+      {...props}
+    >
       {children}
     </p>
   );

@@ -11,7 +11,7 @@ import { ProjectsSection } from "@/layouts/projects/projects-section";
 import { SkillsSection } from "@/layouts/skills/skills-section";
 import { localStorageStore } from "@/stores/local-storage-store";
 import { observer } from "mobx-react-lite";
-import { type ReactElement } from "react";
+import type { ReactElement } from "react";
 
 export const Home = observer((): ReactElement => {
   return (

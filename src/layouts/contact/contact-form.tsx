@@ -9,11 +9,15 @@ import type { EmailJSResponseStatus } from "@emailjs/browser";
 import emailJs from "@emailjs/browser";
 import { useFormik } from "formik";
 import type { FormEvent } from "react";
-import { useState, type ReactElement } from "react";
+import { type ReactElement, useState } from "react";
 import { toast } from "react-toastify";
 
 const contactSchema = yup.object({
-  name: yup.string().trim().required("Campo obrigatório!").max(64, "Máximo de 64 caracteres!"),
+  name: yup
+    .string()
+    .trim()
+    .required("Campo obrigatório!")
+    .max(64, "Máximo de 64 caracteres!"),
 
   email: yup
     .string()
@@ -82,17 +86,34 @@ export const ContactForm = (): ReactElement => {
       ) : (
         <form className="flex flex-col flex-1 gap-8" onSubmit={handleSubmit}>
           <div className="flex flex-col gap-4">
-            <Field.Root hasErrors={!!formik.errors.name} isTouched={formik.touched.name}>
+            <Field.Root
+              hasErrors={!!formik.errors.name}
+              isTouched={formik.touched.name}
+            >
               <Field.Label>Nome*</Field.Label>
-              <Field.Input name="name" placeholder="Seu nome" onChange={formik.handleChange} />
+              <Field.Input
+                name="name"
+                placeholder="Seu nome"
+                onChange={formik.handleChange}
+              />
               <Field.ErrorMessage>{formik.errors.name}</Field.ErrorMessage>
             </Field.Root>
-            <Field.Root hasErrors={!!formik.errors.email} isTouched={formik.touched.email}>
+            <Field.Root
+              hasErrors={!!formik.errors.email}
+              isTouched={formik.touched.email}
+            >
               <Field.Label>E-mail*</Field.Label>
-              <Field.Input name="email" placeholder="Seu e-mail" onChange={formik.handleChange} />
+              <Field.Input
+                name="email"
+                placeholder="Seu e-mail"
+                onChange={formik.handleChange}
+              />
               <Field.ErrorMessage>{formik.errors.email}</Field.ErrorMessage>
             </Field.Root>
-            <Field.Root hasErrors={!!formik.errors.message} isTouched={formik.touched.message}>
+            <Field.Root
+              hasErrors={!!formik.errors.message}
+              isTouched={formik.touched.message}
+            >
               <Field.Label>Mensagem*</Field.Label>
               <Field.TextArea
                 name="message"

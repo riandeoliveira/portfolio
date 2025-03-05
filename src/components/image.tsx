@@ -1,13 +1,17 @@
 import { Icon } from "@/assets/icons";
 import { cn } from "@/lib/utils";
-import { useState, type ImgHTMLAttributes, type ReactElement } from "react";
+import { type ImgHTMLAttributes, type ReactElement, useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 type ImageProps = ImgHTMLAttributes<HTMLImageElement> & {
   skeletonClassName?: string;
 };
 
-export const Image = ({ className, skeletonClassName, ...props }: ImageProps): ReactElement => {
+export const Image = ({
+  className,
+  skeletonClassName,
+  ...props
+}: ImageProps): ReactElement => {
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
 
   return (

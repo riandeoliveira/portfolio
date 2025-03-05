@@ -45,7 +45,11 @@ import {
   FaTools,
   FaUser,
 } from "react-icons/fa";
-import { HiDownload, HiLockClosed, HiOutlineExternalLink } from "react-icons/hi";
+import {
+  HiDownload,
+  HiLockClosed,
+  HiOutlineExternalLink,
+} from "react-icons/hi";
 
 export const Icon = {
   Azure,

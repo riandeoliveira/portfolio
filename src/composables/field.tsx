@@ -9,7 +9,7 @@ import type {
   SpanElementProps,
   TextAreaElementProps,
 } from "@/types/element";
-import { createContext, useContext, type ReactElement } from "react";
+import { type ReactElement, createContext, useContext } from "react";
 
 type FieldContextType = {
   hasErrors: boolean;
@@ -28,7 +28,11 @@ export const useField = (): FieldContextType => {
   return context;
 };
 
-const Button = ({ children, className, ...props }: ButtonElementProps): ReactElement => {
+const Button = ({
+  children,
+  className,
+  ...props
+}: ButtonElementProps): ReactElement => {
   return (
     <NeonBackground>
       <button
@@ -45,13 +49,20 @@ const Button = ({ children, className, ...props }: ButtonElementProps): ReactEle
   );
 };
 
-const ErrorMessage = ({ children, className, ...props }: SpanElementProps): ReactElement => {
+const ErrorMessage = ({
+  children,
+  className,
+  ...props
+}: SpanElementProps): ReactElement => {
   const { hasErrors, isTouched } = useField();
 
   return (
     <>
       {hasErrors && isTouched ? (
-        <span className={cn("text-red-500 font-semibold", className)} {...props}>
+        <span
+          className={cn("text-red-500 font-semibold", className)}
+          {...props}
+        >
           {children}
         </span>
       ) : (
@@ -66,14 +77,21 @@ const Input = ({ className, ...props }: InputElementProps): ReactElement => {
     <NeonBackground className="rounded-md">
       <input
         type="text"
-        className={cn("px-3 py-2 rounded-md bg-zinc-900 w-full outline-none", className)}
+        className={cn(
+          "px-3 py-2 rounded-md bg-zinc-900 w-full outline-none",
+          className,
+        )}
         {...props}
       />
     </NeonBackground>
   );
 };
 
-const Label = ({ children, className, ...props }: LabelElementProps): ReactElement => {
+const Label = ({
+  children,
+  className,
+  ...props
+}: LabelElementProps): ReactElement => {
   return (
     <label className={cn("text-base font-semibold", className)} {...props}>
       {children}
@@ -85,7 +103,12 @@ type LinkProps = AnchorElementProps & {
   containerClassName?: string;
 };
 
-const Link = ({ children, className, containerClassName, ...props }: LinkProps): ReactElement => {
+const Link = ({
+  children,
+  className,
+  containerClassName,
+  ...props
+}: LinkProps): ReactElement => {
   return (
     <NeonBackground className={cn("", containerClassName)}>
       <a
@@ -119,7 +142,10 @@ const Root = ({
   );
 };
 
-const TextArea = ({ className, ...props }: TextAreaElementProps): ReactElement => {
+const TextArea = ({
+  className,
+  ...props
+}: TextAreaElementProps): ReactElement => {
   return (
     <NeonBackground className="rounded-md flex">
       <textarea

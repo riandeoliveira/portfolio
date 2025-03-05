@@ -9,7 +9,8 @@ type TooltipProps = {
 
 type ElementType = ElementRef<typeof TooltipPrimitive.Content>;
 
-type ElementProps = ComponentPropsWithoutRef<typeof TooltipPrimitive.Content> & TooltipProps;
+type ElementProps = ComponentPropsWithoutRef<typeof TooltipPrimitive.Content> &
+  TooltipProps;
 
 export const Tooltip = forwardRef<ElementType, ElementProps>(
   ({ children, className, sideOffset = 10, open, title, ...props }, ref) => (
