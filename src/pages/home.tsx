@@ -1,3 +1,4 @@
+import { LanguageSwitcher } from "@/components/language-switcher";
 import { OuterSpaceBackground } from "@/components/outer-space-background";
 import { SwitchModeButton } from "@/components/toggle-mode-button";
 import { AboutSection } from "@/layouts/about/about-section";
@@ -29,6 +30,7 @@ export const Home = observer((): ReactElement => {
       </main>
       <FooterArea />
       <SwitchModeButton />
+      <LanguageSwitcher />
     </>
   );
 });

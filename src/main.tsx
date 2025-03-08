@@ -3,6 +3,7 @@ import "@/styles.css";
 import { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
 import { RouterProvider } from "react-router-dom";
+import "@/i18n";
 
 const rootElement = document.querySelector("#root") as Element;
 

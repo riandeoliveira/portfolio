@@ -2,11 +2,14 @@ import { HighlightText } from "@/components/highlight-text";
 import { ResumeDownloadLink } from "@/components/resume-download-link";
 import { SocialMediasArea } from "@/components/social-medias-area";
 import { Section } from "@/composables/section";
+import { useI18n } from "@/hooks/use-i18n";
 import type { ReactElement } from "react";
 import { ProfileAvatar } from "./profile-avatar";
 import { ProfileBackground } from "./profile-background";
 
 export const ProfileSection = (): ReactElement => {
+  const { t } = useI18n();
+
   return (
     <section id="profile">
       <ProfileBackground
@@ -18,7 +21,7 @@ export const ProfileSection = (): ReactElement => {
             <strong className="font-semibold">
               Olá, eu sou Rian Oliveira!
             </strong>
-            <HighlightText>Desenvolvedor Front End</HighlightText>
+            <HighlightText>{t("front_end_developer")}</HighlightText>
           </Section.Title>
           <div className="flex justify-between items-center gap-8 tablet-m:flex-col">
             <SocialMediasArea />

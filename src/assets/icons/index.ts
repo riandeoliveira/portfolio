@@ -1,3 +1,6 @@
+import { ReactComponent as Brazil } from "./country-flags/brazil.svg";
+import { ReactComponent as USA } from "./country-flags/usa.svg";
+
 import { ReactComponent as Azure } from "./skills/azure.svg";
 import { ReactComponent as Bootstrap } from "./skills/bootstrap.svg";
 import { ReactComponent as CS } from "./skills/cs.svg";
@@ -54,6 +57,7 @@ import {
 export const Icon = {
   Azure,
   Bootstrap,
+  Brazil,
   CgPerformance,
   CS,
   CSS,
@@ -94,6 +98,7 @@ export const Icon = {
   Tailwind,
   ThreeJS,
   TS,
+  USA,
   Vite,
   VSCode,
   WhatsApp,
