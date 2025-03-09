@@ -5,37 +5,41 @@ import {
   VITE_EMAIL_TEMPLATE_ID,
 } from "@/constants/environment-variables";
 import { yup } from "@/extensions/yup-extension";
+import { useI18n } from "@/hooks/use-i18n";
 import type { EmailJSResponseStatus } from "@emailjs/browser";
 import emailJs from "@emailjs/browser";
 import { useFormik } from "formik";
+import _ from "lodash";
 import type { FormEvent } from "react";
 import { type ReactElement, useState } from "react";
 import { toast } from "react-toastify";
 
-const contactSchema = yup.object({
-  name: yup
-    .string()
-    .trim()
-    .required("Campo obrigatório!")
-    .max(64, "Máximo de 64 caracteres!"),
-
-  email: yup
-    .string()
-    .trim()
-    .required("Campo obrigatório!")
-    .validEmail("O e-mail deve ser válido!")
-    .max(64, "Máximo de 64 caracteres!"),
-
-  message: yup
-    .string()
-    .trim()
-    .required("Campo obrigatório!")
-    .max(1024, "Máximo de 1024 caracteres!"),
-});
-
 export const ContactForm = (): ReactElement => {
+  const { t } = useI18n();
+
   const [formEvent, setFormEvent] = useState<FormEvent<HTMLFormElement>>();
   const [isFormSubmitted, setIsFormSubmitted] = useState<boolean>(false);
+
+  const contactSchema = yup.object({
+    name: yup
+      .string()
+      .trim()
+      .required(t("required_field"))
+      .max(64, t("max_64_characters")),
+
+    email: yup
+      .string()
+      .trim()
+      .required(t("required_field"))
+      .validEmail(t("email_must_be_valid"))
+      .max(64, t("max_64_characters")),
+
+    message: yup
+      .string()
+      .trim()
+      .required(t("required_field"))
+      .max(1024, t("max_1024_characters")),
+  });
 
   const handleSendEmail = async (): Promise<void> => {
     const response: Promise<EmailJSResponseStatus> = emailJs.sendForm(
@@ -90,10 +94,10 @@ export const ContactForm = (): ReactElement => {
               hasErrors={!!formik.errors.name}
               isTouched={formik.touched.name}
             >
-              <Field.Label>Nome*</Field.Label>
+              <Field.Label>{_.capitalize(t("name"))}*</Field.Label>
               <Field.Input
                 name="name"
-                placeholder="Seu nome"
+                placeholder={`${t("your")} ${t("name")}`}
                 onChange={formik.handleChange}
               />
               <Field.ErrorMessage>{formik.errors.name}</Field.ErrorMessage>
@@ -102,10 +106,10 @@ export const ContactForm = (): ReactElement => {
               hasErrors={!!formik.errors.email}
               isTouched={formik.touched.email}
             >
-              <Field.Label>E-mail*</Field.Label>
+              <Field.Label>{_.capitalize(t("email"))}*</Field.Label>
               <Field.Input
                 name="email"
-                placeholder="Seu e-mail"
+                placeholder={`${t("your")} ${t("email")}`}
                 onChange={formik.handleChange}
               />
               <Field.ErrorMessage>{formik.errors.email}</Field.ErrorMessage>
@@ -114,16 +118,16 @@ export const ContactForm = (): ReactElement => {
               hasErrors={!!formik.errors.message}
               isTouched={formik.touched.message}
             >
-              <Field.Label>Mensagem*</Field.Label>
+              <Field.Label>{_.capitalize(t("message"))}*</Field.Label>
               <Field.TextArea
                 name="message"
-                placeholder="Sua mensagem"
+                placeholder={`${t("your")} ${t("message")}`}
                 onChange={formik.handleChange}
               />
               <Field.ErrorMessage>{formik.errors.message}</Field.ErrorMessage>
             </Field.Root>
           </div>
-          <Field.Button type="submit">Enviar</Field.Button>
+          <Field.Button type="submit">{t("submit")}</Field.Button>
         </form>
       )}
     </>

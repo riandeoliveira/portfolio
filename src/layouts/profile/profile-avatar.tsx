@@ -1,10 +1,13 @@
 import { Image } from "@/components/image";
 import { NeonBackground } from "@/components/neon-background";
 import { Tooltip } from "@/components/tooltip";
+import { useI18n } from "@/hooks/use-i18n";
 import { cn } from "@/lib/utils";
 import { type ReactElement, useEffect, useState } from "react";
 
 export const ProfileAvatar = (): ReactElement => {
+  const { t } = useI18n();
+
   const [isRotating, setIsRotating] = useState<boolean | null>(null);
   const [isTooltipOpen, setIsTooltipOpen] = useState<true | undefined>();
 
@@ -21,10 +24,10 @@ export const ProfileAvatar = (): ReactElement => {
   }, []);
 
   return (
-    <Tooltip title="Clique aqui!" open={isTooltipOpen}>
+    <Tooltip title={t("click_here")} open={isTooltipOpen}>
       <button
         type="button"
-        onClick={() => setIsRotating((previousState) => !previousState)}
+        onClick={(): void => setIsRotating((previousState) => !previousState)}
         className={cn(
           "animate-grow",
           isRotating === true ? "animate-rotate-primary" : "",
@@ -43,7 +46,7 @@ export const ProfileAvatar = (): ReactElement => {
               style={{ transform: "rotateY(180deg)" }}
               className="block bg-clip-text text-sm hover:animate-pulse font-semibold text-transparent bg-gradient-to-b from-indigo-500 to-purple-500 tablet-s:text-xs"
             >
-              Você encontrou um Easter Egg!
+              {t("you_found_an_easter_egg")}
             </span>
             <a
               href="https://youtu.be/uHgt8giw1LY?si=MovtNeUKU20Qt6FQ"
@@ -52,7 +55,7 @@ export const ProfileAvatar = (): ReactElement => {
               style={{ transform: "rotateY(180deg)" }}
               className="block bg-clip-text hover:animate-pulse font-semibold text-transparent bg-gradient-to-b from-indigo-500 to-purple-500 tablet-s:text-sm"
             >
-              Para onde esse link leva?
+              {t("where_does_this_link_lead")}
               <div className="h-px bg-gradient-to-b from-indigo-500 to-purple-500" />
             </a>
           </div>

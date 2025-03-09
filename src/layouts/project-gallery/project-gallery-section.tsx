@@ -1,3 +1,4 @@
+import { useI18n } from "@/hooks/use-i18n";
 import { projectStore } from "@/stores/project-store";
 import type { SpringOptions } from "framer-motion";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
@@ -7,6 +8,8 @@ import { useRef } from "react";
 import { ProjectGalleryCard } from "./project-gallery-card";
 
 export const ProjectGallerySection = observer((): ReactElement => {
+  const { t } = useI18n();
+
   const projectList = projectStore.sortByPresentation();
 
   const firstRow = projectList.slice(0, 5);
@@ -60,12 +63,10 @@ export const ProjectGallerySection = observer((): ReactElement => {
     >
       <div className="max-w-7xl relative mx-auto py-40 px-4 left-0 top-0 w-full tablet-s:py-20">
         <h1 className="text-7xl font-bold tablet-s:text-4xl">
-          Conheça mais <br /> sobre meu trabalho
+          {t("learn_more")} <br /> {t("about_my_work")}
         </h1>
         <p className="max-w-2xl text-xl mt-8 tablet-s:text-base">
-          Ao longo da minha jornada, já desenvolvi uma variedade de produtos de
-          alta qualidade utilizando as tecnologias mais recentes e requisitadas
-          do mercado.
+          {t("project_gallery_description")}
         </p>
       </div>
       <motion.div

@@ -1,6 +1,6 @@
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { OuterSpaceBackground } from "@/components/outer-space-background";
-import { SwitchModeButton } from "@/components/toggle-mode-button";
+import { SwitchModeButton } from "@/components/switch-mode-button";
 import { useI18n } from "@/hooks/use-i18n";
 import { AboutSection } from "@/layouts/about/about-section";
 import { AchievementsSection } from "@/layouts/achievements/achievements-section";

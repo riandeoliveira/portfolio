@@ -1,5 +1,58 @@
 {
+  "a_little_about_me": "Um Pouco Sobre Mim",
+  "about_me_description": "Desde pequeno, sempre fui apaixonado por tecnologia, e hoje tenho a oportunidade de exercer minha criatividade fazendo o que tanto amo. Nos últimos 3 anos, venho desenvolvendo e aprimorando minhas habilidades em programação. Possuo uma ótima experiência com tecnologias tanto da parte de front end quanto de back end. Algumas delas são React, TypeScript, Next.js, Node.js, entre outras. Apesar do meu foco estar concentrado no front end, estou sempre aberto a novas oportunidades para continuar aprendendo coisas novas.",
+  "about_my_work": "sobre meu trabalho",
+  "about": "Sobre",
+  "achievements_description": "Em outubro de 2023, minha equipe, Absolem Coders, foi vencedora do prêmio Local People's Choice pelo Instituto Federal do Paraná - IFPR (Curitiba) durante o NASA Space Apps Challenge de 2023, o maior hackaton do mundo.",
+  "achievements": "Conquistas",
+  "and": "e",
+
+  "by": "por",
+
   "change_language_to": "Alterar idioma para",
+  "click_here": "Clique aqui!",
+  "contact": "Contato",
+
+  "developed_with_much": "Desenvolvido com muito",
+  "did_you_like_what_you_saw": "Gostou do que viu?",
+  "disable": "Desativar",
+  "disabled": "Desativado",
+  "download_resume": "Baixar Currículo",
+
+  "email_must_be_valid": "O e-mail deve ser válido!",
+  "email": "e-mail",
+  "enable": "Ativar",
+  "enabled": "Ativado",
+
   "front_end_developer": "Desenvolvedor Front End",
-  "home_page_head_title": "Portfólio | Rian Oliveira"
+
+  "get_in_touch": "Entre em Contato!",
+
+  "hello_i_am_rian_oliveira": "Olá, eu sou Rian Oliveira!",
+  "home_page_head_title": "Portfólio | Rian Oliveira",
+  "home": "Início",
+
+  "learn_more": "Conheça mais",
+
+  "max_1024_characters": "Máximo de 1024 caracteres!",
+  "max_64_characters": "Máximo de 64 caracteres!",
+  "message": "mensagem",
+
+  "name": "nome",
+
+  "performance_mode": "Modo Performance",
+  "project_gallery_description": "Ao longo da minha jornada, já desenvolvi uma variedade de produtos de alta qualidade utilizando as tecnologias mais recentes e requisitadas do mercado.",
+  "projects": "Projetos",
+
+  "required_field": "Campo obrigatório!",
+
+  "skills_description": "Tecnologias e ferramentas do mercado que possuo experiência",
+  "skills": "Habilidades",
+  "submit": "Enviar",
+
+  "what_i_have_achieved": "O que Conquistei",
+  "where_does_this_link_lead": "Para onde esse link leva?",
+
+  "you_found_an_easter_egg": "Você encontrou um Easter Egg!",
+  "your": "Seu"
 }

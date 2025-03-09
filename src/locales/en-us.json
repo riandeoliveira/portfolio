@@ -1,5 +1,58 @@
 {
+  "a_little_about_me": "A Little About Me",
+  "about_me_description": "Since I was a child, I have always been passionate about technology, and today I have the opportunity to express my creativity by doing what I love. Over the past three years, I have been developing and refining my programming skills. I have great experience with both front-end and back-end technologies, including React, TypeScript, Next.js, Node.js, among others. Although my main focus is on front-end development, I am always open to new opportunities to keep learning and exploring new things.",
+  "about_my_work": "about my work",
+  "about": "About",
+  "achievements_description": "In October 2023, my team, Absolem Coders, won the Local People's Choice award from the Federal Institute of Paraná (IFPR) in Curitiba during the 2023 NASA Space Apps Challenge, the world's largest hackathon.",
+  "achievements": "Achievements",
+  "and": "and",
+
+  "by": "by",
+
   "change_language_to": "Change language to",
+  "click_here": "Click here!",
+  "contact": "Contact",
+
+  "developed_with_much": "Developed with much",
+  "did_you_like_what_you_saw": "Did you like what you saw?",
+  "disable": "Disable",
+  "disabled": "Disabled",
+  "download_resume": "Download Resume",
+
+  "email_must_be_valid": "Email must be valid!",
+  "email": "email",
+  "enable": "Enable",
+  "enabled": "Enabled",
+
   "front_end_developer": "Front End Developer",
-  "home_page_head_title": "Portfolio | Rian Oliveira"
+
+  "get_in_touch": "Get in Touch!",
+
+  "hello_i_am_rian_oliveira": "Hello, I'm Rian Oliveira",
+  "home_page_head_title": "Portfolio | Rian Oliveira",
+  "home": "Home",
+
+  "learn_more": "Learn more",
+
+  "name": "name",
+
+  "max_1024_characters": "Maximum 1024 characters!",
+  "max_64_characters": "Maximum 64 characters!",
+  "message": "message",
+
+  "performance_mode": "Performance Mode",
+  "project_gallery_description": "Throughout my journey, I have developed a variety of high-quality products using the latest and most in-demand technologies in the market.",
+  "projects": "Projects",
+
+  "required_field": "Required field!",
+
+  "skills_description": "Technologies and tools in the market that I have experience with",
+  "skills": "Skills",
+  "submit": "Submit",
+
+  "what_i_have_achieved": "What I have achieved",
+  "where_does_this_link_lead": "Where does this link lead?",
+
+  "you_found_an_easter_egg": "You found an Easter Egg!",
+  "your": "Your"
 }

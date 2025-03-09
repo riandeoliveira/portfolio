@@ -1,5 +1,6 @@
 import { Icon } from "@/assets/icons";
 import { NeonBackground } from "@/components/neon-background";
+import { useI18n } from "@/hooks/use-i18n";
 import { cn } from "@/lib/utils";
 import { localStorageStore } from "@/stores/local-storage-store";
 import type { ReactElement } from "react";
@@ -7,6 +8,8 @@ import { useEffect, useState } from "react";
 import { HeaderNavLink } from "./header-nav-link";
 
 export const HeaderArea = (): ReactElement => {
+  const { t } = useI18n();
+
   const headerHeight: number = 80;
 
   const [isHeaderFixed, setIsHeaderFixed] = useState<boolean>(false);
@@ -43,23 +46,23 @@ export const HeaderArea = (): ReactElement => {
       >
         <nav className="w-[1200px] flex">
           <ul className="flex items-center w-full">
-            <HeaderNavLink to="#profile" icon={Icon.FaHome}>
-              Início
+            <HeaderNavLink to="#home" icon={Icon.FaHome}>
+              {t("home")}
             </HeaderNavLink>
             <HeaderNavLink to="#about" icon={Icon.FaUser}>
-              Sobre
+              {t("about")}
             </HeaderNavLink>
             <HeaderNavLink to="#projects" icon={Icon.FaFolderOpen}>
-              Projetos
+              {t("projects")}
             </HeaderNavLink>
             <HeaderNavLink to="#skills" icon={Icon.FaTools}>
-              Skills
+              {t("skills")}
             </HeaderNavLink>
             <HeaderNavLink to="#achievements" icon={Icon.FaAward}>
-              Conquistas
+              {t("achievements")}
             </HeaderNavLink>
             <HeaderNavLink to="#contact" icon={Icon.FaEnvelope}>
-              Contato
+              {t("contact")}
             </HeaderNavLink>
           </ul>
         </nav>

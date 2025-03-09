@@ -11,7 +11,7 @@ export const ProfileSection = (): ReactElement => {
   const { t } = useI18n();
 
   return (
-    <section id="profile">
+    <section id="home">
       <ProfileBackground
         containerClassName="py-48 px-4 laptop-s:py-24 tablet-s:py-12"
         className="flex justify-between w-[1200px] gap-12 laptop-s:flex-col-reverse laptop-s:items-center"
@@ -19,7 +19,7 @@ export const ProfileSection = (): ReactElement => {
         <div className="flex flex-col justify-between gap-12 tablet-m:text-center">
           <Section.Title className="text-5xl flex flex-col gap-2">
             <strong className="font-semibold">
-              Olá, eu sou Rian Oliveira!
+              {t("hello_i_am_rian_oliveira")}
             </strong>
             <HighlightText>{t("front_end_developer")}</HighlightText>
           </Section.Title>
