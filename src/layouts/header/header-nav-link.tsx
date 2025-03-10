@@ -1,16 +1,17 @@
+import { BaseIcon } from "@/components/base-icon";
 import { NeonBackground } from "@/components/neon-background";
+import type { IconName } from "@/types/icon";
 import type { ReactElement } from "react";
-import type { IconType } from "react-icons";
 
 type HeaderNavLinkProps = {
   children: string;
-  icon: IconType;
+  iconName: IconName;
   to: string;
 };
 
 export const HeaderNavLink = ({
   children,
-  icon: Icon,
+  iconName,
   to,
 }: HeaderNavLinkProps): ReactElement => {
   return (
@@ -20,7 +21,10 @@ export const HeaderNavLink = ({
         className="font-semibold flex flex-col items-center gap-1 group"
         aria-label={children}
       >
-        <Icon size={24} className="fill-purple-500 hidden tablet-s:block" />
+        <BaseIcon
+          name={iconName}
+          className="w-6 h-6 fill-purple-500 hidden tablet-s:block"
+        />
         <span className="bg-clip-text text-transparent bg-gradient-to-b from-indigo-500 to-purple-500 tablet-s:hidden">
           {children}
         </span>

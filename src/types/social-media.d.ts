@@ -1,16 +1,7 @@
-import type { IconComponentType } from "./skill";
+import type { IconName } from "./icon";
 
-export type SocialMediaNameType =
-  | "github"
-  | "instagram"
-  | "linkedin"
-  | "spotify"
-  | "whatsapp"
-  | "x";
-
-interface ISocialMedia {
-  name: SocialMediaNameType;
+export type SocialMedia = {
   title: string;
-  icon: IconComponentType;
+  iconName: IconName;
   url: string;
-}
+};

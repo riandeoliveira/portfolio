@@ -50,7 +50,7 @@ export const ProjectsSection = observer((): ReactElement => {
               description={project.description}
               repository={project.repository}
               name={project.name}
-              skillList={project.skillList}
+              skillNames={project.skillNames}
               thumbnail={project.thumbnail}
               websiteUrl={project.websiteUrl}
             />

@@ -1,7 +1,7 @@
-import { Icon } from "@/assets/icons";
 import { cn } from "@/lib/utils";
 import { type ImgHTMLAttributes, type ReactElement, useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import { BaseIcon } from "./base-icon";
 
 type ImageProps = ImgHTMLAttributes<HTMLImageElement> & {
   skeletonClassName?: string;
@@ -23,10 +23,10 @@ export const Image = ({
           skeletonClassName,
         )}
       >
-        <Icon.FaSpinner size={32} className="animate-spin" />
+        <BaseIcon name="spinner" className="w-8 h-8 animate-spin" />
       </div>
       <LazyLoadImage
-        onLoad={() => setIsLoaded(true)}
+        onLoad={(): void => setIsLoaded(true)}
         className={cn(isLoaded ? "block" : "hidden", className)}
         {...props}
       />

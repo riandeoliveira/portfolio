@@ -1,9 +1,9 @@
-import { Icon } from "@/assets/icons";
 import { useI18n } from "@/hooks/use-i18n";
 import { localStorageStore } from "@/stores/local-storage-store";
 import { observer } from "mobx-react-lite";
 import type { ReactElement } from "react";
 import { toast } from "react-toastify";
+import { BaseIcon } from "./base-icon";
 import { Tooltip } from "./tooltip";
 
 export const SwitchModeButton = observer((): ReactElement => {
@@ -32,7 +32,7 @@ export const SwitchModeButton = observer((): ReactElement => {
         onClick={handleButtonClick}
         className="bg-gradient-to-r from-indigo-500 to-purple-500 fixed top-24 left-0 p-1 z-50 flex items-center justify-center rounded-e-xl"
       >
-        <Icon.CgPerformance size={24} />
+        <BaseIcon name="cg-performance" className="w-6 h-6" />
       </button>
     </Tooltip>
   );

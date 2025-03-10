@@ -1,16 +1,14 @@
-import type { SkillType } from "./skill";
+import type { IconName } from "./icon";
 
-export interface IProjectRepository {
-  url?: string;
-  isPrivate: boolean;
-}
-
-export interface IProject {
+export type Project = {
   id: number;
   name: string;
   description: string;
   thumbnail: string;
-  skillList: SkillType[];
+  skillNames: IconName[];
   websiteUrl: string;
-  repository: IProjectRepository;
-}
+  repository: {
+    url?: string;
+    isPrivate: boolean;
+  };
+};

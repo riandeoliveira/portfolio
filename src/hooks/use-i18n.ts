@@ -1,7 +1,7 @@
 import i18n from "@/i18n";
 import { useTranslation } from "react-i18next";
 
-type SupportedLanguages = "en-US" | "pt-BR";
+export type SupportedLanguages = "en-US" | "pt-BR";
 
 type UseI18n = {
   handleSwitchLanguage: () => void;

@@ -1,15 +1,16 @@
-import { Icon } from "@/assets/icons";
+import { BaseIcon } from "@/components/base-icon";
 import { Image } from "@/components/image";
 import { NeonBackground } from "@/components/neon-background";
 import { Card } from "@/composables/3d-card";
 import { Field } from "@/composables/field";
 import { skillStore } from "@/stores/skill-store";
-import type { IProject } from "@/types/project";
+import type { Project } from "@/types/project";
+import _ from "lodash";
 import { observer } from "mobx-react-lite";
 import type { ReactElement } from "react";
 import { SkillCard } from "../skills/skill-card";
 
-type ProjectCardProps = Omit<IProject, "id">;
+type ProjectCardProps = Omit<Project, "id">;
 
 export const ProjectCard = observer(
   ({
@@ -17,7 +18,7 @@ export const ProjectCard = observer(
     repository,
     thumbnail,
     name,
-    skillList,
+    skillNames,
     websiteUrl,
   }: ProjectCardProps): ReactElement => {
     return (
@@ -51,8 +52,12 @@ export const ProjectCard = observer(
                 translateZ={100}
                 className="text-sm mt-2 flex gap-2 justify-evenly items-center w-full"
               >
-                {skillStore.filterBy(skillList).map(({ icon, color, name }) => (
-                  <SkillCard icon={icon} color={color} key={name} />
+                {skillStore.filterBy(skillNames).map(({ iconName, color }) => (
+                  <SkillCard
+                    iconName={iconName}
+                    color={color}
+                    key={_.uniqueId()}
+                  />
                 ))}
               </Card.Item>
               <Card.Item
@@ -61,7 +66,10 @@ export const ProjectCard = observer(
               >
                 {repository.isPrivate ? (
                   <span className="flex w-full items-center justify-center whitespace-nowrap text-red-500 gap-2 h-[36px]">
-                    <Icon.HiLockClosed size={20} className="fill-red-500" />
+                    <BaseIcon
+                      name="lock-closed"
+                      className="w-5 h-5 fill-red-500"
+                    />
                     Repositório privado
                   </span>
                 ) : (
@@ -72,7 +80,10 @@ export const ProjectCard = observer(
                     containerClassName="w-full"
                     className="text-sm font-medium p-2 gap-2 bg-zinc-900"
                   >
-                    <Icon.FaGithub size={20} />
+                    <BaseIcon
+                      name="github"
+                      className="w-6 h-6 [&>g>path]:fill-transparent"
+                    />
                     Acessar repositório
                   </Field.Link>
                 )}
@@ -83,7 +94,7 @@ export const ProjectCard = observer(
                   containerClassName="w-full"
                   className="text-sm font-medium p-2 gap-2 bg-zinc-900"
                 >
-                  <Icon.HiOutlineExternalLink size={20} />
+                  <BaseIcon name="outline-external-link" className="w-5 h-5" />
                   Acessar projeto
                 </Field.Link>
               </Card.Item>

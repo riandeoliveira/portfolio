@@ -1,38 +1,7 @@
-import type { IconComponentType } from "./svg";
+import type { IconName } from "./icon";
 
-export type SkillNameType =
-  | "azure"
-  | "bootstrap"
-  | "cs"
-  | "css"
-  | "cypress"
-  | "docker"
-  | "dotnet"
-  | "express"
-  | "git"
-  | "html"
-  | "jest"
-  | "js"
-  | "laravel"
-  | "materialui"
-  | "mysql"
-  | "nextjs"
-  | "nodejs"
-  | "php"
-  | "postgresql"
-  | "react"
-  | "redux"
-  | "sass"
-  | "styledcomponents"
-  | "tailwind"
-  | "threejs"
-  | "ts"
-  | "vite"
-  | "vscode";
-
-interface ISkill {
-  name: SkillNameType;
+export type Skill = {
   title?: string;
-  icon: IconComponentType;
+  iconName: IconName;
   color: string;
-}
+};

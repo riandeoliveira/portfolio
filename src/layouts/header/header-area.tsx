@@ -1,4 +1,3 @@
-import { Icon } from "@/assets/icons";
 import { NeonBackground } from "@/components/neon-background";
 import { useI18n } from "@/hooks/use-i18n";
 import { cn } from "@/lib/utils";
@@ -46,22 +45,22 @@ export const HeaderArea = (): ReactElement => {
       >
         <nav className="w-[1200px] flex">
           <ul className="flex items-center w-full">
-            <HeaderNavLink to="#home" icon={Icon.FaHome}>
+            <HeaderNavLink to="#home" iconName="home">
               {t("home")}
             </HeaderNavLink>
-            <HeaderNavLink to="#about" icon={Icon.FaUser}>
+            <HeaderNavLink to="#about" iconName="user">
               {t("about")}
             </HeaderNavLink>
-            <HeaderNavLink to="#projects" icon={Icon.FaFolderOpen}>
+            <HeaderNavLink to="#projects" iconName="folder-open">
               {t("projects")}
             </HeaderNavLink>
-            <HeaderNavLink to="#skills" icon={Icon.FaTools}>
+            <HeaderNavLink to="#skills" iconName="tools">
               {t("skills")}
             </HeaderNavLink>
-            <HeaderNavLink to="#achievements" icon={Icon.FaAward}>
+            <HeaderNavLink to="#achievements" iconName="award">
               {t("achievements")}
             </HeaderNavLink>
-            <HeaderNavLink to="#contact" icon={Icon.FaEnvelope}>
+            <HeaderNavLink to="#contact" iconName="envelope">
               {t("contact")}
             </HeaderNavLink>
           </ul>

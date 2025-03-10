@@ -1,7 +1,7 @@
-import { Icon } from "@/assets/icons";
 import { Field } from "@/composables/field";
 import { useI18n } from "@/hooks/use-i18n";
 import type { ReactElement } from "react";
+import { BaseIcon } from "./base-icon";
 
 export const ResumeDownloadLink = (): ReactElement => {
   const { t } = useI18n();
@@ -13,9 +13,9 @@ export const ResumeDownloadLink = (): ReactElement => {
       className="gap-2 group/link"
     >
       {t("download_resume")}
-      <Icon.HiDownload
-        size={20}
-        className="transition-all group-hover/link:animate-bounce"
+      <BaseIcon
+        name="download"
+        className="w-5 h-5 transition-all group-hover/link:animate-bounce"
       />
     </Field.Link>
   );

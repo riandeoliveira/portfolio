@@ -1,12 +1,13 @@
-import type { ISocialMedia } from "@/types/social-media";
+import type { SocialMedia } from "@/types/social-media";
 import type { ReactElement } from "react";
+import { BaseIcon } from "./base-icon";
 import { NeonBackground } from "./neon-background";
 import { Tooltip } from "./tooltip";
 
-type SocialMediaLinkProps = Omit<ISocialMedia, "name">;
+type SocialMediaLinkProps = SocialMedia;
 
 export const SocialMediaLink = ({
-  icon: Icon,
+  iconName,
   title,
   url,
 }: SocialMediaLinkProps): ReactElement => {
@@ -15,7 +16,7 @@ export const SocialMediaLink = ({
       <div className="hover:scale-125 transition-transform mobile-l:scale-[0.8]">
         <NeonBackground>
           <a href={url} target="_blank" rel="noreferrer" aria-label={title}>
-            <Icon className="scale-100" />
+            <BaseIcon name={iconName} className="scale-100" />
           </a>
         </NeonBackground>
       </div>
