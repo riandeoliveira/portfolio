@@ -1,5 +1,5 @@
 import { useI18n } from "@/hooks/use-i18n";
-import { projectStore } from "@/stores/project-store";
+import { useProject } from "@/hooks/use-project";
 import type { SpringOptions } from "framer-motion";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import { observer } from "mobx-react-lite";
@@ -8,9 +8,10 @@ import { useRef } from "react";
 import { ProjectGalleryCard } from "./project-gallery-card";
 
 export const ProjectGallerySection = observer((): ReactElement => {
+  const { getSortedProjectsBy } = useProject();
   const { t } = useI18n();
 
-  const projectList = projectStore.sortByPresentation();
+  const projectList = getSortedProjectsBy("presentation");
 
   const firstRow = projectList.slice(0, 5);
   const secondRow = projectList.slice(5, 10);

@@ -1,6 +1,6 @@
 import { Section } from "@/composables/section";
 import { useI18n } from "@/hooks/use-i18n";
-import { projectStore } from "@/stores/project-store";
+import { useProject } from "@/hooks/use-project";
 import { observer } from "mobx-react-lite";
 import type { ReactElement } from "react";
 import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
@@ -9,6 +9,7 @@ import { ProjectCard } from "./project-card";
 
 export const ProjectsSection = observer((): ReactElement => {
   const { t } = useI18n();
+  const { getSortedProjectsBy } = useProject();
 
   return (
     <section id="projects" className="py-48 px-4">
@@ -45,7 +46,7 @@ export const ProjectsSection = observer((): ReactElement => {
           },
         }}
       >
-        {projectStore.sortByHighlight().map((project) => (
+        {getSortedProjectsBy("highlight").map((project) => (
           <SwiperSlide key={project.id}>
             <ProjectCard
               description={project.description}
