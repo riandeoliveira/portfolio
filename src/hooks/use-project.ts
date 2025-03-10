@@ -72,7 +72,7 @@ export const useProject = (): UseProject => {
         id: 4,
         name: t("medicenter"),
         description: t("medicenter_description"),
-        thumbnail: image.medicenter,
+        thumbnail: image.mediCenter,
         skillNames: ["js", "nextjs", "react", "sass", "ts"],
         repository: {
           url: "https://github.com/riandeoliveira/MediCenter",
@@ -108,7 +108,7 @@ export const useProject = (): UseProject => {
         id: 9,
         name: t("optimustech"),
         description: t("optimustech_description"),
-        thumbnail: image.optimustech,
+        thumbnail: image.optimusTech,
         skillNames: ["js", "nextjs", "react", "sass", "ts"],
         repository: {
           url: "https://github.com/riandeoliveira/OptimusTech",
@@ -144,7 +144,7 @@ export const useProject = (): UseProject => {
         id: 12,
         name: t("gogreen"),
         description: t("gogreen_description"),
-        thumbnail: image.gogreen,
+        thumbnail: image.goGreen,
         skillNames: ["css", "html", "js"],
         repository: {
           url: "https://github.com/riandeoliveira/ods-13-website",
@@ -168,7 +168,7 @@ export const useProject = (): UseProject => {
         id: 14,
         name: t("petmatch"),
         description: t("petmatch_description"),
-        thumbnail: image.petmatch,
+        thumbnail: image.petMatch,
         skillNames: ["js", "react", "sass", "ts", "vite"],
         repository: {
           url: "https://github.com/riandeoliveira/petmatch-web",

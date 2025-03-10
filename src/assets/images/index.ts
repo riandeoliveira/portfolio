@@ -4,12 +4,12 @@ import avatar from "./profile/avatar.png";
 import blazeClone from "./projects/blaze-clone.png";
 import casaVerde from "./projects/casa-verde.png";
 import glossarioLibras from "./projects/glossario-libras.png";
-import gogreen from "./projects/gogreen.png";
+import goGreen from "./projects/go-green.png";
 import linkedinClone from "./projects/linkedin-clone.png";
-import medicenter from "./projects/medicenter.png";
+import mediCenter from "./projects/medi-center.png";
 import metamorfoseDigital from "./projects/metamorfose-digital.png";
-import optimustech from "./projects/optimustech.png";
-import petmatch from "./projects/petmatch.png";
+import optimusTech from "./projects/optimus-tech.png";
+import petMatch from "./projects/pet-match.png";
 import popularMovies from "./projects/popular-movies.png";
 import profileCardComponent from "./projects/profile-card-component.png";
 import todoList from "./projects/todo-list.png";
@@ -20,13 +20,13 @@ export const image = {
   blazeClone,
   casaVerde,
   glossarioLibras,
-  gogreen,
+  goGreen,
   linkedinClone,
-  medicenter,
+  mediCenter,
   metamorfoseDigital,
-  optimustech,
+  optimusTech,
   personalCertificate,
-  petmatch,
+  petMatch,
   popularMovies,
   profileCardComponent,
   teamCertificate,
