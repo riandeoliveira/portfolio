@@ -50,7 +50,7 @@ export const ProfileAvatar = (): ReactElement => {
               {t("you_found_an_easter_egg")}
             </span>
             <a
-              href="https://youtu.be/uHgt8giw1LY?si=MovtNeUKU20Qt6FQ"
+              href="/easter-egg.mp4"
               target="_blank"
               rel="noreferrer"
               style={{ transform: "rotateY(180deg)" }}
