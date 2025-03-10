@@ -52,11 +52,11 @@ export const ProjectCard = observer(
                 translateZ={100}
                 className="text-sm mt-2 flex gap-2 justify-evenly items-center w-full"
               >
-                {skillStore.filterBy(skillNames).map(({ iconName, color }) => (
+                {skillStore.filterBy(skillNames).map(({ iconName, color, id }) => (
                   <SkillCard
                     iconName={iconName}
                     color={color}
-                    key={_.uniqueId()}
+                    key={id}
                   />
                 ))}
               </Card.Item>

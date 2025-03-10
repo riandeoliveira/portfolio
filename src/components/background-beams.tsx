@@ -86,7 +86,7 @@ export const BackgroundBeams = memo(
 
           {paths.map((path, index) => (
             <motion.path
-              key={`path-${index}`}
+              key={Math.random()}
               d={path}
               stroke={`url(#linearGradient-${index})`}
               strokeOpacity="0.4"
@@ -97,7 +97,7 @@ export const BackgroundBeams = memo(
             {paths.map((_, index) => (
               <motion.linearGradient
                 id={`linearGradient-${index}`}
-                key={`gradient-${index}`}
+                key={Math.random()}
                 initial={{
                   x1: "0%",
                   x2: "0%",

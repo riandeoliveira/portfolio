@@ -1,12 +1,12 @@
 import { Image } from "@/components/image";
 import { NeonBackground } from "@/components/neon-background";
-import type { IProject } from "@/types/project";
+import type { Project } from "@/types/project";
 import type { MotionValue } from "framer-motion";
 import { motion } from "framer-motion";
 import type { ReactElement } from "react";
 
 type ProjectGalleryCardProps = {
-  project: IProject;
+  project: Project;
   translate: MotionValue<number>;
 };
 

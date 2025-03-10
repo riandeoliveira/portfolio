@@ -2,7 +2,6 @@ import { BackgroundBeams } from "@/components/background-beams";
 import { useI18n } from "@/hooks/use-i18n";
 import { localStorageStore } from "@/stores/local-storage-store";
 import { skillStore } from "@/stores/skill-store";
-import _ from "lodash";
 import { observer } from "mobx-react-lite";
 import type { ReactElement } from "react";
 import { SkillCard } from "./skill-card";
@@ -24,12 +23,12 @@ export const SkillsSection = observer((): ReactElement => {
           {t("skills_description")}
         </p>
         <div className="grid grid-cols-12 gap-6 mt-12 tablet-l:grid-cols-8 tablet-s:grid-cols-4">
-          {skillStore.list.map(({ title, iconName, color }) => (
+          {skillStore.list.map(({ title, iconName, color, id }) => (
             <SkillCard
               title={title}
               iconName={iconName}
               color={color}
-              key={_.uniqueId()}
+              key={id}
             />
           ))}
         </div>

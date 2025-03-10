@@ -4,7 +4,7 @@ import { BaseIcon } from "./base-icon";
 import { NeonBackground } from "./neon-background";
 import { Tooltip } from "./tooltip";
 
-type SocialMediaLinkProps = SocialMedia;
+type SocialMediaLinkProps = Omit<SocialMedia, "id">;
 
 export const SocialMediaLink = ({
   iconName,
