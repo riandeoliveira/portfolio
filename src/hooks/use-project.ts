@@ -81,19 +81,6 @@ export const useProject = (): UseProject => {
         websiteUrl: "https://medicenter-beryl.vercel.app/",
       },
       {
-        id: 5,
-        name: "Site do Android",
-        description:
-          "Site simples e informativo sobre a história do mascote do Android, suas diferentes versões, curiosidades, entre outros assuntos.",
-        thumbnail: image.siteDoAndroid,
-        skillNames: ["css", "html"],
-        repository: {
-          url: "https://github.com/riandeoliveira/site-do-android",
-          isPrivate: false,
-        },
-        websiteUrl: "https://site-do-android.vercel.app/android.html",
-      },
-      {
         id: 6,
         name: t("casa_verde"),
         description: t("casa_verde_description"),
@@ -116,19 +103,6 @@ export const useProject = (): UseProject => {
           isPrivate: false,
         },
         websiteUrl: "https://urna-eletronica-three.vercel.app/",
-      },
-      {
-        id: 8,
-        name: "Gerador Aleatório de Entretenimento",
-        description:
-          "Site com a funcionalidade de sortear aleatoriamente uma série, anime ou filme para assistir, com centenas de resultados possíveis.",
-        thumbnail: image.geradorAleatorioDeEntretenimento,
-        skillNames: ["css", "html", "js"],
-        repository: {
-          url: "https://github.com/riandeoliveira/gerador-aleatorio-de-entretenimento",
-          isPrivate: false,
-        },
-        websiteUrl: "https://gerador-aleatorio-de-entretenimento.vercel.app/",
       },
       {
         id: 9,
