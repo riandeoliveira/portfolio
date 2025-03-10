@@ -3,8 +3,8 @@ import { Image } from "@/components/image";
 import { NeonBackground } from "@/components/neon-background";
 import { Card } from "@/composables/3d-card";
 import { Field } from "@/composables/field";
+import { skills } from "@/data/skills";
 import { useI18n } from "@/hooks/use-i18n";
-import { skillStore } from "@/stores/skill-store";
 import type { Project } from "@/types/project";
 import { observer } from "mobx-react-lite";
 import type { ReactElement } from "react";
@@ -54,8 +54,8 @@ export const ProjectCard = observer(
                 translateZ={100}
                 className="text-sm mt-2 flex gap-2 justify-evenly items-center w-full"
               >
-                {skillStore
-                  .filterBy(skillNames)
+                {skills
+                  .filter((skill) => skillNames.includes(skill.iconName))
                   .map(({ iconName, color, id }) => (
                     <SkillCard iconName={iconName} color={color} key={id} />
                   ))}

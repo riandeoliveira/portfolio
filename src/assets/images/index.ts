@@ -5,7 +5,7 @@ import blazeClone from "./projects/blaze-clone.png";
 import casaVerde from "./projects/casa-verde.png";
 import geradorAleatorioDeEntretenimento from "./projects/gerador-aleatorio-de-entretenimento.png";
 import glossarioLibras from "./projects/glossario-libras.png";
-import goGreen from "./projects/go-green.png";
+import gogreen from "./projects/gogreen.png";
 import linkedinClone from "./projects/linkedin-clone.png";
 import medicenter from "./projects/medicenter.png";
 import metamorfoseDigital from "./projects/metamorfose-digital.png";
@@ -23,7 +23,7 @@ export const image = {
   casaVerde,
   geradorAleatorioDeEntretenimento,
   glossarioLibras,
-  goGreen,
+  gogreen,
   linkedinClone,
   medicenter,
   metamorfoseDigital,

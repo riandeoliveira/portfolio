@@ -34,9 +34,8 @@ export const useProject = (): UseProject => {
     setProjects([
       {
         id: 1,
-        name: "Profile Card Component",
-        description:
-          "Cartão responsivo e estilizado com dados de perfil de um determinado usuário. Possui uma variedade de animações diferentes.",
+        name: t("profile_card_component"),
+        description: t("profile_card_component_description"),
         thumbnail: image.profileCardComponent,
         skillNames: ["js", "react", "styledcomponents", "ts"],
         repository: {
@@ -47,9 +46,8 @@ export const useProject = (): UseProject => {
       },
       {
         id: 2,
-        name: "Filmes Populares",
-        description:
-          "Aplicação para pesquisar e favoritar filmes, fazendo uso da API do The Movie Database (TMDB). Os filmes são salvos no Local Storage do navegador.",
+        name: t("popular_movies"),
+        description: t("popular_movies_description"),
         thumbnail: image.popularMovies,
         skillNames: ["js", "pinia", "tailwind", "ts", "vue"],
         repository: {
@@ -60,9 +58,8 @@ export const useProject = (): UseProject => {
       },
       {
         id: 3,
-        name: "Lista de Tarefas",
-        description:
-          "Lista de Tarefas básica e funcional, com design agradável, diferentes opções de filtros e salvamento de dados no Local Storage do navegador.",
+        name: t("todo_list"),
+        description: t("todo_list_description"),
         thumbnail: image.todoList,
         skillNames: ["js", "nextjs", "react", "sass", "ts"],
         repository: {
@@ -73,9 +70,8 @@ export const useProject = (): UseProject => {
       },
       {
         id: 4,
-        name: "MediCenter",
-        description:
-          "Página inicial de um site responsivo e acessível para a clínica médica fictícia MediCenter. Inclui um design adaptável para tablets e smartphones.",
+        name: t("medicenter"),
+        description: t("medicenter_description"),
         thumbnail: image.medicenter,
         skillNames: ["js", "nextjs", "react", "sass", "ts"],
         repository: {
@@ -99,9 +95,8 @@ export const useProject = (): UseProject => {
       },
       {
         id: 6,
-        name: "Casa Verde",
-        description:
-          "Página principal da loja online fictícia Casa Verde, especializada na venda de plantas. Possui um serviço de envio de e-mail integrado.",
+        name: t("casa_verde"),
+        description: t("casa_verde_description"),
         thumbnail: image.casaVerde,
         skillNames: ["js", "nextjs", "react", "styledcomponents", "ts"],
         repository: {
@@ -137,9 +132,8 @@ export const useProject = (): UseProject => {
       },
       {
         id: 9,
-        name: "OptimusTech",
-        description:
-          "Página completa de vagas da empresa de tecnologia fictícia OptimusTech. Possui um design limpo, responsivo e profissional.",
+        name: t("optimustech"),
+        description: t("optimustech_description"),
         thumbnail: image.optimustech,
         skillNames: ["js", "nextjs", "react", "sass", "ts"],
         repository: {
@@ -150,9 +144,8 @@ export const useProject = (): UseProject => {
       },
       {
         id: 10,
-        name: "Metamorfose Digital",
-        description:
-          "Site do Metamorfose Digital, um projeto comunitário idealizado por universitários focado no descarte correto de lixo eletrônico.",
+        name: t("metamorfose_digital"),
+        description: t("metamorfose_digital_description"),
         thumbnail: image.metamorfoseDigital,
         skillNames: ["js", "nextjs", "react", "sass", "ts"],
         repository: {
@@ -163,9 +156,8 @@ export const useProject = (): UseProject => {
       },
       {
         id: 11,
-        name: "Clone da Blaze",
-        description:
-          "Clone funcional do jogo Crash da plataforma de apostas Blaze, com um layout responsivo e adaptável para dispositivos móveis.",
+        name: t("blaze_clone"),
+        description: t("blaze_clone_description"),
         thumbnail: image.blazeClone,
         skillNames: ["react", "sass", "ts", "vite", "vitest"],
         repository: {
@@ -176,10 +168,9 @@ export const useProject = (): UseProject => {
       },
       {
         id: 12,
-        name: "GoGreen",
-        description:
-          "Landing page desenvolvida para a conscientização sobre as mudanças climáticas e o 13º Objetivo de Desenvolvimento Sustentável da ONU.",
-        thumbnail: image.goGreen,
+        name: t("gogreen"),
+        description: t("gogreen_description"),
+        thumbnail: image.gogreen,
         skillNames: ["css", "html", "js"],
         repository: {
           url: "https://github.com/riandeoliveira/ods-13-website",
@@ -189,9 +180,8 @@ export const useProject = (): UseProject => {
       },
       {
         id: 13,
-        name: "Clone do LinkedIn",
-        description:
-          "Clone da página de perfil do LinkedIn com tema escuro. Possui um layout totalmente responsivo para inúmeros tamanhos de telas.",
+        name: t("linkedin_clone"),
+        description: t("linkedin_clone_description"),
         thumbnail: image.linkedinClone,
         skillNames: ["js", "nextjs", "react", "sass", "ts"],
         repository: {
@@ -202,9 +192,8 @@ export const useProject = (): UseProject => {
       },
       {
         id: 14,
-        name: "PetMatch",
-        description:
-          "Landing page desenvolvida para a conscientização sobre o abandono de animais no Brasil, incentivando o download de um aplicativo para adoção de pets.",
+        name: t("petmatch"),
+        description: t("petmatch_description"),
         thumbnail: image.petmatch,
         skillNames: ["js", "react", "sass", "ts", "vite"],
         repository: {
@@ -215,9 +204,8 @@ export const useProject = (): UseProject => {
       },
       {
         id: 15,
-        name: "Glossário de Libras",
-        description:
-          "Plataforma de aprendizado focada no ensino da Língua Brasileira de Sinais (Libras) para estudantes universitários de diversos cursos.",
+        name: t("glossario_libras"),
+        description: t("glossario_libras_description"),
         thumbnail: image.glossarioLibras,
         skillNames: ["bootstrap", "js", "react", "sass", "vite"],
         repository: {

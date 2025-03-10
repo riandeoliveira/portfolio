@@ -2,7 +2,9 @@ import { BaseIcon } from "@/components/base-icon";
 import type { Skill } from "@/types/skill";
 import type { ReactElement } from "react";
 
-type SkillCardProps = Omit<Skill, "id">;
+type SkillCardProps = Omit<Skill, "id" | "title"> & {
+  title?: string;
+};
 
 export const SkillCard = ({
   color,
