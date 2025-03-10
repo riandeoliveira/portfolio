@@ -3,6 +3,8 @@
   "about_me_description": "Since I was a child, I have always been passionate about technology, and today I have the opportunity to express my creativity by doing what I love. Over the past three years, I have been developing and refining my programming skills. I have great experience with both front-end and back-end technologies, including React, TypeScript, Next.js, Node.js, among others. Although my main focus is on front-end development, I am always open to new opportunities to keep learning and exploring new things.",
   "about_my_work": "about my work",
   "about": "About",
+  "access_project": "Access project",
+  "access_repository": "Access repository",
   "achievements_description": "In October 2023, my team, Absolem Coders, won the Local People's Choice award from the Federal Institute of Paraná (IFPR) in Curitiba during the 2023 NASA Space Apps Challenge, the world's largest hackathon.",
   "achievements": "Achievements",
   "and": "and",
@@ -39,9 +41,11 @@
   "max_1024_characters": "Maximum 1024 characters!",
   "max_64_characters": "Maximum 64 characters!",
   "message": "message",
+  "my_projects": "My Projects",
 
   "performance_mode": "Performance Mode",
   "project_gallery_description": "Throughout my journey, I have developed a variety of high-quality products using the latest and most in-demand technologies in the market.",
+  "projects_description": "Check out some of the projects I have developed",
   "projects": "Projects",
 
   "required_field": "Required field!",
@@ -49,6 +53,9 @@
   "skills_description": "Technologies and tools in the market that I have experience with",
   "skills": "Skills",
   "submit": "Submit",
+
+  "urna_eletronica": "Urna Eletrônica",
+  "urna_eletronica_description": "Fully functional web simulator of the New Electronic Voting Machine, which was used for the first time in the 2022 Brazilian Elections.",
 
   "what_i_have_achieved": "What I have achieved",
   "where_does_this_link_lead": "Where does this link lead?",

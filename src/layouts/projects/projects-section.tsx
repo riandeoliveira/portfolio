@@ -1,4 +1,5 @@
 import { Section } from "@/composables/section";
+import { useI18n } from "@/hooks/use-i18n";
 import { projectStore } from "@/stores/project-store";
 import { observer } from "mobx-react-lite";
 import type { ReactElement } from "react";
@@ -7,14 +8,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { ProjectCard } from "./project-card";
 
 export const ProjectsSection = observer((): ReactElement => {
+  const { t } = useI18n();
+
   return (
     <section id="projects" className="py-48 px-4">
       <div className="flex justify-center px-4">
         <div className="w-[1200px] flex flex-col gap-4">
-          <Section.Title isHighlighted>Meus Projetos</Section.Title>
-          <Section.Description>
-            Confira alguns dos projetos que eu já desenvolvi
-          </Section.Description>
+          <Section.Title isHighlighted>{t("my_projects")}</Section.Title>
+          <Section.Description>{t("projects_description")}</Section.Description>
         </div>
       </div>
       <Swiper

@@ -3,6 +3,8 @@
   "about_me_description": "Desde pequeno, sempre fui apaixonado por tecnologia, e hoje tenho a oportunidade de exercer minha criatividade fazendo o que tanto amo. Nos últimos 3 anos, venho desenvolvendo e aprimorando minhas habilidades em programação. Possuo uma ótima experiência com tecnologias tanto da parte de front end quanto de back end. Algumas delas são React, TypeScript, Next.js, Node.js, entre outras. Apesar do meu foco estar concentrado no front end, estou sempre aberto a novas oportunidades para continuar aprendendo coisas novas.",
   "about_my_work": "sobre meu trabalho",
   "about": "Sobre",
+  "access_project": "Acessar projeto",
+  "access_repository": "Acessar repositório",
   "achievements_description": "Em outubro de 2023, minha equipe, Absolem Coders, foi vencedora do prêmio Local People's Choice pelo Instituto Federal do Paraná - IFPR (Curitiba) durante o NASA Space Apps Challenge de 2023, o maior hackaton do mundo.",
   "achievements": "Conquistas",
   "and": "e",
@@ -37,11 +39,13 @@
   "max_1024_characters": "Máximo de 1024 caracteres!",
   "max_64_characters": "Máximo de 64 caracteres!",
   "message": "mensagem",
+  "my_projects": "Meus Projetos",
 
   "name": "nome",
 
   "performance_mode": "Modo Performance",
   "project_gallery_description": "Ao longo da minha jornada, já desenvolvi uma variedade de produtos de alta qualidade utilizando as tecnologias mais recentes e requisitadas do mercado.",
+  "projects_description": "Confira alguns dos projetos que eu já desenvolvi",
   "projects": "Projetos",
 
   "required_field": "Campo obrigatório!",
@@ -49,6 +53,9 @@
   "skills_description": "Tecnologias e ferramentas do mercado que possuo experiência",
   "skills": "Habilidades",
   "submit": "Enviar",
+
+  "urna_eletronica": "Urna Eletrônica",
+  "urna_eletronica_description": "Simulador web totalmente funcional da Nova Urna Eletrônica que foi utilizada pela primeira vez nas Eleições Brasileiras de 2022.",
 
   "what_i_have_achieved": "O que Conquistei",
   "where_does_this_link_lead": "Para onde esse link leva?",

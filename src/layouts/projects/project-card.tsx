@@ -3,9 +3,9 @@ import { Image } from "@/components/image";
 import { NeonBackground } from "@/components/neon-background";
 import { Card } from "@/composables/3d-card";
 import { Field } from "@/composables/field";
+import { useI18n } from "@/hooks/use-i18n";
 import { skillStore } from "@/stores/skill-store";
 import type { Project } from "@/types/project";
-import _ from "lodash";
 import { observer } from "mobx-react-lite";
 import type { ReactElement } from "react";
 import { SkillCard } from "../skills/skill-card";
@@ -21,6 +21,8 @@ export const ProjectCard = observer(
     skillNames,
     websiteUrl,
   }: ProjectCardProps): ReactElement => {
+    const { t } = useI18n();
+
     return (
       <Card.Container className="inter-var">
         <NeonBackground>
@@ -52,13 +54,11 @@ export const ProjectCard = observer(
                 translateZ={100}
                 className="text-sm mt-2 flex gap-2 justify-evenly items-center w-full"
               >
-                {skillStore.filterBy(skillNames).map(({ iconName, color, id }) => (
-                  <SkillCard
-                    iconName={iconName}
-                    color={color}
-                    key={id}
-                  />
-                ))}
+                {skillStore
+                  .filterBy(skillNames)
+                  .map(({ iconName, color, id }) => (
+                    <SkillCard iconName={iconName} color={color} key={id} />
+                  ))}
               </Card.Item>
               <Card.Item
                 translateZ={80}
@@ -84,7 +84,7 @@ export const ProjectCard = observer(
                       name="github"
                       className="w-6 h-6 [&>g>path]:fill-transparent"
                     />
-                    Acessar repositório
+                    {t("access_repository")}
                   </Field.Link>
                 )}
                 <Field.Link
@@ -95,7 +95,7 @@ export const ProjectCard = observer(
                   className="text-sm font-medium p-2 gap-2 bg-zinc-900"
                 >
                   <BaseIcon name="outline-external-link" className="w-5 h-5" />
-                  Acessar projeto
+                  {t("access_project")}
                 </Field.Link>
               </Card.Item>
             </div>

@@ -1,4 +1,5 @@
 import { image } from "@/assets/images";
+import i18n from "@/i18n";
 import type { Project } from "@/types/project";
 
 export const projects: Project[] = [
@@ -21,7 +22,7 @@ export const projects: Project[] = [
     description:
       "Aplicação para pesquisar e favoritar filmes, fazendo uso da API do The Movie Database (TMDB). Os filmes são salvos no Local Storage do navegador.",
     thumbnail: image.popularMovies,
-    skillNames: ["js", "nextjs", "react", "tailwind", "ts"],
+    skillNames: ["js", "pinia", "tailwind", "ts", "vue"],
     repository: {
       url: "https://github.com/riandeoliveira/PopularMovies",
       isPrivate: false,
@@ -82,9 +83,8 @@ export const projects: Project[] = [
   },
   {
     id: 7,
-    name: "Urna Eletrônica",
-    description:
-      "Simulador web totalmente funcional da Nova Urna Eletrônica que foi utilizada pela primeira vez nas Eleições Brasileiras de 2022.",
+    name: i18n.t("urna_eletronica"),
+    description: i18n.t("urna_eletronica_description"),
     thumbnail: image.urnaEletronica,
     skillNames: ["cypress", "nextjs", "react", "tailwind", "ts"],
     repository: {
