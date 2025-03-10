@@ -3,6 +3,12 @@ import type { Skill } from "@/types/skill";
 export const skills: Skill[] = [
   {
     id: Math.random(),
+    title: "Angular",
+    iconName: "angular",
+    color: "#E23237",
+  },
+  {
+    id: Math.random(),
     title: "Azure",
     iconName: "azure",
     color: "#0669BC",
@@ -93,6 +99,12 @@ export const skills: Skill[] = [
   },
   {
     id: Math.random(),
+    title: "Nest.js",
+    iconName: "nestjs",
+    color: "#E0234E",
+  },
+  {
+    id: Math.random(),
     title: "Next.js",
     iconName: "nextjs",
     color: "#fff",
@@ -105,15 +117,33 @@ export const skills: Skill[] = [
   },
   {
     id: Math.random(),
+    title: "Nuxt.js",
+    iconName: "nuxtjs",
+    color: "#00DC82",
+  },
+  {
+    id: Math.random(),
     title: "PHP",
     iconName: "php",
     color: "#777BB3",
   },
   {
     id: Math.random(),
+    title: "Pinia",
+    iconName: "pinia",
+    color: "#ECB732",
+  },
+  {
+    id: Math.random(),
     title: "PostgreSQL",
     iconName: "postgresql",
     color: "#336791",
+  },
+  {
+    id: Math.random(),
+    title: "Prisma",
+    iconName: "prisma",
+    color: "#677EEB",
   },
   {
     id: Math.random(),
@@ -165,8 +195,26 @@ export const skills: Skill[] = [
   },
   {
     id: Math.random(),
+    title: "Vitest",
+    iconName: "vitest",
+    color: "#729B1B",
+  },
+  {
+    id: Math.random(),
     title: "VSCode",
     iconName: "vscode",
     color: "#3C99D4",
+  },
+  {
+    id: Math.random(),
+    title: "Vue.js",
+    iconName: "vue",
+    color: "#41B883",
+  },
+  {
+    id: Math.random(),
+    title: "Vuetify",
+    iconName: "vuetify",
+    color: "#1697F6",
   },
 ];
