@@ -1,3 +1,4 @@
+import { image } from "@/assets/images";
 import { Image } from "@/components/image";
 import { NeonBackground } from "@/components/neon-background";
 import { Section } from "@/composables/section";
@@ -17,7 +18,7 @@ export const AchievementsSection = (): ReactElement => {
         <div className="flex gap-4 mt-8 tablet-s:flex-col">
           <NeonBackground className="max-h-[388px] flex-1">
             <Image
-              src="https://i.imgur.com/lafl4UT.png"
+              src={image.teamCertificate}
               alt="Imagem de certificado de uma equipe"
               height={384}
               skeletonClassName="h-96"
@@ -26,7 +27,7 @@ export const AchievementsSection = (): ReactElement => {
           </NeonBackground>
           <NeonBackground className="max-h-[388px] flex-1">
             <Image
-              src="https://i.imgur.com/undCXcN.png"
+              src={image.personalCertificate}
               alt="Imagem de certificado de uma pessoa"
               height={384}
               skeletonClassName="h-96"

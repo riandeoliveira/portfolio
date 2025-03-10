@@ -1,3 +1,4 @@
+import { image } from "@/assets/images";
 import { Image } from "@/components/image";
 import { NeonBackground } from "@/components/neon-background";
 import { Tooltip } from "@/components/tooltip";
@@ -60,7 +61,7 @@ export const ProfileAvatar = (): ReactElement => {
             </a>
           </div>
           <Image
-            src="https://i.imgur.com/0tAVYaU.png"
+            src={image.avatar}
             alt="Imagem de perfil"
             width={248}
             height={248}

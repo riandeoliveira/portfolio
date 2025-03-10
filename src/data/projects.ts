@@ -1,3 +1,4 @@
+import { image } from "@/assets/images";
 import type { Project } from "@/types/project";
 
 export const projects: Project[] = [
@@ -6,7 +7,7 @@ export const projects: Project[] = [
     name: "Profile Card Component",
     description:
       "Cartão responsivo e estilizado com dados de perfil de um determinado usuário. Possui uma variedade de animações diferentes.",
-    thumbnail: "https://i.imgur.com/1RJUzAb.png",
+    thumbnail: image.profileCardComponent,
     skillNames: ["js", "react", "styledcomponents", "ts"],
     repository: {
       url: "https://github.com/riandeoliveira/profile-card-component",
@@ -19,7 +20,7 @@ export const projects: Project[] = [
     name: "Filmes Populares",
     description:
       "Aplicação para pesquisar e favoritar filmes, fazendo uso da API do The Movie Database (TMDB). Os filmes são salvos no Local Storage do navegador.",
-    thumbnail: "https://i.imgur.com/mwziBDU.png",
+    thumbnail: image.popularMovies,
     skillNames: ["js", "nextjs", "react", "tailwind", "ts"],
     repository: {
       url: "https://github.com/riandeoliveira/PopularMovies",
@@ -32,7 +33,7 @@ export const projects: Project[] = [
     name: "Lista de Tarefas",
     description:
       "Lista de Tarefas básica e funcional, com design agradável, diferentes opções de filtros e salvamento de dados no Local Storage do navegador.",
-    thumbnail: "https://i.imgur.com/1D1ECA2.png",
+    thumbnail: image.todoList,
     skillNames: ["js", "nextjs", "react", "sass", "ts"],
     repository: {
       url: "https://github.com/riandeoliveira/TodoList",
@@ -45,7 +46,7 @@ export const projects: Project[] = [
     name: "MediCenter",
     description:
       "Página inicial de um site responsivo e acessível para a clínica médica fictícia MediCenter. Inclui um design adaptável para tablets e smartphones.",
-    thumbnail: "https://i.imgur.com/iKhpXGm.png",
+    thumbnail: image.medicenter,
     skillNames: ["js", "nextjs", "react", "sass", "ts"],
     repository: {
       url: "https://github.com/riandeoliveira/MediCenter",
@@ -58,7 +59,7 @@ export const projects: Project[] = [
     name: "Site do Android",
     description:
       "Site simples e informativo sobre a história do mascote do Android, suas diferentes versões, curiosidades, entre outros assuntos.",
-    thumbnail: "https://i.imgur.com/Vr29V0J.png",
+    thumbnail: image.siteDoAndroid,
     skillNames: ["css", "html"],
     repository: {
       url: "https://github.com/riandeoliveira/site-do-android",
@@ -71,7 +72,7 @@ export const projects: Project[] = [
     name: "Casa Verde",
     description:
       "Página principal da loja online fictícia Casa Verde, especializada na venda de plantas. Possui um serviço de envio de e-mail integrado.",
-    thumbnail: "https://i.imgur.com/uPovaN5.png",
+    thumbnail: image.casaVerde,
     skillNames: ["js", "nextjs", "react", "styledcomponents", "ts"],
     repository: {
       url: "https://github.com/riandeoliveira/7-days-of-code",
@@ -84,7 +85,7 @@ export const projects: Project[] = [
     name: "Urna Eletrônica",
     description:
       "Simulador web totalmente funcional da Nova Urna Eletrônica que foi utilizada pela primeira vez nas Eleições Brasileiras de 2022.",
-    thumbnail: "https://i.imgur.com/jxemmal.png",
+    thumbnail: image.urnaEletronica,
     skillNames: ["cypress", "nextjs", "react", "tailwind", "ts"],
     repository: {
       url: "https://github.com/riandeoliveira/UrnaEletronica",
@@ -97,7 +98,7 @@ export const projects: Project[] = [
     name: "Gerador Aleatório de Entretenimento",
     description:
       "Site com a funcionalidade de sortear aleatoriamente uma série, anime ou filme para assistir, com centenas de resultados possíveis.",
-    thumbnail: "https://i.imgur.com/inqwtpV.png",
+    thumbnail: image.geradorAleatorioDeEntretenimento,
     skillNames: ["css", "html", "js"],
     repository: {
       url: "https://github.com/riandeoliveira/gerador-aleatorio-de-entretenimento",
@@ -110,7 +111,7 @@ export const projects: Project[] = [
     name: "OptimusTech",
     description:
       "Página completa de vagas da empresa de tecnologia fictícia OptimusTech. Possui um design limpo, responsivo e profissional.",
-    thumbnail: "https://i.imgur.com/nVC9Qmv.png",
+    thumbnail: image.optimustech,
     skillNames: ["js", "nextjs", "react", "sass", "ts"],
     repository: {
       url: "https://github.com/riandeoliveira/OptimusTech",
@@ -123,7 +124,7 @@ export const projects: Project[] = [
     name: "Metamorfose Digital",
     description:
       "Site do Metamorfose Digital, um projeto comunitário idealizado por universitários focado no descarte correto de lixo eletrônico.",
-    thumbnail: "https://i.imgur.com/OM8zsvo.png",
+    thumbnail: image.metamorfoseDigital,
     skillNames: ["js", "nextjs", "react", "sass", "ts"],
     repository: {
       url: undefined,
@@ -136,7 +137,7 @@ export const projects: Project[] = [
     name: "Clone da Blaze",
     description:
       "Clone funcional do jogo Crash da plataforma de apostas Blaze, com um layout responsivo e adaptável para dispositivos móveis.",
-    thumbnail: "https://i.imgur.com/q52CHgs.png",
+    thumbnail: image.blazeClone,
     skillNames: ["react", "sass", "ts", "vite", "vitest"],
     repository: {
       url: "https://github.com/riandeoliveira/BlazeClone",
@@ -149,7 +150,7 @@ export const projects: Project[] = [
     name: "GoGreen",
     description:
       "Landing page desenvolvida para a conscientização sobre as mudanças climáticas e o 13º Objetivo de Desenvolvimento Sustentável da ONU.",
-    thumbnail: "https://i.imgur.com/N1Ak4Po.png",
+    thumbnail: image.goGreen,
     skillNames: ["css", "html", "js"],
     repository: {
       url: "https://github.com/riandeoliveira/ods-13-website",
@@ -162,7 +163,7 @@ export const projects: Project[] = [
     name: "Clone do LinkedIn",
     description:
       "Clone da página de perfil do LinkedIn com tema escuro. Possui um layout totalmente responsivo para inúmeros tamanhos de telas.",
-    thumbnail: "https://i.imgur.com/MmtGIEl.png",
+    thumbnail: image.linkedinClone,
     skillNames: ["js", "nextjs", "react", "sass", "ts"],
     repository: {
       url: "https://github.com/riandeoliveira/LinkedInClone",
@@ -175,7 +176,7 @@ export const projects: Project[] = [
     name: "PetMatch",
     description:
       "Landing page desenvolvida para a conscientização sobre o abandono de animais no Brasil, incentivando o download de um aplicativo para adoção de pets.",
-    thumbnail: "https://i.imgur.com/LWvF8C9.png",
+    thumbnail: image.petmatch,
     skillNames: ["js", "react", "sass", "ts", "vite"],
     repository: {
       url: "https://github.com/riandeoliveira/petmatch-web",
@@ -188,7 +189,7 @@ export const projects: Project[] = [
     name: "Glossário de Libras",
     description:
       "Plataforma de aprendizado focada no ensino da Língua Brasileira de Sinais (Libras) para estudantes universitários de diversos cursos.",
-    thumbnail: "https://i.imgur.com/XfVxsNM.png",
+    thumbnail: image.glossarioLibras,
     skillNames: ["bootstrap", "js", "react", "sass", "vite"],
     repository: {
       url: "https://github.com/riandeoliveira/GlossarioLibras",
