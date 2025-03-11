@@ -12,7 +12,7 @@ export const ProjectsSection = observer((): ReactElement => {
   const { getSortedProjectsBy } = useProject();
 
   return (
-    <section id="projects" className="py-48 px-4">
+    <section id="projects" className="py-48">
       <div className="flex justify-center px-4">
         <div className="w-[1200px] flex flex-col gap-4">
           <Section.Title isHighlighted>{t("my_projects")}</Section.Title>
@@ -50,11 +50,14 @@ export const ProjectsSection = observer((): ReactElement => {
           <SwiperSlide key={project.id}>
             <ProjectCard
               description={project.description}
-              repository={project.repository}
               name={project.name}
               skillNames={project.skillNames}
               thumbnail={project.thumbnail}
+              version={project.version}
               websiteUrl={project.websiteUrl}
+              repositoryUrl={project.repositoryUrl}
+              isPrivate={project.isPrivate}
+              isNew={project.isNew}
             />
           </SwiperSlide>
         ))}

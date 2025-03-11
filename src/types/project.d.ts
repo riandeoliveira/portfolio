@@ -5,10 +5,10 @@ export type Project = {
   name: string;
   description: string;
   thumbnail: string;
+  version: string;
   skillNames: IconName[];
   websiteUrl: string;
-  repository: {
-    url?: string;
-    isPrivate: boolean;
-  };
+  repositoryUrl?: string;
+  isPrivate: boolean;
+  isNew: boolean;
 };

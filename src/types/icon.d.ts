@@ -27,6 +27,7 @@ export type IconName =
   | "materialui"
   | "mysql"
   | "nestjs"
+  | "new"
   | "nextjs"
   | "nodejs"
   | "nuxtjs"

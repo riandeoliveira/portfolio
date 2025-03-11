@@ -15,10 +15,13 @@ type ProjectCardProps = Omit<Project, "id">;
 export const ProjectCard = observer(
   ({
     description,
-    repository,
-    thumbnail,
+    isNew,
+    isPrivate,
     name,
+    repositoryUrl,
     skillNames,
+    thumbnail,
+    version,
     websiteUrl,
   }: ProjectCardProps): ReactElement => {
     const { t } = useI18n();
@@ -27,9 +30,29 @@ export const ProjectCard = observer(
       <Card.Container className="inter-var">
         <NeonBackground>
           <Card.Body className="bg-zinc-900 relative group/card h-auto rounded-xl w-[30rem] tablet-s:w-[25rem] mobile-l:w-[20rem]">
+            {isNew && (
+              <Card.Item
+                translateZ={80}
+                className="absolute right-0 top-0 z-50"
+              >
+                <div
+                  style={{ boxShadow: "0 0 32px #e40001" }}
+                  className="w-10 h-10 translate-x-4 -translate-y-2 absolute animate-pulse rounded-full"
+                />
+                <BaseIcon
+                  name="new"
+                  className="w-12 h-12 translate-x-3 -translate-y-3"
+                />
+              </Card.Item>
+            )}
             <div className="bg-zinc-900 rounded-xl p-6 w-full mobile-l:p-4">
-              <Card.Item translateZ={60} className="text-xl font-bold">
-                {name}
+              <Card.Item translateZ={60} className="flex items-center gap-4">
+                <strong className="text-xl font-bold">{name}</strong>
+                <NeonBackground className="h-full rounded-lg p-[1px]">
+                  <strong className="h-full text-sm flex rounded-lg px-2 py-0.5 bg-zinc-900 font-medium">
+                    {version}
+                  </strong>
+                </NeonBackground>
               </Card.Item>
               <Card.Item
                 as="p"
@@ -64,7 +87,7 @@ export const ProjectCard = observer(
                 translateZ={80}
                 className="flex mt-6 w-full gap-12 tablet-s:flex-col tablet-s:gap-6 mobile-l:gap-3 mobile-l:mt-3"
               >
-                {repository.isPrivate ? (
+                {isPrivate ? (
                   <span className="flex w-full items-center justify-center whitespace-nowrap text-red-500 gap-2 h-[36px]">
                     <BaseIcon
                       name="lock-closed"
@@ -74,7 +97,7 @@ export const ProjectCard = observer(
                   </span>
                 ) : (
                   <Field.Link
-                    href={repository.url}
+                    href={repositoryUrl}
                     target="_blank"
                     rel="noreferrer"
                     containerClassName="w-full"
