@@ -20,7 +20,7 @@ export const LanguageSwitcher = (): ReactElement => {
         type="button"
         aria-label={legend}
         onClick={handleSwitchLanguage}
-        className="bg-gradient-to-r from-indigo-500 to-purple-500 fixed top-24 right-0 p-1 z-50 flex items-center justify-center rounded-s-xl"
+        className="fixed top-24 right-0 z-50 rounded-s-xl"
       >
         <BaseIcon name={iconNameKeyMap[language]} className="rounded-s-xl" />
       </button>
