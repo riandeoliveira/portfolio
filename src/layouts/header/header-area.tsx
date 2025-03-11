@@ -17,13 +17,7 @@ export const HeaderArea = (): ReactElement => {
     const handleScroll = (): void => {
       const scrollPosition: number = window.scrollY;
 
-      if (scrollPosition > headerHeight) {
-        setIsHeaderFixed(true);
-
-        return;
-      }
-
-      setIsHeaderFixed(false);
+      setIsHeaderFixed(scrollPosition > headerHeight);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -37,9 +31,9 @@ export const HeaderArea = (): ReactElement => {
       <header
         style={{ height: `${headerHeight}px` }}
         className={cn(
-          "flex justify-center px-4 animate-slide-in-down",
+          "flex justify-center px-4 animate-slide-in-down transition-all border-white/10",
           isHeaderFixed
-            ? "transition-all fixed top-0 left-0 right-0 bg-zinc-950 z-50"
+            ? "fixed top-0 left-0 right-0 z-50 bg-zinc-950/60 backdrop-blur-md border shadow-lg"
             : "",
         )}
       >
