@@ -1,5 +1,6 @@
 import { Image } from "@/components/image";
 import { NeonBackground } from "@/components/neon-background";
+import { useI18n } from "@/hooks/use-i18n";
 import type { Project } from "@/types/project";
 import type { MotionValue } from "framer-motion";
 import { motion } from "framer-motion";
@@ -14,6 +15,8 @@ export const ProjectGalleryCard = ({
   project,
   translate,
 }: ProjectGalleryCardProps): ReactElement => {
+  const { t } = useI18n();
+
   return (
     <motion.div
       style={{
@@ -35,7 +38,7 @@ export const ProjectGalleryCard = ({
         >
           <Image
             src={project.thumbnail}
-            alt={project.name}
+            alt={`${t("project_thumbnail")}: ${project.name}`}
             width={480}
             height={384}
             className="object-cover absolute h-full w-full inset-0 rounded-xl p-0.5"

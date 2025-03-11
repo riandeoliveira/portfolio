@@ -62,7 +62,7 @@ export const ProfileAvatar = (): ReactElement => {
           </div>
           <Image
             src={image.avatar}
-            alt="Imagem de perfil"
+            alt={`${t("avatar_alt")}`}
             width={248}
             height={248}
             skeletonClassName="w-[248px] h-[248px] tablet-s:w-[216px] tablet-s:h-[216px]"

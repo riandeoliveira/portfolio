@@ -65,7 +65,7 @@ export const ProjectCard = observer(
                 <NeonBackground className="w-full h-[388px] mobile-l:h-[244px]">
                   <Image
                     src={thumbnail}
-                    alt={`thumbnail do projeto ${name}`}
+                    alt={`${t("project_thumbnail")}: ${name}`}
                     width={428}
                     height={384}
                     skeletonClassName="h-96"
@@ -93,7 +93,7 @@ export const ProjectCard = observer(
                       name="lock-closed"
                       className="w-5 h-5 fill-red-500"
                     />
-                    Repositório privado
+                    {t("private_repository")}
                   </span>
                 ) : (
                   <Field.Link

@@ -8,6 +8,7 @@
   "achievements_description": "In October 2023, my team, Absolem Coders, won the Local People's Choice award from the Federal Institute of Paraná (IFPR) in Curitiba during the 2023 NASA Space Apps Challenge, the world's largest hackathon.",
   "achievements": "Achievements",
   "and": "and",
+  "avatar_alt": "A young man wearing a blue plaid shirt, smiling while looking at the camera with a confident expression.",
 
   "blaze_clone_description": "A functional clone of the Crash game from the Blaze betting platform, with a responsive layout adaptable to mobile devices.",
   "blaze_clone": "Blaze Clone",
@@ -61,13 +62,16 @@
   "optimustech": "OptimusTech",
 
   "performance_mode": "Performance Mode",
+  "personal_certificate_alt": "Certificate for Rian Dias de Oliveira, recognized as a 'Galactic Problem Solver' for contributions to solving Earth and space challenges, awarded at the NASA International Space Apps Challenge.",
   "petmatch_description": "A landing page developed for raising awareness about animal abandonment in Brazil, encouraging the download of an app for pet adoption.",
   "petmatch": "PetMatch",
   "popular_movies_description": "An application to search and favorite movies in the browser's Local Storage, using the The Movie Database (TMDB) API.",
   "popular_movies": "Popular Movies",
+  "private_repository": "Private repository",
   "profile_card_component_description": "A responsive and stylized card with a user's profile data. It features a variety of different animations.",
   "profile_card_component": "Profile Card Component",
   "project_gallery_description": "Throughout my journey, I have developed a variety of high-quality products using the latest and most in-demand technologies in the market.",
+  "project_thumbnail": "Project thumbnail",
   "projects_description": "Check out some of the projects I have developed",
   "projects": "Projects",
 
@@ -77,6 +81,7 @@
   "skills": "Skills",
   "submit": "Submit",
 
+  "team_certificate_alt": "Certificate awarded to 'Team Absolem Coders' for outstanding participation in NASA's International Space Apps Challenge. Dated October 7-8, 2023. Logos of global space organizations shown.",
   "todo_list_description": "A basic and functional To-Do list, with a pleasant design, various filter options, and data saved in the browser's Local Storage.",
   "todo_list": "Todo List",
 

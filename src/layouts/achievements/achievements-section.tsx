@@ -19,7 +19,7 @@ export const AchievementsSection = (): ReactElement => {
           <NeonBackground className="max-h-[388px] flex-1">
             <Image
               src={image.teamCertificate}
-              alt="Imagem de certificado de uma equipe"
+              alt={`${t("team_certificate_alt")}`}
               height={384}
               skeletonClassName="h-96"
               className="rounded-xl w-full h-96 object-cover"
@@ -28,7 +28,7 @@ export const AchievementsSection = (): ReactElement => {
           <NeonBackground className="max-h-[388px] flex-1">
             <Image
               src={image.personalCertificate}
-              alt="Imagem de certificado de uma pessoa"
+              alt={`${t("personal_certificate_alt")}`}
               height={384}
               skeletonClassName="h-96"
               className="rounded-xl w-full h-96 object-cover"

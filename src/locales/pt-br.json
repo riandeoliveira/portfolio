@@ -8,6 +8,7 @@
   "achievements_description": "Em outubro de 2023, minha equipe, Absolem Coders, foi vencedora do prêmio Local People's Choice pelo Instituto Federal do Paraná - IFPR (Curitiba) durante o NASA Space Apps Challenge de 2023, o maior hackaton do mundo.",
   "achievements": "Conquistas",
   "and": "e",
+  "avatar_alt": "Um jovem usando uma camiseta xadrez azul, sorrindo enquanto olha para a câmera com uma expressão confiante.",
 
   "blaze_clone_description": "Clone funcional do jogo Crash da plataforma de apostas Blaze, com um layout responsivo e adaptável para dispositivos móveis.",
   "blaze_clone": "Clone da Blaze",
@@ -61,13 +62,16 @@
   "optimustech": "OptimusTech",
 
   "performance_mode": "Modo Performance",
+  "personal_certificate_alt": "Certificado para Rian Dias de Oliveira, reconhecido como 'Solucionador de Problemas Galácticos' por suas contribuições na resolução de desafios da Terra e do espaço, concedido no NASA International Space Apps Challenge.",
   "petmatch_description": "Landing page desenvolvida para a conscientização sobre o abandono de animais no Brasil, incentivando o download de um aplicativo para adoção de pets.",
   "petmatch": "PetMatch",
   "popular_movies_description": "Aplicação para pesquisar e favoritar filmes no Armazenamento Local do navegador, fazendo uso da API do The Movie Database (TMDB).",
   "popular_movies": "Filmes Populares",
+  "private_repository": "Repositório privado",
   "profile_card_component_description": "Cartão responsivo e estilizado com dados de perfil de um determinado usuário. Possui uma variedade de animações diferentes.",
   "profile_card_component": "Profile Card Component",
   "project_gallery_description": "Ao longo da minha jornada, já desenvolvi uma variedade de produtos de alta qualidade utilizando as tecnologias mais recentes e requisitadas do mercado.",
+  "project_thumbnail": "Thumbnail do projeto",
   "projects_description": "Confira alguns dos projetos que eu já desenvolvi",
   "projects": "Projetos",
 
@@ -77,6 +81,7 @@
   "skills": "Habilidades",
   "submit": "Enviar",
 
+  "team_certificate_alt": "Certificado concedido a 'Equipe Absolem Coders' pela participação excepcional no NASA's International Space Apps Challenge. Datado de 7 a 8 de outubro de 2023. Logos de organizações espaciais globais exibidos.",
   "todo_list_description": "Lista de Tarefas básica e funcional, com design agradável, diferentes opções de filtros e salvamento de dados no Armazenamento Local do navegador.",
   "todo_list": "Lista de Tarefas",
 
