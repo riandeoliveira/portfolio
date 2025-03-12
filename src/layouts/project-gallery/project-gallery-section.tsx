@@ -60,7 +60,7 @@ export const ProjectGallerySection = observer((): ReactElement => {
   return (
     <section
       ref={elementRef}
-      className="h-[300vh] overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="h-[160rem] overflow-hidden antialiased relative flex flex-col self-auto [perspective:600px] [transform-style:preserve-3d] tablet-s:h-[150rem]"
     >
       <div className="max-w-7xl relative mx-auto py-40 px-4 left-0 top-0 w-full tablet-s:py-20">
         <h1 className="text-7xl font-bold tablet-s:text-4xl">
