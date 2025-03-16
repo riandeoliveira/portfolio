@@ -12,11 +12,11 @@
     "start": "vite preview"
   },
   "dependencies": {
-    "@emailjs/browser": "^4.3.3",
     "@radix-ui/react-tooltip": "^1.0.7",
     "@react-three/drei": "^9.105.5",
     "@react-three/fiber": "^8.16.2",
     "@types/react-lazy-load-image-component": "^1.6.4",
+    "axios": "^1.8.3",
     "clsx": "^2.1.1",
     "formik": "^2.4.6",
     "framer-motion": "^11.1.7",

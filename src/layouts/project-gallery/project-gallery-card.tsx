@@ -15,7 +15,9 @@ export const ProjectGalleryCard = ({
   project,
   translate,
 }: ProjectGalleryCardProps): ReactElement => {
-  const { t } = useI18n();
+  const { t, langProp } = useI18n();
+
+  const projectName = project.info[langProp].fullName;
 
   return (
     <motion.div
@@ -30,15 +32,15 @@ export const ProjectGalleryCard = ({
     >
       <NeonBackground className="w-full h-full">
         <a
-          href={project.websiteUrl}
+          href={project.projectUrl}
           target="_blank"
           rel="noreferrer"
-          aria-label={`Acesse o(a) ${project.name} na internet`}
+          aria-label={t("access_this_project_on_the_internet")}
           className="block group-hover/product:shadow-2xl rounded-xl"
         >
           <Image
-            src={project.thumbnail}
-            alt={`${t("project_thumbnail")}: ${project.name}`}
+            src={project.thumbnailUrl}
+            alt={`${t("project_thumbnail")}: ${projectName}`}
             width={480}
             height={384}
             className="object-cover absolute h-full w-full inset-0 rounded-xl p-0.5"
@@ -47,7 +49,7 @@ export const ProjectGalleryCard = ({
       </NeonBackground>
       <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-zinc-950 pointer-events-none rounded-xl" />
       <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100">
-        {project.name}
+        {projectName}
       </h2>
     </motion.div>
   );

@@ -5,6 +5,7 @@
   "about": "Sobre",
   "access_project": "Acessar projeto",
   "access_repository": "Acessar repositório",
+  "access_this_project_on_the_internet": "Acesse este projeto na internet",
   "achievements_description": "Em outubro de 2023, minha equipe, Absolem Coders, foi vencedora do prêmio Local People's Choice pelo Instituto Federal do Paraná - IFPR (Curitiba) durante o NASA Space Apps Challenge de 2023, o maior hackaton do mundo.",
   "achievements": "Conquistas",
   "and": "e",
@@ -77,6 +78,12 @@
 
   "required_field": "Campo obrigatório!",
 
+  "send_email_error": "Não foi possível enviar e-mail. Por favor, tente outra forma de contato.",
+  "send_email_feedback_description": "Recebi seu e-mail e retornarei o quanto antes!",
+  "send_email_feedback_title": "Obrigado por entrar em contato.",
+  "send_email_success": "E-mail enviado com sucesso!",
+  "send_too_many_emails_error": "Erro! Muitos e-mails enviados. Por favor, tente novamente mais tarde.",
+  "sending_email": "Enviando e-mail...",
   "skills_description": "Tecnologias e ferramentas do mercado que possuo experiência",
   "skills": "Habilidades",
   "submit": "Enviar",

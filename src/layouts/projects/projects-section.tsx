@@ -49,12 +49,12 @@ export const ProjectsSection = observer((): ReactElement => {
         {getSortedProjectsBy("highlight").map((project) => (
           <SwiperSlide key={project.id}>
             <ProjectCard
-              description={project.description}
               name={project.name}
-              skillNames={project.skillNames}
-              thumbnail={project.thumbnail}
+              info={project.info}
+              stack={project.stack}
+              thumbnailUrl={project.thumbnailUrl}
               version={project.version}
-              websiteUrl={project.websiteUrl}
+              projectUrl={project.projectUrl}
               repositoryUrl={project.repositoryUrl}
               isPrivate={project.isPrivate}
               isNew={project.isNew}

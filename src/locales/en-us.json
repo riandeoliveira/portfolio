@@ -5,6 +5,7 @@
   "about": "About",
   "access_project": "Access project",
   "access_repository": "Access repository",
+  "access_this_project_on_the_internet": "Access this project on the internet",
   "achievements_description": "In October 2023, my team, Absolem Coders, won the Local People's Choice award from the Federal Institute of Paraná (IFPR) in Curitiba during the 2023 NASA Space Apps Challenge, the world's largest hackathon.",
   "achievements": "Achievements",
   "and": "and",
@@ -77,6 +78,12 @@
 
   "required_field": "Required field!",
 
+  "send_email_error": "Unable to send email. Please try another contact method.",
+  "send_email_feedback_description": "I received your email and will get back to you as soon as possible!",
+  "send_email_feedback_title": "Thank you for reaching out.",
+  "send_email_success": "Email sent successfully!",
+  "send_too_many_emails_error": "Error! Too many emails sent. Please try again later.",
+  "sending_email": "Sending email...",
   "skills_description": "Technologies and tools in the market that I have experience with",
   "skills": "Skills",
   "submit": "Submit",

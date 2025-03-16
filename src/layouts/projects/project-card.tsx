@@ -14,17 +14,17 @@ type ProjectCardProps = Omit<Project, "id">;
 
 export const ProjectCard = observer(
   ({
-    description,
     isNew,
     isPrivate,
     name,
     repositoryUrl,
-    skillNames,
-    thumbnail,
+    stack,
+    thumbnailUrl,
     version,
-    websiteUrl,
+    projectUrl,
+    info,
   }: ProjectCardProps): ReactElement => {
-    const { t } = useI18n();
+    const { t, langProp } = useI18n();
 
     return (
       <Card.Container className="inter-var">
@@ -47,7 +47,9 @@ export const ProjectCard = observer(
             )}
             <div className="bg-zinc-900 rounded-xl p-6 w-full mobile-l:p-4">
               <Card.Item translateZ={60} className="flex items-center gap-4">
-                <strong className="text-xl font-bold">{name}</strong>
+                <strong className="text-xl font-bold">
+                  {info[langProp].fullName}
+                </strong>
                 <NeonBackground className="h-full rounded-lg p-[1px]">
                   <strong className="h-full text-sm flex rounded-lg px-2 py-0.5 bg-zinc-900 font-medium">
                     {version}
@@ -59,12 +61,12 @@ export const ProjectCard = observer(
                 translateZ={100}
                 className="text-sm mt-2 text-justify text-zinc-400"
               >
-                {description}
+                {info[langProp].description}
               </Card.Item>
               <Card.Item translateZ={140} className="w-full mt-4">
                 <NeonBackground className="w-full h-[388px] mobile-l:h-[244px]">
                   <Image
-                    src={thumbnail}
+                    src={thumbnailUrl}
                     alt={`${t("project_thumbnail")}: ${name}`}
                     width={428}
                     height={384}
@@ -78,7 +80,7 @@ export const ProjectCard = observer(
                 className="text-sm mt-2 flex gap-2 justify-evenly items-center w-full"
               >
                 {skills
-                  .filter((skill) => skillNames.includes(skill.iconName))
+                  .filter((skill) => stack.includes(skill.iconName))
                   .map(({ iconName, color, id }) => (
                     <SkillCard iconName={iconName} color={color} key={id} />
                   ))}
@@ -111,7 +113,7 @@ export const ProjectCard = observer(
                   </Field.Link>
                 )}
                 <Field.Link
-                  href={websiteUrl}
+                  href={projectUrl}
                   target="_blank"
                   rel="noreferrer"
                   containerClassName="w-full"
