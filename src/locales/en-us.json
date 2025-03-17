@@ -1,6 +1,6 @@
 {
   "a_little_about_me": "A Little About Me",
-  "about_me_description": "Since I was a child, I have always been passionate about technology, and today I have the opportunity to express my creativity by doing what I love. Over the past three years, I have been developing and refining my programming skills. I have great experience with both front-end and back-end technologies, including React, TypeScript, Next.js, Node.js, among others. Although my main focus is on front-end development, I am always open to new opportunities to keep learning and exploring new things.",
+  "about_me_description": "Since I was a child, I have always been passionate about technology, and today I have the opportunity to express my creativity by doing what I love. For the past {{year}} years, I have been developing and refining my programming skills. I have solid experience with both front-end and back-end technologies, including React, TypeScript, Tailwind CSS, Vue.js, and more. Although my main focus is on front-end development, I am always open to new opportunities to keep learning and growing.",
   "about_my_work": "about my work",
   "about": "About",
   "access_project": "Access project",
