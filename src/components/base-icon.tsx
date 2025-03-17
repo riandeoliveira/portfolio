@@ -36,7 +36,7 @@ export const BaseIcon = ({ name, className }: BaseIconProps): ReactElement => {
   const Icon = iconsMap[name];
 
   useEffect(() => {
-    if (!Icon) console.error(`Error: Icon ${name} not found!`);
+    if (!Icon) throw new Error(`Error: Icon ${name} not found!`);
   }, [Icon, name]);
 
   if (!Icon) {

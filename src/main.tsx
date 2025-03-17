@@ -8,7 +8,7 @@ import { HelmetProvider } from "react-helmet-async";
 
 const rootElement = document.querySelector("#root") as Element;
 
-ReactDOM.createRoot(rootElement!).render(
+ReactDOM.createRoot(rootElement).render(
   <StrictMode>
     <HelmetProvider>
       <RouterProvider router={router} />

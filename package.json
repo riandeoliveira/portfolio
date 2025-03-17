@@ -54,14 +54,5 @@
     "typescript": "^5.4.5",
     "vite": "^4.5.3",
     "vite-tsconfig-paths": "^4.3.2"
-  },
-  "keywords": [
-    "brazil",
-    "mobx",
-    "portfolio",
-    "react",
-    "tailwindcss",
-    "typescript",
-    "vite"
-  ]
+  }
 }

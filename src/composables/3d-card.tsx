@@ -144,28 +144,23 @@ const Item = observer(
     const ref = useRef<HTMLDivElement>(null);
     const [isMouseEntered] = useMouseEnter();
 
-    useEffect(() => {
-      handleAnimations();
-    }, [isMouseEntered]);
-
     const handleAnimations = (): void => {
       if (!ref.current) return;
 
       if (isMouseEntered) {
         ref.current.style.transform = `
-        translateX(${translateX}px)
-        translateY(${translateY}px)
-        translateZ(${translateZ}px)
-        rotateX(${rotateX}deg)
-        rotateY(${rotateY}deg)
-        rotateZ(${rotateZ}deg)
-      `;
+          translateX(${translateX}px)
+          translateY(${translateY}px)
+          translateZ(${translateZ}px)
+          rotateX(${rotateX}deg)
+          rotateY(${rotateY}deg)
+          rotateZ(${rotateZ}deg)
+        `;
 
         return;
       }
 
-      if (!isMouseEntered) {
-        ref.current.style.transform = `
+      ref.current.style.transform = `
         translateX(0px)
         translateY(0px)
         translateZ(0px)
@@ -173,10 +168,12 @@ const Item = observer(
         rotateY(0deg)
         rotateZ(0deg)
       `;
-
-        return;
-      }
     };
+
+    // biome-ignore lint/correctness/useExhaustiveDependencies: isMouseEntered is necessary
+    useEffect(() => {
+      handleAnimations();
+    }, [isMouseEntered]);
 
     return (
       <Tag
