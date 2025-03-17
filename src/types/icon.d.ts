@@ -50,7 +50,6 @@ export type IconName =
   | "user"
   | "vite"
   | "vitest"
-  | "vitest"
   | "vscode"
   | "vue"
   | "vuetify"
