@@ -1,5 +1,5 @@
 import { BaseIcon } from "@/components/base-icon";
-import type { Skill } from "@/types/skill";
+import type { Skill } from "@/data/skills";
 import type { ReactElement } from "react";
 
 type SkillCardProps = Omit<Skill, "id" | "title"> & {

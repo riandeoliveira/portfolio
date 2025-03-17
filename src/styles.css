@@ -4,7 +4,7 @@
 
 @layer base {
   * {
-    @apply font-primary list-none text-zinc-50;
+    @apply font-primary list-none text-zinc-50 selection:bg-indigo-500 selection:text-white;
   }
 
   html {
@@ -17,11 +17,11 @@
 }
 
 .swiper-slide {
-  @apply scale-75 transition-all opacity-50;
+  @apply !scale-75 transition-all opacity-50;
 }
 
 .swiper-slide-active {
-  @apply scale-100 transition-all opacity-100;
+  @apply !scale-100 transition-all opacity-100;
 }
 
 .swiper-button-prev,

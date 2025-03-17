@@ -1,4 +1,4 @@
-import type { SocialMedia } from "@/types/social-media";
+import type { SocialMedia } from "@/data/social-medias";
 import type { ReactElement } from "react";
 import { BaseIcon } from "./base-icon";
 import { NeonBackground } from "./neon-background";
