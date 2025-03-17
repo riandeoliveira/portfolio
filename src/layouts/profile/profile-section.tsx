@@ -21,7 +21,7 @@ export const ProfileSection = (): ReactElement => {
             <strong className="font-semibold">
               {t("hello_i_am_rian_oliveira")}
             </strong>
-            <HighlightText>{t("front_end_developer")}</HighlightText>
+            <HighlightText>{t("full_stack_developer")}</HighlightText>
           </Section.Title>
           <div className="flex justify-between items-center gap-8 tablet-m:flex-col">
             <SocialMediasArea />

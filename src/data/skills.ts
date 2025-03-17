@@ -1,4 +1,11 @@
-import type { Skill } from "@/types/skill";
+import type { IconName } from "@/types/icon";
+
+export type Skill = {
+  id: number;
+  title: string;
+  iconName: IconName;
+  color: string;
+};
 
 export const skills: Skill[] = [
   {

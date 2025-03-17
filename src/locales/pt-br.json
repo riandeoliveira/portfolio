@@ -11,12 +11,8 @@
   "and": "e",
   "avatar_alt": "Um jovem usando uma camiseta xadrez azul, sorrindo enquanto olha para a câmera com uma expressão confiante.",
 
-  "blaze_clone_description": "Clone funcional do jogo Crash da plataforma de apostas Blaze, com um layout responsivo e adaptável para dispositivos móveis.",
-  "blaze_clone": "Clone da Blaze",
   "by": "por",
 
-  "casa_verde_description": "Página principal da loja online fictícia Casa Verde, especializada na venda de plantas. Possui um serviço de envio de e-mail integrado.",
-  "casa_verde": "Casa Verde",
   "change_language_to": "Alterar idioma para",
   "click_here": "Clique aqui!",
   "contact": "Contato",
@@ -32,45 +28,26 @@
   "enable": "Ativar",
   "enabled": "Ativado",
 
-  "front_end_developer": "Desenvolvedor Front End",
+  "full_stack_developer": "Desenvolvedor Full Stack",
 
   "get_in_touch": "Entre em Contato!",
-  "glossario_libras_description": "Plataforma de aprendizado focada no ensino da Língua Brasileira de Sinais (Libras) para estudantes universitários de diversos cursos.",
-  "glossario_libras": "Glossário de Libras",
-  "gogreen_description": "Landing page desenvolvida para a conscientização sobre as mudanças climáticas e o 13º Objetivo de Desenvolvimento Sustentável da ONU.",
-  "gogreen": "GoGreen",
 
   "hello_i_am_rian_oliveira": "Olá, eu sou Rian Oliveira!",
   "home_page_head_title": "Portfólio | Rian Oliveira",
   "home": "Início",
 
   "learn_more": "Conheça mais",
-  "linkedin_clone_description": "Clone da página de perfil do LinkedIn com tema escuro. Possui um layout totalmente responsivo para inúmeros tamanhos de telas.",
-  "linkedin_clone": "Clone do LinkedIn",
 
   "max_1024_characters": "Máximo de 1024 caracteres!",
   "max_64_characters": "Máximo de 64 caracteres!",
-  "medicenter_description": "Página inicial de um site responsivo e acessível para a clínica médica fictícia MediCenter. Inclui um design adaptável para tablets e smartphones.",
-  "medicenter": "MediCenter",
   "message": "mensagem",
-  "metamorfose_digital_description": "Site do Metamorfose Digital, um projeto comunitário idealizado por universitários focado no descarte correto de lixo eletrônico.",
-  "metamorfose_digital": "Metamorfose Digital",
   "my_projects": "Meus Projetos",
 
   "name": "nome",
 
-  "optimustech_description": "Página completa de vagas da empresa de tecnologia fictícia OptimusTech. Possui um design limpo, responsivo e profissional.",
-  "optimustech": "OptimusTech",
-
   "performance_mode": "Modo Performance",
   "personal_certificate_alt": "Certificado para Rian Dias de Oliveira, reconhecido como 'Solucionador de Problemas Galácticos' por suas contribuições na resolução de desafios da Terra e do espaço, concedido no NASA International Space Apps Challenge.",
-  "petmatch_description": "Landing page desenvolvida para a conscientização sobre o abandono de animais no Brasil, incentivando o download de um aplicativo para adoção de pets.",
-  "petmatch": "PetMatch",
-  "popular_movies_description": "Aplicação para pesquisar e favoritar filmes no Armazenamento Local do navegador, fazendo uso da API do The Movie Database (TMDB).",
-  "popular_movies": "Filmes Populares",
   "private_repository": "Repositório privado",
-  "profile_card_component_description": "Cartão responsivo e estilizado com dados de perfil de um determinado usuário. Possui uma variedade de animações diferentes.",
-  "profile_card_component": "Profile Card Component",
   "project_gallery_description": "Ao longo da minha jornada, já desenvolvi uma variedade de produtos de alta qualidade utilizando as tecnologias mais recentes e requisitadas do mercado.",
   "project_thumbnail": "Thumbnail do projeto",
   "projects_description": "Confira alguns dos projetos que eu já desenvolvi",
@@ -89,11 +66,6 @@
   "submit": "Enviar",
 
   "team_certificate_alt": "Certificado concedido a 'Equipe Absolem Coders' pela participação excepcional no NASA's International Space Apps Challenge. Datado de 7 a 8 de outubro de 2023. Logos de organizações espaciais globais exibidos.",
-  "todo_list_description": "Lista de Tarefas básica e funcional, com design agradável, diferentes opções de filtros e salvamento de dados no Armazenamento Local do navegador.",
-  "todo_list": "Lista de Tarefas",
-
-  "urna_eletronica_description": "Simulador web totalmente funcional da Nova Urna Eletrônica que foi utilizada pela primeira vez nas Eleições Brasileiras de 2022.",
-  "urna_eletronica": "Urna Eletrônica",
 
   "what_i_have_achieved": "O que Conquistei",
   "where_does_this_link_lead": "Para onde esse link leva?",

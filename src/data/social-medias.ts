@@ -1,4 +1,11 @@
-import type { SocialMedia } from "@/types/social-media";
+import type { IconName } from "@/types/icon";
+
+export type SocialMedia = {
+  id: number;
+  title: string;
+  iconName: IconName;
+  url: string;
+};
 
 export const socialMedias: SocialMedia[] = [
   {

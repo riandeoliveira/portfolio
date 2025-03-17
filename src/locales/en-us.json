@@ -11,12 +11,8 @@
   "and": "and",
   "avatar_alt": "A young man wearing a blue plaid shirt, smiling while looking at the camera with a confident expression.",
 
-  "blaze_clone_description": "A functional clone of the Crash game from the Blaze betting platform, with a responsive layout adaptable to mobile devices.",
-  "blaze_clone": "Blaze Clone",
   "by": "by",
 
-  "casa_verde_description": "The homepage of the fictional online store Casa Verde, specialized in selling plants. It features an integrated email sending service.",
-  "casa_verde": "Casa Verde",
   "change_language_to": "Change language to",
   "click_here": "Click here!",
   "contact": "Contact",
@@ -32,45 +28,26 @@
   "enable": "Enable",
   "enabled": "Enabled",
 
-  "front_end_developer": "Front End Developer",
+  "full_stack_developer": "Full Stack Developer",
 
   "get_in_touch": "Get in Touch!",
-  "glossario_libras_description": "A learning platform focused on teaching Brazilian Sign Language (Libras) to university students from various courses.",
-  "glossario_libras": "Glossário de Libras",
-  "gogreen_description": "A landing page developed for raising awareness about climate change and the 13th United Nations Sustainable Development Goal.",
-  "gogreen": "GoGreen",
 
-  "hello_i_am_rian_oliveira": "Hello, I'm Rian Oliveira",
+  "hello_i_am_rian_oliveira": "Hello, I'm Rian Oliveira!",
   "home_page_head_title": "Portfolio | Rian Oliveira",
   "home": "Home",
 
   "learn_more": "Learn more",
-  "linkedin_clone_description": "A clone of the LinkedIn profile page with a dark theme. It features a fully responsive layout for various screen sizes.",
-  "linkedin_clone": "LinkedIn Clone",
 
   "max_1024_characters": "Maximum 1024 characters!",
   "max_64_characters": "Maximum 64 characters!",
-  "medicenter_description": "The homepage of a responsive and accessible website for the fictional MediCenter medical clinic. It includes an adaptable design for tablets and smartphones.",
-  "medicenter": "MediCenter",
   "message": "message",
-  "metamorfose_digital_description": "The Metamorfose Digital website, a community project created by university students focused on the proper disposal of electronic waste.",
-  "metamorfose_digital": "Metamorfose Digital",
   "my_projects": "My Projects",
 
   "name": "name",
 
-  "optimustech_description": "A complete job listings page for the fictional technology company OptimusTech. It features a clean, responsive, and professional design.",
-  "optimustech": "OptimusTech",
-
   "performance_mode": "Performance Mode",
   "personal_certificate_alt": "Certificate for Rian Dias de Oliveira, recognized as a 'Galactic Problem Solver' for contributions to solving Earth and space challenges, awarded at the NASA International Space Apps Challenge.",
-  "petmatch_description": "A landing page developed for raising awareness about animal abandonment in Brazil, encouraging the download of an app for pet adoption.",
-  "petmatch": "PetMatch",
-  "popular_movies_description": "An application to search and favorite movies in the browser's Local Storage, using the The Movie Database (TMDB) API.",
-  "popular_movies": "Popular Movies",
   "private_repository": "Private repository",
-  "profile_card_component_description": "A responsive and stylized card with a user's profile data. It features a variety of different animations.",
-  "profile_card_component": "Profile Card Component",
   "project_gallery_description": "Throughout my journey, I have developed a variety of high-quality products using the latest and most in-demand technologies in the market.",
   "project_thumbnail": "Project thumbnail",
   "projects_description": "Check out some of the projects I have developed",
@@ -89,11 +66,6 @@
   "submit": "Submit",
 
   "team_certificate_alt": "Certificate awarded to 'Team Absolem Coders' for outstanding participation in NASA's International Space Apps Challenge. Dated October 7-8, 2023. Logos of global space organizations shown.",
-  "todo_list_description": "A basic and functional To-Do list, with a pleasant design, various filter options, and data saved in the browser's Local Storage.",
-  "todo_list": "Todo List",
-
-  "urna_eletronica_description": "Fully functional web simulator of the New Electronic Voting Machine, which was used for the first time in the 2022 Brazilian Elections.",
-  "urna_eletronica": "Urna Eletrônica",
 
   "what_i_have_achieved": "What I have achieved",
   "where_does_this_link_lead": "Where does this link lead?",
