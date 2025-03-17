@@ -1,4 +1,5 @@
 import { NeonBackground } from "@/components/neon-background";
+import { useI18n } from "@/hooks/use-i18n";
 import { cn } from "@/lib/utils";
 import type {
   AnchorElementProps,
@@ -9,6 +10,7 @@ import type {
   SpanElementProps,
   TextAreaElementProps,
 } from "@/types/element";
+import type { TranslationKeys } from "@/types/i18n";
 import { type ReactElement, createContext, useContext } from "react";
 
 type FieldContextType = {
@@ -55,6 +57,7 @@ const ErrorMessage = ({
   ...props
 }: SpanElementProps): ReactElement => {
   const { hasErrors, isTouched } = useField();
+  const { t } = useI18n();
 
   return (
     <>
@@ -63,7 +66,7 @@ const ErrorMessage = ({
           className={cn("text-red-500 font-semibold", className)}
           {...props}
         >
-          {children}
+          {t(children as TranslationKeys)}
         </span>
       ) : (
         <div className="h-6" />
@@ -90,10 +93,15 @@ const Input = ({ className, ...props }: InputElementProps): ReactElement => {
 const Label = ({
   children,
   className,
+  htmlFor,
   ...props
 }: LabelElementProps): ReactElement => {
   return (
-    <label className={cn("text-base font-semibold", className)} {...props}>
+    <label
+      htmlFor={htmlFor}
+      className={cn("text-base font-semibold", className)}
+      {...props}
+    >
       {children}
     </label>
   );

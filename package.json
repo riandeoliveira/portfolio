@@ -39,7 +39,7 @@
     "three": "^0.164.1",
     "vite-plugin-svgr": "^3.3.0",
     "workbox-window": "^7.0.0",
-    "yup": "^1.4.0"
+    "yup": "^1.6.1"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",

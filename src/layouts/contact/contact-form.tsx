@@ -1,38 +1,38 @@
 import { api } from "@/api";
 import { Field } from "@/composables/field";
-import { yup } from "@/extensions/yup-extension";
 import { useI18n } from "@/hooks/use-i18n";
 import { AxiosError } from "axios";
 import { useFormik } from "formik";
 import _ from "lodash";
 import { type ReactElement, useState } from "react";
 import { type Id, toast } from "react-toastify";
+import * as yup from "yup";
+
+const contactSchema = yup.object({
+  name: yup
+    .string()
+    .trim()
+    .required("required_field")
+    .max(64, "max_64_characters"),
+
+  email: yup
+    .string()
+    .trim()
+    .required("required_field")
+    .email("email_must_be_valid")
+    .max(64, "max_64_characters"),
+
+  message: yup
+    .string()
+    .trim()
+    .required("required_field")
+    .max(1024, "max_1024_characters"),
+});
 
 export const ContactForm = (): ReactElement => {
   const { t } = useI18n();
 
   const [isFormSubmitted, setIsFormSubmitted] = useState<boolean>(false);
-
-  const contactSchema = yup.object({
-    name: yup
-      .string()
-      .trim()
-      .required(t("required_field"))
-      .max(64, t("max_64_characters")),
-
-    email: yup
-      .string()
-      .trim()
-      .required(t("required_field"))
-      .email(t("email_must_be_valid"))
-      .max(64, t("max_64_characters")),
-
-    message: yup
-      .string()
-      .trim()
-      .required(t("required_field"))
-      .max(1024, t("max_1024_characters")),
-  });
 
   const handleSendEmail = async (data: {
     name: string;

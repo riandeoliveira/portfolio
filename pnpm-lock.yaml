@@ -90,7 +90,7 @@ importers:
         specifier: ^7.0.0
         version: 7.3.0
       yup:
-        specifier: ^1.4.0
+        specifier: ^1.6.1
         version: 1.6.1
     devDependencies:
       '@biomejs/biome':
