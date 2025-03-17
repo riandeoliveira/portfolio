@@ -1,6 +1,5 @@
+import { useAppMode } from "@/hooks/use-app-mode";
 import { cn } from "@/lib/utils";
-import { localStorageStore } from "@/stores/local-storage-store";
-import { observer } from "mobx-react-lite";
 import type {
   Dispatch,
   ElementType,
@@ -51,69 +50,69 @@ type ContainerProps = {
   containerClassName?: string;
 };
 
-const Container = observer(
-  ({
-    children,
-    className,
-    containerClassName,
-  }: ContainerProps): ReactElement => {
-    const containerRef = useRef<HTMLDivElement>(null);
+const Container = ({
+  children,
+  className,
+  containerClassName,
+}: ContainerProps): ReactElement => {
+  const { appMode } = useAppMode();
 
-    const [isMouseEntered, setIsMouseEntered] = useState<boolean>(false);
+  const containerRef = useRef<HTMLDivElement>(null);
 
-    const handleMouseMove = (event: MouseEvent<HTMLDivElement>): void => {
-      if (!containerRef.current) return;
+  const [isMouseEntered, setIsMouseEntered] = useState<boolean>(false);
 
-      const { left, top, width, height } =
-        containerRef.current.getBoundingClientRect();
+  const handleMouseMove = (event: MouseEvent<HTMLDivElement>): void => {
+    if (!containerRef.current) return;
 
-      const x = (event.clientX - left - width / 2) / 25;
-      const y = (event.clientY - top - height / 2) / 25;
+    const { left, top, width, height } =
+      containerRef.current.getBoundingClientRect();
 
-      containerRef.current.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
-    };
+    const x = (event.clientX - left - width / 2) / 25;
+    const y = (event.clientY - top - height / 2) / 25;
 
-    const handleMouseEnter = (): void => {
-      setIsMouseEntered(true);
+    containerRef.current.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
+  };
 
-      if (!containerRef.current) return;
-    };
+  const handleMouseEnter = (): void => {
+    setIsMouseEntered(true);
 
-    const handleMouseLeave = (): void => {
-      if (!containerRef.current) return;
+    if (!containerRef.current) return;
+  };
 
-      setIsMouseEntered(false);
+  const handleMouseLeave = (): void => {
+    if (!containerRef.current) return;
 
-      containerRef.current.style.transform = "rotateY(0deg) rotateX(0deg)";
-    };
-    return (
-      <MouseEnterContext.Provider value={[isMouseEntered, setIsMouseEntered]}>
+    setIsMouseEntered(false);
+
+    containerRef.current.style.transform = "rotateY(0deg) rotateX(0deg)";
+  };
+  return (
+    <MouseEnterContext.Provider value={[isMouseEntered, setIsMouseEntered]}>
+      <div
+        className={cn("flex items-center justify-center", containerClassName)}
+        style={{
+          perspective: "1000px",
+        }}
+      >
         <div
-          className={cn("flex items-center justify-center", containerClassName)}
+          ref={appMode === "quality" ? containerRef : undefined}
+          onMouseEnter={handleMouseEnter}
+          onMouseMove={handleMouseMove}
+          onMouseLeave={handleMouseLeave}
+          className={cn(
+            "flex items-center justify-center relative transition-all duration-200 ease-linear",
+            className,
+          )}
           style={{
-            perspective: "1000px",
+            transformStyle: "preserve-3d",
           }}
         >
-          <div
-            ref={localStorageStore.isQualityMode ? containerRef : undefined}
-            onMouseEnter={handleMouseEnter}
-            onMouseMove={handleMouseMove}
-            onMouseLeave={handleMouseLeave}
-            className={cn(
-              "flex items-center justify-center relative transition-all duration-200 ease-linear",
-              className,
-            )}
-            style={{
-              transformStyle: "preserve-3d",
-            }}
-          >
-            {children}
-          </div>
+          {children}
         </div>
-      </MouseEnterContext.Provider>
-    );
-  },
-);
+      </div>
+    </MouseEnterContext.Provider>
+  );
+};
 
 type ItemProps = {
   as?: ElementType;
@@ -128,27 +127,28 @@ type ItemProps = {
   [key: string]: unknown;
 };
 
-const Item = observer(
-  ({
-    as: Tag = "div",
-    children,
-    className,
-    translateX = 0,
-    translateY = 0,
-    translateZ = 0,
-    rotateX = 0,
-    rotateY = 0,
-    rotateZ = 0,
-    ...rest
-  }: ItemProps): ReactElement => {
-    const ref = useRef<HTMLDivElement>(null);
-    const [isMouseEntered] = useMouseEnter();
+const Item = ({
+  as: Tag = "div",
+  children,
+  className,
+  translateX = 0,
+  translateY = 0,
+  translateZ = 0,
+  rotateX = 0,
+  rotateY = 0,
+  rotateZ = 0,
+  ...rest
+}: ItemProps): ReactElement => {
+  const { appMode } = useAppMode();
 
-    const handleAnimations = (): void => {
-      if (!ref.current) return;
+  const ref = useRef<HTMLDivElement>(null);
+  const [isMouseEntered] = useMouseEnter();
 
-      if (isMouseEntered) {
-        ref.current.style.transform = `
+  const handleAnimations = (): void => {
+    if (!ref.current) return;
+
+    if (isMouseEntered) {
+      ref.current.style.transform = `
           translateX(${translateX}px)
           translateY(${translateY}px)
           translateZ(${translateZ}px)
@@ -157,10 +157,10 @@ const Item = observer(
           rotateZ(${rotateZ}deg)
         `;
 
-        return;
-      }
+      return;
+    }
 
-      ref.current.style.transform = `
+    ref.current.style.transform = `
         translateX(0px)
         translateY(0px)
         translateZ(0px)
@@ -168,24 +168,23 @@ const Item = observer(
         rotateY(0deg)
         rotateZ(0deg)
       `;
-    };
+  };
 
-    // biome-ignore lint/correctness/useExhaustiveDependencies: isMouseEntered is necessary
-    useEffect(() => {
-      handleAnimations();
-    }, [isMouseEntered]);
+  // biome-ignore lint/correctness/useExhaustiveDependencies: isMouseEntered is necessary
+  useEffect(() => {
+    handleAnimations();
+  }, [isMouseEntered]);
 
-    return (
-      <Tag
-        ref={localStorageStore.isQualityMode ? ref : undefined}
-        className={cn("w-fit transition duration-200 ease-linear", className)}
-        {...rest}
-      >
-        {children}
-      </Tag>
-    );
-  },
-);
+  return (
+    <Tag
+      ref={appMode === "quality" ? ref : undefined}
+      className={cn("w-fit transition duration-200 ease-linear", className)}
+      {...rest}
+    >
+      {children}
+    </Tag>
+  );
+};
 
 export const Card = {
   Body,

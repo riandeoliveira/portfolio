@@ -1,28 +1,26 @@
+import { useAppMode } from "@/hooks/use-app-mode";
 import { useI18n } from "@/hooks/use-i18n";
-import { localStorageStore } from "@/stores/local-storage-store";
-import { observer } from "mobx-react-lite";
 import type { ReactElement } from "react";
 import { toast } from "react-toastify";
 import { BaseIcon } from "./base-icon";
 import { Tooltip } from "./tooltip";
 
-export const SwitchModeButton = observer((): ReactElement => {
+export const AppModeSwitcher = (): ReactElement => {
   const { t } = useI18n();
+  const { appMode, toggleMode } = useAppMode();
 
   const handleButtonClick = (): void => {
-    const message: string = localStorageStore.isQualityMode
-      ? t("enabled")
-      : t("disabled");
+    const message = appMode === "quality" ? t("enabled") : t("disabled");
 
     toast.info(`${t("performance_mode")} ${message}`);
 
-    localStorageStore.toggleMode();
+    toggleMode();
   };
 
   return (
     <Tooltip
       title={
-        localStorageStore.isQualityMode
+        appMode === "quality"
           ? `${t("enable")} ${t("performance_mode")}`
           : `${t("disable")} ${t("performance_mode")}`
       }
@@ -36,4 +34,4 @@ export const SwitchModeButton = observer((): ReactElement => {
       </button>
     </Tooltip>
   );
-});
+};

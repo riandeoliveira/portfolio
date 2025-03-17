@@ -1,13 +1,12 @@
 import { Section } from "@/composables/section";
 import { useI18n } from "@/hooks/use-i18n";
 import { useProject } from "@/hooks/use-project";
-import { observer } from "mobx-react-lite";
 import type { ReactElement } from "react";
 import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { ProjectCard } from "./project-card";
 
-export const ProjectsSection = observer((): ReactElement => {
+export const ProjectsSection = (): ReactElement => {
   const { t } = useI18n();
   const { getSortedProjectsBy } = useProject();
 
@@ -64,4 +63,4 @@ export const ProjectsSection = observer((): ReactElement => {
       </Swiper>
     </section>
   );
-});
+};

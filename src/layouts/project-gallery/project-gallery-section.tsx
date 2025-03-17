@@ -2,20 +2,19 @@ import { useI18n } from "@/hooks/use-i18n";
 import { useProject } from "@/hooks/use-project";
 import type { SpringOptions } from "framer-motion";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
-import { observer } from "mobx-react-lite";
 import type { ReactElement } from "react";
 import { useRef } from "react";
 import { ProjectGalleryCard } from "./project-gallery-card";
 
-export const ProjectGallerySection = observer((): ReactElement => {
+export const ProjectGallerySection = (): ReactElement => {
   const { getSortedProjectsBy } = useProject();
   const { t } = useI18n();
 
-  const projectList = getSortedProjectsBy("presentation");
+  const projects = getSortedProjectsBy("presentation");
 
-  const firstRow = projectList.slice(0, 5);
-  const secondRow = projectList.slice(5, 10);
-  const thirdRow = projectList.slice(10, 15);
+  const firstRow = projects.slice(0, 5);
+  const secondRow = projects.slice(5, 10);
+  const thirdRow = projects.slice(10, 15);
 
   const elementRef = useRef(null);
 
@@ -108,4 +107,4 @@ export const ProjectGallerySection = observer((): ReactElement => {
       </motion.div>
     </section>
   );
-});
+};

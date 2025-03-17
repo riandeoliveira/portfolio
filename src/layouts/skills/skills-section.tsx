@@ -1,12 +1,12 @@
 import { BackgroundBeams } from "@/components/background-beams";
 import { skills } from "@/data/skills";
+import { useAppMode } from "@/hooks/use-app-mode";
 import { useI18n } from "@/hooks/use-i18n";
-import { localStorageStore } from "@/stores/local-storage-store";
-import { observer } from "mobx-react-lite";
 import type { ReactElement } from "react";
 import { SkillCard } from "./skill-card";
 
-export const SkillsSection = observer((): ReactElement => {
+export const SkillsSection = (): ReactElement => {
+  const { appMode } = useAppMode();
   const { t } = useI18n();
 
   return (
@@ -14,7 +14,7 @@ export const SkillsSection = observer((): ReactElement => {
       id="skills"
       className="py-20 px-4 bg-zinc-950 flex justify-center relative tablet-s:py-10"
     >
-      {localStorageStore.isQualityMode && <BackgroundBeams />}
+      {appMode === "quality" && <BackgroundBeams />}
       <div className="w-[1200px] flex flex-col text-center gap-2">
         <h1 className="text-6xl bg-clip-text text-transparent bg-gradient-to-b from-zinc-200 to-zinc-600 font-bold tablet-s:text-4xl">
           {t("skills")}
@@ -35,4 +35,4 @@ export const SkillsSection = observer((): ReactElement => {
       </div>
     </section>
   );
-});
+};

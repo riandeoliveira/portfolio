@@ -1,15 +1,16 @@
 import { NeonBackground } from "@/components/neon-background";
+import { useAppMode } from "@/hooks/use-app-mode";
 import { useI18n } from "@/hooks/use-i18n";
 import { cn } from "@/lib/utils";
-import { localStorageStore } from "@/stores/local-storage-store";
 import type { ReactElement } from "react";
 import { useEffect, useState } from "react";
 import { HeaderNavLink } from "./header-nav-link";
 
 export const HeaderArea = (): ReactElement => {
-  const { t } = useI18n();
-
   const headerHeight: number = 80;
+
+  const { t } = useI18n();
+  const { appMode } = useAppMode();
 
   const [isHeaderFixed, setIsHeaderFixed] = useState<boolean>(false);
 
@@ -65,9 +66,7 @@ export const HeaderArea = (): ReactElement => {
           className={cn(
             "h-0.5 p-0",
             isHeaderFixed ? "fixed top-10 left-0 right-0 z-50" : "",
-            localStorageStore.isPerformanceMode && isHeaderFixed
-              ? "top-20"
-              : "",
+            appMode === "performance" && isHeaderFixed ? "top-20" : "",
           )}
         />
       </div>
