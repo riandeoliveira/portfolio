@@ -8,7 +8,7 @@ export const AboutSection = (): ReactElement => {
   const yearsSince2021 = new Date().getFullYear() - 2021;
 
   return (
-    <section id="about" className="flex justify-center py-48 px-4">
+    <section id="about" className="flex justify-center py-48 px-4 text-zinc-50">
       <div className="w-[1200px] flex flex-col gap-8">
         <Section.Title isHighlighted>{t("a_little_about_me")}</Section.Title>
         <Section.Description>

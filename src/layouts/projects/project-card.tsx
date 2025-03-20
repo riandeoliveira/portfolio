@@ -27,7 +27,7 @@ export const ProjectCard = ({
   return (
     <Card.Container className="inter-var">
       <NeonBackground>
-        <Card.Body className="bg-zinc-900 relative group/card h-auto rounded-xl w-[30rem] tablet-s:w-[25rem] mobile-l:w-[20rem]">
+        <Card.Body className="bg-zinc-900 relative group/card h-auto rounded-xl w-[30rem] max-tablet-s:w-[25rem] max-mobile-l:w-[20rem]">
           {isNew && (
             <Card.Item translateZ={80} className="absolute right-0 top-0 z-50">
               <div
@@ -40,7 +40,7 @@ export const ProjectCard = ({
               />
             </Card.Item>
           )}
-          <div className="bg-zinc-900 rounded-xl p-6 w-full mobile-l:p-4">
+          <div className="bg-zinc-900 rounded-xl p-6 w-full max-mobile-l:p-4">
             <Card.Item translateZ={60} className="flex items-center gap-4">
               <strong className="text-xl font-bold">
                 {info[langProp].fullName}
@@ -59,14 +59,14 @@ export const ProjectCard = ({
               {info[langProp].description}
             </Card.Item>
             <Card.Item translateZ={140} className="w-full mt-4">
-              <NeonBackground className="w-full h-[388px] mobile-l:h-[244px]">
+              <NeonBackground className="w-full h-[388px] max-mobile-l:h-[244px]">
                 <Image
                   src={thumbnailUrl}
                   alt={`${t("project_thumbnail")}: ${name}`}
                   width={428}
                   height={384}
                   skeletonClassName="h-96"
-                  className="w-full h-96 object-cover rounded-xl group-hover/card:shadow-xl mobile-l:h-60"
+                  className="w-full h-96 object-cover rounded-xl group-hover/card:shadow-xl max-mobile-l:h-60"
                 />
               </NeonBackground>
             </Card.Item>
@@ -82,7 +82,7 @@ export const ProjectCard = ({
             </Card.Item>
             <Card.Item
               translateZ={80}
-              className="flex mt-6 w-full gap-12 tablet-s:flex-col tablet-s:gap-6 mobile-l:gap-3 mobile-l:mt-3"
+              className="flex mt-6 w-full gap-12 max-tablet-s:flex-col max-tablet-s:gap-6 max-mobile-l:gap-3 max-mobile-l:mt-3"
             >
               {isPrivate ? (
                 <span className="flex w-full items-center justify-center whitespace-nowrap text-red-500 gap-2 h-[36px]">

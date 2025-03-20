@@ -11,7 +11,7 @@ export const FooterArea = (): ReactElement => {
   return (
     <>
       <NeonBackground className="h-0.5 p-0" />
-      <footer className="w-full flex justify-center py-48 px-4">
+      <footer className="w-full flex justify-center py-48 px-4 text-zinc-50">
         <div className="flex flex-col items-center justify-center gap-8">
           <p className="text-base text-center">
             ✨ {t("developed_with_much")} 💜 {t("and")} ☕ {t("by")}

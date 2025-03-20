@@ -17,18 +17,17 @@ export const AppModeSwitcher = (): ReactElement => {
     toggleMode();
   };
 
+  const legend =
+    appMode === "quality"
+      ? `${t("enable")} ${t("performance_mode")}`
+      : `${t("disable")} ${t("performance_mode")}`;
+
   return (
-    <Tooltip
-      title={
-        appMode === "quality"
-          ? `${t("enable")} ${t("performance_mode")}`
-          : `${t("disable")} ${t("performance_mode")}`
-      }
-    >
+    <Tooltip title={legend} className="text-zinc-50">
       <button
         type="button"
         onClick={handleButtonClick}
-        className="bg-gradient-to-r from-indigo-500 to-purple-500 fixed top-24 left-0 p-1 z-50 flex items-center justify-center rounded-e-xl"
+        className="bg-gradient-to-r from-indigo-500 to-purple-500 fixed top-24 left-0 p-1 z-50 flex items-center justify-center rounded-e-xl text-zinc-50 cursor-pointer"
       >
         <BaseIcon name="cg-performance" className="w-6 h-6" />
       </button>

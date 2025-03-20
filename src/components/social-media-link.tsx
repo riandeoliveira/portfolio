@@ -13,7 +13,7 @@ export const SocialMediaLink = ({
 }: SocialMediaLinkProps): ReactElement => {
   return (
     <Tooltip title={title}>
-      <div className="hover:scale-125 transition-transform mobile-l:scale-[0.8]">
+      <div className="hover:scale-125 transition-transform max-mobile-l:scale-[0.8]">
         <NeonBackground>
           <a href={url} target="_blank" rel="noreferrer" aria-label={title}>
             <BaseIcon name={iconName} className="scale-100" />

@@ -15,12 +15,12 @@ export const LanguageSwitcher = (): ReactElement => {
   const legend = `${t("change_language_to")} ${oppositeLanguage}`;
 
   return (
-    <Tooltip title={legend}>
+    <Tooltip title={legend} className="text-zinc-50">
       <button
         type="button"
         aria-label={legend}
         onClick={handleSwitchLanguage}
-        className="fixed top-24 right-[-2px] z-50 rounded-s-xl"
+        className="fixed top-24 right-[-2px] z-50 rounded-s-xl cursor-pointer"
       >
         <BaseIcon name={iconNameKeyMap[language]} className="rounded-s-xl" />
       </button>

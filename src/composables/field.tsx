@@ -40,7 +40,7 @@ const Button = ({
       <button
         type="button"
         className={cn(
-          "px-3 py-2 text-center rounded-xl items-center w-full font-semibold text-base hover:bg-zinc-950 transition-colors",
+          "px-3 py-2 text-center rounded-xl items-center w-full font-semibold text-base hover:bg-zinc-950 transition-colors cursor-pointer",
           className,
         )}
         {...props}
@@ -121,7 +121,7 @@ const Link = ({
     <NeonBackground className={cn("", containerClassName)}>
       <a
         className={cn(
-          "h-full w-full px-4 py-2 flex items-center justify-center rounded-xl font-semibold hover:bg-zinc-950 transition-colors mobile-l:text-sm",
+          "h-full w-full px-4 py-2 flex items-center justify-center rounded-xl font-semibold hover:bg-zinc-950 transition-colors max-mobile-l:text-sm",
           className,
         )}
         {...props}

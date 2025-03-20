@@ -59,13 +59,13 @@ export const ProjectGallerySection = (): ReactElement => {
   return (
     <section
       ref={elementRef}
-      className="h-[160rem] overflow-hidden antialiased relative flex flex-col self-auto [perspective:600px] [transform-style:preserve-3d] tablet-s:h-[150rem]"
+      className="h-[160rem] overflow-hidden antialiased relative flex flex-col self-auto [perspective:600px] [transform-style:preserve-3d] max-tablet-s:h-[150rem] text-zinc-50"
     >
-      <div className="max-w-7xl relative mx-auto py-40 px-4 left-0 top-0 w-full tablet-s:py-20">
-        <h1 className="text-7xl font-bold tablet-s:text-4xl">
+      <div className="max-w-7xl relative mx-auto py-40 px-4 left-0 top-0 w-full max-tablet-s:py-20">
+        <h1 className="text-7xl font-bold max-tablet-s:text-4xl">
           {t("learn_more")} <br /> {t("about_my_work")}
         </h1>
-        <p className="max-w-2xl text-xl mt-8 tablet-s:text-base">
+        <p className="max-w-2xl text-xl mt-8 max-tablet-s:text-base">
           {t("project_gallery_description")}
         </p>
       </div>

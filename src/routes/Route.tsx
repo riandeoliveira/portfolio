@@ -8,7 +8,7 @@ interface RouteProps {
 export const Route = ({ page: Page }: RouteProps): ReactElement => {
   return (
     <>
-      <ToastContainer toastClassName="bg-zinc-900" />
+      <ToastContainer theme="dark" toastClassName="!bg-zinc-900" />
       <Page />
     </>
   );

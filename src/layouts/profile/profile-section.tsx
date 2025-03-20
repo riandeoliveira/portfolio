@@ -13,17 +13,17 @@ export const ProfileSection = (): ReactElement => {
   return (
     <section id="home">
       <ProfileBackground
-        containerClassName="py-48 px-4 laptop-s:py-24 tablet-s:py-12"
-        className="flex justify-between w-[1200px] gap-12 laptop-s:flex-col-reverse laptop-s:items-center"
+        containerClassName="py-48 px-4 max-laptop-s:py-24 max-tablet-s:py-12"
+        className="flex justify-between w-[1200px] gap-12 max-laptop-s:flex-col-reverse max-laptop-s:items-center text-zinc-50"
       >
-        <div className="flex flex-col justify-between gap-12 tablet-m:text-center">
+        <div className="flex flex-col justify-between gap-12 max-tablet-m:text-center">
           <Section.Title className="text-5xl flex flex-col gap-2">
             <strong className="font-semibold">
               {t("hello_i_am_rian_oliveira")}
             </strong>
             <HighlightText>{t("full_stack_developer")}</HighlightText>
           </Section.Title>
-          <div className="flex justify-between items-center gap-8 tablet-m:flex-col">
+          <div className="flex justify-between items-center gap-8 max-tablet-m:flex-col">
             <SocialMediasArea />
             <ResumeDownloadLink />
           </div>

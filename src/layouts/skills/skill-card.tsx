@@ -13,10 +13,10 @@ export const SkillCard = ({
 }: SkillCardProps): ReactElement => {
   return (
     <div className="flex flex-col items-center gap-2 flex-1">
-      <BaseIcon name={iconName} className="mobile-l:scale-90" />
+      <BaseIcon name={iconName} className="max-mobile-l:scale-90" />
       <div
         style={{ boxShadow: `0 0 32px ${color}` }}
-        className="w-12 h-12 absolute animate-pulse rounded-xl mobile-l:scale-90"
+        className="w-12 h-12 absolute animate-pulse rounded-xl max-mobile-l:scale-90"
       />
       {title && <span className="text-center">{title}</span>}
     </div>

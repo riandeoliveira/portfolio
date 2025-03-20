@@ -11,7 +11,7 @@ export const ProjectsSection = (): ReactElement => {
   const { getSortedProjectsBy } = useProject();
 
   return (
-    <section id="projects" className="py-48">
+    <section id="projects" className="py-48 text-zinc-50">
       <div className="flex justify-center px-4">
         <div className="w-[1200px] flex flex-col gap-4">
           <Section.Title isHighlighted>{t("my_projects")}</Section.Title>
@@ -26,7 +26,7 @@ export const ProjectsSection = (): ReactElement => {
           clickable: true,
         }}
         modules={[EffectCoverflow, Navigation, Pagination]}
-        className="py-24 select-none"
+        className="!py-24 select-none"
         breakpoints={{
           0: {
             slidesPerView: 1,

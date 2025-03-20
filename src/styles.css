@@ -2,23 +2,124 @@
 @import "swiper/css";
 @import "swiper/css/navigation";
 @import "swiper/css/pagination";
+@import "tailwindcss";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@plugin "./plugins/add-dot-thick-background-utility";
+@plugin "./plugins/add-variables-for-colors.ts";
+@plugin "tailwindcss-animate";
 
-@layer base {
-  * {
-    @apply font-primary list-none text-zinc-50 selection:bg-indigo-500 selection:text-white;
+@theme {
+  --breakpoint-desktop: 2560px;
+  --breakpoint-laptop-l: 1440px;
+  --breakpoint-laptop-m: 1280px;
+  --breakpoint-laptop-s: 1024px;
+  --breakpoint-tablet-l: 900px;
+  --breakpoint-tablet-m: 768px;
+  --breakpoint-tablet-s: 600px;
+  --breakpoint-mobile-l: 425px;
+  --breakpoint-mobile-m: 375px;
+  --breakpoint-mobile-s: 320px;
+
+  --font-primary: "Montserrat", sans-serif;
+}
+
+@layer utilities {
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 
-  html {
-    @apply scroll-smooth relative;
+  @keyframes grow {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
   }
 
-  body {
-    @apply bg-black;
+  @keyframes rotate-primary {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(180deg);
+    }
   }
+
+  @keyframes rotate-secondary {
+    from {
+      transform: rotateY(180deg);
+    }
+    to {
+      transform: rotateY(0deg);
+    }
+  }
+
+  @keyframes slide-in-down {
+    from {
+      transform: translateY(-80px);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes toggle-primary {
+    from {
+      z-index: 50;
+    }
+    to {
+      z-index: 0;
+    }
+  }
+
+  @keyframes toggle-secondary {
+    from {
+      z-index: 0;
+    }
+    to {
+      z-index: 50;
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 1s forwards;
+  }
+  .animate-grow {
+    animation: grow 1s forwards;
+  }
+  .animate-rotate-primary {
+    animation: rotate-primary 2s forwards;
+  }
+  .animate-rotate-secondary {
+    animation: rotate-secondary 2s forwards;
+  }
+  .animate-slide-in-down {
+    animation: slide-in-down 1s forwards;
+  }
+  .animate-toggle-primary {
+    animation: toggle-primary 1.2s forwards;
+  }
+  .animate-toggle-secondary {
+    animation: toggle-secondary 3.5s forwards;
+  }
+}
+
+* {
+  @apply font-primary list-none selection:bg-indigo-500 selection:text-white;
+}
+
+html {
+  @apply scroll-smooth relative;
+}
+
+body {
+  @apply bg-black;
 }
 
 .swiper-slide {

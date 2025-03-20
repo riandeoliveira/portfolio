@@ -9,13 +9,16 @@ export const AchievementsSection = (): ReactElement => {
   const { t } = useI18n();
 
   return (
-    <section id="achievements" className="flex justify-center py-48 px-4">
+    <section
+      id="achievements"
+      className="flex justify-center py-48 px-4 text-zinc-50"
+    >
       <div className="w-[1200px] flex flex-col gap-8">
         <Section.Title isHighlighted>{t("what_i_have_achieved")}</Section.Title>
         <Section.Description>
           {t("achievements_description")}
         </Section.Description>
-        <div className="flex gap-4 mt-8 tablet-s:flex-col">
+        <div className="flex gap-4 mt-8 max-tablet-s:flex-col">
           <NeonBackground className="max-h-[388px] flex-1">
             <Image
               src={image.teamCertificate}
