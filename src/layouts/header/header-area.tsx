@@ -32,9 +32,9 @@ export const HeaderArea = (): ReactElement => {
       <header
         style={{ height: `${headerHeight}px` }}
         className={cn(
-          "flex justify-center px-4 animate-slide-in-down transition-all border-white/10",
+          "flex justify-center px-4 animate-slide-in-down transition-all",
           isHeaderFixed
-            ? "fixed top-0 left-0 right-0 z-50 bg-zinc-950/60 backdrop-blur-md border shadow-lg"
+            ? "fixed top-0 left-0 right-0 z-50 bg-zinc-950/60 backdrop-blur-md shadow-lg"
             : "",
         )}
       >

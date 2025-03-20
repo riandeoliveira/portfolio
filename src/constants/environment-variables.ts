@@ -1,7 +1,0 @@
-export const {
-  VITE_API_BASE_URL,
-
-  VITE_EMAIL_PUBLIC_KEY,
-  VITE_EMAIL_SERVICE_ID,
-  VITE_EMAIL_TEMPLATE_ID,
-} = import.meta.env;

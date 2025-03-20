@@ -6,6 +6,10 @@
   "private": true,
   "main": "./src/main.tsx",
   "type": "module",
+  "author": {
+    "name": "Rian Dias de Oliveira",
+    "email": "riandiasdeoliveira2001@gmail.com"
+  },
   "scripts": {
     "build": "tsc && vite build",
     "check": "biome check --write",
@@ -17,7 +21,6 @@
     "@react-three/drei": "^9.105.5",
     "@react-three/fiber": "^8.16.2",
     "@tailwindcss/vite": "^4.0.14",
-    "@types/react-lazy-load-image-component": "^1.6.4",
     "axios": "^1.8.3",
     "clsx": "^2.1.1",
     "formik": "^2.4.6",
@@ -40,7 +43,6 @@
     "three": "^0.164.1",
     "use-local-storage": "^3.0.0",
     "vite-plugin-svgr": "^3.3.0",
-    "workbox-window": "^7.0.0",
     "yup": "^1.6.1"
   },
   "devDependencies": {
@@ -48,6 +50,7 @@
     "@types/lodash": "^4.17.16",
     "@types/react": "^18.2.79",
     "@types/react-dom": "^18.2.25",
+    "@types/react-lazy-load-image-component": "^1.6.4",
     "@types/three": "^0.164.0",
     "@vitejs/plugin-react-swc": "^3.6.0",
     "typescript": "^5.4.5",

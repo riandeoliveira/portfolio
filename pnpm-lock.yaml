@@ -20,9 +20,6 @@ importers:
       '@tailwindcss/vite':
         specifier: ^4.0.14
         version: 4.0.14(vite@4.5.9(@types/node@22.13.9)(lightningcss@1.29.2)(terser@5.39.0))
-      '@types/react-lazy-load-image-component':
-        specifier: ^1.6.4
-        version: 1.6.4
       axios:
         specifier: ^1.8.3
         version: 1.8.3
@@ -89,9 +86,6 @@ importers:
       vite-plugin-svgr:
         specifier: ^3.3.0
         version: 3.3.0(rollup@3.29.5)(typescript@5.8.2)(vite@4.5.9(@types/node@22.13.9)(lightningcss@1.29.2)(terser@5.39.0))
-      workbox-window:
-        specifier: ^7.0.0
-        version: 7.3.0
       yup:
         specifier: ^1.6.1
         version: 1.6.1
@@ -108,6 +102,9 @@ importers:
       '@types/react-dom':
         specifier: ^18.2.25
         version: 18.3.5(@types/react@18.3.18)
+      '@types/react-lazy-load-image-component':
+        specifier: ^1.6.4
+        version: 1.6.4
       '@types/three':
         specifier: ^0.164.0
         version: 0.164.1
@@ -972,9 +969,6 @@ packages:
   '@types/three@0.164.1':
     resolution: {integrity: sha512-dR/trWDhyaNqJV38rl1TonlCA9DpnX7OPYDWD81bmBGn/+uEc3+zNalFxQcV4FlPTeDBhCY3SFWKvK6EJwL88g==}
 
-  '@types/trusted-types@2.0.7':
-    resolution: {integrity: sha512-ScaPdn1dQczgbl0QFTeTOmVHFULt394XJgOQNoyVhZ6r2vLnMLJfBPd53SB52T/3G36VI1/g2MZaX0cwDuXsfw==}
-
   '@types/webxr@0.5.21':
     resolution: {integrity: sha512-geZIAtLzjGmgY2JUi6VxXdCrTb99A7yP49lxLr2Nm/uIK0PkkxcEi4OGhoGDO4pxCf3JwGz2GiJL2Ej4K2bKaA==}
 
@@ -1825,12 +1819,6 @@ packages:
     engines: {node: '>= 8'}
     hasBin: true
 
-  workbox-core@7.3.0:
-    resolution: {integrity: sha512-Z+mYrErfh4t3zi7NVTvOuACB0A/jA3bgxUN3PwtAVHvfEsZxV9Iju580VEETug3zYJRc0Dmii/aixI/Uxj8fmw==}
-
-  workbox-window@7.3.0:
-    resolution: {integrity: sha512-qW8PDy16OV1UBaUNGlTVcepzrlzyzNW/ZJvFQQs2j2TzGsg6IKjcpZC1RSquqQnTOafl5pCj5bGfAHlCjOOjdA==}
-
   yallist@3.1.1:
     resolution: {integrity: sha512-a4UGQaWPH59mOXUYnAG2ewncQS4i4F43Tv3JoAM+s2VDAmS9NsK8GpDMLrCHPksFT7h3K6TOoUNn2pb7RoXx4g==}
 
@@ -2639,8 +2627,6 @@ snapshots:
       fflate: 0.8.2
       meshoptimizer: 0.18.1
 
-  '@types/trusted-types@2.0.7': {}
-
   '@types/webxr@0.5.21': {}
 
   '@use-gesture/core@10.3.1': {}
@@ -3391,13 +3377,6 @@ snapshots:
   which@2.0.2:
     dependencies:
       isexe: 2.0.0
-
-  workbox-core@7.3.0: {}
-
-  workbox-window@7.3.0:
-    dependencies:
-      '@types/trusted-types': 2.0.7
-      workbox-core: 7.3.0
 
   yallist@3.1.1: {}
 

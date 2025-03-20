@@ -23,6 +23,8 @@ export const Home = (): ReactElement => {
     <>
       <Helmet>
         <html lang={language} />
+        <meta name="description" content={t("meta_description")} />
+        <meta name="keywords" content={t("meta_keywords")} />
         <title>{t("home_page_head_title")}</title>
       </Helmet>
       {appMode === "quality" && <OuterSpaceBackground />}

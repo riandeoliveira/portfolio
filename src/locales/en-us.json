@@ -42,6 +42,8 @@
   "max_1024_characters": "Maximum 1024 characters!",
   "max_64_characters": "Maximum 64 characters!",
   "message": "message",
+  "meta_description": "My personal portfolio, with information about me, the technologies I use, my projects, and links to my social media.",
+  "meta_keywords": "backend, developer, frontend, fullstack, javascript, portfolio, programmer, react, tailwindcss, threejs, typescript, vite",
   "my_projects": "My Projects",
 
   "name": "name",
