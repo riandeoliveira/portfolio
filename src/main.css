@@ -1,11 +1,9 @@
-@import "react-toastify/dist/ReactToastify.css";
-@import "swiper/css";
-@import "swiper/css/navigation";
-@import "swiper/css/pagination";
+@import "./styles/react-toastify";
+@import "./styles/swiper";
 @import "tailwindcss";
 
 @plugin "./plugins/add-dot-thick-background-utility";
-@plugin "./plugins/add-variables-for-colors.ts";
+@plugin "./plugins/add-variables-for-colors";
 @plugin "tailwindcss-animate";
 
 @theme {
@@ -126,24 +124,6 @@ html {
 
 body {
   @apply bg-black;
-}
-
-.swiper-slide {
-  @apply !scale-75 transition-all opacity-50;
-}
-
-.swiper-slide-active {
-  @apply !scale-100 transition-all opacity-100;
-}
-
-.swiper-button-prev,
-.swiper-button-next {
-  @apply text-purple-500;
-}
-
-.swiper-pagination-bullet,
-.swiper-pagination-bullet-active {
-  @apply bg-gradient-to-r from-indigo-500 to-purple-500;
 }
 
 @font-face {

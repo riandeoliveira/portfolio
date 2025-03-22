@@ -1,5 +1,5 @@
 import "@/i18n";
-import "@/styles.css";
+import "@/main.css";
 import { router } from "@/routes";
 import { StrictMode } from "react";
 import ReactDOM from "react-dom/client";

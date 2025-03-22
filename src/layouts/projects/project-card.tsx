@@ -27,7 +27,7 @@ export const ProjectCard = ({
   return (
     <Card.Container className="inter-var">
       <NeonBackground>
-        <Card.Body className="bg-zinc-900 relative group/card h-auto rounded-xl w-[30rem] max-s-600:w-[25rem] max-s-480:w-[20rem]">
+        <Card.Body className="bg-zinc-900 relative group/card h-auto rounded-xl w-[30rem] max-s-600:w-[25rem] max-s-480:w-[20rem] !cursor-grab">
           {isNew && (
             <Card.Item translateZ={80} className="absolute right-0 top-0 z-50">
               <div
