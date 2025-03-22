@@ -1,10 +1,10 @@
-import { router } from "@/routes";
+import "@/i18n";
 import "@/styles.css";
+import { router } from "@/routes";
 import { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
-import { RouterProvider } from "react-router-dom";
-import "@/i18n";
 import { HelmetProvider } from "react-helmet-async";
+import { RouterProvider } from "react-router-dom";
 
 const rootElement = document.querySelector("#root") as Element;
 

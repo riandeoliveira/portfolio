@@ -23,12 +23,12 @@ export const HeaderNavLink = ({
       >
         <BaseIcon
           name={iconName}
-          className="w-6 h-6 fill-purple-500 hidden max-tablet-s:block"
+          className="w-6 h-6 fill-purple-500 hidden max-s-600:block"
         />
-        <span className="bg-clip-text text-transparent bg-gradient-to-b from-indigo-500 to-purple-500 max-tablet-s:hidden">
+        <span className="bg-clip-text text-transparent bg-gradient-to-b from-indigo-500 to-purple-500 max-s-600:hidden">
           {children}
         </span>
-        <NeonBackground className="w-full h-0.5 p-0 opacity-0 group-hover:opacity-100 transition-opacity max-tablet-s:hidden" />
+        <NeonBackground className="w-full h-0.5 p-0 opacity-0 group-hover:opacity-100 transition-opacity max-s-600:hidden" />
       </a>
     </li>
   );

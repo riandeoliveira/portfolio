@@ -18,7 +18,7 @@ export const AchievementsSection = (): ReactElement => {
         <Section.Description>
           {t("achievements_description")}
         </Section.Description>
-        <div className="flex gap-4 mt-8 max-tablet-s:flex-col">
+        <div className="flex gap-4 mt-8 max-s-600:flex-col">
           <NeonBackground className="max-h-[388px] flex-1">
             <Image
               src={image.teamCertificate}

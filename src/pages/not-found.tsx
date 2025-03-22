@@ -12,7 +12,7 @@ export const NotFound = (): ReactElement => {
   return (
     <>
       {appMode === "quality" && <OuterSpaceBackground />}
-      <div className="min-h-screen flex flex-col gap-8 items-center justify-center">
+      <div className="min-h-screen flex flex-col gap-8 items-center justify-center text-zinc-50">
         <Section.Title isHighlighted>
           {`404 - ${t("page_not_found")}`}
         </Section.Title>

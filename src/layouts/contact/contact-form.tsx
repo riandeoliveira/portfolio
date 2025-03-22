@@ -100,10 +100,10 @@ export const ContactForm = (): ReactElement => {
     <>
       {isFormSubmitted ? (
         <div className="h-[496px] flex flex-col justify-center text-center gap-2 flex-1 animate-fade-in">
-          <strong className="text-3xl bg-clip-text text-transparent bg-gradient-to-b from-indigo-500 to-purple-500 max-mobile-l:text-2xl">
+          <strong className="text-3xl bg-clip-text text-transparent bg-gradient-to-b from-indigo-500 to-purple-500 max-s-480:text-2xl">
             {t("send_email_feedback_title")}
           </strong>
-          <p className="text-xl max-mobile-l:text-base">
+          <p className="text-xl max-s-480:text-base">
             {t("send_email_feedback_description")}
           </p>
         </div>

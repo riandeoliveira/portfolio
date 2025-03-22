@@ -14,7 +14,7 @@ const Description = ({
   return (
     <p
       className={cn(
-        "text-justify text-xl max-tablet-s:text-base indent-10",
+        "text-justify text-xl max-s-600:text-base indent-10",
         className,
       )}
       {...props}
@@ -37,7 +37,7 @@ const Title = ({
   return (
     <h1
       className={cn(
-        "font-bold text-4xl w-fit max-tablet-s:text-2xl max-tablet-s:w-full max-tablet-s:text-center",
+        "font-bold text-4xl w-fit max-s-600:text-2xl max-s-600:w-full max-s-600:text-center",
         className,
       )}
       {...props}
