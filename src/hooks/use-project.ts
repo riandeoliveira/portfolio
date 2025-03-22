@@ -1,17 +1,27 @@
 import { api } from "@/api";
+import { ProjectContext } from "@/contexts/project-context";
 import type { Project } from "@/types/project";
 import type { AxiosResponse } from "axios";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useContext } from "react";
 import { toast } from "react-toastify";
 import useLocalStorage from "use-local-storage";
 import { useI18n } from "./use-i18n";
 
 type UseProject = {
+  fetchProjects: () => Promise<void>;
   getSortedProjectsBy: (order: "highlight" | "presentation") => Project[];
 };
 
 export const useProject = (): UseProject => {
-  const [projects, setProjects] = useState<Project[]>([]);
+  const context = useContext(ProjectContext);
+
+  if (!context) {
+    throw new Error(
+      "useProject must be used within a ProjectContextProvider component",
+    );
+  }
+
+  const { projects, setProjects } = context;
 
   const [storageProjects, setStorageProjects] = useLocalStorage<Project[]>(
     "storage_projects",
@@ -58,11 +68,8 @@ export const useProject = (): UseProject => {
     }
   }, []);
 
-  useEffect(() => {
-    fetchProjects();
-  }, [fetchProjects]);
-
   return {
+    fetchProjects,
     getSortedProjectsBy,
   };
 };

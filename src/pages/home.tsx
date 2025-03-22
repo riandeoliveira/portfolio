@@ -11,10 +11,16 @@ import { ProjectGallerySection } from "@/components/project-gallery-section";
 import { ProjectsSection } from "@/components/projects-section";
 import { SkillsSection } from "@/components/skills-section";
 import { useAppMode } from "@/hooks/use-app-mode";
-import type { ReactElement } from "react";
+import { useProject } from "@/hooks/use-project";
+import { type ReactElement, useEffect } from "react";
 
 export const Home = (): ReactElement => {
+  const { fetchProjects } = useProject();
   const { appMode } = useAppMode();
+
+  useEffect(() => {
+    fetchProjects();
+  }, [fetchProjects]);
 
   return (
     <>

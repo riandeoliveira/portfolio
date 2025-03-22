@@ -1,3 +1,4 @@
+import { ProjectContextProvider } from "@/contexts/project-context";
 import { useI18n } from "@/hooks/use-i18n";
 import type { ReactElement } from "react";
 import { Helmet } from "react-helmet-async";
@@ -11,7 +12,7 @@ export const Route = ({ page: Page }: RouteProps): ReactElement => {
   const { language, t } = useI18n();
 
   return (
-    <>
+    <ProjectContextProvider>
       <Helmet>
         <html lang={language} />
         <meta name="description" content={t("meta_description")} />
@@ -20,6 +21,6 @@ export const Route = ({ page: Page }: RouteProps): ReactElement => {
       </Helmet>
       <ToastContainer theme="dark" toastClassName="!bg-zinc-900" />
       <Page />
-    </>
+    </ProjectContextProvider>
   );
 };
