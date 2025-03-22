@@ -1,7 +1,7 @@
 import { image } from "@/assets/images";
 import { Image } from "@/components/image";
 import { NeonBackground } from "@/components/neon-background";
-import { Section } from "@/composables/section";
+import { Section } from "@/components/section";
 import { useI18n } from "@/hooks/use-i18n";
 import type { ReactElement } from "react";
 

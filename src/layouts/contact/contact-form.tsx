@@ -1,5 +1,5 @@
 import { api } from "@/api";
-import { Field } from "@/composables/field";
+import { Field } from "@/components/field";
 import { useI18n } from "@/hooks/use-i18n";
 import { AxiosError } from "axios";
 import { useFormik } from "formik";

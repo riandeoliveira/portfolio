@@ -1,5 +1,5 @@
 import { HighlightText } from "@/components/highlight-text";
-import { Section } from "@/composables/section";
+import { Section } from "@/components/section";
 import { useI18n } from "@/hooks/use-i18n";
 import type { ReactElement } from "react";
 import { ContactForm } from "./contact-form";

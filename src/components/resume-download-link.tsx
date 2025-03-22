@@ -1,4 +1,4 @@
-import { Field } from "@/composables/field";
+import { Field } from "@/components/field";
 import { useI18n } from "@/hooks/use-i18n";
 import type { ReactElement } from "react";
 import { BaseIcon } from "./base-icon";

@@ -1,4 +1,4 @@
-import { Section } from "@/composables/section";
+import { Section } from "@/components/section";
 import { useI18n } from "@/hooks/use-i18n";
 import { useProject } from "@/hooks/use-project";
 import type { ReactElement } from "react";

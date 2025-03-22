@@ -19,7 +19,7 @@ const MouseEnterContext = createContext<MouseEnterContextType | undefined>(
 export const useMouseEnter = (): MouseEnterContextType => {
   const context = useContext(MouseEnterContext);
 
-  if (context === undefined) {
+  if (!context) {
     throw new Error("useMouseEnter must be used within a MouseEnterProvider");
   }
 
@@ -142,6 +142,7 @@ const Item = ({
   const { appMode } = useAppMode();
 
   const ref = useRef<HTMLDivElement>(null);
+
   const [isMouseEntered] = useMouseEnter();
 
   const handleAnimations = (): void => {

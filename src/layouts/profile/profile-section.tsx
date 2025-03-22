@@ -1,7 +1,7 @@
 import { HighlightText } from "@/components/highlight-text";
 import { ResumeDownloadLink } from "@/components/resume-download-link";
+import { Section } from "@/components/section";
 import { SocialMediasArea } from "@/components/social-medias-area";
-import { Section } from "@/composables/section";
 import { useI18n } from "@/hooks/use-i18n";
 import type { ReactElement } from "react";
 import { ProfileAvatar } from "./profile-avatar";

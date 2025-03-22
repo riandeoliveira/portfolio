@@ -24,7 +24,7 @@ const FieldContext = createContext<FieldContextType | undefined>(undefined);
 export const useField = (): FieldContextType => {
   const context = useContext(FieldContext);
 
-  if (context === undefined) {
+  if (!context) {
     throw new Error("useField must be used within a Field.Root component");
   }
 

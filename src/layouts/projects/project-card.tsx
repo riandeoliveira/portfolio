@@ -1,8 +1,8 @@
 import { BaseIcon } from "@/components/base-icon";
+import { Field } from "@/components/field";
 import { Image } from "@/components/image";
 import { NeonBackground } from "@/components/neon-background";
-import { Card } from "@/composables/3d-card";
-import { Field } from "@/composables/field";
+import { Card } from "@/components/3d-card";
 import { skills } from "@/data/skills";
 import { useI18n } from "@/hooks/use-i18n";
 import type { Project } from "@/types/project";
