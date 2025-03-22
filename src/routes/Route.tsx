@@ -3,9 +3,9 @@ import type { ReactElement } from "react";
 import { Helmet } from "react-helmet-async";
 import { ToastContainer } from "react-toastify";
 
-interface RouteProps {
+type RouteProps = {
   page: () => ReactElement;
-}
+};
 
 export const Route = ({ page: Page }: RouteProps): ReactElement => {
   const { language, t } = useI18n();

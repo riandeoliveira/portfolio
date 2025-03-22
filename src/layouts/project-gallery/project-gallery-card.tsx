@@ -15,9 +15,9 @@ export const ProjectGalleryCard = ({
   project,
   translate,
 }: ProjectGalleryCardProps): ReactElement => {
-  const { t, langProp } = useI18n();
+  const { t, langKey } = useI18n();
 
-  const projectName = project.info[langProp].fullName;
+  const projectName = project.info[langKey].fullName;
 
   return (
     <motion.div

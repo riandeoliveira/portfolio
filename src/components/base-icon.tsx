@@ -1,5 +1,5 @@
-import { cn } from "@/lib/utils";
 import type { IconName } from "@/types/icon";
+import { cn } from "@/utils/cn";
 import { type FC, type ReactElement, type SVGProps, useEffect } from "react";
 
 type IconElement = {

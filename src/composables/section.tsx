@@ -1,16 +1,12 @@
 import { HighlightText } from "@/components/highlight-text";
-import { cn } from "@/lib/utils";
-import type {
-  HeadingElementProps,
-  ParagraphElementProps,
-} from "@/types/element";
-import type { ReactElement } from "react";
+import { cn } from "@/utils/cn";
+import type { HTMLAttributes, ReactElement } from "react";
 
 const Description = ({
   children,
   className,
   ...props
-}: ParagraphElementProps): ReactElement => {
+}: HTMLAttributes<HTMLParagraphElement>): ReactElement => {
   return (
     <p
       className={cn(
@@ -24,7 +20,7 @@ const Description = ({
   );
 };
 
-type TitleProps = HeadingElementProps & {
+type TitleProps = HTMLAttributes<HTMLHeadingElement> & {
   isHighlighted?: boolean;
 };
 

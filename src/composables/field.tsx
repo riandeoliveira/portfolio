@@ -1,17 +1,18 @@
 import { NeonBackground } from "@/components/neon-background";
 import { useI18n } from "@/hooks/use-i18n";
-import { cn } from "@/lib/utils";
-import type {
-  AnchorElementProps,
-  ButtonElementProps,
-  DivElementProps,
-  InputElementProps,
-  LabelElementProps,
-  SpanElementProps,
-  TextAreaElementProps,
-} from "@/types/element";
 import type { TranslationKeys } from "@/types/i18n";
-import { type ReactElement, createContext, useContext } from "react";
+import { cn } from "@/utils/cn";
+import {
+  type AnchorHTMLAttributes,
+  type ButtonHTMLAttributes,
+  type HTMLAttributes,
+  type InputHTMLAttributes,
+  type LabelHTMLAttributes,
+  type ReactElement,
+  type TextareaHTMLAttributes,
+  createContext,
+  useContext,
+} from "react";
 
 type FieldContextType = {
   hasErrors: boolean;
@@ -34,7 +35,7 @@ const Button = ({
   children,
   className,
   ...props
-}: ButtonElementProps): ReactElement => {
+}: ButtonHTMLAttributes<HTMLButtonElement>): ReactElement => {
   return (
     <NeonBackground>
       <button
@@ -55,7 +56,7 @@ const ErrorMessage = ({
   children,
   className,
   ...props
-}: SpanElementProps): ReactElement => {
+}: HTMLAttributes<HTMLSpanElement>): ReactElement => {
   const { hasErrors, isTouched } = useField();
   const { t } = useI18n();
 
@@ -75,7 +76,10 @@ const ErrorMessage = ({
   );
 };
 
-const Input = ({ className, ...props }: InputElementProps): ReactElement => {
+const Input = ({
+  className,
+  ...props
+}: InputHTMLAttributes<HTMLInputElement>): ReactElement => {
   return (
     <NeonBackground className="rounded-md">
       <input
@@ -95,7 +99,7 @@ const Label = ({
   className,
   htmlFor,
   ...props
-}: LabelElementProps): ReactElement => {
+}: LabelHTMLAttributes<HTMLLabelElement>): ReactElement => {
   return (
     <label
       htmlFor={htmlFor}
@@ -107,7 +111,7 @@ const Label = ({
   );
 };
 
-type LinkProps = AnchorElementProps & {
+type LinkProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
   containerClassName?: string;
 };
 
@@ -132,7 +136,7 @@ const Link = ({
   );
 };
 
-type RootProps = DivElementProps & Partial<FieldContextType>;
+type RootProps = HTMLAttributes<HTMLDivElement> & Partial<FieldContextType>;
 
 const Root = ({
   children,
@@ -153,7 +157,7 @@ const Root = ({
 const TextArea = ({
   className,
   ...props
-}: TextAreaElementProps): ReactElement => {
+}: TextareaHTMLAttributes<HTMLTextAreaElement>): ReactElement => {
   return (
     <NeonBackground className="rounded-md flex">
       <textarea

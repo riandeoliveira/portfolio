@@ -1,5 +1,5 @@
 import { useAppMode } from "@/hooks/use-app-mode";
-import { cn } from "@/lib/utils";
+import { cn } from "@/utils/cn";
 import type { Transition, Variants } from "framer-motion";
 import { motion } from "framer-motion";
 import type { CSSProperties, ReactElement, ReactNode } from "react";

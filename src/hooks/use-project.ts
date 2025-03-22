@@ -13,12 +13,12 @@ export const useProject = (): UseProject => {
   const getSortedProjectsBy = (
     order: "highlight" | "presentation",
   ): Project[] => {
-    const projectsOrderKeyMap = {
+    const projectsOrderMap = {
       highlight: [10, 2, 1, 6, 9, 4, 5, 8, 7, 3],
       presentation: [9, 2, 5, 6, 10, 4, 8, 7, 1, 3],
     };
 
-    const sortedIds = projectsOrderKeyMap[order];
+    const sortedIds = projectsOrderMap[order];
 
     return projects.slice().sort((a, b) => {
       const indexA = sortedIds.indexOf(a.id);
@@ -28,15 +28,15 @@ export const useProject = (): UseProject => {
     });
   };
 
-  const handleFetchProjects = useCallback(async () => {
+  const fetchProjects = useCallback(async () => {
     const response: AxiosResponse<Project[]> = await api.get("/projects");
 
     if (response.status === 200) setProjects(response.data);
   }, []);
 
   useEffect(() => {
-    handleFetchProjects();
-  }, [handleFetchProjects]);
+    fetchProjects();
+  }, [fetchProjects]);
 
   return {
     getSortedProjectsBy,

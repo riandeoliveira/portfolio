@@ -1,7 +1,7 @@
 import { NeonBackground } from "@/components/neon-background";
 import { useAppMode } from "@/hooks/use-app-mode";
 import { useI18n } from "@/hooks/use-i18n";
-import { cn } from "@/lib/utils";
+import { cn } from "@/utils/cn";
 import type { ReactElement } from "react";
 import { useEffect, useState } from "react";
 import { HeaderNavLink } from "./header-nav-link";

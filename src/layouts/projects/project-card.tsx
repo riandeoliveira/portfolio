@@ -22,7 +22,7 @@ export const ProjectCard = ({
   projectUrl,
   info,
 }: ProjectCardProps): ReactElement => {
-  const { t, langProp } = useI18n();
+  const { t, langKey } = useI18n();
 
   return (
     <Card.Container className="inter-var">
@@ -43,7 +43,7 @@ export const ProjectCard = ({
           <div className="bg-zinc-900 rounded-xl p-6 w-full max-s-480:p-4">
             <Card.Item translateZ={60} className="flex items-center gap-4">
               <strong className="text-xl font-bold">
-                {info[langProp].fullName}
+                {info[langKey].fullName}
               </strong>
               <NeonBackground className="h-full rounded-lg p-[1px]">
                 <strong className="h-full text-sm flex rounded-lg px-2 py-0.5 bg-zinc-900 font-medium">
@@ -56,7 +56,7 @@ export const ProjectCard = ({
               translateZ={100}
               className="text-sm mt-2 text-justify text-zinc-400"
             >
-              {info[langProp].description}
+              {info[langKey].description}
             </Card.Item>
             <Card.Item translateZ={140} className="w-full mt-4">
               <NeonBackground className="w-full h-[388px] max-s-480:h-[244px]">

@@ -1,4 +1,4 @@
-import { type SupportedLanguages, useI18n } from "@/hooks/use-i18n";
+import { type LanguageValues, useI18n } from "@/hooks/use-i18n";
 import type { IconName } from "@/types/icon";
 import type { ReactElement } from "react";
 import { BaseIcon } from "./base-icon";
@@ -7,7 +7,7 @@ import { Tooltip } from "./tooltip";
 export const LanguageSwitcher = (): ReactElement => {
   const { t, oppositeLanguage, handleSwitchLanguage, language } = useI18n();
 
-  const iconNameKeyMap: Record<SupportedLanguages, IconName> = {
+  const iconNameKeyMap: Record<LanguageValues, IconName> = {
     "en-US": "usa",
     "pt-BR": "brazil",
   };

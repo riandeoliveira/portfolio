@@ -3,7 +3,7 @@ import { Image } from "@/components/image";
 import { NeonBackground } from "@/components/neon-background";
 import { Tooltip } from "@/components/tooltip";
 import { useI18n } from "@/hooks/use-i18n";
-import { cn } from "@/lib/utils";
+import { cn } from "@/utils/cn";
 import { type ReactElement, useEffect, useState } from "react";
 
 export const ProfileAvatar = (): ReactElement => {

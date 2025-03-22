@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+import { cn } from "@/utils/cn";
 import { type ImgHTMLAttributes, type ReactElement, useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { BaseIcon } from "./base-icon";

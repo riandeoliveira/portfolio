@@ -1,27 +1,37 @@
 import i18n from "@/i18n";
-import _ from "lodash";
 import { useTranslation } from "react-i18next";
 
-export type SupportedLanguages = "en-US" | "pt-BR";
+const languages = [
+  { key: "enUs", value: "en-US" },
+  { key: "ptBr", value: "pt-BR" },
+] as const;
 
-type LangProp = "enUs" | "ptBr";
+type LanguageKeys = (typeof languages)[number]["key"];
+type LanguageValues = (typeof languages)[number]["value"];
+
+const getKeyByValue = (value: LanguageValues): LanguageKeys => {
+  return languages.find((lang) => lang.value === value)?.key as LanguageKeys;
+};
+
+const getOppositeLanguage = (current: LanguageValues): LanguageValues => {
+  return current === "en-US" ? "pt-BR" : "en-US";
+};
 
 type UseI18n = {
   handleSwitchLanguage: () => void;
-  langProp: LangProp;
-  language: SupportedLanguages;
-  oppositeLanguage: SupportedLanguages;
+  langKey: LanguageKeys;
+  language: LanguageValues;
+  oppositeLanguage: LanguageValues;
   t: ReturnType<typeof useTranslation>["t"];
 };
 
 export const useI18n = (): UseI18n => {
   const { t } = useTranslation();
 
-  const language = i18n.language as SupportedLanguages;
-  const langProp = _.camelCase(language.replace("-", "")) as LangProp;
+  const language = i18n.language as LanguageValues;
 
-  const oppositeLanguage: SupportedLanguages =
-    language === "en-US" ? "pt-BR" : "en-US";
+  const langKey = getKeyByValue(language);
+  const oppositeLanguage = getOppositeLanguage(language);
 
   const handleSwitchLanguage = (): void => {
     i18n.changeLanguage(oppositeLanguage);
@@ -29,7 +39,7 @@ export const useI18n = (): UseI18n => {
 
   return {
     handleSwitchLanguage,
-    langProp,
+    langKey,
     language,
     oppositeLanguage,
     t,
