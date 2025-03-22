@@ -12,13 +12,13 @@ export const appModeSchema = yup
 type UseAppMode = {
   appMode: AppMode;
   setAppMode: Dispatch<SetStateAction<AppMode | undefined>>;
-  toggleMode: () => void;
+  toggleAppMode: () => void;
 };
 
 export const useAppMode = (): UseAppMode => {
   const [appMode, setAppMode] = useLocalStorage<AppMode>("app_mode", "quality");
 
-  const toggleMode = (): void => {
+  const toggleAppMode = (): void => {
     setAppMode((prevMode) =>
       prevMode === "quality" ? "performance" : "quality",
     );
@@ -39,6 +39,6 @@ export const useAppMode = (): UseAppMode => {
   return {
     appMode,
     setAppMode,
-    toggleMode,
+    toggleAppMode,
   };
 };

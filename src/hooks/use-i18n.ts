@@ -6,8 +6,8 @@ const languages = [
   { key: "ptBr", value: "pt-BR" },
 ] as const;
 
-type LanguageKeys = (typeof languages)[number]["key"];
-type LanguageValues = (typeof languages)[number]["value"];
+export type LanguageKeys = (typeof languages)[number]["key"];
+export type LanguageValues = (typeof languages)[number]["value"];
 
 const getKeyByValue = (value: LanguageValues): LanguageKeys => {
   return languages.find((lang) => lang.value === value)?.key as LanguageKeys;

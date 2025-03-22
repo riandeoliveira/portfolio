@@ -7,14 +7,14 @@ import { Tooltip } from "./tooltip";
 
 export const AppModeSwitcher = (): ReactElement => {
   const { t } = useI18n();
-  const { appMode, toggleMode } = useAppMode();
+  const { appMode, toggleAppMode } = useAppMode();
 
   const handleButtonClick = (): void => {
     const message = appMode === "quality" ? t("enabled") : t("disabled");
 
     toast.info(`${t("performance_mode")} ${message}`);
 
-    toggleMode();
+    toggleAppMode();
   };
 
   const legend =

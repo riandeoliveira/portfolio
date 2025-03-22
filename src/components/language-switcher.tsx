@@ -7,7 +7,7 @@ import { Tooltip } from "./tooltip";
 export const LanguageSwitcher = (): ReactElement => {
   const { t, oppositeLanguage, handleSwitchLanguage, language } = useI18n();
 
-  const iconNameKeyMap: Record<LanguageValues, IconName> = {
+  const iconNamesMap: Record<LanguageValues, IconName> = {
     "en-US": "usa",
     "pt-BR": "brazil",
   };
@@ -22,7 +22,7 @@ export const LanguageSwitcher = (): ReactElement => {
         onClick={handleSwitchLanguage}
         className="fixed top-24 right-[-2px] z-50 rounded-s-xl cursor-pointer"
       >
-        <BaseIcon name={iconNameKeyMap[language]} className="rounded-s-xl" />
+        <BaseIcon name={iconNamesMap[language]} className="rounded-s-xl" />
       </button>
     </Tooltip>
   );
