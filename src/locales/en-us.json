@@ -28,6 +28,7 @@
   "enable": "Enable",
   "enabled": "Enabled",
 
+  "fetch_projects_error": "Unable to retrieve projects. Please try again later.",
   "full_stack_developer": "Full Stack Developer",
 
   "get_in_touch": "Get in Touch!",

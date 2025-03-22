@@ -2,6 +2,9 @@ import { api } from "@/api";
 import type { Project } from "@/types/project";
 import type { AxiosResponse } from "axios";
 import { useCallback, useEffect, useState } from "react";
+import { toast } from "react-toastify";
+import useLocalStorage from "use-local-storage";
+import { useI18n } from "./use-i18n";
 
 type UseProject = {
   getSortedProjectsBy: (order: "highlight" | "presentation") => Project[];
@@ -9,6 +12,13 @@ type UseProject = {
 
 export const useProject = (): UseProject => {
   const [projects, setProjects] = useState<Project[]>([]);
+
+  const [storageProjects, setStorageProjects] = useLocalStorage<Project[]>(
+    "storage_projects",
+    [],
+  );
+
+  const { t } = useI18n();
 
   const getSortedProjectsBy = (
     order: "highlight" | "presentation",
@@ -28,10 +38,24 @@ export const useProject = (): UseProject => {
     });
   };
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: storageProjects will cause an infinite loop
   const fetchProjects = useCallback(async () => {
-    const response: AxiosResponse<Project[]> = await api.get("/projects");
+    try {
+      const response: AxiosResponse<Project[]> = await api.get("/projects");
 
-    if (response.status === 200) setProjects(response.data);
+      if (response.status === 200) {
+        setProjects(response.data);
+        setStorageProjects(response.data);
+      }
+    } catch {
+      if (storageProjects.length > 0) {
+        setProjects(storageProjects);
+
+        return;
+      }
+
+      toast.error(t("fetch_projects_error"));
+    }
   }, []);
 
   useEffect(() => {

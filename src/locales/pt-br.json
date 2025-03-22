@@ -28,6 +28,7 @@
   "enable": "Ativar",
   "enabled": "Ativado",
 
+  "fetch_projects_error": "Não foi possível obter os projetos. Por favor, tente novamente mais tarde.",
   "full_stack_developer": "Desenvolvedor Full Stack",
 
   "get_in_touch": "Entre em Contato!",
