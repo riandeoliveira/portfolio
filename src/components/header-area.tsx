@@ -38,7 +38,7 @@ export const HeaderArea = (): ReactElement => {
             : "",
         )}
       >
-        <nav className="w-[1200px] flex">
+        <nav className="w-300 flex">
           <ul className="flex items-center w-full">
             <HeaderNavLink to="#home" iconName="home">
               {t("home")}

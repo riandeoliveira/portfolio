@@ -13,7 +13,7 @@ export const AchievementsSection = (): ReactElement => {
       id="achievements"
       className="flex justify-center py-48 px-4 text-zinc-50"
     >
-      <div className="w-[1200px] flex flex-col gap-8">
+      <div className="w-300 flex flex-col gap-8">
         <Section.Title isHighlighted>{t("what_i_have_achieved")}</Section.Title>
         <Section.Description>
           {t("achievements_description")}

@@ -15,7 +15,7 @@ export const SkillsSection = (): ReactElement => {
       className="py-20 px-4 bg-zinc-950 flex justify-center relative max-s-600:py-10"
     >
       {appMode === "quality" && <BackgroundBeams />}
-      <div className="w-[1200px] flex flex-col text-center gap-2">
+      <div className="w-300 flex flex-col text-center gap-2">
         <h1 className="text-6xl bg-clip-text text-transparent bg-gradient-to-b from-zinc-200 to-zinc-600 font-bold max-s-600:text-4xl">
           {t("skills")}
         </h1>

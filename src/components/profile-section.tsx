@@ -14,7 +14,7 @@ export const ProfileSection = (): ReactElement => {
     <section id="home">
       <ProfileBackground
         containerClassName="py-48 px-4 max-s-1080:py-24 max-s-600:py-12"
-        className="flex justify-between w-[1200px] gap-12 max-s-1080:flex-col-reverse max-s-1080:items-center text-zinc-50"
+        className="flex justify-between w-300 gap-12 max-s-1080:flex-col-reverse max-s-1080:items-center text-zinc-50"
       >
         <div className="flex flex-col justify-between gap-12 max-s-720:text-center">
           <Section.Title className="text-5xl flex flex-col gap-2">

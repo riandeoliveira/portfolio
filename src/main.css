@@ -114,6 +114,10 @@
   }
 }
 
+.w-300 {
+  width: calc(var(--spacing) * 300) /* 75rem = 1200px */;
+}
+
 * {
   @apply font-primary list-none selection:bg-indigo-500 selection:text-white;
 }

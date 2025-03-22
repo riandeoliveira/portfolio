@@ -10,10 +10,12 @@ export const ProjectsSection = (): ReactElement => {
   const { t } = useI18n();
   const { getSortedProjectsBy } = useProject();
 
+  const projects = getSortedProjectsBy("highlight");
+
   return (
     <section id="projects" className="py-48 text-zinc-50">
       <div className="flex justify-center px-4">
-        <div className="w-[1200px] flex flex-col gap-4">
+        <div className="w-300 flex flex-col gap-4">
           <Section.Title isHighlighted>{t("my_projects")}</Section.Title>
           <Section.Description>{t("projects_description")}</Section.Description>
         </div>
@@ -45,7 +47,7 @@ export const ProjectsSection = (): ReactElement => {
           },
         }}
       >
-        {getSortedProjectsBy("highlight").map((project) => (
+        {projects.map((project) => (
           <SwiperSlide key={project.id}>
             <ProjectCard
               name={project.name}
