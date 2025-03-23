@@ -28,7 +28,7 @@
   "enable": "Ativar",
   "enabled": "Ativado",
 
-  "fetch_projects_error": "Não foi possível obter os projetos. Por favor, tente novamente mais tarde.",
+  "fetch_projects_error": "Erro! Não foi possível obter os projetos. Por favor, tente novamente mais tarde.",
   "full_stack_developer": "Desenvolvedor Full Stack",
 
   "get_in_touch": "Entre em Contato!",
@@ -60,7 +60,7 @@
 
   "required_field": "Campo obrigatório!",
 
-  "send_email_error": "Não foi possível enviar e-mail. Por favor, tente outra forma de contato.",
+  "send_email_error": "Erro! Não foi possível enviar e-mail. Por favor, tente outra forma de contato.",
   "send_email_feedback_description": "Recebi seu e-mail e retornarei o quanto antes!",
   "send_email_feedback_title": "Obrigado por entrar em contato.",
   "send_email_success": "E-mail enviado com sucesso!",

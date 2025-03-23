@@ -3,13 +3,14 @@ import { cn } from "@/utils/cn";
 import { type FC, type ReactElement, type SVGProps, useEffect } from "react";
 
 type IconElement = {
-  ReactComponent: FC<SVGProps<SVGSVGElement>>;
+  default: FC<SVGProps<SVGSVGElement>>;
 };
 
 type IconType = Record<IconName, IconElement>;
 
 const importIcons = import.meta.glob("../assets/icons/**/*.svg", {
   eager: true,
+  query: "react",
 });
 
 const iconsMap: IconType = Object.keys(importIcons).reduce(
@@ -33,7 +34,7 @@ type BaseIconProps = {
 };
 
 export const BaseIcon = ({ name, className }: BaseIconProps): ReactElement => {
-  const Icon = iconsMap[name];
+  const Icon = iconsMap[name].default;
 
   useEffect(() => {
     if (!Icon) throw new Error(`Error: Icon '${name}' not found!`);
@@ -41,5 +42,5 @@ export const BaseIcon = ({ name, className }: BaseIconProps): ReactElement => {
 
   if (!Icon) return <></>;
 
-  return <Icon.ReactComponent className={cn("", className)} />;
+  return <Icon className={cn("", className)} />;
 };

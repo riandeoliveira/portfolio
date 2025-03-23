@@ -19,7 +19,10 @@ export const Route = ({ page: Page }: RouteProps): ReactElement => {
         <meta name="keywords" content={t("meta_keywords")} />
         <title>{t("home_page_head_title")}</title>
       </Helmet>
-      <ToastContainer theme="dark" toastClassName="!bg-zinc-900" />
+      <ToastContainer
+        theme="dark"
+        toastClassName="!bg-zinc-900 !font-primary"
+      />
       <Page />
     </ProjectContextProvider>
   );

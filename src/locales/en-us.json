@@ -28,7 +28,7 @@
   "enable": "Enable",
   "enabled": "Enabled",
 
-  "fetch_projects_error": "Unable to retrieve projects. Please try again later.",
+  "fetch_projects_error": "Error! Unable to retrieve projects. Please try again later.",
   "full_stack_developer": "Full Stack Developer",
 
   "get_in_touch": "Get in Touch!",
@@ -60,7 +60,7 @@
 
   "required_field": "Required field!",
 
-  "send_email_error": "Unable to send email. Please try another contact method.",
+  "send_email_error": "Error! Unable to send email. Please try another contact method.",
   "send_email_feedback_description": "I received your email and will get back to you as soon as possible!",
   "send_email_feedback_title": "Thank you for reaching out.",
   "send_email_success": "Email sent successfully!",
