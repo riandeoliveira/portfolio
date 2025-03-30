@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "description": "My personal portfolio, with information about me, the technologies I use, my projects, and links to my social media.",
-  "version": "3.4.0",
+  "version": "3.4.1",
   "license": "MIT",
   "private": true,
   "main": "./src/main.tsx",
