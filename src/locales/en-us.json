@@ -1,20 +1,26 @@
 {
   "a_little_about_me": "A Little About Me",
-  "about_me_description": "Since I was a child, I have always been passionate about technology, and today I have the opportunity to express my creativity by doing what I love. For the past {{year}} years, I have been developing and refining my programming skills. I have solid experience with both front-end and back-end technologies, including React, TypeScript, Tailwind CSS, Vue.js, and more. Although my main focus is on front-end development, I am always open to new opportunities to keep learning and growing.",
+  "about_alt": "A young man wearing a black shirt and dark pants, sitting on a chair. He is holding a black electric guitar and looking at the camera with a serious expression. The background is neutral, with soft lighting and a dark backdrop.",
+  "about_me_description_2": "When I'm not immersed in code, you'll probably find me with a guitar in hand, running outdoors, playing video games, or diving into a good book or manga. These moments help expand my creativity, bringing new perspectives and innovative solutions to the projects I work on.",
+  "about_me_description": "Since I was young, I have always been passionate about technology, and today I have the opportunity to express my creativity by doing what I love. I hold a degree in Computer Science from Centro Universitário Cesuca. Over the past {{year}} years, I have been developing and refining my programming skills, focusing on front-end solutions. I have solid experience with technologies such as React, TypeScript, Tailwind CSS, among others.",
   "about_my_work": "about my work",
   "about": "About",
+  "access_linkedin": "Access LinkedIn",
   "access_project": "Access project",
   "access_repository": "Access repository",
+  "access_site": "Access site",
   "access_this_project_on_the_internet": "Access this project on the internet",
   "achievements_description": "In October 2023, my team, Absolem Coders, won the Local People's Choice award from the Federal Institute of Paraná (IFPR) in Curitiba during the 2023 NASA Space Apps Challenge, the world's largest hackathon.",
   "achievements": "Achievements",
   "and": "and",
-  "avatar_alt": "A young man wearing a blue plaid shirt, smiling while looking at the camera with a confident expression.",
+  "avatar_alt": "A young man smiling, wearing glasses and a black jacket, with a starry sky background. He is looking slightly to the right, with a friendly and confident expression.",
 
   "by": "by",
 
   "change_language_to": "Change language to",
   "click_here": "Click here!",
+  "companies_where_i_worked": "Companies Where I Worked",
+  "company_logo": "Company logo",
   "contact": "Contact",
 
   "developed_with_much": "Developed with much",
@@ -27,11 +33,13 @@
   "email": "email",
   "enable": "Enable",
   "enabled": "Enabled",
+  "experience_description": "Some of the companies where I had the opportunity to contribute, gaining a lot of experience.",
+  "experience": "Experience",
 
-  "fetch_projects_error": "Error! Unable to retrieve projects. Please try again later.",
-  "full_stack_developer": "Full Stack Developer",
+  "front_end_developer": "Front End Developer",
 
   "get_in_touch": "Get in Touch!",
+  "get_projects_error": "Error! Unable to retrieve projects. Please try again later.",
   "go_back_to_home": "Go back to home",
 
   "hello_i_am_rian_oliveira": "Hello, I'm Rian Oliveira!",
@@ -43,7 +51,7 @@
   "max_1024_characters": "Maximum 1024 characters!",
   "max_64_characters": "Maximum 64 characters!",
   "message": "message",
-  "meta_description": "My personal portfolio, with information about me, the technologies I use, my projects, and links to my social media.",
+  "meta_description": "My personal portfolio, with information about me, projects I've developed, technologies I use, companies I've worked for, and links to my social media.",
   "meta_keywords": "backend, developer, frontend, fullstack, javascript, portfolio, programmer, react, tailwindcss, threejs, typescript, vite",
   "my_projects": "My Projects",
 
@@ -55,7 +63,7 @@
   "private_repository": "Private repository",
   "project_gallery_description": "Throughout my journey, I have developed a variety of high-quality products using the latest and most in-demand technologies in the market.",
   "project_thumbnail": "Project thumbnail",
-  "projects_description": "Check out some of the projects I have developed",
+  "projects_description": "Check out some of the projects I have developed.",
   "projects": "Projects",
 
   "required_field": "Required field!",
@@ -64,17 +72,19 @@
   "send_email_feedback_description": "I received your email and will get back to you as soon as possible!",
   "send_email_feedback_title": "Thank you for reaching out.",
   "send_email_success": "Email sent successfully!",
-  "send_too_many_emails_error": "Error! Too many emails sent. Please try again later.",
-  "sending_email": "Sending email...",
+  "sending": "Sending",
   "skills_description": "Technologies and tools in the market that I have experience with",
   "skills": "Skills",
   "submit": "Submit",
 
   "team_certificate_alt": "Certificate awarded to 'Team Absolem Coders' for outstanding participation in NASA's International Space Apps Challenge. Dated October 7-8, 2023. Logos of global space organizations shown.",
 
+  "unable_to_connect_to_the_server": "Unable to connect to the server.",
+
   "what_i_have_achieved": "What I have achieved",
   "where_does_this_link_lead": "Where does this link lead?",
 
+  "you_are_already_here": "You are already here",
   "you_found_an_easter_egg": "You found an Easter Egg!",
   "your": "Your"
 }

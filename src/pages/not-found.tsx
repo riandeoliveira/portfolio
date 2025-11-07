@@ -1,11 +1,10 @@
-import { OuterSpaceBackground } from "@/components/outer-space-background";
-import { Section } from "@/components/section";
+import { Link } from "react-router-dom";
+import { OuterSpaceBackground } from "@/components/backgrounds/outer-space-background";
+import { Section } from "@/components/shared/section";
 import { useAppMode } from "@/hooks/use-app-mode";
 import { useI18n } from "@/hooks/use-i18n";
-import type { ReactElement } from "react";
-import { Link } from "react-router-dom";
 
-export const NotFound = (): ReactElement => {
+export const NotFoundPage = () => {
   const { appMode } = useAppMode();
   const { t } = useI18n();
 

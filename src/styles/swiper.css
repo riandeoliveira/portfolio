@@ -3,11 +3,11 @@
 @import "swiper/css/pagination";
 
 .swiper-slide {
-  @apply !scale-75 transition-all opacity-50;
+  @apply scale-75! transition-all opacity-50;
 }
 
 .swiper-slide-active {
-  @apply !scale-100 transition-all opacity-100;
+  @apply scale-100! transition-all opacity-100;
 }
 
 .swiper-button-prev,
@@ -17,5 +17,5 @@
 
 .swiper-pagination-bullet,
 .swiper-pagination-bullet-active {
-  @apply bg-gradient-to-r from-indigo-500 to-purple-500;
+  @apply bg-linear-to-r from-indigo-500 to-purple-500;
 }

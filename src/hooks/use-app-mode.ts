@@ -18,14 +18,14 @@ type UseAppMode = {
 export const useAppMode = (): UseAppMode => {
   const [appMode, setAppMode] = useLocalStorage<AppMode>("app_mode", "quality");
 
-  const toggleAppMode = (): void => {
+  const toggleAppMode = () => {
     setAppMode((prevMode) =>
       prevMode === "quality" ? "performance" : "quality",
     );
   };
 
   useEffect(() => {
-    const validateAppMode = async (): Promise<void> => {
+    const validateAppMode = async () => {
       try {
         await appModeSchema.validate(appMode);
       } catch {

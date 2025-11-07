@@ -5,8 +5,7 @@
     "eamodio.gitlens",
     "fill-labs.dependi",
     "naumovs.color-highlight",
-    "visualstudioexptteam.vscodeintellicode",
-    "wayou.vscode-todo-highlight",
-    "wix.vscode-import-cost"
+    "streetsidesoftware.code-spell-checker-portuguese-brazilian",
+    "streetsidesoftware.code-spell-checker"
   ]
 }

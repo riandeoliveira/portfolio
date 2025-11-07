@@ -1,0 +1,15 @@
+import { create } from "zustand";
+import type { Project } from "@/types/project";
+
+type ProjectStore = {
+  projects: Project[];
+  setProjects(projects: Project[]): void;
+};
+
+export const useProjectStore = create<ProjectStore>()((set) => ({
+  projects: [],
+
+  setProjects(projects) {
+    set(() => ({ projects }));
+  },
+}));

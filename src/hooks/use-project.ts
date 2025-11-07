@@ -1,46 +1,27 @@
-import { api } from "@/api";
-import { ProjectContext } from "@/contexts/project-context";
+import { useProjectStore } from "@/stores/project-store";
 import type { Project } from "@/types/project";
-import type { AxiosResponse } from "axios";
-import { useCallback, useContext } from "react";
-import { toast } from "react-toastify";
-import useLocalStorage from "use-local-storage";
+import { useHttp } from "./use-http";
 import { useI18n } from "./use-i18n";
+import { useToast } from "./use-toast";
 
-type UseProject = {
-  fetchProjects: () => Promise<void>;
-  getSortedProjectsBy: (order: "highlight" | "presentation") => Project[];
-};
-
-export const useProject = (): UseProject => {
-  const context = useContext(ProjectContext);
-
-  if (!context) {
-    throw new Error(
-      "useProject must be used within a ProjectContextProvider component",
-    );
-  }
-
-  const { projects, setProjects } = context;
-
-  const [storageProjects, setStorageProjects] = useLocalStorage<Project[]>(
-    "storage_projects",
-    [],
-  );
+export const useProject = () => {
+  const toast = useToast();
+  const projectStore = useProjectStore();
 
   const { t } = useI18n();
+  const { request } = useHttp();
 
   const getSortedProjectsBy = (
     order: "highlight" | "presentation",
   ): Project[] => {
     const projectsOrderMap = {
-      highlight: [10, 2, 1, 6, 9, 4, 5, 8, 7, 3],
-      presentation: [9, 2, 5, 6, 10, 4, 8, 7, 1, 3],
+      highlight: [7, 15, 1, 13, 10, 4, 8, 6, 11, 2, 12, 9, 14, 5, 3],
+      presentation: [11, 9, 2, 4, 7, 14, 12, 13, 15, 5, 3, 6, 10, 8, 1],
     };
 
     const sortedIds = projectsOrderMap[order];
 
-    return projects.slice().sort((a, b) => {
+    return projectStore.projects.slice().sort((a, b) => {
       const indexA = sortedIds.indexOf(a.id);
       const indexB = sortedIds.indexOf(b.id);
 
@@ -48,28 +29,19 @@ export const useProject = (): UseProject => {
     });
   };
 
-  // biome-ignore lint/correctness/useExhaustiveDependencies: storageProjects will cause an infinite loop
-  const fetchProjects = useCallback(async () => {
-    try {
-      const response: AxiosResponse<Project[]> = await api.get("/projects");
-
-      if (response.status === 200) {
-        setProjects(response.data);
-        setStorageProjects(response.data);
-      }
-    } catch {
-      if (storageProjects.length > 0) {
-        setProjects(storageProjects);
-
-        return;
-      }
-
-      toast.error(t("fetch_projects_error"));
-    }
-  }, []);
+  const getProjects = async () => {
+    await request<null, Project[]>("GET", "/projects", {
+      onSuccess: (data) => {
+        projectStore.setProjects(data);
+      },
+      onError: () => {
+        toast.error(t("get_projects_error"));
+      },
+    });
+  };
 
   return {
-    fetchProjects,
+    getProjects,
     getSortedProjectsBy,
   };
 };

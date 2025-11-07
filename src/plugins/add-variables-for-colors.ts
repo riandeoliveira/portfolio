@@ -9,7 +9,7 @@ type PluginParams = {
   theme(params: string): Colors;
 };
 
-const addVariablesForColors = ({ addBase, theme }: PluginParams): void => {
+const addVariablesForColors = ({ addBase, theme }: PluginParams) => {
   const allColors = flattenColorPalette(theme("colors"));
 
   const newVars = Object.fromEntries(

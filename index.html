@@ -1,14 +1,18 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Rian Dias de Oliveira" />
-    <meta name="google" value="notranslate" />
-    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="./src/main.tsx"></script>
-  </body>
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | Rian Oliveira</title>
+  <link rel="icon" href="/favicon.ico" />
+  <script>
+    const locale = localStorage.getItem("locale");
+
+    if (locale) document.documentElement.lang = locale;
+  </script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="./src/main.tsx"></script>
+</body>
 </html>

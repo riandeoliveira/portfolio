@@ -1,14 +1,19 @@
-import "@/i18n";
 import "@/main.css";
-import { router } from "@/routes";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
+import { HelmetProvider } from "react-helmet-async";
 import { RouterProvider } from "react-router-dom";
+import { router } from "@/router";
+import { AppProvider } from "./providers/app-provider";
 
-const rootElement = document.querySelector("#root") as Element;
+const root = document.querySelector("#root") as Element;
 
-createRoot(rootElement).render(
-  <StrictMode>
-    <RouterProvider router={router} />
-  </StrictMode>,
+createRoot(root).render(
+  <HelmetProvider>
+    <StrictMode>
+      <AppProvider>
+        <RouterProvider router={router} />
+      </AppProvider>
+    </StrictMode>
+  </HelmetProvider>,
 );

@@ -1,15 +1,14 @@
-import type { IconName } from "./icon";
+import type { ProjectName } from "@/assets/images";
 
 export type Project = {
   id: number;
-  name: string;
+  name: ProjectName;
   version: string;
-  stack: IconName[];
-  thumbnailUrl: string;
-  repositoryUrl: string;
-  projectUrl: string;
+  url: string;
+  repositoryUrl: string | null;
   isPrivate: boolean;
   isNew: boolean;
+  stack: string[];
   info: {
     enUs: {
       fullName: string;

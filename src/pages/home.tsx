@@ -1,43 +1,41 @@
-import { AboutSection } from "@/components/about-section";
-import { AchievementsSection } from "@/components/achievements-section";
-import { AppModeSwitcher } from "@/components/app-mode-switcher";
-import { ContactSection } from "@/components/contact-section";
-import { FooterArea } from "@/components/footer-area";
-import { HeaderArea } from "@/components/header-area";
-import { LanguageSwitcher } from "@/components/language-switcher";
-import { OuterSpaceBackground } from "@/components/outer-space-background";
-import { ProfileSection } from "@/components/profile-section";
-import { ProjectGallerySection } from "@/components/project-gallery-section";
-import { ProjectsSection } from "@/components/projects-section";
-import { SkillsSection } from "@/components/skills-section";
+import { useEffect } from "react";
+import { OuterSpaceBackground } from "@/components/backgrounds/outer-space-background";
+import { FooterLayout } from "@/components/layouts/footer-layout";
+import { HeaderLayout } from "@/components/layouts/header-layout";
+import { AboutSection } from "@/components/sections/about-section";
+import { AchievementsSection } from "@/components/sections/achievements-section";
+import { ContactSection } from "@/components/sections/contact-section";
+import { ExperienceSection } from "@/components/sections/experience-section";
+import { ProfileSection } from "@/components/sections/profile-section";
+import { ProjectGallerySection } from "@/components/sections/project-gallery-section";
+import { ProjectsSection } from "@/components/sections/projects-section";
+import { SkillsSection } from "@/components/sections/skills-section";
 import { useAppMode } from "@/hooks/use-app-mode";
 import { useProject } from "@/hooks/use-project";
-import { type ReactElement, useEffect } from "react";
 
-export const Home = (): ReactElement => {
-  const { fetchProjects } = useProject();
+export const HomePage = () => {
+  const { getProjects } = useProject();
   const { appMode } = useAppMode();
 
   useEffect(() => {
-    fetchProjects();
-  }, [fetchProjects]);
+    getProjects();
+  }, []);
 
   return (
     <>
       {appMode === "quality" && <OuterSpaceBackground />}
-      <HeaderArea />
+      <HeaderLayout />
       <main className="flex flex-col gap-24">
         <ProfileSection />
         <AboutSection />
         <ProjectGallerySection />
         <ProjectsSection />
         <SkillsSection />
+        <ExperienceSection />
         <AchievementsSection />
         <ContactSection />
       </main>
-      <FooterArea />
-      <AppModeSwitcher />
-      <LanguageSwitcher />
+      <FooterLayout />
     </>
   );
 };

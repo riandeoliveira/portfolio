@@ -1,0 +1,107 @@
+@layer utilities {
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes grow {
+    from {
+      scale: 0;
+    }
+    to {
+      scale: 1;
+    }
+  }
+
+  @keyframes rotate-primary {
+    from {
+      rotate: y 0deg;
+    }
+    to {
+      rotate: y 180deg;
+    }
+  }
+
+  @keyframes rotate-secondary {
+    from {
+      rotate: y 180deg;
+    }
+    to {
+      rotate: y 0deg;
+    }
+  }
+
+  @keyframes slide-in-down {
+    from {
+      translate: 0 -80px;
+    }
+    to {
+      translate: 0px;
+    }
+  }
+
+  @keyframes toggle-primary {
+    from {
+      z-index: 50;
+    }
+    to {
+      z-index: 0;
+    }
+  }
+
+  @keyframes toggle-secondary {
+    from {
+      z-index: 0;
+    }
+    to {
+      z-index: 50;
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 1s forwards;
+  }
+
+  .animate-grow {
+    animation: grow 1s forwards;
+  }
+
+  .animate-rotate-primary {
+    animation: rotate-primary 2s forwards;
+  }
+
+  .animate-rotate-secondary {
+    animation: rotate-secondary 2s forwards;
+  }
+
+  .animate-slide-in-down {
+    animation: slide-in-down 1s forwards;
+  }
+
+  .animate-toggle-primary {
+    animation: toggle-primary 1.2s forwards;
+  }
+
+  .animate-toggle-secondary {
+    animation: toggle-secondary 3.5s forwards;
+  }
+
+  .w-300 {
+    width: calc(var(--spacing) * 300) /* 75rem = 1200px */;
+  }
+}
+
+@theme inline {
+  --animate-scroll: scroll var(--animation-duration, 40s)
+    var(--animation-direction, forwards) linear infinite;
+
+  @keyframes scroll {
+    to {
+      transform: translate(calc(-50% - 0.5rem));
+    }
+  }
+}
