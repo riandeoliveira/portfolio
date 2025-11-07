@@ -19,7 +19,7 @@ export const OuterSpaceBackground = () => {
         <Stars
           radius={100}
           depth={100}
-          count={2000}
+          count={5000}
           factor={5}
           saturation={0}
           fade

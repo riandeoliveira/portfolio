@@ -12,15 +12,12 @@ export const ExperienceSection = () => {
   const { t } = useI18n();
 
   return (
-    <section
-      id="experience"
-      className="flex flex-col items-center justify-center py-48 px-4 text-zinc-50"
-    >
-      <div className="w-300 flex flex-col gap-8">
-        <Section.Title isHighlighted className="text-white">
+    <section id="experience" className="flex justify-center pt-48 text-zinc-50">
+      <div className="w-full max-w-300 flex flex-col gap-8">
+        <Section.Title isHighlighted className="text-white px-4">
           {t("companies_where_i_worked")}
         </Section.Title>
-        <Section.Description className="text-white">
+        <Section.Description className="text-white px-4">
           {t("experience_description")}
         </Section.Description>
         <InfiniteMovingCards
@@ -79,7 +76,7 @@ const ExperienceCard = ({
               className="text-sm justify-start font-medium gap-2 hover:bg-transparent group-hover:animate-pulse p-0"
             >
               <Icon.LinkedIn className="w-6 h-6 [&>g>path]:fill-transparent" />
-              {t("access_linkedin")}
+              <span>{t("access_linkedin")}</span>
             </Link>
             <GradientBackground className="w-full h-px p-0 opacity-0 group-hover:opacity-100 transition-opacity max-s-600:hidden mt-0.5" />
           </div>
@@ -91,7 +88,7 @@ const ExperienceCard = ({
               className="text-sm justify-end font-medium gap-2 hover:bg-transparent group-hover:animate-pulse p-0"
             >
               <Icon.OutlineExternalLink className="w-6 h-6 [&>g>path]:fill-transparent" />
-              {t("access_site")}
+              <span>{t("access_site")}</span>
             </Link>
             <GradientBackground className="w-full h-px p-0 opacity-0 group-hover:opacity-100 transition-opacity max-s-600:hidden mt-0.5" />
           </div>

@@ -1,6 +1,5 @@
 import type { Dispatch, MouseEvent, ReactNode, SetStateAction } from "react";
 import { createContext, useContext, useEffect, useRef, useState } from "react";
-import { useAppMode } from "@/hooks/use-app-mode";
 import { cn } from "@/utils/cn";
 
 type MouseEnterContextType = [boolean, Dispatch<SetStateAction<boolean>>];
@@ -55,11 +54,10 @@ const CardItem = ({
   rotateZ = 0,
   ...rest
 }: CardItemProps) => {
-  const { appMode } = useAppMode();
-
   const ref = useRef<HTMLDivElement>(null);
 
   const [isMouseEntered] = useMouseEnter();
+  const [width, setWidth] = useState(window.innerWidth);
 
   const handleAnimations = () => {
     if (!ref.current) return;
@@ -91,9 +89,17 @@ const CardItem = ({
     handleAnimations();
   }, [isMouseEntered]);
 
+  useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth);
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div
-      ref={appMode === "quality" ? ref : undefined}
+      ref={width > 600 ? ref : undefined}
       className={cn("w-fit transition duration-200 ease-linear", className)}
       {...rest}
     >
@@ -113,11 +119,10 @@ const CardRoot = ({
   className,
   containerClassName,
 }: CardRootProps) => {
-  const { appMode } = useAppMode();
-
   const containerRef = useRef<HTMLDivElement>(null);
 
   const [isMouseEntered, setIsMouseEntered] = useState(false);
+  const [width, setWidth] = useState(window.innerWidth);
 
   const handleMouseMove = (event: MouseEvent<HTMLDivElement>) => {
     if (!containerRef.current) return;
@@ -145,6 +150,14 @@ const CardRoot = ({
     containerRef.current.style.transform = "rotateY(0deg) rotateX(0deg)";
   };
 
+  useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth);
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <MouseEnterContext.Provider value={[isMouseEntered, setIsMouseEntered]}>
       <div
@@ -155,7 +168,7 @@ const CardRoot = ({
       >
         {/* * biome-ignore lint/a11y/noStaticElementInteractions: `div` is used for visual effects, not interactions. */}
         <div
-          ref={appMode === "quality" ? containerRef : undefined}
+          ref={width > 600 ? containerRef : undefined}
           onMouseEnter={handleMouseEnter}
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}

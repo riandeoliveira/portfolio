@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Icon } from "@/assets/icons";
-import { useAppMode } from "@/hooks/use-app-mode";
 import { useI18n } from "@/hooks/use-i18n";
 import type { IconType } from "@/types/icon";
 import { cn } from "@/utils/cn";
@@ -10,7 +9,6 @@ const headerHeight = 80;
 
 export const HeaderLayout = () => {
   const { t } = useI18n();
-  const { appMode } = useAppMode();
 
   const [isHeaderFixed, setIsHeaderFixed] = useState(false);
 
@@ -69,7 +67,6 @@ export const HeaderLayout = () => {
           className={cn(
             "h-px p-0",
             isHeaderFixed ? "fixed top-10 left-0 right-0 z-50" : "",
-            appMode === "performance" && isHeaderFixed ? "top-20" : "",
           )}
         />
       </div>

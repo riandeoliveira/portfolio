@@ -1,6 +1,5 @@
 import Award from "./common/award.svg?react";
 import Briefcase from "./common/briefcase.svg?react";
-import CgPerformance from "./common/cg-performance.svg?react";
 import Download from "./common/download.svg?react";
 import Envelope from "./common/envelope.svg?react";
 import FolderOpen from "./common/folder-open.svg?react";
@@ -53,7 +52,6 @@ export const Icon = {
   Bootstrap,
   Brazil,
   Briefcase,
-  CgPerformance,
   CSharp,
   Css,
   Cypress,

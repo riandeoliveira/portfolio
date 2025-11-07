@@ -10,7 +10,7 @@ export const SkillCard = ({ name, color, icon: Icon }: SkillCardProps) => {
       <Icon />
       <div
         style={{ boxShadow: `0 0 32px ${color}` }}
-        className="w-12 h-12 animate-pulse absolute rounded-xl"
+        className="w-12 h-12 absolute rounded-xl"
       />
       {name && <span className="text-center">{name}</span>}
     </div>

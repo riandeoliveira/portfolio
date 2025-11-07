@@ -5,7 +5,6 @@ import { thumbnails } from "@/assets/images";
 import { useI18n } from "@/hooks/use-i18n";
 import { useProject } from "@/hooks/use-project";
 import type { Project } from "@/types/project";
-import { GradientBackground } from "../backgrounds/gradient-background";
 import { Image } from "../shared/image";
 
 export const ProjectGallerySection = () => {
@@ -139,7 +138,7 @@ const ProjectGalleryCard = ({
       key={project.id}
       className="group/product w-120 h-96 relative shrink-0 rounded-xl"
     >
-      <GradientBackground className="w-full h-full rounded-xl">
+      <div className="w-full h-full rounded-xl">
         <a
           href={project.url}
           target="_blank"
@@ -155,7 +154,7 @@ const ProjectGalleryCard = ({
             className="object-cover absolute h-full w-full inset-0 rounded-xl p-px"
           />
         </a>
-      </GradientBackground>
+      </div>
       <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-zinc-950 pointer-events-none rounded-xl" />
       <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100">
         {projectName}

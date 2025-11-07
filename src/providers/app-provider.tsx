@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import { Helmet } from "react-helmet-async";
-import { AppModeSwitcher } from "@/components/shared/app-mode-switcher";
+import { OuterSpaceBackground } from "@/components/backgrounds/outer-space-background";
 import { LanguageSwitcher } from "@/components/shared/language-switcher";
 import { Toaster } from "@/components/shared/toaster";
 import { useI18n } from "@/hooks/use-i18n";
@@ -19,9 +19,9 @@ export const AppProvider = ({ children }: AppProviderProps) => {
         <meta name="keywords" content={t("meta_keywords")} />
         <title>{t("home_page_head_title")}</title>
       </Helmet>
+      <OuterSpaceBackground />
       {children}
       <Toaster />
-      <AppModeSwitcher />
       <LanguageSwitcher />
     </>
   );
